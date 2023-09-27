@@ -256,7 +256,7 @@
                     <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
                 @else  
                     <button  style="color":#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
-                        <a style="color"white" href="http://localhost:8000/login?source=marketplace&destination=marketplace" >Place order</a>
+                        <a style="color"white" href="http://auth.greenwebbtech.com/login?source=marketplace&destination=marketplace" >Place order</a>
                     </button>
                 @endauth
                 <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="d162cd3d41"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">

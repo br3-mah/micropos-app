@@ -10,7 +10,7 @@
                                     <div class="elementor-widget-wrap">
                                         <div class="sc_layouts_item elementor-element elementor-element-f112344 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="f112344" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                                             <div class="elementor-widget-container">
-                                                <a href="{{ route('welcome') }}" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1675068927"><img class="logo_image" src="{{ asset('img/logo.png')}}" alt="Ecoagro" width="173" height="53"></a>
+                                                <a href="{{ route('welcome') }}" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1675068927"><img class="logo_image" src="{{ asset('public/img/logo.png')}}" alt="Ecoagro" width="173" height="53"></a>
                                             </div>
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-29ff9f0 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="29ff9f0" data-element_type="widget" data-widget_type="trx_sc_layouts_menu.default">
@@ -116,7 +116,7 @@
                                                         </span>
                                                     </a>
                                                     @else
-                                                    <a id="showLoginLink" style="display:none" href="http://localhost:8000/login?source=marketplace&destination=marketplace"  class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                                    <a id="showLoginLink" style="display:none" href="http://auth.greenwebbtech.com/login?source=marketplace&destination=marketplace"  class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
                                                         <span class="sc_button_text">
                                                             <span class="sc_button_title">
                                                                 Login

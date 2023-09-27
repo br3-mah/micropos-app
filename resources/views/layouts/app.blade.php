@@ -30,13 +30,13 @@ License: For each use you must have a valid license purchased only from above li
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Vendor Stylesheets(used for this page only)-->
-		<link href="{{ asset('dash/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('dash/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('public/dash/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('public/dash/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Vendor Stylesheets-->
 		
 		<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-		<link href="{{ asset('dash/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('dash/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('public/dash/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('public/dash/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 		<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
         <!-- Scripts -->
@@ -3107,11 +3107,13 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Username-->
+											@auth
 											<div class="d-flex flex-column">
 												<div class="fw-bold d-flex align-items-center fs-5">{{ auth()->user()->name }}
 												<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
 												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{ auth()->user()->email }}</a>
 											</div>
+											@endauth
 											<!--end::Username-->
 										</div>
 									</div>
@@ -3314,7 +3316,11 @@ License: For each use you must have a valid license purchased only from above li
 									<a href="../../demo29/dist/index.html" class="d-flex align-items-center custom-link fs-6 fw-semibold mb-5">
 									<i class="ki-outline ki-black-left fs-2 me-3 text-white opacity-50"></i>Back to list</a>
 									<!--end::Action-->
-									<span class="fs-2 fw-bolder text-white">{{auth()->user()->name}}</span>
+									<span class="fs-2 fw-bolder text-white">
+										@auth
+											{{auth()->user()->name}}
+										@endauth
+									</span>
 								</div>
 								<!--end::Sidebar secondary wrapper-->
 								<!--begin::Sidebar secondary menu-->
@@ -7498,11 +7504,11 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Javascript-->
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-		<script src="{{ asset('dash/plugins/global/plugins.bundle.js')}}"></script>
-		<script src="{{ asset('dash/js/scripts.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/js/scripts.bundle.js')}}"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Vendors Javascript(used for this page only)-->
-		<script src="{{ asset('dash/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
 		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 		<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
@@ -7514,19 +7520,19 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
 		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
 		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
-		<script src="{{ asset('dash/plugins/custom/datatables/datatables.bundle.js')}}"></script>
-		<script src="{{ asset('dash/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/plugins/custom/datatables/datatables.bundle.js')}}"></script>
 
 		
-		<script src="{{ asset('dash/js/widgets.bundle.js')}}"></script>
-		<script src="{{ asset('dash/js/custom/widgets.js')}}"></script>
-		<script src="{{ asset('dash/js/custom/apps/chat/chat.js')}}"></script>
-		<script src="{{ asset('dash/js/custom/utilities/modals/create-campaign.js')}}"></script>
-		<script src="{{ asset('dash/js/custom/utilities/modals/bidding.js')}}"></script>
-		<script src="{{ asset('dash/js/custom/utilities/modals/users-search.js')}}"></script>
+		<script src="{{ asset('public/dash/js/widgets.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/js/custom/widgets.js')}}"></script>
+		<script src="{{ asset('public/dash/js/custom/apps/chat/chat.js')}}"></script>
+		<script src="{{ asset('public/dash/js/custom/utilities/modals/create-campaign.js')}}"></script>
+		<script src="{{ asset('public/dash/js/custom/utilities/modals/bidding.js')}}"></script>
+		<script src="{{ asset('public/dash/js/custom/utilities/modals/users-search.js')}}"></script>
 
-		<script src="{{ asset('dash/js/custom/apps/ecommerce/catalog/save-product.js')}}"></script>
-		<script src="{{ asset('dash/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
+		<script src="{{ asset('public/dash/js/custom/apps/ecommerce/catalog/save-product.js')}}"></script>
+		<script src="{{ asset('public/dash/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
 	</body>
 	<!--end::Body-->
 </html>

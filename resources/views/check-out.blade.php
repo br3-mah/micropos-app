@@ -159,16 +159,16 @@ Cultivating Agriculture that Works for the Future
             padding: 0 !important;
         }
     </style>
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-icons-css' href='{{ asset("theme/css/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_demo_icons-css' href='{{ asset("theme/css/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_demo_icons_animation-css' href='{{ asset("theme/css/plugins/trx_demo/css/font-icons/css/animation.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-font-halyard-display-css' href='{{ asset("theme/css/xog3vbp.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-icons-css' href='{{ asset("public/theme/css/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_demo_icons-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_demo_icons_animation-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/font-icons/css/animation.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-font-halyard-display-css' href='{{ asset("public/theme/css/xog3vbp.css")}}' type='text/css' media='all' />
     <link property="stylesheet" rel='stylesheet' id='agricola-font-google_fonts-css' href='https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&#038;subset=latin,latin-ext&#038;display=swap' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-fontello-css' href='{{ asset("theme/css/css-fontello.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='sbi_styles-css' href='{{ asset("theme/css/plugins/instagram-feed/css/sbi-styles.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='wp-block-library-css' href='{{ asset("theme/css/block-library-style.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='wc-blocks-vendors-style-css' href='{{ asset("theme/css/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='wc-blocks-style-css' href='{{ asset("theme/css/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-fontello-css' href='{{ asset("public/theme/css/css-fontello.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='sbi_styles-css' href='{{ asset("public/theme/css/plugins/instagram-feed/css/sbi-styles.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='wp-block-library-css' href='{{ asset("public/theme/css/block-library-style.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='wc-blocks-vendors-style-css' href='{{ asset("public/theme/css/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='wc-blocks-style-css' href='{{ asset("public/theme/css/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css")}}' type='text/css' media='all' />
     <style id='classic-theme-styles-inline-css' type='text/css'>
         /*! This file is auto-generated */
         .wp-block-button__link {
@@ -563,25 +563,25 @@ Cultivating Agriculture that Works for the Future
             line-height: 1.6;
         }
     </style>
-    <link property="stylesheet" rel='stylesheet' id='advanced-popups-css' href='{{ asset("theme/css/plugins/advanced-popups/public/css/advanced-popups-public.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='powertip-css' href='{{ asset("theme/css/plugins/devvn-image-hotspot/frontend/css/jquery.powertip.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='maps-points-css' href='{{ asset("theme/css/plugins/devvn-image-hotspot/frontend/css/maps_points.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='magnific-popup-css' href='{{ asset("theme/css/plugins/trx_addons/js/magnific/magnific-popup.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_demo_panels-css' href='{{ asset("theme/css/plugins/trx_demo/css/trx_demo_panels.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='woocommerce-layout-css' href='{{ asset("theme/css/plugins/woocommerce/assets/css/woocommerce-layout.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='woocommerce-smallscreen-css' href='{{ asset("theme/css/plugins/woocommerce/assets/css/woocommerce-smallscreen.css")}}' type='text/css' media='only screen and (max-width: 768px)' />
-    <link property="stylesheet" rel='stylesheet' id='woocommerce-general-css' href='{{ asset("theme/css/plugins/woocommerce/assets/css/woocommerce.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='advanced-popups-css' href='{{ asset("public/theme/css/plugins/advanced-popups/public/css/advanced-popups-public.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='powertip-css' href='{{ asset("public/theme/css/plugins/devvn-image-hotspot/frontend/css/jquery.powertip.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='maps-points-css' href='{{ asset("public/theme/css/plugins/devvn-image-hotspot/frontend/css/maps_points.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='magnific-popup-css' href='{{ asset("public/theme/css/plugins/trx_addons/js/magnific/magnific-popup.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_demo_panels-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/trx_demo_panels.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='woocommerce-layout-css' href='{{ asset("public/theme/css/plugins/woocommerce/assets/css/woocommerce-layout.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='woocommerce-smallscreen-css' href='{{ asset("public/theme/css/plugins/woocommerce/assets/css/woocommerce-smallscreen.css")}}' type='text/css' media='only screen and (max-width: 768px)' />
+    <link property="stylesheet" rel='stylesheet' id='woocommerce-general-css' href='{{ asset("public/theme/css/plugins/woocommerce/assets/css/woocommerce.css")}}' type='text/css' media='all' />
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
             visibility: visible;
         }
     </style>
-    <link property="stylesheet" rel='preload' as='font' type='font/woff2' id='tinvwl-webfont-font-css' href='{{ asset("theme/css/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.woff")}}' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='tinvwl-webfont-css' href='{{ asset("theme/css/plugins/ti-woocommerce-wishlist/assets/css/webfont.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='tinvwl-css' href='{{ asset("theme/css/plugins/ti-woocommerce-wishlist/assets/css/public.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='elementor-icons-css' href='{{ asset("theme/css/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='elementor-frontend-legacy-css' href='{{ asset("theme/css/plugins/elementor/assets/css/frontend-legacy.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='elementor-frontend-css' href='{{ asset("theme/css/plugins/elementor/assets/css/frontend.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='preload' as='font' type='font/woff2' id='tinvwl-webfont-font-css' href='{{ asset("public/theme/css/plugins/ti-woocommerce-wishlist/assets/fonts/tinvwl-webfont.woff")}}' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='tinvwl-webfont-css' href='{{ asset("public/theme/css/plugins/ti-woocommerce-wishlist/assets/css/webfont.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='tinvwl-css' href='{{ asset("public/theme/css/plugins/ti-woocommerce-wishlist/assets/css/public.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='elementor-icons-css' href='{{ asset("public/theme/css/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='elementor-frontend-legacy-css' href='{{ asset("public/theme/css/plugins/elementor/assets/css/frontend-legacy.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='elementor-frontend-css' href='{{ asset("public/theme/css/plugins/elementor/assets/css/frontend.min.css")}}' type='text/css' media='all' />
     <style id='elementor-frontend-inline-css' type='text/css'>
         .elementor-kit-15 {
             --e-global-color-primary: #6EC1E4;
@@ -1124,17 +1124,17 @@ Cultivating Agriculture that Works for the Future
             }
         }
     </style>
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-css' href='{{ asset("theme/css/plugins/trx_addons/css/__styles.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-widget_custom_links-css' href='{{ asset("theme/css/plugins/trx_addons/components/widgets/custom_links/custom_links.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_content-css' href='{{ asset("theme/css/plugins/trx_addons/components/shortcodes/content/content.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_content-responsive-css' href='{{ asset("theme/css/plugins/trx_addons/components/shortcodes/content/content.responsive.css")}}' type='text/css' media='(max-width:1439px)' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-animations-css' href='{{ asset("theme/css/plugins/trx_addons/css/trx_addons.animations.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-woocommerce-css' href='{{ asset("theme/css/plugins/trx_addons/components/api/woocommerce/woocommerce.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-mouse-helper-css' href='{{ asset("theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-cpt_testimonials-css' href='{{ asset("theme/css/plugins/trx_addons/components/cpt/testimonials/testimonials.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_blogger-css' href='{{ asset("theme/css/plugins/trx_addons/components/shortcodes/blogger/blogger.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_icons-css' href='{{ asset("theme/css/plugins/trx_addons/components/shortcodes/icons/icons.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='wpgdprc-front-css-css' href='{{ asset("theme/css/plugins/wp-gdpr-compliance/Assets/css/front.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-css' href='{{ asset("public/theme/css/plugins/trx_addons/css/__styles.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-widget_custom_links-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/widgets/custom_links/custom_links.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_content-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/shortcodes/content/content.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_content-responsive-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/shortcodes/content/content.responsive.css")}}' type='text/css' media='(max-width:1439px)' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-animations-css' href='{{ asset("public/theme/css/plugins/trx_addons/css/trx_addons.animations.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-woocommerce-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/api/woocommerce/woocommerce.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-mouse-helper-css' href='{{ asset("public/theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-cpt_testimonials-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/cpt/testimonials/testimonials.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_blogger-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/shortcodes/blogger/blogger.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_icons-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/shortcodes/icons/icons.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='wpgdprc-front-css-css' href='{{ asset("public/theme/css/plugins/wp-gdpr-compliance/Assets/css/front.css")}}' type='text/css' media='all' />
     <style id='wpgdprc-front-css-inline-css' type='text/css'>
         :root {
             --wp-gdpr--bar--background-color: #000000;
@@ -1542,27 +1542,27 @@ Cultivating Agriculture that Works for the Future
         }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400%7CDM+Sans:400&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">
-    <link property="stylesheet" rel='stylesheet' id='agricola-style-css' href='{{ asset("theme/css/agricola-style.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='mediaelement-css' href='{{ asset("theme/js/mediaelement-mediaelementplayer-legacy.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='wp-mediaelement-css' href='{{ asset("theme/js/mediaelement-wp-mediaelement.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-skin-default-css' href='{{ asset("theme/css/css-style.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-plugins-css' href='{{ asset("theme/css/css-__plugins.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-woocommerce-css' href='{{ asset("theme/css/woocommerce-woocommerce.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-custom-css' href='{{ asset("theme/css/css-__custom.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='e-animations-css' href='{{ asset("theme/css/plugins/elementor/assets/lib/animations/animations.min.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='rs-plugin-settings-css' href='{{ asset("theme/css/plugins/revslider/public/assets/css/rs6.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-responsive-css' href='{{ asset("theme/css/plugins/trx_addons/css/__responsive.css")}}' type='text/css' media='(max-width:1439px)' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-woocommerce-responsive-css' href='{{ asset("theme/css/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css")}}' type='text/css' media='(max-width:767px)' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-mouse-helper-responsive-css' href='{{ asset("theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css")}}' type='text/css' media='(max-width:1279px)' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_blogger-responsive-css' href='{{ asset("theme/css/plugins/trx_addons/components/shortcodes/blogger/blogger.responsive.css")}}' type='text/css' media='(max-width:1279px)' />
-    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_icons-responsive-css' href='{{ asset("theme/css/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css")}}' type='text/css' media='(max-width:1279px)' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-responsive-css' href='{{ asset("theme/css/css-__responsive.css")}}' type='text/css' media='(max-width:1679px)' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-woocommerce-responsive-css' href='{{ asset("theme/css/woocommerce-woocommerce-responsive.css")}}' type='text/css' media='(max-width:1679px)' />
-    <link property="stylesheet" rel='stylesheet' id='agricola-trx-addons-extra-styles-css' href='{{ asset("theme/css/default-extra-styles.css")}}' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='swiper-css' href='{{ asset("theme/css/plugins/trx_addons/js/swiper/swiper.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-style-css' href='{{ asset("public/theme/css/agricola-style.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='mediaelement-css' href='{{ asset("public/theme/js/mediaelement-mediaelementplayer-legacy.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='wp-mediaelement-css' href='{{ asset("public/theme/js/mediaelement-wp-mediaelement.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-skin-default-css' href='{{ asset("public/theme/css/css-style.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-plugins-css' href='{{ asset("public/theme/css/css-__plugins.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-woocommerce-css' href='{{ asset("public/theme/css/woocommerce-woocommerce.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-custom-css' href='{{ asset("public/theme/css/css-__custom.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='e-animations-css' href='{{ asset("public/theme/css/plugins/elementor/assets/lib/animations/animations.min.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='rs-plugin-settings-css' href='{{ asset("public/theme/css/plugins/revslider/public/assets/css/rs6.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-responsive-css' href='{{ asset("public/theme/css/plugins/trx_addons/css/__responsive.css")}}' type='text/css' media='(max-width:1439px)' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-woocommerce-responsive-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/api/woocommerce/woocommerce.responsive.css")}}' type='text/css' media='(max-width:767px)' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-mouse-helper-responsive-css' href='{{ asset("public/theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.responsive.css")}}' type='text/css' media='(max-width:1279px)' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_blogger-responsive-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/shortcodes/blogger/blogger.responsive.css")}}' type='text/css' media='(max-width:1279px)' />
+    <link property="stylesheet" rel='stylesheet' id='trx_addons-sc_icons-responsive-css' href='{{ asset("public/theme/css/plugins/trx_addons/components/shortcodes/icons/icons.responsive.css")}}' type='text/css' media='(max-width:1279px)' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-responsive-css' href='{{ asset("public/theme/css/css-__responsive.css")}}' type='text/css' media='(max-width:1679px)' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-woocommerce-responsive-css' href='{{ asset("public/theme/css/woocommerce-woocommerce-responsive.css")}}' type='text/css' media='(max-width:1679px)' />
+    <link property="stylesheet" rel='stylesheet' id='agricola-trx-addons-extra-styles-css' href='{{ asset("public/theme/css/default-extra-styles.css")}}' type='text/css' media='all' />
+    <link property="stylesheet" rel='stylesheet' id='swiper-css' href='{{ asset("public/theme/css/plugins/trx_addons/js/swiper/swiper.min.css")}}' type='text/css' media='all' />
     <link property="stylesheet" rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.3.1' type='text/css' media='all' />
-    <script type='text/javascript' src='{{ asset("theme/js/jquery-jquery.min.js")}}' id='jquery-core-js'></script>
-    <script type='text/javascript' src='{{ asset("theme/js/jquery-jquery-migrate.min.js")}}' id='jquery-migrate-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/js/jquery-jquery.min.js")}}' id='jquery-core-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/js/jquery-jquery-migrate.min.js")}}' id='jquery-migrate-js'></script>
     <link rel="https://api.w.org/" href="https://agricola.axiomthemes.com/wp-json/" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://agricola.axiomthemes.com/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.3.1" />
@@ -2119,12 +2119,12 @@ Cultivating Agriculture that Works for the Future
             }
         }
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/advanced-popups/public/js/advanced-popups-public.js")}}' id='advanced-popups-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/devvn-image-hotspot/frontend/js/jquery.powertip.min.js")}}' id='powertip-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/devvn-image-hotspot/frontend/js/maps_points.js")}}' id='maps-points-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/revslider/public/assets/js/rbtools.min.js")}}' async id='tp-tools-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/revslider/public/assets/js/rs6.min.js")}}' async id='revmin-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js")}}' id='magnific-popup-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/advanced-popups/public/js/advanced-popups-public.js")}}' id='advanced-popups-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/devvn-image-hotspot/frontend/js/jquery.powertip.min.js")}}' id='powertip-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/devvn-image-hotspot/frontend/js/maps_points.js")}}' id='maps-points-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/revslider/public/assets/js/rbtools.min.js")}}' async id='tp-tools-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/revslider/public/assets/js/rs6.min.js")}}' async id='revmin-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js")}}' id='magnific-popup-js'></script>
     <script type='text/javascript' id='trx_demo_panels-js-extra'>
         /* <![CDATA[ */
         var TRX_DEMO_STORAGE = {
@@ -2137,8 +2137,8 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_demo/js/trx_demo_panels.js")}}' id='trx_demo_panels-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js")}}' id='jquery-blockui-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_demo/js/trx_demo_panels.js")}}' id='trx_demo_panels-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js")}}' id='jquery-blockui-js'></script>
     <script type='text/javascript' id='wc-add-to-cart-js-extra'>
         /* <![CDATA[ */
         var wc_add_to_cart_params = {
@@ -2151,7 +2151,7 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js")}}' id='wc-add-to-cart-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js")}}' id='wc-add-to-cart-js'></script>
     <script type='text/javascript' src='css/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js' id='js-cookie-js'>
     </script>
     <script type='text/javascript' id='woocommerce-js-extra'>
@@ -2162,7 +2162,7 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/woocommerce/assets/js/frontend/woocommerce.min.js")}}' id='woocommerce-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/woocommerce/assets/js/frontend/woocommerce.min.js")}}' id='woocommerce-js'></script>
     <script type='text/javascript' id='wc-cart-fragments-js-extra'>
         /* <![CDATA[ */
         var wc_cart_fragments_params = {
@@ -2174,7 +2174,7 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js")}}' id='wc-cart-fragments-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js")}}' id='wc-cart-fragments-js'></script>
     <script type='text/javascript' id='tinvwl-js-extra'>
         /* <![CDATA[ */
         var tinvwl_add_to_wishlist = {
@@ -2198,7 +2198,7 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/ti-woocommerce-wishlist/assets/js/public.min.js")}}' id='tinvwl-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/ti-woocommerce-wishlist/assets/js/public.min.js")}}' id='tinvwl-js'></script>
     <script type='text/javascript' id='trx_addons-js-extra'>
         /* <![CDATA[ */
         var TRX_ADDONS_STORAGE = {
@@ -2396,14 +2396,14 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_addons/js/__scripts.js")}}' id='trx_addons-js'>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/js/__scripts.js")}}' id='trx_addons-js'>
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_addons/components/api/woocommerce/woocommerce.js")}}' id='trx_addons-woocommerce-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.js")}}' id='trx_addons-mouse-helper-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js")}}' id='superfish-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/trx_addons/js/swiper/swiper.min.js")}}' id='swiper-js'>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/components/api/woocommerce/woocommerce.js")}}' id='trx_addons-woocommerce-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.js")}}' id='trx_addons-mouse-helper-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js")}}' id='superfish-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/js/swiper/swiper.min.js")}}' id='swiper-js'>
     </script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/trx_addons/js/tweenmax/tweenmax.min.js")}}' id='tweenmax-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/trx_addons/js/tweenmax/tweenmax.min.js")}}' id='tweenmax-js'></script>
     <script type='text/javascript' id='wpgdprc-front-js-js-extra'>
         /* <![CDATA[ */
         var wpgdprcFront = {
@@ -2423,7 +2423,7 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/css/plugins/wp-gdpr-compliance/Assets/js/front.min.js")}}' id='wpgdprc-front-js-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/wp-gdpr-compliance/Assets/js/front.min.js")}}' id='wpgdprc-front-js-js'></script>
     <script type='text/javascript' id='agricola-init-js-extra'>
         /* <![CDATA[ */
         var AGRICOLA_STORAGE = {
@@ -2457,7 +2457,7 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/wp-content/themes/agricola/js/__scripts.js")}}' id='agricola-init-js'>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/wp-content/themes/agricola/js/__scripts.js")}}' id='agricola-init-js'>
     </script>
     <script id="mediaelement-core-js-before" type="text/javascript">
         var mejsL10n = {
@@ -2538,8 +2538,8 @@ Cultivating Agriculture that Works for the Future
             }
         };
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/js/mediaelement-mediaelement-and-player.min.js")}}' id='mediaelement-core-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/js/mediaelement-mediaelement-migrate.min.js")}}' id='mediaelement-migrate-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/js/mediaelement-mediaelement-and-player.min.js")}}' id='mediaelement-core-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/js/mediaelement-mediaelement-migrate.min.js")}}' id='mediaelement-migrate-js'></script>
     <script type='text/javascript' id='mediaelement-js-extra'>
         /* <![CDATA[ */
         var _wpmejsSettings = {
@@ -2551,16 +2551,16 @@ Cultivating Agriculture that Works for the Future
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/js/mediaelement-wp-mediaelement.min.js")}}' id='wp-mediaelement-js'>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/js/mediaelement-wp-mediaelement.min.js")}}' id='wp-mediaelement-js'>
     </script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/js/default-skin.js")}}' id='agricola-skin-default-js'></script>
-    <script type='text/javascript' defer="defer" src='{{ asset("theme/wp-content/themes/agricola/plugins/woocommerce/woocommerce.js")}}' id='agricola-woocommerce-js'></script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/elementor/assets/js/webpack.runtime.min.js")}}' id='elementor-webpack-runtime-js'></script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/elementor/assets/js/frontend-modules.min.js")}}' id='elementor-frontend-modules-js'></script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/elementor/assets/lib/waypoints/waypoints.min.js")}}' id='elementor-waypoints-js'></script>
-    <script type='text/javascript' src='{{ asset("theme/js/ui-core.min.js")}}' id='jquery-ui-core-js'></script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/elementor/assets/lib/share-link/share-link.min.js")}}' id='share-link-js'></script>
-    <script type='text/javascript' src='c{{ asset("theme/css/plugins/elementor/assets/lib/dialog/dialog.min.js")}}' id='elementor-dialog-js'>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/js/default-skin.js")}}' id='agricola-skin-default-js'></script>
+    <script type='text/javascript' defer="defer" src='{{ asset("public/theme/wp-content/themes/agricola/plugins/woocommerce/woocommerce.js")}}' id='agricola-woocommerce-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/elementor/assets/js/webpack.runtime.min.js")}}' id='elementor-webpack-runtime-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/elementor/assets/js/frontend-modules.min.js")}}' id='elementor-frontend-modules-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/elementor/assets/lib/waypoints/waypoints.min.js")}}' id='elementor-waypoints-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/js/ui-core.min.js")}}' id='jquery-ui-core-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/elementor/assets/lib/share-link/share-link.min.js")}}' id='share-link-js'></script>
+    <script type='text/javascript' src='c{{ asset("public/theme/css/plugins/elementor/assets/lib/dialog/dialog.min.js")}}' id='elementor-dialog-js'>
     </script>
     <script id="elementor-frontend-js-before" type="text/javascript">
         var elementorFrontendConfig = {
@@ -2674,9 +2674,9 @@ Cultivating Agriculture that Works for the Future
             }
         };
     </script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/elementor/assets/js/frontend.min.js")}}' id='elementor-frontend-js'>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/elementor/assets/js/frontend.min.js")}}' id='elementor-frontend-js'>
     </script>
-    <script type='text/javascript' src='{{ asset("theme/css/plugins/elementor/assets/js/preloaded-modules.min.js")}}' id='preloaded-modules-js'></script>
+    <script type='text/javascript' src='{{ asset("public/theme/css/plugins/elementor/assets/js/preloaded-modules.min.js")}}' id='preloaded-modules-js'></script>
     <script id="rs-initialisation-scripts">
         var tpj = jQuery;
         var revapi4;
