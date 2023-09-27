@@ -2773,9 +2773,9 @@ Cultivating Agriculture that Works for the Future
         var isAuthenticated = true;
         // var isAuthenticated = @json(auth()->check());
     </script>
-    <script src="{{ asset('scripts/routes.js') }}"></script>
-    <script src="{{ asset('scripts/checkout.js') }}"></script>
-    <script src="{{ asset('scripts/realtime-cart.js') }}"></script>
+    <script src="{{ asset('public/scripts/routes.js') }}"></script>
+    <script src="{{ asset('public/scripts/checkout.js') }}"></script>
+    <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
 </body>
 
 </html> 
