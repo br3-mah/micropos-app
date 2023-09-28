@@ -5,17 +5,14 @@ use App\Models\Product;
 
 class ProductRepository
 {
-    public function all()
-    {
-        return Product::all();
+    public function all(){
+        return Product::orderBy('created_at', 'desc')->get();
     }
 
-    public function find($id)
-    {
+    public function find($id){
         return Product::find($id);
     }
-    public function create($request)
-    {
+    public function create($request){
         // Validate the form data
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
@@ -56,16 +53,15 @@ class ProductRepository
         
     }
 
-    public function destroy($product)
-{
-    // Implement any logic to check if the user is authorized to delete the product.
-    
-    // Delete the product
-    $product->delete();
+    public function destroy($product){
+        // Implement any logic to check if the user is authorized to delete the product.
+        
+        // Delete the product
+        $product->delete();
 
-    // Redirect to the product list page or any other appropriate page.
-    return redirect()->route('products.index')->with('success', 'Product deleted successfully');
-}
+        // Redirect to the product list page or any other appropriate page.
+        return redirect()->route('products.index')->with('success', 'Product deleted successfully');
+    }
 
     
 }

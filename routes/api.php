@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('auto-login', [AutoAuthController::class, 'index']);
 
 // Product
-Route::get('products', [ProductController::class, 'index']);
+Route::get('eco-products', [ProductController::class, 'index']);
 Route::get('products/{id}', [ProductController::class, 'show']);
 
 
