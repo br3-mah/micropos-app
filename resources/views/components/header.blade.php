@@ -28,7 +28,7 @@
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-3fb9c4d sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_search" data-id="3fb9c4d" data-element_type="widget" data-widget_type="trx_sc_layouts_search.default">
                                             <div class="elementor-widget-container">
-                                                <div class="sc_layouts_search">
+                                                {{-- <div class="sc_layouts_search">
                                                     <div class="search_modern">
                                                         <span class="search_submit"></span>
                                                         <div class="search_wrap scheme_dark">
@@ -48,11 +48,11 @@
                                                     </div>
 
 
-                                                </div><!-- /.sc_layouts_search -->
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-18b55c6 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_cart" data-id="18b55c6" data-element_type="widget" data-widget_type="trx_sc_layouts_cart.default">
-                                            <div class="elementor-widget-container">
+                                            {{-- <div class="elementor-widget-container">
                                                 <div class="sc_layouts_cart sc_layouts_cart_market_woocommerce">
                                                     <span class="sc_layouts_item_icon sc_layouts_cart_icon sc_icons_type_icons trx_addons_icon-basket"></span>
                                                     <span class="sc_layouts_item_details sc_layouts_cart_details">
@@ -71,7 +71,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class="elementor-widget-wrap">
                                         
-                                         {{-- <div class="sc_layouts_item elementor-element elementor-element-066af30 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_iconed_text" data-id="066af30" data-element_type="widget" data-widget_type="trx_sc_layouts_iconed_text.default">
+                                         <div class="sc_layouts_item elementor-element elementor-element-066af30 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_iconed_text" data-id="066af30" data-element_type="widget" data-widget_type="trx_sc_layouts_iconed_text.default">
                                             <div class="elementor-widget-container">
                                                 <div class="sc_layouts_iconed_text">
                                                     <a href="tel:18004585697" class="sc_layouts_item_link sc_layouts_iconed_text_link">
@@ -91,39 +91,29 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>  --}}
+                                        </div> 
                                         
                                         <div class="sc_layouts_item elementor-element elementor-element-d662b41 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="d662b41" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                             <div class="elementor-widget-container">
                                                 
                                                 <div class="sc_item_button sc_button_wrap">
-                                                    @auth
+                                                    {{-- @auth --}}
                                                     <a href="{{ route('home') }}" id="openSideMenu" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
                                                         <span class="sc_button_text">
                                                             <span class="sc_button_title">
-                                                                {{ auth()->user()->name }}
-                                                            </span> 
-                                                            {{-- <span class="sc_button_title">
-                                                                <script>
-                                                                    const userData = JSON.parse(sessionStorage.getItem('user'));
-                                                                    if (userData && userData.name) {
-                                                                        document.write(userData.name);
-                                                                    } else {
-                                                                        document.write("Get Started");
-                                                                    }
-                                                                </script>
-                                                            </span> --}}
+                                                                {{ auth()->check() }}
+                                                            </span>
                                                         </span>
                                                     </a>
-                                                    @else
-                                                    <a id="showLoginLink" style="display:none" href="http://auth.greenwebbtech.com/login?source=marketplace&destination=marketplace"  class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                                    {{-- @else --}}
+                                                    <a id="showLoginLink" href="http://auth.greenwebbtech.com/login?source=marketplace&destination=marketplace"  class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
                                                         <span class="sc_button_text">
                                                             <span class="sc_button_title">
                                                                 Login
                                                             </span>
                                                         </span>
                                                     </a>
-                                                    @endauth
+                                                    {{-- @endauth --}}
                                                 </div>
                                             </div>
                                         </div> 
@@ -155,7 +145,7 @@
                                     <div class="elementor-widget-wrap">
 
                                         <div class="sc_layouts_item elementor-element elementor-element-f59f78f sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_search" data-id="f59f78f" data-element_type="widget" data-widget_type="trx_sc_layouts_search.default">
-                                            <div class="elementor-widget-container">
+                                            {{-- <div class="elementor-widget-container">
                                                 <div class="sc_layouts_search">
                                                     <div class="search_modern">
                                                         <span class="search_submit"></span>
@@ -177,7 +167,7 @@
 
 
                                                 </div><!-- /.sc_layouts_search -->
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-18b55c6 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_cart" data-id="18b55c6" data-element_type="widget" data-widget_type="trx_sc_layouts_cart.default">
                                             <div class="elementor-widget-container">
@@ -186,7 +176,8 @@
                                                     <span class="sc_layouts_item_details sc_layouts_cart_details">
                                                         <span class="sc_layouts_item_details_line2 sc_layouts_cart_totals">
                                                             <span class="sc_layouts_cart_items" data-item="item" data-items="items">0
-                                                                items</span>
+                                                                items
+                                                            </span>
                                                             -
                                                             <span class="sc_layouts_cart_summa">$0.00</span>
                                                         </span>
@@ -214,7 +205,7 @@
                                         <div class="sc_layouts_item elementor-element elementor-element-feaea9d sc_layouts_hide_on_mobile sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="feaea9d" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                             <div class="elementor-widget-container">
                                                 <div class="sc_item_button sc_button_wrap"><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sc_button hide_on_mobile sc_button_default sc_button_size_small sc_button_icon_left color_style_link2"><span class="sc_button_text"><span class="sc_button_title">Get
-                                                                Started</span></span></a></div>
+                                                    Started</span></span></a></div>
                                             </div>
                                         </div>
                                     </div>

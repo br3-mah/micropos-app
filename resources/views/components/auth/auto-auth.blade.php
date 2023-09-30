@@ -5,10 +5,11 @@
             <div class="modal-body text-center"> <!-- Center align the body contents -->
                 <form id="autoLoginForm" method="POST" action="{{ route('login') }}" style="padding: 5%;">
                     @csrf
-                    <div style="display: none">
-                        <input id="theemail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
-                        <input id="thepassword" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required>
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember" checked>
+                    <div style="display: block">
+                        <input type="hidden" id="theemail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
+                        <input type="hidden" id="thepassword" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required>
+                        <input type="hidden" class="form-check-input" type="checkbox" name="remember" id="remember" checked>
+                        <input type="hidden" class="form-check-input" type="checkbox" name="terms" id="remember" checked>
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -21,10 +22,10 @@
                         @enderror
                     </div>
                     <div>
-                        <img style="width: 50%;" src="{{ asset('img/1.jpg') }}">
+                        <img style="width: 50%;" src="{{ asset('public/img/1.jpg') }}">
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        {{ __('Continue Shopping') }}
+                        Continue as&nbsp;<span id="auth_username"></span>
                     </button>
                 </form>
             </div>

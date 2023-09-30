@@ -1,25 +1,39 @@
 
-// Get a reference to the link and the user session information (change 'userSessionInfo' to your actual session variable)
+// Get a reference to the link and the user session information 
+//(change 'userSessionInfo' to your actual session variable).
+// Check if userParams exists in url parameters
 const loginLink = document.getElementById("showLoginLink");
-const userSessionInfo = sessionStorage.getItem('authuser'); // or localStorage.getItem('userData') depending on your storage choice
-console.log('Session User: '+userSessionInfo);
+const userSessionInfo = sessionStorage.getItem('user'); 
+const username = document.getElementById('auth_username');
+const theemail = document.getElementById('theemail');
+const thepassword = document.getElementById('thepassword');
+const userParams = getUrlParameter('user');
+console.log(userSessionInfo && userSessionInfo.trim());
+// Check if the session storage has auth user for the first time only
 // Check if user session information is set or not empty
 if (userSessionInfo && userSessionInfo.trim() == "") {
+    // Initialize content text
+    // username.textContent = userSessionInfo.name;
     // If it's set and not empty, show the button
     loginLink.style.display = "block";
 } else {
     // If it's not set or empty, hide the button
     loginLink.style.display = "none";
-    // const u = JSON.parse(decodeURIComponent(userSessionInfo));
-    auto_register(userSessionInfo);
-    // $('#loginModal').modal('show');
+    
+    const usr = JSON.parse(decodeURIComponent(userSessionInfo));
+    username.textContent = usr.name;
+    auto_register(usr);
+    theemail.value = usr.email;
+    thepassword.value = usr.global_secret_word;
+    // const form = document.getElementById('autoLoginForm');
+    $('#loginModal').modal('show');
+    // form.submit();
 }
 
 
-// Check if userData exists
-const userData = getUrlParameter('user');
-const user = JSON.parse(decodeURIComponent(userData));
-if (userData) {
+
+if (userParams) {
+    const user = JSON.parse(decodeURIComponent(userParams));
     // console.log('check password '+user);
     document.getElementById('theemail').value = user.email;
     document.getElementById('thepassword').value = user.global_secret_word;
@@ -30,6 +44,7 @@ if (userData) {
     auto_register(user);
    
 }
+
 
 function auto_register(user){
     // Create an object to send to the Laravel controller
