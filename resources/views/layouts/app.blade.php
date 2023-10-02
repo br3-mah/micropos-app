@@ -52,7 +52,7 @@ License: For each use you must have a valid license purchased only from above li
 			// Set the src attribute of the image element to the new URL
 			imgElement.setAttribute('src', imageUrl);
 		</script>
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
     </head>
 	<!--end::Head-->
 	<!--begin::Body-->
