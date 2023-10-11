@@ -2,6 +2,7 @@
 // Get a reference to the link and the user session information 
 //(change 'userSessionInfo' to your actual session variable).
 // Check if userParams exists in url parameters
+
 const loginLink = document.getElementById("showLoginLink");
 const userSessionInfo = sessionStorage.getItem('user'); 
 const username = document.getElementById('auth_username');
@@ -11,47 +12,54 @@ const thepassword = document.getElementById('thepassword');
 const userParams = getUrlParameter('user');
 
 isUser.style.display = "none";
-console.log(userParams);
-console.log(userSessionInfo && userSessionInfo.trim());
-// Check if the session storage has auth user for the first time only
-// Check if user session information is set or not empty
-if (userSessionInfo && userSessionInfo.trim() == "") {
-    // Initialize content text
-    // username.textContent = userSessionInfo.name;
-    // If it's set and not empty, show the button
+
+if(isAuthenticated){
+    loginLink.style.display = "none";
+        
+    isUser.style.display = "block";
+    isUser.textContent = current_user.name;
+}else{
+    if (userSessionInfo && userSessionInfo.trim() == "") {
+        // No session data
+        isUser.style.display = "none";
+        loginLink.style.display = "block";
+    } else {
+        loginLink.style.display = "none";
+        isUser.style.display = "none";
     
-    isUser.style.display = "none";
-    loginLink.style.display = "block";
-} else {
-    // If it's not set or empty, hide the button
-    // loginLink.style.display = "none";
-    
-    if (userParams) {
-        const usr = JSON.parse(decodeURIComponent(userParams));
-        username.textContent = usr.name;
-        auto_register(usr);
-        theemail.value = usr.email;
-        thepassword.value = usr.global_secret_word;
-        // const form = document.getElementById('autoLoginForm');
-        $('#loginModal').modal('show');
-        // form.submit();
+        // Check parameters
+        if (userParams) {
+            const usr = JSON.parse(decodeURIComponent(userParams));
+            
+            isUser.textContent = usr.name;
+            username.textContent = usr.name;
+
+            auto_register(usr);
+
+            theemail.value = usr.email;
+            thepassword.value = usr.global_secret_word;
+            // const form = document.getElementById('autoLoginForm');
+            $('#loginModal').modal('show');
+            // form.submit();
+        }
     }
 }
 
 
 
-if (userParams) {
-    const user = JSON.parse(decodeURIComponent(userParams));
-    // console.log('check password '+user);
-    document.getElementById('theemail').value = user.email;
-    document.getElementById('thepassword').value = user.global_secret_word;
-    $('#loginModal').modal('show');
-    const csrf = '{{ csrf_token() }}';
-    sessionStorage.setItem('token', csrf);
-    sessionStorage.setItem('authuser', JSON.stringify(user));
-    auto_register(user);
+
+// if (userParams) {
+//     const user = JSON.parse(decodeURIComponent(userParams));
+//     // console.log('check password '+user);
+//     document.getElementById('theemail').value = user.email;
+//     document.getElementById('thepassword').value = user.global_secret_word;
+//     $('#loginModal').modal('show');
+//     const csrf = '{{ csrf_token() }}';
+//     sessionStorage.setItem('token', csrf);
+//     sessionStorage.setItem('authuser', JSON.stringify(user));
+//     auto_register(user);
    
-}
+// }
 
 
 function auto_register(user){
