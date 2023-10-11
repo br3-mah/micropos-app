@@ -125,10 +125,1224 @@ License: For each use you must have a valid license purchased only from above li
 										</span>
 									</div>
 									
-									
-									
-									
-									
+									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+										<!--begin:Menu link-->
+										<span class="menu-link menu-center">
+											<span class="menu-icon me-0">
+												<i class="ki-outline ki-abstract-26 fs-2x"></i>
+											</span>
+										</span>
+										<!--end:Menu link-->
+										<!--begin:Menu sub-->
+										<div class="menu-sub menu-sub-dropdown menu-sub-indention px-2 py-4 w-250px mh-75 overflow-auto">
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu content-->
+												<div class="menu-content">
+													<span class="menu-section fs-5 fw-bolder ps-1 py-1">Apps</span>
+												</div>
+												<!--end:Menu content-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-rocket fs-2"></i>
+													</span>
+													<span class="menu-title">Projects</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/list.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">My Projects</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/project.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">View Project</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/targets.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Targets</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/budget.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Budget</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/users.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Users</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/files.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Files</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/activity.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Activity</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/projects/settings.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Settings</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-handcart fs-2"></i>
+													</span>
+													<span class="menu-title">eCommerce</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Catalog</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/catalog/products.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Products</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/catalog/categories.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Categories</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/catalog/add-product.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Add Product</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/catalog/edit-product.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Edit Product</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/catalog/add-category.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Add Category</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/catalog/edit-category.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Edit Category</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Sales</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/sales/listing.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Orders Listing</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/sales/details.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Order Details</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/sales/add-order.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Add Order</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/sales/edit-order.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Edit Order</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Customers</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/customers/listing.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Customer Listing</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/customers/details.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Customer Details</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Reports</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/reports/view.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Products Viewed</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/reports/sales.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Sales</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/reports/returns.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Returns</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/reports/customer-orders.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Customer Orders</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/ecommerce/reports/shipping.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Shipping</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/ecommerce/settings.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Settings</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-phone fs-2"></i>
+													</span>
+													<span class="menu-title">Contacts</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/contacts/getting-started.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Getting Started</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/contacts/add-contact.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Add Contact</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/contacts/edit-contact.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Edit Contact</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/contacts/view-contact.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">View Contact</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-chart fs-2"></i>
+													</span>
+													<span class="menu-title">Support Center</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/support-center/overview.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Overview</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Tickets</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/support-center/tickets/list.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Tickets List</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/support-center/tickets/view.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">View Ticket</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Tutorials</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/support-center/tutorials/list.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Tutorials List</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/support-center/tutorials/post.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Tutorial Post</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/support-center/faq.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">FAQ</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/support-center/licenses.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Licenses</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/support-center/contact.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Contact Us</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-shield-tick fs-2"></i>
+													</span>
+													<span class="menu-title">User Management</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Users</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/user-management/users/list.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Users List</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/user-management/users/view.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">View User</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Roles</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/user-management/roles/list.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Roles List</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/user-management/roles/view.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">View Role</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/user-management/permissions.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Permissions</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-briefcase fs-2"></i>
+													</span>
+													<span class="menu-title">Customers</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/customers/getting-started.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Getting Started</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/customers/list.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Customer Listing</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/customers/view.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Customer Details</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-map fs-2"></i>
+													</span>
+													<span class="menu-title">Subscription</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/subscriptions/getting-started.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Getting Started</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/subscriptions/list.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Subscription List</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/subscriptions/add.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Add Subscription</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/subscriptions/view.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">View Subscription</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-credit-cart fs-2"></i>
+													</span>
+													<span class="menu-title">Invoice Manager</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<!--begin:Menu link-->
+														<span class="menu-link">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">View Invoices</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<!--end:Menu link-->
+														<!--begin:Menu sub-->
+														<div class="menu-sub menu-sub-accordion menu-active-bg">
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/invoices/view/invoice-1.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Invoice 1</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/invoices/view/invoice-2.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Invoice 2</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+															<!--begin:Menu item-->
+															<div class="menu-item">
+																<!--begin:Menu link-->
+																<a class="menu-link" href="../../demo29/dist/apps/invoices/view/invoice-3.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Invoice 3</span>
+																</a>
+																<!--end:Menu link-->
+															</div>
+															<!--end:Menu item-->
+														</div>
+														<!--end:Menu sub-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/invoices/create.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Create Invoice</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-file-added fs-2"></i>
+													</span>
+													<span class="menu-title">File Manager</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/file-manager/folders.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Folders</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/file-manager/files.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Files</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/file-manager/blank.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Blank Directory</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/file-manager/settings.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Settings</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-sms fs-2"></i>
+													</span>
+													<span class="menu-title">Inbox</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/inbox/listing.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Messages</span>
+															<span class="menu-badge">
+																<span class="badge badge-success">3</span>
+															</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/inbox/compose.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Compose</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/inbox/reply.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">View & Reply</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+												<!--begin:Menu link-->
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-outline ki-message-text-2 fs-2"></i>
+													</span>
+													<span class="menu-title">Chat</span>
+													<span class="menu-arrow"></span>
+												</span>
+												<!--end:Menu link-->
+												<!--begin:Menu sub-->
+												<div class="menu-sub menu-sub-accordion">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/chat/private.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Private Chat</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/chat/group.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Group Chat</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="../../demo29/dist/apps/chat/drawer.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Drawer Chat</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<!--end:Menu sub-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu link-->
+												<a class="menu-link" href="../../demo29/dist/apps/calendar.html">
+													<span class="menu-icon">
+														<i class="ki-outline ki-calendar-8 fs-2"></i>
+													</span>
+													<span class="menu-title">Calendar</span>
+												</a>
+												<!--end:Menu link-->
+											</div>
+											<!--end:Menu item-->
+										</div>
+										<!--end:Menu sub-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+										<!--begin:Menu link-->
+										<span class="menu-link menu-center">
+											<span class="menu-icon me-0">
+												<i class="ki-outline ki-briefcase fs-2x"></i>
+											</span>
+										</span>
+										<!--end:Menu link-->
+										<!--begin:Menu sub-->
+										<div class="menu-sub menu-sub-dropdown px-2 py-4 w-200px w-lg-225px mh-75 overflow-auto">
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu content-->
+												<div class="menu-content">
+													<span class="menu-section fs-5 fw-bolder ps-1 py-1">Help</span>
+												</div>
+												<!--end:Menu content-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu link-->
+												<a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities" target="_blank" title="Check out over 200 in-house components" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+													<span class="menu-bullet">
+														<span class="bullet bullet-dot"></span>
+													</span>
+													<span class="menu-title">Components</span>
+												</a>
+												<!--end:Menu link-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu link-->
+												<a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs" target="_blank" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+													<span class="menu-bullet">
+														<span class="bullet bullet-dot"></span>
+													</span>
+													<span class="menu-title">Documentation</span>
+												</a>
+												<!--end:Menu link-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu link-->
+												<a class="menu-link" href="https://preview.keenthemes.com/metronic8/demo29/layout-builder.html" title="Build your layout and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+													<span class="menu-bullet">
+														<span class="bullet bullet-dot"></span>
+													</span>
+													<span class="menu-title">Layout Builder</span>
+												</a>
+												<!--end:Menu link-->
+											</div>
+											<!--end:Menu item-->
+											<!--begin:Menu item-->
+											<div class="menu-item">
+												<!--begin:Menu link-->
+												<a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" target="_blank">
+													<span class="menu-bullet">
+														<span class="bullet bullet-dot"></span>
+													</span>
+													<span class="menu-title">Changelog v8.2.0</span>
+												</a>
+												<!--end:Menu link-->
+											</div>
+											<!--end:Menu item-->
+										</div>
+										<!--end:Menu sub-->
+									</div>
+									<!--end:Menu item-->
 								</div>
 								<!--end::Menu-->
 							</div>
@@ -146,13 +1360,14 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-content d-flex align-items-center px-3">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-50px me-5">
-												<img alt="Logo" src="{{ asset('public/img/logo.png')}}" />
+												<img alt="Logo" src="{{ asset('img/logo.png')}}" />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Username-->
 											@auth
 											<div class="d-flex flex-column">
-												<div class="fw-bold d-flex align-items-center fs-5">{{ auth()->user()->name }}</div>
+												<div class="fw-bold d-flex align-items-center fs-5">{{ auth()->user()->name }}
+												<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
 												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{ auth()->user()->email }}</a>
 											</div>
 											@endauth
@@ -165,16 +1380,16 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Menu separator-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="#" class="menu-link px-5">My Profile</a>
+										<a href="../../demo29/dist/account/overview.html" class="menu-link px-5">My Profile</a>
 									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="#" class="menu-link px-5">
-											<span class="menu-text">My Products</span>
-											<!--<span class="menu-badge">
+										<a href="../../demo29/dist/apps/projects/list.html" class="menu-link px-5">
+											<span class="menu-text">My Projects</span>
+											<span class="menu-badge">
 												<span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-											</span>-->
+											</span>
 										</a>
 									</div>
 									<!--end::Menu item-->
@@ -188,22 +1403,22 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-sub menu-sub-dropdown w-175px py-4">
 											<!--begin::Menu item-->
 											<div class="menu-item px-3">
-												<a href="##" class="menu-link px-5">Referrals</a>
+												<a href="../../demo29/dist/account/referrals.html" class="menu-link px-5">Referrals</a>
 											</div>
 											<!--end::Menu item-->
 											<!--begin::Menu item-->
 											<div class="menu-item px-3">
-												<a href="##" class="menu-link px-5">Billing</a>
+												<a href="../../demo29/dist/account/billing.html" class="menu-link px-5">Billing</a>
 											</div>
 											<!--end::Menu item-->
 											<!--begin::Menu item-->
 											<div class="menu-item px-3">
-												<a href="##" class="menu-link px-5">Payments</a>
+												<a href="../../demo29/dist/account/statements.html" class="menu-link px-5">Payments</a>
 											</div>
 											<!--end::Menu item-->
 											<!--begin::Menu item-->
 											<div class="menu-item px-3">
-												<a href="##" class="menu-link d-flex flex-stack px-5">Statements
+												<a href="../../demo29/dist/account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
 												<span class="ms-2 lh-0" data-bs-toggle="tooltip" title="View your statements">
 													<i class="ki-outline ki-information-5 fs-5"></i>
 												</span></a>
@@ -228,7 +1443,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="##" class="menu-link px-5">My Statements</a>
+										<a href="../../demo29/dist/account/statements.html" class="menu-link px-5">My Statements</a>
 									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu separator-->
@@ -280,7 +1495,57 @@ License: For each use you must have a valid license purchased only from above li
 									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
-									
+									<div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="0, 0">
+										<a href="#" class="menu-link px-5">
+											<span class="menu-title position-relative">Language
+											<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
+											<img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg" alt="" /></span></span>
+										</a>
+										<!--begin::Menu sub-->
+										<div class="menu-sub menu-sub-dropdown w-175px py-4">
+											<!--begin::Menu item-->
+											<div class="menu-item px-3">
+												<a href="../../demo29/dist/account/settings.html" class="menu-link d-flex px-5 active">
+												<span class="symbol symbol-20px me-4">
+													<img class="rounded-1" src="assets/media/flags/united-states.svg" alt="" />
+												</span>English</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-3">
+												<a href="../../demo29/dist/account/settings.html" class="menu-link d-flex px-5">
+												<span class="symbol symbol-20px me-4">
+													<img class="rounded-1" src="assets/media/flags/spain.svg" alt="" />
+												</span>Spanish</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-3">
+												<a href="../../demo29/dist/account/settings.html" class="menu-link d-flex px-5">
+												<span class="symbol symbol-20px me-4">
+													<img class="rounded-1" src="assets/media/flags/germany.svg" alt="" />
+												</span>German</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-3">
+												<a href="../../demo29/dist/account/settings.html" class="menu-link d-flex px-5">
+												<span class="symbol symbol-20px me-4">
+													<img class="rounded-1" src="assets/media/flags/japan.svg" alt="" />
+												</span>Japanese</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-3">
+												<a href="../../demo29/dist/account/settings.html" class="menu-link d-flex px-5">
+												<span class="symbol symbol-20px me-4">
+													<img class="rounded-1" src="assets/media/flags/france.svg" alt="" />
+												</span>French</a>
+											</div>
+											<!--end::Menu item-->
+										</div>
+										<!--end::Menu sub-->
+									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									{{--  <div class="menu-item px-5 my-1">
@@ -289,16 +1554,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a class="menu-link px-5" href="{{ route('logout') }}"
-											onclick="event.preventDefault();
-															document.getElementById('logout-form').submit();">
-												{{ __('Sign Out') }}
-											</a>
-
-											<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-												@csrf
-											</form>
-										</a>
+										<a href="#" class="menu-link px-5">Sign Out</a>
 									</div>
 									<!--end::Menu item-->
 								</div>
