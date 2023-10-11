@@ -313,10 +313,10 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="d-flex flex-column">
 								<!--begin::Sidebar secondary wrapper-->
 								<div class="d-flex flex-column pt-10 ps-11" id="kt_app_sidebar_secondary_header">
-									<!--begin::Action-->
-									<a href="../../demo29/dist/index.html" class="d-flex align-items-center custom-link fs-6 fw-semibold mb-5">
+									<!--begin::Action
+									 <a href="../../demo29/dist/index.html" class="d-flex align-items-center custom-link fs-6 fw-semibold mb-5">
 									<i class="ki-outline ki-black-left fs-2 me-3 text-white opacity-50"></i>Back to list</a>
-									<!--end::Action-->
+									end::Action-->
 									<span class="fs-2 fw-bolder text-white">
 										@auth
 											{{auth()->user()->name}}
@@ -341,7 +341,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<a style="text-decoration:none; text-underline:none" class="menu-link active" href="{{ route('product.index') }}">
 												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
+													<!--<span class="bullet bullet-dot"></span> -->
 												</span>
 												<span class="menu-title">My Products</span>
 											</a>
@@ -485,9 +485,9 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="d-flex align-items-center gap-2 gapl-lg-4">
 											<!--begin::Secondary button-->
 											<div class="m-0">
-												<!--begin::Menu-->
+												<!--begin::Menu
 												<a href="#" class="btn btn-flex btn-sm h-40px btn-light fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Decline</a>
-												<!--begin::Menu 1-->
+												begin::Menu 1-->
 												<div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_64b77c89eaae8">
 													<!--begin::Header-->
 													<div class="px-7 py-5">
@@ -566,9 +566,9 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Menu-->
 											</div>
 											<!--end::Secondary button-->
-											<!--begin::Primary button-->
+											<!--begin::Primary button
 											<a href="#" class="btn btn-flex btn-sm h-40px fw-bold btn-dark" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Complete</a>
-											<!--end::Primary button-->
+											end::Primary button-->
 										</div>
 										<!--end::Actions-->
 									</div>

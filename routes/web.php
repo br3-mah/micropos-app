@@ -21,6 +21,7 @@ Route::middleware(['web'])->group(function () {
     Route::resource('checkout', CheckoutController::class);
     
     Auth::routes(['register' => true]);
+    Auth::routes(['login' => false]);
     
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

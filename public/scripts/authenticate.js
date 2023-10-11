@@ -10,7 +10,9 @@ const isUser = document.getElementById('isUser');
 const theemail = document.getElementById('theemail');
 const thepassword = document.getElementById('thepassword');
 const userParams = getUrlParameter('user');
-
+if(!isAuthenticated){
+    loginLink.style.display = "block";
+}
 isUser.style.display = "none";
 
 if(isAuthenticated){
@@ -24,7 +26,6 @@ if(isAuthenticated){
         isUser.style.display = "none";
         loginLink.style.display = "block";
     } else {
-        loginLink.style.display = "none";
         isUser.style.display = "none";
     
         // Check parameters

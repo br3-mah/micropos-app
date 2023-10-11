@@ -15,7 +15,7 @@
                         <!--begin::Title-->
                         <h1 class="fw-semibold text-gray-800 text-center lh-lg">Quick form to
                         <br />
-                        <span class="fw-bolder">Bid a New Shipment</span></h1>
+                        <span class="fw-bolder">Bid a New Sale</span></h1>
                         <!--end::Title-->
                         <!--begin::Illustration-->
                         <div class="py-10 text-center">
@@ -31,7 +31,7 @@
                         <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_bidding" data-bs-toggle="modal">Start Now</a>
                         <!--end::Link-->
                         <!--begin::Link-->
-                        <a class="btn btn-sm btn-light" href="../../demo29/dist/apps/invoices/view/invoice-2.html">Quick Guide</a>
+                        <a class="btn btn-sm btn-light" href="#">Quick Guide</a>
                         <!--end::Link-->
                     </div>
                     <!--end::Links-->
@@ -82,7 +82,7 @@
                             <!--begin::Title-->
                             <div class="card-title d-flex flex-column">
                                 <!--begin::Amount-->
-                                <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">69,700</span>
+                                <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">0</span>
                                 <!--end::Amount-->
                                 <!--begin::Subtitle-->
                                 <span class="text-gray-400 pt-1 fw-semibold fs-6">Expected Earnings This Month</span>
@@ -114,7 +114,7 @@
                                         <div class="separator separator-dashed min-w-10px flex-grow-1 mx-2"></div>
                                         <!--end::Separator-->
                                         <!--begin::Stats-->
-                                        <div class="ms-auto fw-bolder text-gray-700 text-end">45%</div>
+                                        <div class="ms-auto fw-bolder text-gray-700 text-end">0%</div>
                                         <!--end::Stats-->
                                     </div>
                                     <!--end::Label-->
@@ -130,7 +130,7 @@
                                         <div class="separator separator-dashed min-w-10px flex-grow-1 mx-2"></div>
                                         <!--end::Separator-->
                                         <!--begin::Stats-->
-                                        <div class="ms-auto fw-bolder text-gray-700 text-end">21%</div>
+                                        <div class="ms-auto fw-bolder text-gray-700 text-end">0%</div>
                                         <!--end::Stats-->
                                     </div>
                                     <!--end::Label-->
@@ -146,7 +146,7 @@
                                         <div class="separator separator-dashed min-w-10px flex-grow-1 mx-2"></div>
                                         <!--end::Separator-->
                                         <!--begin::Stats-->
-                                        <div class="ms-auto fw-bolder text-gray-700 text-end">34%</div>
+                                        <div class="ms-auto fw-bolder text-gray-700 text-end">0%</div>
                                         <!--end::Stats-->
                                     </div>
                                     <!--end::Label-->
@@ -171,14 +171,14 @@
                                 <!--begin::Statistics-->
                                 <div class="d-flex align-items-center mb-2">
                                     <!--begin::Value-->
-                                    <span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">259,786</span>
+                                    <span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">0</span>
                                     <!--end::Value-->
                                     <!--begin::Label-->
                                     <!--end::Label-->
                                 </div>
                                 <!--end::Statistics-->
                                 <!--begin::Description-->
-                                <span class="fs-6 fw-semibold text-gray-400">Total Shipments</span>
+                                <span class="fs-6 fw-semibold text-gray-400">Total Deliveries</span>
                                 <!--end::Description-->
                             </div>
                             <!--end::Statistics-->
@@ -196,7 +196,7 @@
                             <!--begin::Title-->
                             <div class="card-title d-flex flex-column">
                                 <!--begin::Amount-->
-                                <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">604</span>
+                                <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">0</span>
                                 <!--end::Amount-->
                                 <!--begin::Subtitle-->
                                 <span class="text-gray-400 pt-1 fw-semibold fs-6">New Customers This Month</span>
@@ -257,8 +257,8 @@
                 <div class="card-header pt-7">
                     <!--begin::Title-->
                     <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold text-gray-800">Shipment History</span>
-                        <span class="text-gray-400 mt-1 fw-semibold fs-6">59 Active Shipments</span>
+                        <span class="card-label fw-bold text-gray-800">Delivery History</span>
+                        <span class="text-gray-400 mt-1 fw-semibold fs-6">0 Active Deliveries</span>
                     </h3>
                     <!--end::Title-->
                     <!--begin::Toolbar-->
@@ -305,7 +305,7 @@
                             <!--begin::Link-->
                             <a class="nav-link d-flex justify-content-center w-100 border-0 h-100" data-bs-toggle="pill" href="#kt_list_widget_10_tab_3">
                                 <!--begin::Subtitle-->
-                                <span class="nav-text text-gray-800 fw-bold fs-6 mb-3">Shipping</span>
+                                <span class="nav-text text-gray-800 fw-bold fs-6 mb-3">Delivering</span>
                                 <!--end::Subtitle-->
                                 <!--begin::Bullet-->
                                 <span class="bullet-custom position-absolute z-index-2 bottom-0 w-100 h-4px bg-primary rounded"></span>
@@ -415,7 +415,7 @@
                                             <a href="#" class="text-gray-400 fs-6 fw-semibold">Truck Freight</a>
                                             <span class="text-gray-800 fw-bold d-block fs-4">#0066-954784</span>
                                         </div>
-                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Shipping</span>
+                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Delivering</span>
                                     </div>
                                     <!--end::Section-->
                                 </div>
@@ -942,7 +942,7 @@
                                             <a href="#" class="text-gray-400 fs-6 fw-semibold">Ship Freight</a>
                                             <span class="text-gray-800 fw-bold d-block fs-4">#5635-342808</span>
                                         </div>
-                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Shipping</span>
+                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Delivering</span>
                                     </div>
                                     <!--end::Section-->
                                 </div>
@@ -1017,7 +1017,7 @@
                                             <a href="#" class="text-gray-400 fs-6 fw-semibold">Plane Freight</a>
                                             <span class="text-gray-800 fw-bold d-block fs-4">#5635-342808</span>
                                         </div>
-                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Shipping</span>
+                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Delivering</span>
                                     </div>
                                     <!--end::Section-->
                                 </div>
@@ -1092,7 +1092,7 @@
                                             <a href="#" class="text-gray-400 fs-6 fw-semibold">Ship Freight</a>
                                             <span class="text-gray-800 fw-bold d-block fs-4">#5635-342808</span>
                                         </div>
-                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Shipping</span>
+                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Delivering</span>
                                     </div>
                                     <!--end::Section-->
                                 </div>
@@ -1167,7 +1167,7 @@
                                             <a href="#" class="text-gray-400 fs-6 fw-semibold">Truck Freight</a>
                                             <span class="text-gray-800 fw-bold d-block fs-4">#0066-954784</span>
                                         </div>
-                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Shipping</span>
+                                        <span class="badge badge-lg badge-light-primary fw-bold my-2">Delivering</span>
                                     </div>
                                     <!--end::Section-->
                                 </div>
@@ -1307,7 +1307,7 @@
                                         <!--begin::Info-->
                                         <div class="d-flex align-items-center">
                                             <!--begin::Number-->
-                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">9,763</span>
+                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">0</span>
                                             <!--end::Number-->
                                             <!--begin::Label-->
                                             <div class="m-0">
