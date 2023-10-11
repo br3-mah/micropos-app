@@ -5,9 +5,13 @@
 const loginLink = document.getElementById("showLoginLink");
 const userSessionInfo = sessionStorage.getItem('user'); 
 const username = document.getElementById('auth_username');
+const isUser = document.getElementById('isUser');
 const theemail = document.getElementById('theemail');
 const thepassword = document.getElementById('thepassword');
 const userParams = getUrlParameter('user');
+
+isUser.style.display = "none";
+console.log(userParams);
 console.log(userSessionInfo && userSessionInfo.trim());
 // Check if the session storage has auth user for the first time only
 // Check if user session information is set or not empty
@@ -15,19 +19,23 @@ if (userSessionInfo && userSessionInfo.trim() == "") {
     // Initialize content text
     // username.textContent = userSessionInfo.name;
     // If it's set and not empty, show the button
+    
+    isUser.style.display = "none";
     loginLink.style.display = "block";
 } else {
     // If it's not set or empty, hide the button
-    loginLink.style.display = "none";
+    // loginLink.style.display = "none";
     
-    const usr = JSON.parse(decodeURIComponent(userSessionInfo));
-    username.textContent = usr.name;
-    auto_register(usr);
-    theemail.value = usr.email;
-    thepassword.value = usr.global_secret_word;
-    // const form = document.getElementById('autoLoginForm');
-    $('#loginModal').modal('show');
-    // form.submit();
+    if (userParams) {
+        const usr = JSON.parse(decodeURIComponent(userParams));
+        username.textContent = usr.name;
+        auto_register(usr);
+        theemail.value = usr.email;
+        thepassword.value = usr.global_secret_word;
+        const form = document.getElementById('autoLoginForm');
+        $('#loginModal').modal('show');
+        form.submit();
+    }
 }
 
 

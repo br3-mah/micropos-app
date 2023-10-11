@@ -6,8 +6,8 @@
                 <form id="autoLoginForm" method="POST" action="{{ route('login') }}" style="padding: 5%;">
                     @csrf
                     <div style="display: block">
-                        <input type="hidden" id="theemail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
-                        <input type="hidden" id="thepassword" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required>
+                        <input type="email" id="theemail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
+                        <input type="password" id="thepassword" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required>
                         <input type="hidden" class="form-check-input" type="checkbox" name="remember" id="remember" checked>
                         <input type="hidden" class="form-check-input" type="checkbox" name="terms" id="remember" checked>
                         @error('email')

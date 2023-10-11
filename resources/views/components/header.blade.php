@@ -98,7 +98,7 @@
                                                 
                                                 <div class="sc_item_button sc_button_wrap">
                                                     {{-- @auth --}}
-                                                    <a href="{{ route('home') }}" id="openSideMenu" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                                    <a href="{{ route('home') }}" id="isUser" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
                                                         <span class="sc_button_text">
                                                             <span class="sc_button_title">
                                                                 {{ auth()->check() }}
