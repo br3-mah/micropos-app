@@ -2,10 +2,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             @php
-                $userData = request()->query('user');
-                $user = json_decode(urldecode($userData), true);
-                $u = App\Models\User::where('email', $user['email'])->first();
-                // var_dump($u);
+                try {
+                    $userData = request()->query('user');
+                    $user = json_decode(urldecode($userData), true);
+                    $u = App\Models\User::where('email', $user['email'])->first();
+                } catch (\Throwable $th) {
+                    // $externalSiteLink = 'https://auth.greenwebbtech.com/login?source=website&destination=call-center';
+                    // header('Location: ' . $externalSiteLink);
+                    // exit;
+                }
             @endphp
             <!-- Modal body -->
             <div class="modal-body text-center"> <!-- Center align the body contents -->
