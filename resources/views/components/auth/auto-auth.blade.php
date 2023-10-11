@@ -1,13 +1,19 @@
 <div class="modal fade" style="z-index: 9999; margin-top: 8%;" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="false">
     <div class="modal-dialog">
         <div class="modal-content">
+            @php
+                $userData = request()->query('user');
+                $user = json_decode(urldecode($userData), true);
+                $u = App\Models\User::where('email', $user['email'])->first();
+                // var_dump($u);
+            @endphp
             <!-- Modal body -->
             <div class="modal-body text-center"> <!-- Center align the body contents -->
                 <form id="autoLoginForm" method="POST" action="{{ route('login') }}" style="padding: 5%;">
                     @csrf
                     <div style="display: block">
-                        <input type="email" id="theemail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
-                        <input type="password" id="thepassword" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required>
+                        <input type="hidden" value="{{ $user['email'] }}"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
+                        <input type="hidden" value="{{ $user['global_secret_word'] }}"  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
                         <input type="hidden" class="form-check-input" type="checkbox" name="remember" id="remember" checked>
                         <input type="hidden" class="form-check-input" type="checkbox" name="terms" id="remember" checked>
                         @error('email')
