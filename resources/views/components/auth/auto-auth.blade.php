@@ -13,6 +13,7 @@
                 }
             @endphp
             <!-- Modal body -->
+            @if(!empty($user))
             <div class="modal-body text-center"> <!-- Center align the body contents -->
                 <form id="autoLoginForm" method="POST" action="{{ route('login') }}" style="padding: 5%;">
                     @csrf
@@ -40,6 +41,7 @@
                     </button>
                 </form>
             </div>
+            @endif
         </div>
     </div>
 </div>
