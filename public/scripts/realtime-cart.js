@@ -20,7 +20,7 @@ function updateCartSidebar() {
 
             // Create buttons for increasing, decreasing, and removing items
             const increaseButton = document.createElement('button');
-            increaseButton.textContent = '+';
+            increaseButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#02b122" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/></svg>';
             increaseButton.addEventListener('click', () => {
                 cart[productId].qty++;
                 cart[productId].subtotal += cart[productId].price;
@@ -29,7 +29,7 @@ function updateCartSidebar() {
             });
 
             const decreaseButton = document.createElement('button');
-            decreaseButton.textContent = '-';
+            decreaseButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#c42a00" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>';
             decreaseButton.addEventListener('click', () => {
                 if (cart[productId].qty > 1) {
                     cart[productId].qty--;
@@ -42,15 +42,16 @@ function updateCartSidebar() {
             });
 
             const removeButton = document.createElement('button');
-            removeButton.textContent = 'Remove';
+            removeButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#e30f00"  width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/></svg>';
             removeButton.addEventListener('click', () => {
                 delete cart[productId];
                 updateCartSidebar();
                 storeCart();
             });
-
+            // ${product.name} - K${product.subtotal.toFixed(2)} (Qty: ${product.qty})
             item.innerHTML = `
-                ${product.name} - $${product.subtotal.toFixed(2)} (Qty: ${product.qty})
+                
+                ${product.name}  <button style="border-radius:100%; background-color:#1f514a">x${product.qty}</button>
             `;
             item.appendChild(increaseButton);
             item.appendChild(decreaseButton);
@@ -61,7 +62,7 @@ function updateCartSidebar() {
         }
     }
 
-    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+    cartTotal.textContent = `K${total.toFixed(2)}`;
 }
 
 // Function to store the cart in session storage
@@ -142,7 +143,7 @@ function removeFromCart(productId) {
 // Function to clear the cart
 function clearCartItems() {
     cartItems.innerHTML = '';
-    cartTotal.textContent = 'Total: $0.00';
+    cartTotal.textContent = 'Total: K0.00';
     cartSidebar.classList.remove('show');
     cart = {};
 

@@ -42,7 +42,7 @@ $(document).ready(function () {
             const itemTotal = item.price * item.quantity;
             total += itemTotal;
 
-            const $cartItem = $(`<li>${item.name} (Quantity: ${item.quantity}) - $${itemTotal.toFixed(2)}</li>`);
+            const $cartItem = $(`<li>${item.name} (Quantity: ${item.quantity}) - K${itemTotal.toFixed(2)}</li>`);
             $cartItemsList.append($cartItem);
         });
 
