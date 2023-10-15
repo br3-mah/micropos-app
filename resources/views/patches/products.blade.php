@@ -39,7 +39,7 @@
                                                                                         <a href="#">
                                                                                             {{-- <a href="{{ route('product.show', $product->id) }}"> --}}
                                                                                                
-                                                                                                <img width="430" height="430" src="{{asset("storage/" . $product->image)}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $product->name }}" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='https://www.rallis.com/Upload/Images/thumbnail/Product-inside.png';" />
+                                                                                                <img width="430" height="430" src="{{asset("storage/" . $product->image)}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $product->name }}" decoding="async" fetchpriority="high" />
                                                                                             </a>
                                                                                         <div class="mask">
                                                                                         </div>
