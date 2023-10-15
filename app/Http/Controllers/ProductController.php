@@ -64,7 +64,7 @@ class ProductController extends Controller
     {
         try {
             $product = $this->productRepository->destroy($product);
-            return redirect()->back()->with('success', 'Product deleted successfully');
+            return redirect()->route('product.index')->with('success', 'Product deleted successfully');
         } catch (\Throwable $th) {
             dd($th);
         }

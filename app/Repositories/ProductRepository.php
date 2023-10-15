@@ -60,7 +60,7 @@ class ProductRepository
         $product->delete();
 
         // Redirect to the product list page or any other appropriate page.
-        return redirect()->route('products.index')->with('success', 'Product deleted successfully');
+        return true;
     }
 
     
