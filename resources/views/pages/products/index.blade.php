@@ -68,7 +68,7 @@
                             <div class="d-flex align-items-center">
                                 <!--begin::Thumbnail-->
                                 <a href="#" class="symbol symbol-50px">
-                                    <span class="symbol-label" style="background-image:url('{{asset("storage/" . $product->image)}}');"></span>
+                                    <span class="symbol-label" style="background-image:url('{{asset("public/storage/" . $product->image)}}');"></span>
                                 </a>
                                 <!--end::Thumbnail-->
                                 <div class="ms-5">
