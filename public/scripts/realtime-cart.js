@@ -92,30 +92,31 @@ function addToCart(product) {
 
     // alert(isAuthenticated);
     if (isAuthenticated) {
+        sessionStorage.setItem('cart', JSON.stringify(cart));
         // User is authenticated, make an API request to addToCart
-        $.ajax({
-            url: 'api/add-cart', // Replace with the actual API endpoint
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                product_id: product.id,
-                cart_qty: cart[product.id].qty,
-                email: current_user.email,
-                // Include additional data as needed
-            },
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'), // Include CSRF token header
-                // 'Authorization': 'Bearer ' + yourAuthToken, // Include your authentication token here
-            },
-            success: function(response) {
-                // Handle the success response from the server
-                console.log('Item added to cart:', response);
-            },
-            error: function(error) {
-                // Handle any errors that occur during the request
-                console.error('Error adding item to cart:', error);
-            }
-        });
+        // $.ajax({
+        //     url: 'api/add-cart', // Replace with the actual API endpoint
+        //     type: 'POST',
+        //     dataType: 'json',
+        //     data: {
+        //         product_id: product.id,
+        //         cart_qty: cart[product.id].qty,
+        //         email: current_user.email,
+        //         // Include additional data as needed
+        //     },
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'), // Include CSRF token header
+        //         // 'Authorization': 'Bearer ' + yourAuthToken, // Include your authentication token here
+        //     },
+        //     success: function(response) {
+        //         // Handle the success response from the server
+        //         console.log('Item added to cart:', response);
+        //     },
+        //     error: function(error) {
+        //         // Handle any errors that occur during the request
+        //         console.error('Error adding item to cart:', error);
+        //     }
+        // });
     } else {
         // User is not authenticated, store the cart in session storage
         sessionStorage.setItem('cart', JSON.stringify(cart));

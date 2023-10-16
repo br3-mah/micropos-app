@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
     Route::resource('product', ProductController::class);
     Route::resource('checkout', CheckoutController::class);
+    Route::get('detail/{id}', [ProductDetailController::class, 'index'])->name('detail.index');
     
     Auth::routes(['register' => true]);
     Auth::routes(['login' => false]);

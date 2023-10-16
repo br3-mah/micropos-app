@@ -36,11 +36,9 @@
                                                                             <li class="product type-product post-{{ $product->id }} status-publish first instock product_cat-berries product_cat-fruits product_cat-organic product_tag-crop product_tag-organic product_tag-season product_tag-summer has-post-thumbnail shipping-taxable purchasable product-type-simple product_style_info_2">
                                                                                 <div class="post_item post_layout_thumbs">
                                                                                     <div class="post_featured hover_shop">
-                                                                                        <a href="#">
-                                                                                            {{-- <a href="{{ route('product.show', $product->id) }}"> --}}
-                                                                                               
-                                                                                                <img width="430" height="430" src="{{asset("public/storage/" . $product->image)}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $product->name }}" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='https://www.rallis.com/Upload/Images/thumbnail/Product-inside.png';" />
-                                                                                            </a>
+                                                                                        <a href="{{ route('detail.index', $product->id) }}">
+                                                                                            <img width="430" height="430" src="{{asset("public/storage/" . $product->image)}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $product->name }}" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='https://www.rallis.com/Upload/Images/thumbnail/Product-inside.png';" />
+                                                                                        </a>
                                                                                         <div class="mask">
                                                                                         </div>
                                                                                         <div class="icons">
@@ -67,13 +65,13 @@
                                                                                         <div class="post_data_inner">
                                                                                             <div class="post_header entry-header">
                                                                                                 <div class="post_tags product_tags">
-                                                                                                    <a href="product-tag/crop.html" rel="tag">{{ $product->type }}</a>,
+                                                                                                    <a href="#" rel="tag">{{ $product->type }}</a>,
                                                                                                     {{-- <a href="product-tag/organic.html" rel="tag">Marketplace</a>,
                                                                                                     <a href="product-tag/season.html" rel="tag">season</a>,
                                                                                                     <a href="product-tag/summer.html" rel="tag">summer</a> --}}
                                                                                                 </div>
                                                                                                 <h2 class="woocommerce-loop-product__title">
-                                                                                                    <a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
+                                                                                                    <a href="#">{{ $product->name }}</a>
                                                                                                 </h2>
                                                                                                 <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                                                                                     <span style="width:100%">Rated
