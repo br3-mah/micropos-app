@@ -114,10 +114,12 @@ document.getElementById('place_order').addEventListener('click', function (e) {
     e.preventDefault(); // Prevent the default form submission
     // Retrieve cartData from session storage
     var cartData = sessionStorage.getItem('cart');
-
+    
+    
     // Get a reference to the form
     var form = document.getElementById('checkout-form');
-
+    const process_loader = document.getElementById('order_processing');
+    process_loader.style.display = 'block';
     // Create a FormData object from the form
     var formData = new FormData(form);
 
@@ -140,6 +142,12 @@ document.getElementById('place_order').addEventListener('click', function (e) {
             // Redirect to the Laravel route
             window.location.href = 'order/'+id;
         }
+    };
+
+    xhr.onerror = function () {
+        // Handle the case where the request encounters an error
+        process_loader.style.display = 'none';
+        alert('Failed. Please check your network');
     };
 
     xhr.send(formData);

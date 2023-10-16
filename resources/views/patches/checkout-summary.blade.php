@@ -337,11 +337,13 @@
                     <div class="woocommerce-privacy-policy-text"></div>
                 </div>
                 @auth
-                    <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
+                    <button type="button" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
+                       <img style="display: none" id="order_processing" src="{{asset('/public/img/loader.gif')}}"> Place order
+                    </button>
                 @else  
-                <button style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
-                Buy Now
-                </button> 
+                    <button style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
+                        <img style="display: none" id="order_processing" src="{{asset('/public/img/loader.gif')}}"> Buy Now
+                    </button> 
                 {{-- <button  style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
                     <a style="color:white" href="https://auth.greenwebbtech.com/login?source=website&destination=marketplace" >Place order</a>
                 </button> --}}
