@@ -2146,8 +2146,6 @@ Cultivating Agriculture that Works for the Future
                                         <span class="product_id">Product ID: <span>{{ $product->id }}</span></span>
                                     </div>
                                 </div>
-
-
                                 <div class="woocommerce-tabs wc-tabs-wrapper">
                                     <ul class="tabs wc-tabs" role="tablist">
                                         <li class="description_tab" id="tab-title-description" role="tab"
