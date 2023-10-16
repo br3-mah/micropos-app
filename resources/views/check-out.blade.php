@@ -2768,14 +2768,23 @@ Cultivating Agriculture that Works for the Future
     </script>
     <!-- Add this script tag to your HTML file to include jQuery from Google CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // Define a JavaScript variable to indicate if the user is authenticated
-        var isAuthenticated = true;
-        // var isAuthenticated = @json(auth()->check());
-    </script>
+        // var isAuthenticated = true;
+        var isAuthenticated = @json(auth()->check());
+        var current_user = @json(auth()->user());
+        @verbatim
+            var loginRoute = "{{ route('login') }}"; // Define the login route URL using double quotes    
+        @endverbatim
+        </script>
+    @include('components.auth.auto-auth')
+    <script src="{{ asset('public/scripts/authenticate.js') }}"></script>
     <script src="{{ asset('public/scripts/routes.js') }}"></script>
     <script src="{{ asset('public/scripts/checkout.js') }}"></script>
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
+    <script src="{{ asset('public/scripts/main.js') }}"></script>
+    <script src="{{ asset('public/scripts/checkout.js') }}"></script>
 </body>
 
 </html> 
