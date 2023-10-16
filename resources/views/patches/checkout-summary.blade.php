@@ -26,7 +26,8 @@
         </div>
     </div>
 </div>
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="" enctype="multipart/form-data" novalidate="novalidate" data-inited-validation="1">
+<form id="checkout-form" action="{{ route('checkout.store') }}" name="checkout" method="post" class="checkout woocommerce-checkout" enctype="multipart/form-data" novalidate="novalidate" data-inited-validation="1">
+    @csrf
     <div id="customer_details" style="width: 100%; padding-bottom: 3%; padding-left:8%; padding-right:8%;">
         <div class="col-1">
             <div class="woocommerce-billing-fields">
@@ -138,105 +139,105 @@
         </div>
 
         <div class="col-2">
-    <div class="woocommerce-shipping-fields">
-        {{-- <h3 id="ship-to-different-address">
-            <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                <input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox" name="ship_to_different_address" value="1"> <span>Ship to a different address?</span>
-            </label>
-        </h3> --}}
+            <div class="woocommerce-shipping-fields">
+                {{-- <h3 id="ship-to-different-address">
+                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                        <input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox" name="ship_to_different_address" value="1"> <span>Ship to a different address?</span>
+                    </label>
+                </h3> --}}
 
-        <div class="shipping_address" style="display: none;">
-            <div class="woocommerce-shipping-fields__field-wrapper">
+                <div class="shipping_address" style="display: none;">
+                    <div class="woocommerce-shipping-fields__field-wrapper">
 
-                <!-- First Name -->
-                <div class="form-row form-row-first validate-required" id="shipping_first_name_field" data-priority="10">
-                    <label for="shipping_first_name">First name&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_first_name" id="shipping_first_name" placeholder="" value="" autocomplete="given-name">
-                    </span>
+                        <!-- First Name -->
+                        <div class="form-row form-row-first validate-required" id="shipping_first_name_field" data-priority="10">
+                            <label for="shipping_first_name">First name&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_first_name" id="shipping_first_name" placeholder="" value="" autocomplete="given-name">
+                            </span>
+                        </div>
+                        
+                        <!-- Last Name -->
+                        <div class="form-row form-row-last validate-required" id="shipping_last_name_field" data-priority="20">
+                            <label for="shipping_last_name">Last name&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_last_name" id="shipping_last_name" placeholder="" value="" autocomplete="family-name">
+                            </span>
+                        </div>
+
+                        <!-- Company Name -->
+                        <div class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
+                            <label for="shipping_company">Company name&nbsp;<span class="optional">(optional)</span></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_company" id="shipping_company" placeholder="" value="" autocomplete="organization">
+                            </span>
+                        </div>
+
+                        <!-- Country / Region -->
+                        <div class="form-row form-row-wide address-field update_totals_on_change validate-required" id="shipping_country_field" data-priority="40">
+                            <label for="shipping_country">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <select name="shipping_country" id="shipping_country" class="country_to_state country_select select2-hidden-accessible filled fill_inited" autocomplete="country" data-placeholder="Select a country / region…">
+                                    @include('components.options.countries')
+                                </select>
+                            </span>
+                        </div>
+
+                        <!-- Street Address -->
+                        <div class="form-row form-row-wide address-field validate-required" id="shipping_address_1_field" data-priority="50">
+                            <label for="shipping_address_1">Street address&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_address_1" id="shipping_address_1" placeholder="House number and street name" value="" autocomplete="address-line1">
+                            </span>
+                        </div>
+
+                        <!-- Apartment, suite, unit, etc. -->
+                        <div class="form-row form-row-wide address-field" id="shipping_address_2_field" data-priority="60">
+                            <label for="shipping_address_2">Apartment, suite, unit, etc.&nbsp;<span class="optional">(optional)</span></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_address_2" id="shipping_address_2" placeholder="Apartment, suite, unit, etc. (optional)" value="" autocomplete="address-line2">
+                            </span>
+                        </div>
+
+                        <!-- Town / City -->
+                        <div class="form-row form-row-wide address-field validate-required" id="shipping_city_field" data-priority="70">
+                            <label for="shipping_city">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_city" id="shipping_city" placeholder="" value="" autocomplete="address-level2">
+                            </span>
+                        </div>
+
+                        <!-- State -->
+                        <div class="form-row form-row-wide address-field validate-required validate-state" id="shipping_state_field" data-priority="80">
+                            <label for="shipping_state">State&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <select name="shipping_state" id="shipping_state" class="state_select select2-hidden-accessible filled fill_inited" autocomplete="address-level1">
+                                    <!-- Your state options here -->
+                                </select>
+                            </span>
+                        </div>
+
+                        <!-- ZIP Code -->
+                        <div class="form-row form-row-wide address-field validate-required validate-postcode" id="shipping_postcode_field" data-priority="90">
+                            <label for="shipping_postcode">ZIP Code&nbsp;<abbr class="required" title="required">*</abbr></label>
+                            <span class="woocommerce-input-wrapper">
+                                <input type="text" class="input-text fill_inited" name="shipping_postcode" id="shipping_postcode" placeholder="" value="" autocomplete="postal-code">
+                            </span>
+                        </div>
+
+                    </div>
                 </div>
-                
-                <!-- Last Name -->
-                <div class="form-row form-row-last validate-required" id="shipping_last_name_field" data-priority="20">
-                    <label for="shipping_last_name">Last name&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_last_name" id="shipping_last_name" placeholder="" value="" autocomplete="family-name">
-                    </span>
-                </div>
+            </div>
 
-                <!-- Company Name -->
-                <div class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
-                    <label for="shipping_company">Company name&nbsp;<span class="optional">(optional)</span></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_company" id="shipping_company" placeholder="" value="" autocomplete="organization">
-                    </span>
+            <!-- Additional Fields -->
+            <div class="woocommerce-additional-fields">
+                <div class="woocommerce-additional-fields__field-wrapper">
+                    <label for="order_comments">Order notes&nbsp;<span class="optional">(optional)</span></label>
+                    <br>
+                    <textarea name="order_comments" class="input-text fill_inited" id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="4" cols="60"></textarea>
                 </div>
-
-                <!-- Country / Region -->
-                <div class="form-row form-row-wide address-field update_totals_on_change validate-required" id="shipping_country_field" data-priority="40">
-                    <label for="shipping_country">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <select name="shipping_country" id="shipping_country" class="country_to_state country_select select2-hidden-accessible filled fill_inited" autocomplete="country" data-placeholder="Select a country / region…">
-                            @include('components.options.countries')
-                        </select>
-                    </span>
-                </div>
-
-                <!-- Street Address -->
-                <div class="form-row form-row-wide address-field validate-required" id="shipping_address_1_field" data-priority="50">
-                    <label for="shipping_address_1">Street address&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_address_1" id="shipping_address_1" placeholder="House number and street name" value="" autocomplete="address-line1">
-                    </span>
-                </div>
-
-                <!-- Apartment, suite, unit, etc. -->
-                <div class="form-row form-row-wide address-field" id="shipping_address_2_field" data-priority="60">
-                    <label for="shipping_address_2">Apartment, suite, unit, etc.&nbsp;<span class="optional">(optional)</span></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_address_2" id="shipping_address_2" placeholder="Apartment, suite, unit, etc. (optional)" value="" autocomplete="address-line2">
-                    </span>
-                </div>
-
-                <!-- Town / City -->
-                <div class="form-row form-row-wide address-field validate-required" id="shipping_city_field" data-priority="70">
-                    <label for="shipping_city">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_city" id="shipping_city" placeholder="" value="" autocomplete="address-level2">
-                    </span>
-                </div>
-
-                <!-- State -->
-                <div class="form-row form-row-wide address-field validate-required validate-state" id="shipping_state_field" data-priority="80">
-                    <label for="shipping_state">State&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <select name="shipping_state" id="shipping_state" class="state_select select2-hidden-accessible filled fill_inited" autocomplete="address-level1">
-                            <!-- Your state options here -->
-                        </select>
-                    </span>
-                </div>
-
-                <!-- ZIP Code -->
-                <div class="form-row form-row-wide address-field validate-required validate-postcode" id="shipping_postcode_field" data-priority="90">
-                    <label for="shipping_postcode">ZIP Code&nbsp;<abbr class="required" title="required">*</abbr></label>
-                    <span class="woocommerce-input-wrapper">
-                        <input type="text" class="input-text fill_inited" name="shipping_postcode" id="shipping_postcode" placeholder="" value="" autocomplete="postal-code">
-                    </span>
-                </div>
-
             </div>
         </div>
-    </div>
-
-    <!-- Additional Fields -->
-    <div class="woocommerce-additional-fields">
-        <div class="woocommerce-additional-fields__field-wrapper">
-            <label for="order_comments">Order notes&nbsp;<span class="optional">(optional)</span></label>
-            <br>
-            <textarea name="order_comments" class="input-text fill_inited" id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="4" cols="60"></textarea>
-        </div>
-    </div>
-</div>
 
         <button type="button" style="float: right" class="button alt next-stage">Next</button>
 
@@ -338,9 +339,12 @@
                 @auth
                     <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
                 @else  
-                    <button  style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
-                        <a style="color:white" href="https://auth.greenwebbtech.com/login?source=website&destination=marketplace" >Place order</a>
-                    </button>
+                <button style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
+                Buy Now
+                </button> 
+                {{-- <button  style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
+                    <a style="color:white" href="https://auth.greenwebbtech.com/login?source=website&destination=marketplace" >Place order</a>
+                </button> --}}
                 @endauth
                 <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="d162cd3d41"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">
             </div>

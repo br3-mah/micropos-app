@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\WelcomeController;
@@ -20,6 +21,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
     Route::resource('product', ProductController::class);
     Route::resource('checkout', CheckoutController::class);
+    Route::get('order/{id}', [OrderController::class, 'summary'])->name('order.summary');
     Route::get('detail/{id}', [ProductDetailController::class, 'index'])->name('detail.index');
     
     Auth::routes(['register' => true]);

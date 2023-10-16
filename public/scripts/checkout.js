@@ -57,13 +57,17 @@ function displayCartItems() {
             productNameCell.innerHTML = `${product.name} <strong class="product-quantity">×&nbsp;${product.qty}</strong>`;
             
             // Product total
+            // alert(product.subtotal);
             const productTotalCell = document.createElement('td');
             productTotalCell.classList.add('product-total');
-            productTotalCell.innerHTML = `
-                <span class="woocommerce-Price-amount amount">
-                    <bdi><span class="woocommerce-Price-currencySymbol">K</span>${product.subtotal.toFixed(2)}</bdi>
-                </span>
-            `;
+
+            if (product.subtotal !== null) {
+                productTotalCell.innerHTML = `
+                    <span class="woocommerce-Price-amount amount">
+                        <bdi><span class="woocommerce-Price-currencySymbol">K</span>${product.subtotal.toFixed(2)}</bdi>
+                    </span>
+                `;
+            }
 
             cartRow.appendChild(productNameCell);
             cartRow.appendChild(productTotalCell);
@@ -102,4 +106,41 @@ $('.prev-stage').on('click', async () => {
     $('#order_review').hide();
     // Add the "active" class to its classList
     order_review.classList.remove("active");
+});
+
+
+// Add an event listener to a button or trigger that will submit the form
+document.getElementById('place_order').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+    // Retrieve cartData from session storage
+    var cartData = sessionStorage.getItem('cart');
+
+    // Get a reference to the form
+    var form = document.getElementById('checkout-form');
+
+    // Create a FormData object from the form
+    var formData = new FormData(form);
+
+    // Append the cartData to the FormData object
+    formData.append('cartData', cartData);
+
+    // Create an XMLHttpRequest or use the fetch API to send the form data
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', form.action, true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Handle the response from the server if needed
+            // console.log(xhr.response);
+            var response = JSON.parse(xhr.responseText);
+
+            // Now you can work with the parsed JSON array
+            var id = response.data.id;
+          
+            // Redirect to the Laravel route
+            window.location.href = 'order/'+id;
+        }
+    };
+
+    xhr.send(formData);
 });

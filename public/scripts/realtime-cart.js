@@ -74,6 +74,7 @@ function storeCart() {
 function addToCart(product) {
     if (!cart[product.id]) {
         cart[product.id] = {
+            product_id: product.id,
             name: product.name,
             price: product.price,
             qty: 1,
