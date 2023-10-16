@@ -2784,7 +2784,6 @@ Cultivating Agriculture that Works for the Future
     <script src="{{ asset('public/scripts/checkout.js') }}"></script>
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
     <script src="{{ asset('public/scripts/main.js') }}"></script>
-    <script src="{{ asset('public/scripts/checkout.js') }}"></script>
 </body>
 
 </html> 
