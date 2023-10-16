@@ -87,7 +87,7 @@
     <ul id="cart-items" class="cart-items" style="font-weight: bold; font-size:14px">
         <!-- Cart items will be dynamically added here -->
     </ul>
-    <button id="clear-cart" class="clear-cart">Clear Cart</button>
+    <button id="clear-cart" style="color:#81351e" class="clear-cart">Clear Cart</button>
     
     <div class="total-section">
         <h5>Total</h5>
