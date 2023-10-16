@@ -2059,7 +2059,7 @@ Cultivating Agriculture that Works for the Future
                                                     sizes="(max-width: 600px) 100vw, 600px"></a>
                                         </div>
                                         
-                                        {{-- <div data-thumb="{{asset("public/storage/" . $product->image)}}"
+                                        <div data-thumb="{{asset("public/storage/" . $product->image)}}"
                                             data-thumb-alt="" class="woocommerce-product-gallery__image"><a
                                                 href="{{asset("public/storage/" . $product->image)}}"><img
                                                     width="600" height="660"
@@ -2085,7 +2085,7 @@ Cultivating Agriculture that Works for the Future
                                                     data-large_image_width="1200" data-large_image_height="1320"
                                                     loading="lazy"
                                                     srcset="{{asset("public/storage/" . $product->image)}} 1200w"
-                                                    sizes="(max-width: 600px) 100vw, 600px"></a></div> --}}
+                                                    sizes="(max-width: 600px) 100vw, 600px"></a></div>
                                     </figure>
                                 </div>
 
@@ -2101,7 +2101,7 @@ Cultivating Agriculture that Works for the Future
                                     </div>
 
 
-                                    <form class="cart" action="https://agricola.axiomthemes.com/product/cauliflower/"
+                                    <form class="cart" action="#"
                                         method="post" enctype="multipart/form-data">
 
                                         <div class="quantity">
@@ -2140,9 +2140,9 @@ Cultivating Agriculture that Works for the Future
 
                                         <span class="posted_in">Category: <a href="#"
                                                 rel="tag">Marketplace</a></span>
-                                        <span class="tagged_as">Tags: <a href="crop.html" rel="tag">crop</a>, <a
-                                                href="farm.html" rel="tag">farm</a>, <a href="food.html"
-                                                rel="tag">food</a>, <a href="healthy.html" rel="tag">healthy</a></span>
+                                        <span class="tagged_as">Tags: <a href="#" rel="tag">crop</a>, <a
+                                                href="farm.html" rel="tag">farm</a>, <a href="#"
+                                                rel="tag">food</a>, <a href="#" rel="tag">farming</a></span>
                                         <span class="product_id">Product ID: <span>{{ $product->id }}</span></span>
                                     </div>
                                 </div>
@@ -2166,12 +2166,9 @@ Cultivating Agriculture that Works for the Future
 
                                         <h2>Description</h2>
 
-                                        <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis nostrud. Wiusmod tempor incididunt ut
-                                            labore et dolore magna aliqua. Ut enim ad minim.</p>
-                                        <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                                            aspernatur aut odit aut fugit, sed. Beatae vitae dicta. Adipiscing elit, sed
-                                            do eiusmod tempor incididunt.</p>
+                                        <p>
+                                            {{ $product->description ?? 'No Description on this item' }}
+                                        </p>
                                     </div>
                                     <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
                                         id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
@@ -2187,7 +2184,7 @@ Cultivating Agriculture that Works for the Future
                                                 <div id="review_form">
                                                     <div id="respond" class="comment-respond">
                                                         <span id="reply-title" class="comment-reply-title">Be the first
-                                                            to review &ldquo;Cauliflower&rdquo; <small><a rel="nofollow"
+                                                            to review &ldquo;{{ $product->name }}&rdquo; <small><a rel="nofollow"
                                                                     id="cancel-comment-reply-link"
                                                                     href="/product/cauliflower/#respond"
                                                                     style="display:none;">Cancel
@@ -2238,7 +2235,7 @@ Cultivating Agriculture that Works for the Future
                                                                     value="1">
                                                                 <label for="wpgdprc">
                                                                     I agree that my submitted data is being <a
-                                                                        href="privacy-policy.html">collected and
+                                                                        href="#">collected and
                                                                         stored</a>.
                                                                     <abbr class="wpgdprc-required"
                                                                         title="You need to accept this checkbox.">*</abbr>
@@ -2263,7 +2260,7 @@ Cultivating Agriculture that Works for the Future
                                 </div>
 
 
-                                <section class="related products">
+                                {{-- <section class="related products">
 
                                     <h2>Related products</h2>
 
@@ -2459,7 +2456,7 @@ Cultivating Agriculture that Works for the Future
 
                                     </ul>
 
-                                </section>
+                                </section> --}}
                             </div>
 
 
@@ -3307,7 +3304,7 @@ Cultivating Agriculture that Works for the Future
     </script>
     <script type="text/javascript" src="js/js-frontend.min.js" id="elementor-frontend-js"></script>
     <script type="text/javascript" src="js/js-preloaded-modules.min.js" id="preloaded-modules-js"></script>
-    <!-- Add this script tag to your HTML file to include jQuery from Google CDN -->
+   <!-- Add this script tag to your HTML file to include jQuery from Google CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
