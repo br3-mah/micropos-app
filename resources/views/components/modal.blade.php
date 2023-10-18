@@ -1,4 +1,4 @@
-<div style="z-index: 100003;" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+{{-- <div style="z-index: 100003;" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
         <div style="width: 100%;margin: 0;height: 100%; background:#29444a; border-radius: 3px;" class="modal-content">
@@ -140,4 +140,4 @@
     border-radius: 0.375rem;
     opacity: var(--bs-btn-close-opacity);}
 
-</style>
+</style> --}}

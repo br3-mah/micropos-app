@@ -8,6 +8,25 @@ const cartTotal = document.getElementById('cart-total');
 // Initialize cart from session storage (if it exists)
 let cart = JSON.parse(sessionStorage.getItem('cart')) || {};
 
+function setCount(){
+    if (cart && Object.keys(cart).length > 0) {
+        let totalItems = Object.keys(cart).length;
+        // let totalItems = Object.values(cart).reduce((total, quantity) => total + quantity, 0);
+      
+        // Select the HTML element with the ID "cart-info" and set its innerHTML
+        const cartInfoElement = document.getElementById('sc_layouts_cart_items_short');
+        const cartInfoElement2 = document.getElementById('sc_layouts_cart_items_short2');
+        cartInfoElement.innerHTML = `${totalItems}`;
+        cartInfoElement2.innerHTML = `${totalItems}`;
+    
+      }
+}
+
+function showCart(){
+    cartSidebar.classList.add('show');
+}
+
+
 // Function to update the cart sidebar
 function updateCartSidebar() {
     cartItems.innerHTML = '';
@@ -61,7 +80,7 @@ function updateCartSidebar() {
             total += product.subtotal;
         }
     }
-
+    setCount();
     cartTotal.textContent = `K${total.toFixed(2)}`;
 }
 
@@ -122,6 +141,7 @@ function addToCart(product) {
         // User is not authenticated, store the cart in session storage
         sessionStorage.setItem('cart', JSON.stringify(cart));
     }
+    setCount();
 }
 
 // Function to remove an item from the cart
@@ -140,6 +160,7 @@ function removeFromCart(productId) {
         // Store the cart in session storage
         sessionStorage.setItem('cart', JSON.stringify(cart));
     }
+    setCount();
 }
 
 // Function to clear the cart
@@ -151,6 +172,7 @@ function clearCartItems() {
 
     // Clear session storage
     sessionStorage.removeItem('cart');
+    setCount();
 }
 
 // Close cart sidebar
@@ -186,3 +208,4 @@ clearCart.addEventListener('click', function () {
 
 // Initialize cart on page load
 updateCartSidebar();
+setCount();

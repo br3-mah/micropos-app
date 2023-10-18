@@ -52,8 +52,8 @@
                                             </div>
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-18b55c6 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_cart" data-id="18b55c6" data-element_type="widget" data-widget_type="trx_sc_layouts_cart.default">
-                                            {{-- <div class="elementor-widget-container">
-                                                <div class="sc_layouts_cart sc_layouts_cart_market_woocommerce">
+                                            <div class="elementor-widget-container">
+                                                <div  onclick="showCart()" class="sc_layouts_cart sc_layouts_cart_market_woocommerce">
                                                     <span class="sc_layouts_item_icon sc_layouts_cart_icon sc_icons_type_icons trx_addons_icon-basket"></span>
                                                     <span class="sc_layouts_item_details sc_layouts_cart_details">
                                                         <span class="sc_layouts_item_details_line2 sc_layouts_cart_totals">
@@ -63,7 +63,7 @@
                                                             <span class="sc_layouts_cart_summa">$0.00</span>
                                                         </span>
                                                     </span>
-                                                    <span class="sc_layouts_cart_items_short">0</span>
+                                                    <span class="sc_layouts_cart_items_short" id="sc_layouts_cart_items_short2">0</span>
                                                     <div class="sc_layouts_cart_widget widget_area">
                                                         <span class="sc_layouts_cart_widget_close trx_addons_button_close"><span class="sc_layouts_cart_widget_close_icon trx_addons_button_close_icon"></span></span>
                                                         <div class="widget woocommerce widget_shopping_cart">
@@ -71,7 +71,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div> --}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                         <div class="sc_layouts_item elementor-element elementor-element-703d5de sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="703d5de" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                                             <div class="elementor-widget-container">
                                                 <a href="index.php" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1726964019">
-                                                <img class="logo_image" src="{{ asset('theme/images/logo.png') }}" srcset="{{ asset('theme/images/logo.png') }} 2x" alt="Ecoagro" width="173" height="53"></a>
+                                                <img class="logo_image" src="{{ asset('public/theme/images/logo.png') }}" srcset="{{ asset('public/theme/images/logo.png') }} 2x" alt="Ecoagro" width="173" height="53"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-18b55c6 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_cart" data-id="18b55c6" data-element_type="widget" data-widget_type="trx_sc_layouts_cart.default">
                                             <div class="elementor-widget-container">
-                                                <div class="sc_layouts_cart sc_layouts_cart_market_woocommerce">
+                                                <div  onclick="showCart()" class="sc_layouts_cart sc_layouts_cart_market_woocommerce">
                                                     <span class="sc_layouts_item_icon sc_layouts_cart_icon sc_icons_type_icons trx_addons_icon-basket"></span>
                                                     <span class="sc_layouts_item_details sc_layouts_cart_details">
                                                         <span class="sc_layouts_item_details_line2 sc_layouts_cart_totals">
@@ -182,7 +182,7 @@
                                                             <span class="sc_layouts_cart_summa">$0.00</span>
                                                         </span>
                                                     </span>
-                                                    <span class="sc_layouts_cart_items_short">0</span>
+                                                    <span class="sc_layouts_cart_items_short" id="sc_layouts_cart_items_short">0</span>
                                                     <div class="sc_layouts_cart_widget widget_area">
                                                         <span class="sc_layouts_cart_widget_close trx_addons_button_close"><span class="sc_layouts_cart_widget_close_icon trx_addons_button_close_icon"></span></span>
                                                         <div class="widget woocommerce widget_shopping_cart">
@@ -226,7 +226,8 @@
     <div class="menu_mobile_inner with_widgets">
         <div class="menu_mobile_header_wrap">
             <a class="sc_layouts_logo" href="index.php">
-                <img src="{{ asset('theme/images/logo-inverse.png') }}" srcset="{{ asset('theme/images/logo-inverse.png') }} 2x" alt="Ecoagro" width="173" height="53"> </a>
+                <img src="{{ asset('public/theme/images/logo-inverse.png') }}" srcset="{{ asset('public/theme/images/logo-inverse.png') }} 2x" alt="Ecoagro" width="173" height="53"> 
+            </a>
 
             <a class="menu_mobile_close menu_button_close" tabindex="0" href="agro-services.html"><span class="menu_button_close_text">Close</span><span class="menu_button_close_icon"></span></a>
         </div>
