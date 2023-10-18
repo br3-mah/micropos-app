@@ -2039,39 +2039,27 @@ Cultivating Agriculture that Works for the Future
                                                                                         <div class="wp-block-themepunch-revslider 0">
                                                                                             <!-- START Organic Farm REVOLUTION SLIDER 6.5.31 -->
                                                                                             <p class="rs-p-wp-fix"></p>
-                                                                                            <rs-module-wrap id="rev_slider_4_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;">
-                                                                                                <rs-module id="rev_slider_4_1" style="" data-version="6.5.31">
+                                                                                            <rs-module-wrap id="rev_slider_4_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
+                                                                                                <rs-module id="rev_slider_4_1" style="display:block" data-version="6.5.31">
                                                                                                     <rs-slides>
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-6" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-1-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="" title="slider-4-slide-1-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/images/slider-4-slide-1-copyright.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--
-							                                        -->
+                                                                                                        <rs-slide style="position: absolute;" data-key="rs-6" data-title="Slide" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
+
+                                                                                                            <img src="{{ asset('public/img/3.jpg')}}" alt="" title="slider-4-slide-1-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/3.jpg')}}" data-parallax="on" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
                                                                                                             <rs-layer id="slider-4-slide-6-layer-3" data-type="image" data-rsp_ch="on" data-xy="x:c;y:m;" data-text="w:normal;s:20,15,8,4;l:0,18,9,6;" data-dim="w:838px,628px,339px,209px;h:647px,485px,262px,161px;" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:520;sp:1000;sR:520;" data-frame_999="o:0;st:w;sR:7480;" style="z-index:16;">
-                                                                                                                <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Marketpalce Farm" class="tp-rs-img rs-lazyload" width="838" height="647" data-lazyload="{{ asset('public/images/organic-farm.png')}}" data-no-retina>
+                                                                                                                {{-- <img  class="tp-rs-img rs-lazyload" width="838" height="647" data-no-retina> --}}
                                                                                                             </rs-layer>
-                                                                                                            <!--
-                                                                                    -->
+
                                                                                                         </rs-slide>
+                                                                                                        
                                                                                                         <rs-slide style="position: absolute;" data-key="rs-7" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-2-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Slider Slide" title="slider-4-slide-2-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/images/slider-4-slide-2-copyright.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--						-->
+                                                                                                            <img  src="{{ asset('public/img/4.jpg')}}" alt="Slider Slide" title="slider-4-slide-2-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/4.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
+                                                                                                    
                                                                                                             <rs-zone id="rrzm_7" class="rev_row_zone_middle" style="z-index: 14;">
-                                                                                                                <!--
-								                                -->
                                                                                                                 <rs-row id="slider-4-slide-7-layer-13" data-type="row" data-xy="xo:50px;yo:50px;" data-cbreak="nobreak" data-basealign="slide" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:1;">
-                                                                                                                    <!--
-									                                                            -->
                                                                                                                     <rs-column id="slider-4-slide-7-layer-14" data-type="column" data-xy="xo:50px;yo:50px;" data-text="l:26,24,24,24;a:center;" data-rsp_bd="off" data-column="w:100%;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:2;width:100%;">
-                                                                                                                        <!--
-										                        -->
                                                                                                                         <rs-layer id="slider-4-slide-7-layer-1" data-type="text" data-text="w:normal;s:19,17,16,16;l:28,26,24,24;a:center;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-frame_0="x:30px;" data-frame_1="st:1770;sp:1000;" data-frame_999="o:0;st:w;sR:6230;" style="z-index:3;font-family:'DM Sans';display:inline-block;">
-                                                                                                                            Cultivating
-                                                                                                                            Agriculture
-                                                                                                                            that
-                                                                                                                            Works
-                                                                                                                            for
-                                                                                                                            the
-                                                                                                                            Future
+                                                                                                                            Cultivating Agriculture that
+                                                                                                                            Works for the Future
                                                                                                                         </rs-layer>
                                                                                                                         <!--
 										-->
@@ -2080,94 +2068,50 @@ Cultivating Agriculture that Works for the Future
                                                                                                                         <!--
 										-->
                                                                                                                         <rs-layer id="slider-4-slide-7-layer-24" class="sldr-title" data-type="text" data-xy="xo:0,35px,35px,35px;yo:0,281px,281px,281px;" data-text="w:normal;s:78,58,40,28;l:72,58,42,34;fw:500;a:center;" data-rsp_o="off" data-disp="inline-block" data-frame_0="x:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index:5;font-family:'halyard-display';display:inline-block;">
-                                                                                                                            We’re
-                                                                                                                            a
-                                                                                                                            Unique
-                                                                                                                            and
-                                                                                                                            Traditional<br />
-                                                                                                                            Organic
-                                                                                                                            Farm
+                                                                                                                            We’re a Unique and
+                                                                                                                            Traditional<br /> Organic Farm
                                                                                                                         </rs-layer>
                                                                                                                         <!--
 										-->
                                                                                                                         <rs-layer id="slider-4-slide-7-layer-19" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:50px,36px,32px,20px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:6;">
                                                                                                                         </rs-layer>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-7-layer-21" class="rs-layer rev-btn" href="marketplace.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Go
-                                                                                                                            to
-                                                                                                                            the
-                                                                                                                            Shop
+                                                                                                                        <a id="slider-4-slide-7-layer-21" class="rs-layer rev-btn" href="marketplace.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">
+                                                                                                                            Go to the Shop
                                                                                                                         </a>
-                                                                                                                        <!--
-									-->
                                                                                                                     </rs-column>
-                                                                                                                    <!--
-								    -->
                                                                                                                 </rs-row>
-                                                                                                                <!--
-							        -->
                                                                                                             </rs-zone>
-                                                                                                            <!--
-                                                                    -->
                                                                                                         </rs-slide>
                                                                                                         <rs-slide style="position: absolute;" data-key="rs-8" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-3-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Slider Slide" title="slider-4-slide-3-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/images/slider-4-slide-3-copyright.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--						-->
+                                                                                                            <img src="{{ asset('public/img/5.jpg')}}" alt="Slider Slide" title="slider-4-slide-3-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/5.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
+                                                                                                            
                                                                                                             <rs-zone id="rrzm_8" class="rev_row_zone_middle" style="z-index: 14;">
-                                                                                                                <!--
-								    -->
+                                                                                                          
                                                                                                                 <rs-row id="slider-4-slide-8-layer-13" data-type="row" data-xy="xo:50px;yo:50px;" data-cbreak="nobreak" data-basealign="slide" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:1;">
-                                                                                                                    <!--
-									-->
+                                                                                                           
                                                                                                                     <rs-column id="slider-4-slide-8-layer-14" data-type="column" data-xy="xo:50px;yo:50px;" data-text="l:26,24,24,24;a:center;" data-rsp_bd="off" data-column="w:100%;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:2;width:100%;">
-                                                                                                                        <!--
-										-->
+                                                                                                              
                                                                                                                         <rs-layer id="slider-4-slide-8-layer-1" data-type="text" data-text="w:normal;s:19,17,16,16;l:28,26,24,24;a:center;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-frame_0="x:30px;" data-frame_1="st:1770;sp:1000;sR:1770;" data-frame_999="o:0;st:w;sR:6230;" style="z-index:3;font-family:'DM Sans';display:inline-block;">
-                                                                                                                            Cultivating
-                                                                                                                            Agriculture
-                                                                                                                            that
-                                                                                                                            Works
-                                                                                                                            for
-                                                                                                                            the
-                                                                                                                            Future
+                                                                                                                            Cultivating Agriculture that Works
+                                                                                                                            for the Future
                                                                                                                         </rs-layer>
-                                                                                                                        <!--
-										-->
                                                                                                                         <rs-layer id="slider-4-slide-8-layer-0" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:22px,16px,8px,0px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:4;">
                                                                                                                         </rs-layer>
-                                                                                                                        <!--
-										-->
                                                                                                                         <rs-layer id="slider-4-slide-8-layer-24" class="sldr-title" data-type="text" data-xy="xo:0,35px,35px,35px;yo:0,281px,281px,281px;" data-text="w:normal;s:92,72,54,38;l:92,76,64,46;fw:500;a:center;" data-rsp_o="off" data-disp="inline-block" data-frame_0="x:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index:5;font-family:'halyard-display';display:inline-block;">
-                                                                                                                            Get
-                                                                                                                            the
-                                                                                                                            Fresh
-                                                                                                                            Product
+                                                                                                                            Get the Fresh Product
                                                                                                                         </rs-layer>
-                                                                                                                        <!--
-										-->
                                                                                                                         <rs-layer id="slider-4-slide-8-layer-19" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:44px,30px,26px,20px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:6;">
                                                                                                                         </rs-layer>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-8-layer-21" class="rs-layer rev-btn" href="marketplace.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-margin="r:10,8,6,6;" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;sR:1250;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Go
-                                                                                                                            to
-                                                                                                                            the
-                                                                                                                            Shop
+                                                                                                                        <a id="slider-4-slide-8-layer-21" class="rs-layer rev-btn" href="#" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-margin="r:10,8,6,6;" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;sR:1250;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">
+                                                                                                                            Go to the Shop
                                                                                                                         </a>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-8-layer-2" class="rs-layer rev-btn" href="contacts.html" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:50,48,46,46;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:38,30,26,26;l:38,30,26,26;" data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;" data-frame_0="x:30px;" data-frame_1="st:1350;sp:1000;sR:1350;" data-frame_999="o:0;st:w;sR:6650;" data-frame_hover="rX:0deg;rY:0deg;bgc:#92bb53;boc:#92bb53;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;e:power1.inOut;" style="z-index:8;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Contact
+                                                                                                                        <a id="slider-4-slide-8-layer-2" class="rs-layer rev-btn" href="website/greenwebbtech.com/contacts.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:50,48,46,46;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:38,30,26,26;l:38,30,26,26;" data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;" data-frame_0="x:30px;" data-frame_1="st:1350;sp:1000;sR:1350;" data-frame_999="o:0;st:w;sR:6650;" data-frame_hover="rX:0deg;rY:0deg;bgc:#92bb53;boc:#92bb53;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;e:power1.inOut;" style="z-index:8;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Contact
                                                                                                                             Info
                                                                                                                         </a>
-                                                                                                                        <!--
-									-->
                                                                                                                     </rs-column>
-                                                                                                                    <!--
-								-->
+                                                                                                                   
                                                                                                                 </rs-row>
-                                                                                                                <!--
-							-->
                                                                                                             </rs-zone>
-                                                                                                            <!--
--->
                                                                                                         </rs-slide>
                                                                                                     </rs-slides>
                                                                                                     <rs-static-layers>
@@ -2270,7 +2214,7 @@ Cultivating Agriculture that Works for the Future
 
 
 
-                                            {{-- @include('patches.products'); --}}
+                                            @include('patches.products');
 
 
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
@@ -2329,7 +2273,7 @@ Cultivating Agriculture that Works for the Future
                                                         <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <section data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:-30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-6589da6c scheme_default sc_parallax sc_parallax_default elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static elementor-invisible" data-id="6589da6c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
+                                                                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-6589da6c scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static">
                                                                         <div class="elementor-container elementor-column-gap-no">
                                                                             <div class="elementor-row">
                                                                                 <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-5e924329 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e924329" data-element_type="column">
@@ -2397,13 +2341,13 @@ Cultivating Agriculture that Works for the Future
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        {{-- <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e95e5f sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e95e5f" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e95e5f sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e95e5f" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <div class="elementor-element elementor-element-12ccc613 no-title sc_fly_static elementor-widget elementor-widget-image" data-id="12ccc613" data-element_type="widget" data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img decoding="async" loading="lazy" width="945" height="855" src="{{ asset('public/img/2.jpg') }}" class="attachment-full size-full" alt="" sizes="(max-width: 945px) 100vw, 945px" />
+                                                                                <img decoding="async" loading="lazy" width="945" height="855" src="{{ asset('public/img/5.jpg') }}" class="attachment-full size-full" alt="" sizes="(max-width: 945px) 100vw, 945px" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -2417,7 +2361,7 @@ Cultivating Agriculture that Works for the Future
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div> --}}
+                                                        </div>
                                                         <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5d65ae0d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5d65ae0d" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
@@ -2429,7 +2373,7 @@ Cultivating Agriculture that Works for the Future
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <section data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark sc_parallax sc_parallax_default elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static elementor-invisible" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
+                                                                    <section data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark  elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
                                                                         <div class="elementor-container elementor-column-gap-no">
                                                                             <div class="elementor-row">
                                                                                 <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-721499a0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="721499a0" data-element_type="column">
@@ -3368,7 +3312,7 @@ Cultivating Agriculture that Works for the Future
     @include('components.auth.auto-auth')
     <script src="{{ asset('public/scripts/authenticate.js') }}"></script>
     <script src="{{ asset('public/scripts/routes.js') }}"></script>
-    <script src="{{ asset('public/scripts/checkout.js') }}"></script>
+    {{-- <script src="{{ asset('public/scripts/checkout.js') }}"></script> --}}
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
     <script src="{{ asset('public/scripts/main.js') }}"></script>
 </body>

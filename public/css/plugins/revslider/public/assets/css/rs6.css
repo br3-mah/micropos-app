@@ -5,7 +5,7 @@
 .wp-block-themepunch-revslider { position: relative }
 
 /* FIX FOR QUICK LOADING OF SLIDER SCRIPTS AND WP-ROCKET READDING IMG TAG INTO DOM*/
-/*rs-sbg-px rs-sbg-wrap img { display:none !important}*/
+/*rs-sbg-px rs-sbg-wrap img { display:block !important}*/
 
 /* MODAL BASICS */
 rs-modal { position: fixed !important; z-index: 9999999 !important; pointer-events: none !important;}
@@ -13,7 +13,7 @@ rs-modal.rs-modal-auto { top: auto;bottom: auto;left: auto; right:auto; }
 rs-modal.rs-modal-fullwidth,
 rs-modal.rs-modal-fullscreen { top: 0px; left: 0px; width: 100%; height: 100%; }
 rs-modal rs-fullwidth-wrap { position: absolute; top: 0px; left: 0px; height: 100%;}
-rs-module-wrap.rs-modal { display:none; max-height: 100% !important; overflow: auto !important;  pointer-events: auto !important;}
+rs-module-wrap.rs-modal { display:block; max-height: 100% !important; overflow: auto !important;  pointer-events: auto !important;}
 rs-module-wrap.hideallscrollbars.rs-modal { overflow: hidden !important; max-width: 100% !important}
 rs-modal-cover { width: 100%; height: 100%; z-index: 0; background: transparent; position: absolute;top: 0px;left: 0px; cursor: pointer; pointer-events: auto}
 body>rs-modal-cover { position: fixed; z-index: 9999995 !important; }
@@ -295,10 +295,10 @@ rs-slides, rs-slide, rs-slide:before {	 position:absolute;text-indent: 0em;top:0
 rs-slide,rs-slide:before {  display:block; visibility:hidden; }
 
 .rs-layer .rs-untoggled-content { display:block;}
-.rs-layer .rs-toggled-content { display:none;}
+.rs-layer .rs-toggled-content { display:block;}
 
 .rs-tc-active.rs-layer > .rs-toggled-content { display:block;}
-.rs-tc-active.rs-layer > .rs-untoggled-content { display:none;}
+.rs-tc-active.rs-layer > .rs-untoggled-content { display:block;}
 
 .rs-layer-video { overflow: hidden }
 
@@ -457,7 +457,7 @@ rs-row.rs-layer 	{
 	font-size:0px;
 }
 
-.rs-layer.rs-waction.iospermaccwait.permanenthidden { display:none !important; visibility:hidden !important; pointer-events: none !important;}
+.rs-layer.rs-waction.iospermaccwait.permanenthidden { display:block !important; visibility:hidden !important; pointer-events: none !important;}
 
 rs-column-wrap {
 	display: table-cell;
@@ -522,7 +522,7 @@ rs-column-wrap.rs-layer-hidden,
 .rs-layer-audio.rs-layer-hidden,
 .rs-parallax-wrap.rs-layer-hidden {
 	visibility:hidden !important;
-	display:none !important
+	display:block !important
 }
 
 /*rs-column .rs-parallax-wrap,
@@ -634,18 +634,18 @@ rs-bgvideo 			{	position: absolute;top:0px;left:0px; width:100%;height:100%;z-in
 	z-index: 6;
 }
 
-.rs-audio .tp-video-play-button { display:none !important;}
+.rs-audio .tp-video-play-button { display:block !important;}
 .rs-layer .html5vid					{	width:100% !important; height:100% !important;}
 .tp-video-play-button i 				{	width:50px;height:50px; display:inline-block; text-align: center !important; vertical-align: top; line-height: 50px !important; font-size: 30px !important;}
 .rs-layer:hover .tp-video-play-button	{	opacity: 1; display:block; z-index: 6;}
-.rs-layer .tp-revstop					{	display:none;width: 15px; border-right: 5px solid #fff !important; border-left:5px solid #fff !important; transform: translateX(50%) translateY(50%);height: 20px;margin-left: 11px !important;margin-top: 5px !important;}
-.videoisplaying .revicon-right-dir		{	display:none}
+.rs-layer .tp-revstop					{	display:block;width: 15px; border-right: 5px solid #fff !important; border-left:5px solid #fff !important; transform: translateX(50%) translateY(50%);height: 20px;margin-left: 11px !important;margin-top: 5px !important;}
+.videoisplaying .revicon-right-dir		{	display:block}
 .videoisplaying .tp-revstop				{	display:block}
 
-.videoisplaying  .tp-video-play-button			{	display:none}
+.videoisplaying  .tp-video-play-button			{	display:block}
 
 
-.fullcoveredvideo .tp-video-play-button			{	display:none !important}
+.fullcoveredvideo .tp-video-play-button			{	display:block !important}
 
 
 .rs-fsv .rs-fsv audio 		{	object-fit:contain !important;}
@@ -666,7 +666,7 @@ rs-bgvideo 			{	position: absolute;top:0px;left:0px; width:100%;height:100%;z-in
 .rs-nolc .tp-video-play-button,
 rs-bgvideo video::-webkit-media-controls-start-playback-button,
 rs-bgvideo video::-webkit-media-controls,
-rs-bgvideo audio::-webkit-media-controls { display:none !important;}
+rs-bgvideo audio::-webkit-media-controls { display:block !important;}
 
 
 .rs-audio .tp-video-controls {	opacity: 1 !important; visibility: visible !important}
