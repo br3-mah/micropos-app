@@ -5,8 +5,16 @@ use App\Models\Product;
 
 class ProductRepository
 {
+    public function four(){
+        return Product::orderBy('created_at', 'desc')->limit(4)->get();
+    }
     public function all(){
         return Product::orderBy('created_at', 'desc')->get();
+    }
+    public function search($data){
+        return Product::orWhere('name', 'LIKE', '%'.$data['s'].'%')
+                ->orWhere('description', 'LIKE', '%'.$data['s'])
+                ->orderBy('created_at', 'desc')->get();
     }
 
     public function find($id){

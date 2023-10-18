@@ -4,6 +4,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductDetailController;
+use App\Http\Controllers\ShopProductController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,8 @@ Route::middleware(['web'])->group(function () {
     Route::resource('checkout', CheckoutController::class);
     Route::get('order/{id}', [OrderController::class, 'summary'])->name('order.summary');
     Route::get('detail/{id}', [ProductDetailController::class, 'index'])->name('detail.index');
+    Route::get('shop-products', [ShopProductController::class, 'index'])->name('shop.index');
+    Route::get('product-results', [ShopProductController::class, 'search'])->name('product.search');
     
     Auth::routes(['register' => true]);
     Auth::routes(['login' => false]);

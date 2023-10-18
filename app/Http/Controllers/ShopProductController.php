@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
-class WelcomeController extends Controller
+class ShopProductController extends Controller
 {
     private $productRepository;
     public function __construct(ProductRepository $productRepository)
@@ -17,9 +17,19 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $products = $this->productRepository->four();
-        return view('welcome', [
-            'products' => $products
+        $products = $this->productRepository->all();
+        return view('shop', [
+            'products'=>$products
+        ]);
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function search(Request $request)
+    {
+        $products = $this->productRepository->search($request->toArray());
+        return view('shop-result', [
+            'products'=>$products
         ]);
     }
 
