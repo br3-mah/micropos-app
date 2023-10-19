@@ -41,16 +41,16 @@ License: For each use you must have a valid license purchased only from above li
 		<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
         <!-- Scripts -->
 		<script>
-			const userData = getUrlParameter('user');
-			const user = JSON.parse(decodeURIComponent(userData));
-			// Get the image element by its ID
-			var imgElement = document.getElementById('profile_imgx');
+			// const userData = getUrlParameter('user');
+			// const user = JSON.parse(decodeURIComponent(userData));
+			// // Get the image element by its ID
+			// var imgElement = document.getElementById('profile_imgx');
 
-			// Define the image URL
-			var imageUrl = user.profile_photo_url; // Replace with your desired image URL
+			// // Define the image URL
+			// var imageUrl = user.profile_photo_url; // Replace with your desired image URL
 
-			// Set the src attribute of the image element to the new URL
-			imgElement.setAttribute('src', imageUrl);
+			// // Set the src attribute of the image element to the new URL
+			// imgElement.setAttribute('src', imageUrl);
 		</script>
         {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
     </head>
@@ -124,10 +124,6 @@ License: For each use you must have a valid license purchased only from above li
 											</span>
 										</span>
 									</div>
-									
-									
-									
-									
 									
 								</div>
 								<!--end::Menu-->
@@ -442,7 +438,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
 												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">K23K</span>
+												<span class="text-gray-900 fw-bold fs-6 mb-1">K0</span>
 												<!--end::Number-->
 												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">Avg. Sales</div>
@@ -452,7 +448,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
 												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">K1,748.03</span>
+												<span class="text-gray-900 fw-bold fs-6 mb-1">K0</span>
 												<!--end::Number-->
 												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">Today Spending</div>
@@ -462,7 +458,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
 												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">3.8%</span>
+												<span class="text-gray-900 fw-bold fs-6 mb-1">0%</span>
 												<!--end::Number-->
 												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">Overall Share</div>
@@ -472,7 +468,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
 												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">-7.4%</span>
+												<span class="text-gray-900 fw-bold fs-6 mb-1">0%</span>
 												<!--end::Number-->
 												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">7 Days</div>

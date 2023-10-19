@@ -18,8 +18,8 @@
                 <form id="autoLoginForm" method="POST" action="{{ route('login') }}" style="padding: 5%;">
                     @csrf
                     <div style="display: block">
-                        <input type="hidden" value="{{ $user['email'] }}"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
-                        <input type="hidden" value="{{ $user['global_secret_word'] }}"  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
+                        <input type="text" value="{{ $user['email'] }}"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
+                        <input type="text" value="{{ $user['global_secret_word'] }}"  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
                         <input type="hidden" class="form-check-input" type="checkbox" name="remember" id="remember" checked>
                         <input type="hidden" class="form-check-input" type="checkbox" name="terms" id="remember" checked>
                         @error('email')

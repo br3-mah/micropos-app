@@ -1245,12 +1245,12 @@
                             <!--begin::Title-->
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="card-label fw-bold text-gray-800">Top Selling Categories</span>
-                                <span class="text-gray-400 mt-1 fw-semibold fs-6">8k social visitors</span>
+                                <span class="text-gray-400 mt-1 fw-semibold fs-6">14 Selling categories</span>
                             </h3>
                             <!--end::Title-->
                             <!--begin::Toolbar-->
                             <div class="card-toolbar">
-                                <a href="../../demo29/dist/apps/ecommerce/sales/listing.html" class="btn btn-sm btn-light">View All</a>
+                                <a href="#" class="btn btn-sm btn-light">View All</a>
                             </div>
                             <!--end::Toolbar-->
                         </div>
@@ -1272,13 +1272,13 @@
                         <div class="card-header pt-7 mb-5">
                             <!--begin::Title-->
                             <h3 class="card-title align-items-start flex-column">
-                                <span class="card-label fw-bold text-gray-800">Visits by Country</span>
-                                <span class="text-gray-400 mt-1 fw-semibold fs-6">20 countries share 97% visits</span>
+                                <span class="card-label fw-bold text-gray-800">Sales by State</span>
+                                <span class="text-gray-400 mt-1 fw-semibold fs-6">20 states share 0% sales</span>
                             </h3>
                             <!--end::Title-->
                             <!--begin::Toolbar-->
                             <div class="card-toolbar">
-                                <a href="../../demo29/dist/apps/ecommerce/sales/listing.html" class="btn btn-sm btn-light">View All</a>
+                                <a href="#" class="btn btn-sm btn-light">View All</a>
                             </div>
                             <!--end::Toolbar-->
                         </div>
@@ -1297,7 +1297,7 @@
                                         <!--begin::Content-->
                                         <div class="me-5">
                                             <!--begin::Title-->
-                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">United States</a>
+                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Lusaka</a>
                                             <!--end::Title-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct link clicks</span>
@@ -1313,7 +1313,7 @@
                                             <div class="m-0">
                                                 <!--begin::Label-->
                                                 <span class="badge badge-light-success fs-base">
-                                                <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>2.6%</span>
+                                                <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>0%</span>
                                                 <!--end::Label-->
                                             </div>
                                             <!--end::Label-->
@@ -1336,7 +1336,7 @@
                                         <!--begin::Content-->
                                         <div class="me-5">
                                             <!--begin::Title-->
-                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Brasil</a>
+                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Copperbelt</a>
                                             <!--end::Title-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">All Social Channels</span>
@@ -1346,13 +1346,13 @@
                                         <!--begin::Info-->
                                         <div class="d-flex align-items-center">
                                             <!--begin::Number-->
-                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">4,062</span>
+                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">0</span>
                                             <!--end::Number-->
                                             <!--begin::Label-->
                                             <div class="m-0">
                                                 <!--begin::Label-->
                                                 <span class="badge badge-light-danger fs-base">
-                                                <i class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>0.4%</span>
+                                                <i class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>0%</span>
                                                 <!--end::Label-->
                                             </div>
                                             <!--end::Label-->
@@ -1363,160 +1363,7 @@
                                 </div>
                                 <!--end::Item-->
                                 <!--begin::Separator-->
-                                <div class="separator separator-dashed my-3"></div>
-                                <!--end::Separator-->
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack">
-                                    <!--begin::Flag-->
-                                    <img src="assets/media/flags/turkey.svg" class="me-4 w-25px" style="border-radius: 4px" alt="" />
-                                    <!--end::Flag-->
-                                    <!--begin::Section-->
-                                    <div class="d-flex flex-stack flex-row-fluid d-grid gap-2">
-                                        <!--begin::Content-->
-                                        <div class="me-5">
-                                            <!--begin::Title-->
-                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Turkey</a>
-                                            <!--end::Title-->
-                                            <!--begin::Desc-->
-                                            <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Mailchimp Campaigns</span>
-                                            <!--end::Desc-->
-                                        </div>
-                                        <!--end::Content-->
-                                        <!--begin::Info-->
-                                        <div class="d-flex align-items-center">
-                                            <!--begin::Number-->
-                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">1,680</span>
-                                            <!--end::Number-->
-                                            <!--begin::Label-->
-                                            <div class="m-0">
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light-success fs-base">
-                                                <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>0.2%</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Info-->
-                                    </div>
-                                    <!--end::Section-->
-                                </div>
-                                <!--end::Item-->
-                                <!--begin::Separator-->
-                                <div class="separator separator-dashed my-3"></div>
-                                <!--end::Separator-->
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack">
-                                    <!--begin::Flag-->
-                                    <img src="assets/media/flags/france.svg" class="me-4 w-25px" style="border-radius: 4px" alt="" />
-                                    <!--end::Flag-->
-                                    <!--begin::Section-->
-                                    <div class="d-flex flex-stack flex-row-fluid d-grid gap-2">
-                                        <!--begin::Content-->
-                                        <div class="me-5">
-                                            <!--begin::Title-->
-                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">France</a>
-                                            <!--end::Title-->
-                                            <!--begin::Desc-->
-                                            <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Impact Radius visits</span>
-                                            <!--end::Desc-->
-                                        </div>
-                                        <!--end::Content-->
-                                        <!--begin::Info-->
-                                        <div class="d-flex align-items-center">
-                                            <!--begin::Number-->
-                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">849</span>
-                                            <!--end::Number-->
-                                            <!--begin::Label-->
-                                            <div class="m-0">
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light-success fs-base">
-                                                <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>4.1%</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Info-->
-                                    </div>
-                                    <!--end::Section-->
-                                </div>
-                                <!--end::Item-->
-                                <!--begin::Separator-->
-                                <div class="separator separator-dashed my-3"></div>
-                                <!--end::Separator-->
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack">
-                                    <!--begin::Flag-->
-                                    <img src="assets/media/flags/india.svg" class="me-4 w-25px" style="border-radius: 4px" alt="" />
-                                    <!--end::Flag-->
-                                    <!--begin::Section-->
-                                    <div class="d-flex flex-stack flex-row-fluid d-grid gap-2">
-                                        <!--begin::Content-->
-                                        <div class="me-5">
-                                            <!--begin::Title-->
-                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">India</a>
-                                            <!--end::Title-->
-                                            <!--begin::Desc-->
-                                            <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Many Sources</span>
-                                            <!--end::Desc-->
-                                        </div>
-                                        <!--end::Content-->
-                                        <!--begin::Info-->
-                                        <div class="d-flex align-items-center">
-                                            <!--begin::Number-->
-                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">604</span>
-                                            <!--end::Number-->
-                                            <!--begin::Label-->
-                                            <div class="m-0">
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light-danger fs-base">
-                                                <i class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>8.3%</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Info-->
-                                    </div>
-                                    <!--end::Section-->
-                                </div>
-                                <!--end::Item-->
-                                <!--begin::Separator-->
-                                <div class="separator separator-dashed my-3"></div>
-                                <!--end::Separator-->
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack">
-                                    <!--begin::Flag-->
-                                    <img src="assets/media/flags/sweden.svg" class="me-4 w-25px" style="border-radius: 4px" alt="" />
-                                    <!--end::Flag-->
-                                    <!--begin::Section-->
-                                    <div class="d-flex flex-stack flex-row-fluid d-grid gap-2">
-                                        <!--begin::Content-->
-                                        <div class="me-5">
-                                            <!--begin::Title-->
-                                            <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Sweden</a>
-                                            <!--end::Title-->
-                                            <!--begin::Desc-->
-                                            <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Social Network</span>
-                                            <!--end::Desc-->
-                                        </div>
-                                        <!--end::Content-->
-                                        <!--begin::Info-->
-                                        <div class="d-flex align-items-center">
-                                            <!--begin::Number-->
-                                            <span class="text-gray-800 fw-bold fs-6 me-3 d-block">237</span>
-                                            <!--end::Number-->
-                                            <!--begin::Label-->
-                                            <div class="m-0">
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light-success fs-base">
-                                                <i class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>1.9%</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Info-->
-                                    </div>
-                                    <!--end::Section-->
-                                </div>
+                                
                                 <!--end::Item-->
                             </div>
                             <!--end::Items-->
@@ -1538,8 +1385,8 @@
                         <div class="card-header pt-7">
                             <!--begin::Title-->
                             <h3 class="card-title align-items-start flex-column">
-                                <span class="card-label fw-bold text-gray-800">Freight Tonnage</span>
-                                <span class="text-gray-400 mt-1 fw-semibold fs-6">3,567,457 tons</span>
+                                <span class="card-label fw-bold text-gray-800">Product Sales</span>
+                                <span class="text-gray-400 mt-1 fw-semibold fs-6">0</span>
                             </h3>
                             <!--end::Title-->
                             <!--begin::Toolbar-->
@@ -1557,7 +1404,7 @@
                         </div>
                         <!--end::Header-->
                         <!--begin::Body-->
-                        <div class="card-body d-flex flex-column justify-content-between pb-5 px-0">
+                        {{-- <div class="card-body d-flex flex-column justify-content-between pb-5 px-0">
                             <!--begin::Nav-->
                             <ul class="nav nav-pills nav-pills-custom mb-3 mx-9">
                                 <!--begin::Item-->
@@ -1670,7 +1517,7 @@
                                 <!--end::Tap pane-->
                             </div>
                             <!--end::Tab Content-->
-                        </div>
+                        </div> --}}
                         <!--end: Card Body-->
                     </div>
                     <!--end::Chart widget 10-->
@@ -1681,226 +1528,5 @@
         </div>
         <!--end::Col-->
     </div>
-    <!--end::Row-->
-    <!--begin::Row-->
-    <div class="row gy-5 g-xl-10">
-        <!--begin::Col-->
-        <div class="col-xl-4">
-            <!--begin::List widget 11-->
-            <div class="card card-flush h-xl-100">
-                <!--begin::Header-->
-                <div class="card-header pt-7 mb-3">
-                    <!--begin::Title-->
-                    <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold text-gray-800">Our Fleet Tonnage</span>
-                        <span class="text-gray-400 mt-1 fw-semibold fs-6">Total 1,247 vehicles</span>
-                    </h3>
-                    <!--end::Title-->
-                    <!--begin::Toolbar-->
-                    <div class="card-toolbar">
-                        <a href="#" class="btn btn-sm btn-light" data-bs-toggle='tooltip' data-bs-dismiss='click' data-bs-custom-class="tooltip-inverse" title="Logistics App is coming soon">Review Fleet</a>
-                    </div>
-                    <!--end::Toolbar-->
-                </div>
-                <!--end::Header-->
-                <!--begin::Body-->
-                <div class="card-body pt-4">
-                    <!--begin::Item-->
-                    <div class="d-flex flex-stack">
-                        <!--begin::Section-->
-                        <div class="d-flex align-items-center me-5">
-                            <!--begin::Symbol-->
-                            <div class="symbol symbol-40px me-4">
-                                <span class="symbol-label">
-                                    <i class="ki-outline ki-ship text-gray-600 fs-1"></i>
-                                </span>
-                            </div>
-                            <!--end::Symbol-->
-                            <!--begin::Content-->
-                            <div class="me-5">
-                                <!--begin::Title-->
-                                <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Ships</a>
-                                <!--end::Title-->
-                                <!--begin::Desc-->
-                                <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">234 Ships</span>
-                                <!--end::Desc-->
-                            </div>
-                            <!--end::Content-->
-                        </div>
-                        <!--end::Section-->
-                        <!--begin::Wrapper-->
-                        <div class="text-gray-400 fw-bold fs-7 text-end">
-                        <!--begin::Number-->
-                        <span class="text-gray-800 fw-bold fs-6 d-block">2,345,500</span>
-                        <!--end::Number-->Tons</div>
-                        <!--end::Wrapper-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Separator-->
-                    <div class="separator separator-dashed my-5"></div>
-                    <!--end::Separator-->
-                    <!--begin::Item-->
-                    <div class="d-flex flex-stack">
-                        <!--begin::Section-->
-                        <div class="d-flex align-items-center me-5">
-                            <!--begin::Symbol-->
-                            <div class="symbol symbol-40px me-4">
-                                <span class="symbol-label">
-                                    <i class="ki-outline ki-truck text-gray-600 fs-1"></i>
-                                </span>
-                            </div>
-                            <!--end::Symbol-->
-                            <!--begin::Content-->
-                            <div class="me-5">
-                                <!--begin::Title-->
-                                <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Trucks</a>
-                                <!--end::Title-->
-                                <!--begin::Desc-->
-                                <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">1,460 Trucks</span>
-                                <!--end::Desc-->
-                            </div>
-                            <!--end::Content-->
-                        </div>
-                        <!--end::Section-->
-                        <!--begin::Wrapper-->
-                        <div class="text-gray-400 fw-bold fs-7 text-end">
-                        <!--begin::Number-->
-                        <span class="text-gray-800 fw-bold fs-6 d-block">457,200</span>
-                        <!--end::Number-->Tons</div>
-                        <!--end::Wrapper-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Separator-->
-                    <div class="separator separator-dashed my-5"></div>
-                    <!--end::Separator-->
-                    <!--begin::Item-->
-                    <div class="d-flex flex-stack">
-                        <!--begin::Section-->
-                        <div class="d-flex align-items-center me-5">
-                            <!--begin::Symbol-->
-                            <div class="symbol symbol-40px me-4">
-                                <span class="symbol-label">
-                                    <i class="ki-outline ki-airplane-square text-gray-600 fs-1"></i>
-                                </span>
-                            </div>
-                            <!--end::Symbol-->
-                            <!--begin::Content-->
-                            <div class="me-5">
-                                <!--begin::Title-->
-                                <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Planes</a>
-                                <!--end::Title-->
-                                <!--begin::Desc-->
-                                <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">8 Aircrafts</span>
-                                <!--end::Desc-->
-                            </div>
-                            <!--end::Content-->
-                        </div>
-                        <!--end::Section-->
-                        <!--begin::Wrapper-->
-                        <div class="text-gray-400 fw-bold fs-7 text-end">
-                        <!--begin::Number-->
-                        <span class="text-gray-800 fw-bold fs-6 d-block">1,240</span>
-                        <!--end::Number-->Tons</div>
-                        <!--end::Wrapper-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Separator-->
-                    <div class="separator separator-dashed my-5"></div>
-                    <!--end::Separator-->
-                    <!--begin::Item-->
-                    <div class="d-flex flex-stack">
-                        <!--begin::Section-->
-                        <div class="d-flex align-items-center me-5">
-                            <!--begin::Symbol-->
-                            <div class="symbol symbol-40px me-4">
-                                <span class="symbol-label">
-                                    <i class="ki-outline ki-bus text-gray-600 fs-1"></i>
-                                </span>
-                            </div>
-                            <!--end::Symbol-->
-                            <!--begin::Content-->
-                            <div class="me-5">
-                                <!--begin::Title-->
-                                <a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Trains</a>
-                                <!--end::Title-->
-                                <!--begin::Desc-->
-                                <span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">36 Trains</span>
-                                <!--end::Desc-->
-                            </div>
-                            <!--end::Content-->
-                        </div>
-                        <!--end::Section-->
-                        <!--begin::Wrapper-->
-                        <div class="text-gray-400 fw-bold fs-7 text-end">
-                        <!--begin::Number-->
-                        <span class="text-gray-800 fw-bold fs-6 d-block">804,300</span>
-                        <!--end::Number-->Tons</div>
-                        <!--end::Wrapper-->
-                    </div>
-                    <!--end::Item-->
-                    <div class="text-center pt-9">
-                        <a href="../../demo29/dist/apps/ecommerce/catalog/add-product.html" class="btn btn-primary">Add Vehicle</a>
-                    </div>
-                </div>
-                <!--end::Body-->
-            </div>
-            <!--end::List widget 11-->
-        </div>
-        <!--end::Col-->
-        <!--begin::Col-->
-        <div class="col-xl-8">
-            <!--begin::Chart widget 17-->
-            <div class="card card-flush h-xl-100">
-                <!--begin::Header-->
-                <div class="card-header pt-7">
-                    <!--begin::Title-->
-                    <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold text-dark">Sales Statistics</span>
-                        <span class="text-gray-400 pt-2 fw-semibold fs-6">Top Selling Countries</span>
-                    </h3>
-                    <!--end::Title-->
-                    <!--begin::Toolbar-->
-                    <div class="card-toolbar">
-                        <!--begin::Menu-->
-                        <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
-                            <i class="ki-outline ki-dots-square fs-1 text-gray-400 me-n1"></i>
-                        </button>
-                        <!--begin::Menu-->
-                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-100px py-4" data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="#" class="menu-link px-3">Remove</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="#" class="menu-link px-3">Mute</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="#" class="menu-link px-3">Settings</a>
-                            </div>
-                            <!--end::Menu item-->
-                        </div>
-                        <!--end::Menu-->
-                        <!--end::Menu-->
-                    </div>
-                    <!--end::Toolbar-->
-                </div>
-                <!--end::Header-->
-                <!--begin::Body-->
-                <div class="card-body pt-5">
-                    <!--begin::Chart container-->
-                    <div id="kt_charts_widget_16_chart" class="w-100 h-350px"></div>
-                    <!--end::Chart container-->
-                </div>
-                <!--end::Body-->
-            </div>
-            <!--end::Chart widget 17-->
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Row-->
 </div>
 @endsection

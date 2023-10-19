@@ -73,7 +73,7 @@
                                 <!--end::Thumbnail-->
                                 <div class="ms-5">
                                     <!--begin::Title-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">Product 2</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $product->name }}</a>
                                     <!--end::Title-->
                                 </div>
                             </div>
@@ -82,9 +82,9 @@
                             <span class="fw-bold">{{ $product->sku }}</span>
                         </td>
                         <td class="text-end pe-0" data-order="39">
-                            <span class="fw-bold ms-3">{{ $product->shelf_qty }}</span>
+                            <span class="fw-bold ms-3">{{ $product->shelf_qty ?? 0 }}</span>
                         </td>
-                        <td class="text-end pe-0">{{ $product->price }}</td>
+                        <td class="text-end pe-0">K {{ $product->price }}</td>
                         <td class="text-end pe-0" data-order="rating-4">
                             <div class="rating justify-content-end">
 
@@ -135,7 +135,8 @@
                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
-                                    <a href="{{ route('product.edit', $product->id) }}" class="menu-link px-3">Edit</a>
+                                    <a href="#" class="menu-link px-3">Edit</a>
+                                    {{-- <a href="{{ route('product.edit', $product->id) }}" class="menu-link px-3">Edit</a> --}}
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->

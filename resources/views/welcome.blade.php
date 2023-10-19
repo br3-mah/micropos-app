@@ -2287,9 +2287,13 @@ Cultivating Agriculture that Works for the Future
                                                                                     <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                                         <div class="elementor-widget-container">
                                                                                             <div class="sc_item_button sc_button_wrap sc_align_center">
-                                                                                                <a href="marketplace.php" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span class="sc_button_text"><span class="sc_button_title">Go
-                                                                                                            To The
-                                                                                                            Shop</span></span></a>
+                                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                    <span class="sc_button_text">
+                                                                                                        <span class="sc_button_title">
+                                                                                                            Go To The Shop
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -3366,7 +3370,7 @@ Cultivating Agriculture that Works for the Future
             var loginRoute = "{{ route('login') }}"; // Define the login route URL using double quotes    
         @endverbatim
         </script>
-    @include('components.auth.auto-auth')
+    {{-- @include('components.auth.auto-auth') --}}
     <script src="{{ asset('public/scripts/authenticate.js') }}"></script>
     <script src="{{ asset('public/scripts/routes.js') }}"></script>
     {{-- <script src="{{ asset('public/scripts/checkout.js') }}"></script> --}}

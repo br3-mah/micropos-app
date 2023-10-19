@@ -96,7 +96,7 @@
 
                                                                         </ul>
                                                                     </div>
-
+                                                                    @if (Route::currentRouteName() !== 'welcome')
                                                                     <div class="sidebar widget_area right sidebar_below sidebar_default scheme_default" role="complementary">
                                                                         <a id="sidebar_skip_link_anchor" class="agricola_skip_link_anchor" href="#"></a>
                                                                         <div class="sidebar_inner">
@@ -174,6 +174,7 @@
                                                                             </aside>
                                                                         </div>
                                                                     </div>
+                                                                    @endif
                                                                     <div class="clearfix"></div>
                                                                 </div>
                                                             </div>
