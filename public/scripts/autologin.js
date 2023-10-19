@@ -31,12 +31,12 @@ if(isAuthenticated){
             const usr = JSON.parse(decodeURIComponent(userParams));
             
             // isUser.textContent = usr.name;
-            username.textContent = usr.name;
+            // username.textContent = usr.name;
 
             auto_register(usr);
 
-            // theemail.value = usr.email;
-            // thepassword.value = usr.global_secret_word;
+            theemail.value = usr.email;
+            thepassword.value = usr.global_secret_word;
             const form = document.getElementById('autoLoginForm');
             // $('#loginModal').modal('show');
             form.submit();

@@ -37,7 +37,7 @@
                         <img style="width: 50%;" src="{{ asset('public/img/1.jpg') }}">
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        Continue as&nbsp;<span id="auth_username"></span>
+                        Continue <span id="auth_username"></span>
                     </button>
                 </form>
             </div>
