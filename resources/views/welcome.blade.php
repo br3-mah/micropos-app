@@ -2271,7 +2271,7 @@ Cultivating Agriculture that Works for the Future
 
 
 
-                                            @include('patches.products');
+                                            {{-- @include('patches.products'); --}}
 
 
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
