@@ -1,13 +1,8 @@
 
-// Get a reference to the link and the user session information 
-//(change 'userSessionInfo' to your actual session variable).
-// Check if userParams exists in url parameters
-
 const userSessionInfo = sessionStorage.getItem('user'); 
 const username = document.getElementById('my_name_is');
-const theemail = document.getElementById('theemail');
-const thepassword = document.getElementById('thepassword');
 const userParams = getUrlParameter('user');
+
 if(!isAuthenticated){
     // loginLink.style.display = "block";
 }
@@ -34,9 +29,7 @@ if(isAuthenticated){
             // username.textContent = usr.name;
 
             auto_register(usr);
-
-            theemail.value = usr.email;
-            thepassword.value = usr.global_secret_word;
+            
             const form = document.getElementById('autoLoginForm');
             // $('#loginModal').modal('show');
             form.submit();
