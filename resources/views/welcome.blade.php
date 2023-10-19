@@ -2341,10 +2341,7 @@ li {
                                                                                             <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-text-editor elementor-clearfix">
-                                                                                                        Adipiscing elit,
-                                                                                                        sed do eiusmod
-                                                                                                        tempor
-                                                                                                        incididunt ut.
+                                                                                                        Sign up today
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -2359,7 +2356,7 @@ li {
                                                                                             <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="sc_item_button sc_button_wrap">
-                                                                                                        <a href="https://auth.greenwebbtech.com/register?type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                                        <a href="https://auth.greenwebbtech.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
                                                                                                             Register
                                                                                                             </span></span></a>
                                                                                                     </div>
