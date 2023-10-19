@@ -20,7 +20,7 @@ try {
 
                 <div class="card-body">
                     
-                    <form  id="autoLoginForm"  method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
@@ -94,41 +94,10 @@ try {
     </div>
 </div>
 @endsection
-{{-- 
-            <!-- Modal body -->
-            @if(!empty($user))
-            <div class=" text-center"> <!-- Center align the body contents -->
-                <form method="POST" action="{{ route('login') }}" style="padding: 5%;">
-                    @csrf
-                    <div style="display: block">
-                        <input type="text" value="{{ $user['email'] }}"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" required>
-                        <input type="text" value="{{ $user['global_secret_word'] }}"  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
-                        <input type="hidden" class="form-check-input" type="checkbox" name="remember" id="remember" checked>
-                        <input type="hidden" class="form-check-input" type="checkbox" name="terms" id="remember" checked>
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div>
-                        <img style="width: 50%;" src="{{ asset('public/img/1.jpg') }}">
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Continue as&nbsp;<span id="auth_username"></span>
-                    </button>
-                </form>
-            </div>
-            @endif --}}
 
+<!-- jQuery CDN link (choose the version you need) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 // var isAuthenticated = true;
 var isAuthenticated = @json(auth()->check());
@@ -137,4 +106,71 @@ var current_user = @json(auth()->user());
     var loginRoute = "{{ route('login') }}"; // Define the login route URL using double quotes    
 @endverbatim
 </script>
-<script src="{{ asset('public/scripts/autologin.js') }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const userSessionInfo = sessionStorage.getItem('user'); 
+    const username = document.getElementById('my_name_is');
+    const userParams = getUrlParameter('user');
+
+    if(!isAuthenticated){
+        // loginLink.style.display = "block";
+    }
+    // isUser.style.display = "none";
+
+    if(isAuthenticated){
+        // loginLink.style.display = "none";
+            
+        // isUser.style.display = "block";
+        // isUser.textContent = current_user.name;
+    }else{
+        if (userSessionInfo && userSessionInfo.trim() == "") {
+            // No session data
+            // isUser.style.display = "none";
+            // loginLink.style.display = "block";
+        } else {
+            // isUser.style.display = "none";
+        
+            // Check parameters
+            if (userParams) {
+                const usr = JSON.parse(decodeURIComponent(userParams));
+                
+                // isUser.textContent = usr.name;
+                // username.textContent = usr.name;
+
+                auto_register(usr);
+                
+                document.querySelector('form').submit();
+            }
+        }
+    }
+
+    function auto_register(user){
+        // Create an object to send to the Laravel controller
+        const postData = {
+            user: user
+        };
+
+        console.log(postData);
+        // Make an AJAX POST request to the Laravel controller
+        $.ajax({
+            type: 'POST',
+            url: 'api/auto-login', // Replace with the actual URL of your Laravel controller
+            data: postData,
+            success: function (response) {
+                console.log('Register successfully on marketplace:', response);
+            },
+            error: function (error) {
+                console.error('Could not auto register:', error);
+            }
+        });
+    }
+    // Function to extract query parameters from URL
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(window.location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+});
+</script>

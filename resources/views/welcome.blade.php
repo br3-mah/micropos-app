@@ -2003,6 +2003,119 @@ Cultivating Agriculture that Works for the Future
             max-height: 53px;
         }
     </style>
+    <style>
+li {
+  list-style: none;
+}
+.red {
+      color: #F16B6F;
+    }
+.logo {
+  position: fixed;
+  background-color: #333;
+  color: #eee;
+  left: 0;
+  top: 0;
+  z-index: 1200;
+  padding: 10px;
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bg-slideshow,
+.bg-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.bg-slideshow:after {
+    content: '';
+    background: transparent url('http://watchmaker.haz.wiki/_media/tips:stripes.png') repeat top left;
+    /*background: transparent url('http://erinsowards.com/articles/2012/07/graphics/bkg_patterns_08.gif') repeat top left;*/
+}
+.bg-slideshow li .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 18s linear infinite 0s;
+}
+.bg-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 18s linear infinite 0s;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.bg-slideshow li div h3 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 240px;
+    padding: 0;
+    line-height: 200px;
+}
+.bg-slideshow li:nth-child(1) .image {
+    background-image: url('{{ asset("public/img/3.jpg") }}')
+}
+.bg-slideshow li:nth-child(2) .image {
+    background-image: url('{{ asset("public/img/4.jpg") }}');
+    animation-delay: 6s;
+}
+.bg-slideshow li:nth-child(3) .image {
+    background-image: url('{{ asset("public/img/5.jpg") }}');
+    animation-delay: 12s;
+}
+.bg-slideshow li:nth-child(2) div {
+    animation-delay: 6s;
+}
+.bg-slideshow li:nth-child(3) div {
+    animation-delay: 12s;
+}
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    27% { opacity: 1 }
+    45% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  27% { opacity: 1 }
+  45% { opacity: 0 }
+  100% { opacity: 0 }
+}
+.no-cssanimations .cb-slideshow li .image{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) {
+    .bg-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) {
+    .bg-slideshow li div h3 { font-size: 80px }
+}
+    </style>
 </head>
 
 <body class="page-template-default page page-id-18091 wp-custom-logo theme-agricola woocommerce-no-js tinvwl-theme-style skin_default scheme_light blog_mode_page body_style_fullscreen is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-18667 header_position_over menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-18091">
@@ -2026,227 +2139,26 @@ Cultivating Agriculture that Works for the Future
                                     <div class="elementor-inner">
                                         <div class="elementor-section-wrap">
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-771869f elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="771869f" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-extended">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d91685a sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="d91685a" data-element_type="column">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-0015647 sc_fly_static elementor-widget elementor-widget-trx_widget_slider" data-id="0015647" data-element_type="widget" data-widget_type="trx_widget_slider.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="widget_area sc_widget_slider">
-                                                                                <aside class="widget widget_slider">
-                                                                                    <div class="slider_wrap slider_engine_revo slider_alias_organic-farm">
-                                                                                        <div class="wp-block-themepunch-revslider 0">
-                                                                                            <!-- START Organic Farm REVOLUTION SLIDER 6.5.31 -->
-                                                                                            <p class="rs-p-wp-fix"></p>
-                                                                                            <rs-module-wrap id="rev_slider_4_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
-                                                                                                <rs-module id="rev_slider_4_1" style="" data-version="6.5.31">
-                                                                                                    <rs-slides>
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-6" data-title="Slide" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="" title="slider-4-slide-1-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/3.jpg')}}" data-parallax="on" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--
-							                                        -->
-                                                                                                            <rs-layer id="slider-4-slide-6-layer-3" data-type="image" data-rsp_ch="on" data-xy="x:c;y:m;" data-text="w:normal;s:20,15,8,4;l:0,18,9,6;" data-dim="w:838px,628px,339px,209px;h:647px,485px,262px,161px;" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:520;sp:1000;sR:520;" data-frame_999="o:0;st:w;sR:7480;" style="z-index:16;">
-                                                                                                                <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Marketpalce Farm" class="tp-rs-img rs-lazyload" width="838" height="647" data-lazyload="{{ asset('public/images/organic-farm.jpg')}}" data-no-retina>
-                                                                                                            </rs-layer>
-                                                                                                            <!--
-                                                                                    -->
-                                                                                                        </rs-slide>
-                                                                                                        
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-7" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-2-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Slider Slide" title="slider-4-slide-2-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/4.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--						-->
-                                                                                                            <rs-zone id="rrzm_7" class="rev_row_zone_middle" style="z-index: 14;">
-                                                                                                                <!--
-								                                -->
-                                                                                                                <rs-row id="slider-4-slide-7-layer-13" data-type="row" data-xy="xo:50px;yo:50px;" data-cbreak="nobreak" data-basealign="slide" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:1;">
-                                                                                                                    <!--
-									                                                            -->
-                                                                                                                    <rs-column id="slider-4-slide-7-layer-14" data-type="column" data-xy="xo:50px;yo:50px;" data-text="l:26,24,24,24;a:center;" data-rsp_bd="off" data-column="w:100%;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:2;width:100%;">
-                                                                                                                        <!--
-										                        -->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-1" data-type="text" data-text="w:normal;s:19,17,16,16;l:28,26,24,24;a:center;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-frame_0="x:30px;" data-frame_1="st:1770;sp:1000;" data-frame_999="o:0;st:w;sR:6230;" style="z-index:3;font-family:'DM Sans';display:inline-block;">
-                                                                                                                            Cultivating
-                                                                                                                            Agriculture
-                                                                                                                            that
-                                                                                                                            Works
-                                                                                                                            for
-                                                                                                                            the
-                                                                                                                            Future
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-0" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:22px,16px,12px,0px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:4;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-24" class="sldr-title" data-type="text" data-xy="xo:0,35px,35px,35px;yo:0,281px,281px,281px;" data-text="w:normal;s:78,58,40,28;l:72,58,42,34;fw:500;a:center;" data-rsp_o="off" data-disp="inline-block" data-frame_0="x:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index:5;font-family:'halyard-display';display:inline-block;">
-                                                                                                                            We’re
-                                                                                                                            a
-                                                                                                                            Unique
-                                                                                                                            and
-                                                                                                                            Traditional<br />
-                                                                                                                            Organic
-                                                                                                                            Farm
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-19" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:50px,36px,32px,20px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:6;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-                                                                                                                            --><a id="slider-4-slide-7-layer-21" class="rs-layer rev-btn" href="{{ route('shop.index') }}" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Go
-                                                                                                                            to
-                                                                                                                            the
-                                                                                                                            Shop
-                                                                                                                        </a>
-                                                                                                                        <!--
-									-->
-                                                                                                                    </rs-column>
-                                                                                                                    <!--
-								    -->
-                                                                                                                </rs-row>
-                                                                                                                <!--
-							        -->
-                                                                                                            </rs-zone>
-                                                                                                            <!--
-                                                                    -->
-                                                                                                        </rs-slide>
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-8" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-3-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Slider Slide" title="slider-4-slide-3-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/5.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--						-->
-                                                                                                            <rs-zone id="rrzm_8" class="rev_row_zone_middle" style="z-index: 14;">
-                                                                                                                <!--
-								    -->
-                                                                                                                <rs-row id="slider-4-slide-8-layer-13" data-type="row" data-xy="xo:50px;yo:50px;" data-cbreak="nobreak" data-basealign="slide" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:1;">
-                                                                                                                    <!--
-									-->
-                                                                                                                    <rs-column id="slider-4-slide-8-layer-14" data-type="column" data-xy="xo:50px;yo:50px;" data-text="l:26,24,24,24;a:center;" data-rsp_bd="off" data-column="w:100%;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:2;width:100%;">
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-1" data-type="text" data-text="w:normal;s:19,17,16,16;l:28,26,24,24;a:center;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-frame_0="x:30px;" data-frame_1="st:1770;sp:1000;sR:1770;" data-frame_999="o:0;st:w;sR:6230;" style="z-index:3;font-family:'DM Sans';display:inline-block;">
-                                                                                                                            Cultivating
-                                                                                                                            Agriculture
-                                                                                                                            that
-                                                                                                                            Works
-                                                                                                                            for
-                                                                                                                            the
-                                                                                                                            Future
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-0" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:22px,16px,8px,0px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:4;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-24" class="sldr-title" data-type="text" data-xy="xo:0,35px,35px,35px;yo:0,281px,281px,281px;" data-text="w:normal;s:92,72,54,38;l:92,76,64,46;fw:500;a:center;" data-rsp_o="off" data-disp="inline-block" data-frame_0="x:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index:5;font-family:'halyard-display';display:inline-block;">
-                                                                                                                            Get
-                                                                                                                            the
-                                                                                                                            Fresh
-                                                                                                                            Product
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-19" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:44px,30px,26px,20px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:6;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-8-layer-21" class="rs-layer rev-btn" href="#" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-margin="r:10,8,6,6;" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;sR:1250;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Go
-                                                                                                                            to
-                                                                                                                            the
-                                                                                                                            Shop
-                                                                                                                        </a>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-8-layer-2" class="rs-layer rev-btn" href="website/greenwebbtech.com/contacts.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:50,48,46,46;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:38,30,26,26;l:38,30,26,26;" data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;" data-frame_0="x:30px;" data-frame_1="st:1350;sp:1000;sR:1350;" data-frame_999="o:0;st:w;sR:6650;" data-frame_hover="rX:0deg;rY:0deg;bgc:#92bb53;boc:#92bb53;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;e:power1.inOut;" style="z-index:8;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Contact
-                                                                                                                            Info
-                                                                                                                        </a>
-                                                                                                                        <!--
-									-->
-                                                                                                                    </rs-column>
-                                                                                                                    <!--
-								-->
-                                                                                                                </rs-row>
-                                                                                                                <!--
-							-->
-                                                                                                            </rs-zone>
-                                                                                                            <!--
--->
-                                                                                                        </rs-slide>
-                                                                                                    </rs-slides>
-                                                                                                    <rs-static-layers>
-                                                                                                        <!--
-					-->
-                                                                                                    </rs-static-layers>
-                                                                                                </rs-module>
-                                                                                                <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-                                                                                                </script>
-                                                                                                <script>
-                                                                                                    setREVStartSize({
-                                                                                                        c: 'rev_slider_4_1',
-                                                                                                        rl: [1240,
-                                                                                                            1460,
-                                                                                                            785,
-                                                                                                            500
-                                                                                                        ],
-                                                                                                        el: [980,
-                                                                                                            700,
-                                                                                                            480,
-                                                                                                            480
-                                                                                                        ],
-                                                                                                        gw: [1920,
-                                                                                                            1440,
-                                                                                                            778,
-                                                                                                            480
-                                                                                                        ],
-                                                                                                        gh: [980,
-                                                                                                            700,
-                                                                                                            480,
-                                                                                                            480
-                                                                                                        ],
-                                                                                                        type: 'standard',
-                                                                                                        justify: '',
-                                                                                                        layout: 'fullscreen',
-                                                                                                        offsetContainer: '',
-                                                                                                        offset: '',
-                                                                                                        mh: "0"
-                                                                                                    });
-                                                                                                    if (window
-                                                                                                        .RS_MODULES !==
-                                                                                                        undefined && window
-                                                                                                        .RS_MODULES
-                                                                                                        .modules !==
-                                                                                                        undefined && window
-                                                                                                        .RS_MODULES.modules[
-                                                                                                            "revslider41"
-                                                                                                        ] !== undefined
-                                                                                                    ) {
-                                                                                                        window.RS_MODULES
-                                                                                                            .modules[
-                                                                                                                "revslider41"
-                                                                                                            ].once =
-                                                                                                            false;
-                                                                                                        window.revapi4 =
-                                                                                                            undefined;
-                                                                                                        if (window
-                                                                                                            .RS_MODULES
-                                                                                                            .checkMinimal !==
-                                                                                                            undefined)
-                                                                                                            window
-                                                                                                            .RS_MODULES
-                                                                                                            .checkMinimal()
-                                                                                                    }
-                                                                                                </script>
-                                                                                            </rs-module-wrap>
-                                                                                            <!-- END REVOLUTION SLIDER -->
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </aside>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <ul class="bg-slideshow">
+                                                    <li>
+                                                         <span class="image">Image 01</span>
+                                                         <div>
+                                                              {{-- <h3><span class="red">re</span>·lax</h3> --}}
+                                                         </div>
+                                                    </li>
+                                                   <li>
+                                                   <span class="image">Image 02</span>
+                                                         <div>
+                                                              {{-- <h3>and <span class="red">go</span>..</h3> --}}
+                                                         </div>
+                                                 </li>
+                                                   <li>
+                                                   <span class="image">Image 03</span>
+                                                         <div>
+                                                              {{-- <h3>Get <span class="red">you</span>rself</h3> --}}
+                                                         </div>
+                                                 </li>
+                                               </ul>
                                             </section>
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
@@ -2274,40 +2186,7 @@ Cultivating Agriculture that Works for the Future
                                             {{-- @include('patches.products'); --}}
 
 
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-extended">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-spacer">
-                                                                                <div class="elementor-spacer-inner">
-                                                                                    <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
-                                                                                        <div class="elementor-widget-container">
-                                                                                            <div class="sc_item_button sc_button_wrap sc_align_center">
-                                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
-                                                                                                    <span class="sc_button_text">
-                                                                                                        <span class="sc_button_title">
-                                                                                                            Go To The Shop
-                                                                                                        </span>
-                                                                                                    </span>
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-
+                                            
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
@@ -2328,7 +2207,8 @@ Cultivating Agriculture that Works for the Future
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
+
+                                            <section style="margin-top:5%" class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-no">
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
@@ -2479,8 +2359,9 @@ Cultivating Agriculture that Works for the Future
                                                                                             <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="sc_item_button sc_button_wrap">
-                                                                                                        <a href="about.html" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">About
-                                                                                                                    Us</span></span></a>
+                                                                                                        <a href="https://auth.greenwebbtech.com/register?type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                                            Register
+                                                                                                            </span></span></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -2497,6 +2378,41 @@ Cultivating Agriculture that Works for the Future
                                                     </div>
                                                 </div>
                                             </section> 
+
+                                            
+                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-extended">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner">
+                                                                                    <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <div class="sc_item_button sc_button_wrap sc_align_center">
+                                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                    <span class="sc_button_text">
+                                                                                                        <span class="sc_button_title">
+                                                                                                            Go To The Shop
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
 
                                              <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
