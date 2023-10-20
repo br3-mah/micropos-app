@@ -93,7 +93,7 @@ try {
                             <div class="col-md-6">
                                 
                                 @if(!empty($user))
-                                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email"  value="{{ $user['email'] }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"  value="{{ $user['email'] }}" required autocomplete="email" autofocus>
                                 @else
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required autocomplete="email" autofocus>
                                 @endif
@@ -110,7 +110,7 @@ try {
 
                             <div class="col-md-6">
                                 @if(!empty($user))
-                                    <input id="password" type="text" class="form-control @error('password') is-invalid @enderror" value="{{ $user['global_secret_word'] }}" name="global_secret_word" required autocomplete="current-password">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" value="{{ $user['global_secret_word'] }}" name="global_secret_word" required autocomplete="current-password">
                                 @else
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required autocomplete="current-password">
                                 @endif
