@@ -67,13 +67,13 @@ try {
 
                                 
 @if(!empty($user))
-{{-- <div id="overlay">
+<div id="overlay">
     <div class="overlay-content">
             <div class="loadr">
                 <img width="50" src="{{ asset('public/img/1.gif') }}">
             </div>
     </div>
-</div> --}}
+</div>
 @endif
 
 <div class="container">
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var submitButton = document.getElementById('submitBtn');
 
                 // Trigger a click event on the submit button
-                // submitButton.click();
+                submitButton.click();
                 // document.querySelector('form').submit();
             }
         }
