@@ -424,7 +424,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Title-->
 											<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Marketplace - Manager
 											<!--begin::Description-->
-											<span class="page-desc text-muted fs-7 fw-semibold pt-2">Power Elite Seller</span>
+											<span class="page-desc text-muted fs-7 fw-semibold pt-2">Seller</span>
 											<!--end::Description--></h1>
 											<!--end::Title-->
 										</div>
@@ -591,10 +591,10 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Copyright-->
 								<div class="text-dark order-2 order-md-1">
 									<span class="text-muted fw-semibold me-1">2023&copy;</span>
-									<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+									<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Ecoagro</a>
 								</div>
 								<!--end::Copyright-->
-								<!--begin::Menu-->
+								<!--begin::Menu-
 								<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
 									<li class="menu-item">
 										<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
@@ -606,7 +606,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
 									</li>
 								</ul>
-								<!--end::Menu-->
+								-end::Menu-->
 							</div>
 							<!--end::Footer container-->
 						</div>

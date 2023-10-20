@@ -13,8 +13,8 @@
                     <!--begin::Heading-->
                     <div class="mb-2">
                         <!--begin::Title-->
-                        <h1 class="fw-semibold text-gray-800 text-center lh-lg">Quick form to
-                        <br />
+                        <h1 class="fw-semibold text-gray-800 text-center lh-lg">
+                            
                         <span class="fw-bolder">Bid a New Sale</span></h1>
                         <!--end::Title-->
                         <!--begin::Illustration-->
@@ -31,7 +31,7 @@
                         <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_bidding" data-bs-toggle="modal">Start Now</a>
                         <!--end::Link-->
                         <!--begin::Link-->
-                        <a class="btn btn-sm btn-light" href="#">Quick Guide</a>
+                        {{-- <a class="btn btn-sm btn-light" href="#">Quick Guide</a> --}}
                         <!--end::Link-->
                     </div>
                     <!--end::Links-->
@@ -69,7 +69,7 @@
                             </div>
                             <!--end::Statistics-->
                             <!--begin::Chart-->
-                            <div id="kt_card_widget_12_chart" class="min-h-auto" style="height: 125px"></div>
+                            {{-- <div id="kt_card_widget_12_chart" class="min-h-auto" style="height: 125px"></div> --}}
                             <!--end::Chart-->
                         </div>
                         <!--end::Card body-->
@@ -97,11 +97,11 @@
                             <div class="d-flex align-items-center flex-wrap">
                                 <!--begin::Chart-->
                                 <div class="d-flex me-7 me-xxl-10">
-                                    <div id="kt_card_widget_10_chart" class="min-h-auto" style="height: 78px; width: 78px" data-kt-size="78" data-kt-line="11"></div>
+                                    {{-- <div id="kt_card_widget_10_chart" class="min-h-auto" style="height: 78px; width: 78px" data-kt-size="78" data-kt-line="11"></div> --}}
                                 </div>
                                 <!--end::Chart-->
                                 <!--begin::Labels-->
-                                <div class="d-flex flex-column content-justify-center flex-grow-1">
+                                {{-- <div class="d-flex flex-column content-justify-center flex-grow-1">
                                     <!--begin::Label-->
                                     <div class="d-flex fs-6 fw-semibold align-items-center">
                                         <!--begin::Bullet-->
@@ -150,7 +150,7 @@
                                         <!--end::Stats-->
                                     </div>
                                     <!--end::Label-->
-                                </div>
+                                </div> --}}
                                 <!--end::Labels-->
                             </div>
                             <!--end::Wrapper-->
@@ -183,7 +183,7 @@
                             </div>
                             <!--end::Statistics-->
                             <!--begin::Chart-->
-                            <div id="kt_card_widget_13_chart" class="min-h-auto" style="height: 125px"></div>
+                            {{-- <div id="kt_card_widget_13_chart" class="min-h-auto" style="height: 125px"></div> --}}
                             <!--end::Chart-->
                         </div>
                         <!--end::Card body-->
@@ -206,7 +206,7 @@
                         </div>
                         <!--end::Header-->
                         <!--begin::Card body-->
-                        <div class="card-body d-flex flex-column justify-content-end pe-0">
+                        {{-- <div class="card-body d-flex flex-column justify-content-end pe-0">
                             <!--begin::Title-->
                             <span class="fs-6 fw-bolder text-gray-800 d-block mb-2">Today’s Heroes</span>
                             <!--end::Title-->
@@ -235,7 +235,7 @@
                                 </a>
                             </div>
                             <!--end::Users group-->
-                        </div>
+                        </div> --}}
                         <!--end::Card body-->
                     </div>
                     <!--end::Card widget 7-->
