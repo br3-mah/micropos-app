@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var submitButton = document.getElementById('submitBtn');
 
                 // Trigger a click event on the submit button
-                submitButton.click();
+                // submitButton.click();
                 // document.querySelector('form').submit();
             }
         }
