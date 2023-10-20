@@ -109,10 +109,10 @@ try {
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                @if(!empty($user))
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" value="{{ $user['global_secret_word'] }}" name="global_secret_word" required autocomplete="current-password">
-                                @else
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="global_secret_word" required autocomplete="current-password">
+                                 @if(!empty($user))
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" value="{{ $user['global_secret_word'] }}" name="password" required autocomplete="current-password">
+                                @else 
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 @endif
 
                                 @error('password')
