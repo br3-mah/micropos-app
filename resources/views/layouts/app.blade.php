@@ -327,7 +327,9 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-item">
 											<!--begin:Menu content-->
 											<div class="menu-content">
-												<span class="menu-section fs-5 fw-bolder ps-1 py-1">Home</span>
+												<span class="menu-section fs-5 fw-bolder ps-1 py-1">
+													<a href="{{ route('home') }}">Home</a>	
+												</span>
 											</div>
 											<!--end:Menu content-->
 										</div>
