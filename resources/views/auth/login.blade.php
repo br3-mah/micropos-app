@@ -67,15 +67,13 @@ try {
 
                                 
 @if(!empty($user))
-<div id="overlay">
+{{-- <div id="overlay">
     <div class="overlay-content">
-        {{-- <div class="loader"> --}}
             <div class="loadr">
                 <img width="50" src="{{ asset('public/img/1.gif') }}">
             </div>
-        {{-- </div> --}}
     </div>
-</div>
+</div> --}}
 @endif
 
 <div class="container">
