@@ -14,7 +14,8 @@ class Tags extends Model
         'meta-title',
         'meta-description',
         'meta-keyword',
-        'avatar'
+        'avatar',
+        'avatar_remove'
     ];
 
     public function product(){

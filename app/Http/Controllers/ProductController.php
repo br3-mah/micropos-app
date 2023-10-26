@@ -19,7 +19,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        $products = $this->productRepository->all();
+        $products = $this->productRepository->mine();
         // return response()->json($products);    
         return view('pages.products.index', [
             'products' => $products
@@ -56,12 +56,12 @@ class ProductController extends Controller
     }
 
     public function store(Request $request){
-        // dd($request);
         try {
             $product = $this->productRepository->create($request);
             return redirect()->route('product.index')->with('success', 'Product created successfully.');
         } catch (\Throwable $th) {
-            dd($th);
+            session()->flash('errorMessage', 'Error: ' . $th->getMessage());
+            return redirect()->back();
         }
     }
     

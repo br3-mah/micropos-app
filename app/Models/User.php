@@ -25,7 +25,19 @@ class User extends Authenticatable
         'current_source',
         'current_destination',
         'customer_group',
-        'status'
+        "is_approved",
+        "is_type",
+        "seller_name",
+        "seller_address",
+        "seller_address2",
+        "seller_address3",
+        "seller_size",
+        "seller_city",
+        "seller_country",
+        "seller_phone",
+        "seller_phone2",
+        "seller_phone3",
+        "status"
     ];
 
     /**

@@ -1,11 +1,64 @@
 @extends('layouts.app')
 @section('content')
+<style>
+/* Create the look of a generic thumbnail */
+.thumbnail {
+  position:relative;
+  display:inline-block;
+  width:6em;
+  height:6em;
+  border-radius:0.6em;
+  border:0.25em solid white;
+  vertical-align:middle;
+  box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+  margin:0.5em;
+  
+  background-position:center;
+  background-size:cover;
+}
 
+
+
+/* This will hide the file input */
+.imagepicker input {
+  display:none;
+}
+.imagepicker {
+  cursor:pointer;
+  color:white;
+  background-color:rgba(0,0,0,0.3);
+}
+/* This will add the floating plus symbol to the imagepicker */
+.imagepicker:before {
+  content:'+';
+  position:absolute;
+  font-size:3em;
+  vertical-align:middle;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+/* This will hide the plus symbol behind the background of the imagepicker if the class "picked" is added to the element */
+.imagepicker.picked:before {
+  z-index:-1;
+}
+</style>
 <div id="kt_app_content_container" class="app-container container-xxl">
+    {{-- @if(session('successMessage'))
+        <div class="alert alert-success">
+            {{ session('successMessage') }}
+        </div>
+    @endif --}}
+    @if(session('errorMessage'))
+        <div class="alert alert-danger">
+            {{ session('errorMessage') }}
+        </div>
+    @endif
     <!--begin::Form-->
     {{-- id="kt_ecommerce_add_product_form" --}}
     <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data" class="form d-flex flex-column flex-lg-row">
         @csrf
+        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         <!--begin::Aside column-->
         <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
             <!--begin::Thumbnail settings-->
@@ -282,24 +335,21 @@
                             <!--begin::Card body-->
                             <div class="card-body pt-0">
                                 <!--begin::Input group-->
-                                <div class="fv-row mb-2">
-                                    <!--begin::Dropzone-->
-                                    <div class="dropzone" id="kt_ecommerce_add_product_media">
-                                        <!--begin::Message-->
-                                        <div class="dz-message needsclick">
-                                            <!--begin::Icon-->
-                                            <i class="ki-outline ki-file-up text-primary fs-3x"></i>
-                                            <!--end::Icon-->
-                                            <!--begin::Info-->
-                                            <div class="ms-4">
-                                                <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                <span class="fs-7 fw-semibold text-gray-400">Upload up to 10 files</span>
-                                            </div>
-                                            <!--end::Info-->
-                                        </div>
-                                    </div>
-                                    <!--end::Dropzone-->
-                                </div>
+                                <label class="imagepicker imagepicker-replace thumbnail">
+                                    <input type='file' name="pic1" id="imagepicker1">
+                                </label>
+                                <label class="imagepicker imagepicker-replace thumbnail">
+                                    <input type='file' name="pic2" id="imagepicker2">
+                                </label>
+                                <label class="imagepicker imagepicker-replace thumbnail">
+                                    <input type='file' name="pic3" id="imagepicker3">
+                                </label>
+                                <label class="imagepicker imagepicker-replace thumbnail">
+                                    <input type='file' name="pic4" id="imagepicker4">
+                                </label>
+                                <label class="imagepicker imagepicker-replace thumbnail">
+                                    <input type='file' name="pic5" id="imagepicker5">
+                                </label>
                                 <!--end::Input group-->
                                 <!--begin::Description-->
                                 <div class="text-muted fs-7">Set the product media gallery.</div>
@@ -537,7 +587,7 @@
                                     <!--end::Label-->
                                     <!--begin::Input-->
                                     <div class="form-check form-check-custom form-check-solid mb-2">
-                                        <input name="allow_backorder" class="form-check-input" type="checkbox" value="" />
+                                        <input name="allow_backorder" class="form-check-input" type="checkbox" value="1" />
                                         <label class="form-check-label">Yes</label>
                                     </div>
                                     <!--end::Input-->
@@ -747,5 +797,47 @@
     </form>
     <!--end::Form-->
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
+<script>
+// This function just works and can be used for many file types.
+// It will accept multiple files, and will only fire the callback once for each file.
+// Don't try to reinvent this
+function readFiles(files,callback,index=0) {
+  if (files && files[0]) {
+    let file = files[index++],
+        reader = new FileReader();
+    reader.onload = function(e){
+      callback(e);
+      if(index<files.length) readFiles(files,callback,index);
+    }
+    reader.readAsDataURL(file);
+  }
+}
+
+
+// Create a selector for an input and then do whatever you want using the callback function.
+$("body").on("change",".imagepicker-replace input",function() {
+  // store the current "this" into a variable
+  var imagepicker = this;
+  readFiles(this.files,function(e) {
+    // "this" will be different in the callback function
+    $(imagepicker).parent()
+      .addClass("picked")
+      .css({"background-image":"url("+e.target.result+")"});
+  });
+})
+
+
+
+// This example will add a new thumbnail each time
+$("body").on("change",".imagepicker-add input",function() {
+  var imagepicker = this;
+  readFiles(this.files,function(e) {
+    $(imagepicker).parent().before(
+      "<div class='thumbnail' style='background-image:url("+e.target.result+")'></div>"
+    )
+  });
+});
+</script>
 @endsection

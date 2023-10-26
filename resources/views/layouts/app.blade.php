@@ -39,7 +39,13 @@ License: For each use you must have a valid license purchased only from above li
 		<link href="{{ asset('public/dash/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 		<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
-        <!-- Scripts -->
+		<link rel="stylesheet" href="https://unpkg.com/filepond@4.19.4/dist/filepond.min.css">
+		
+
+		
+		
+		<!-- Scripts -->
+		
 		<script>
 			// const userData = getUrlParameter('user');
 			// const user = JSON.parse(decodeURIComponent(userData));
@@ -103,21 +109,23 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Logo-->
 							<!--begin::Primary menu-->
 							<div class="app-sidebar-menu flex-grow-1 hover-scroll-overlay-y scroll-ps mx-2 my-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px">
-								<!--begin::Menu-->
+								<!--begin::Menu-
 								<div id="kt_aside_menu" class="menu menu-rounded menu-column menu-title-gray-600 menu-state-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500 fw-semibold fs-6" data-kt-menu="true">
-									<!--begin:Menu item-->
+									
+									
 									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item here show py-2">
-										<!--begin:Menu link-->
+									
+										
 										<span class="menu-link menu-center">
 											<span class="menu-icon me-0">
 												<i class="ki-outline ki-home-2 fs-2x"></i>
 											</span>
 										</span>
 									</div>
-									<!--end:Menu item-->
-									<!--begin:Menu item-->
+									
 									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
-										<!--begin:Menu link-->
+									
+										
 										<span class="menu-link menu-center">
 											<span class="menu-icon me-0">
 												<i class="ki-outline ki-notification-status fs-2x"></i>
@@ -126,7 +134,7 @@ License: For each use you must have a valid license purchased only from above li
 									</div>
 									
 								</div>
-								<!--end::Menu-->
+								-end::Menu-->
 							</div>
 							<!--end::Primary menu-->
 							<!--begin::Footer-->
@@ -310,7 +318,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Sidebar secondary wrapper-->
 								<div class="d-flex flex-column pt-10 ps-11" id="kt_app_sidebar_secondary_header">
 									<!--begin::Action
-									 <a href="../../demo29/dist/index.html" class="d-flex align-items-center custom-link fs-6 fw-semibold mb-5">
+									 <a href="#" class="d-flex align-items-center custom-link fs-6 fw-semibold mb-5">
 									<i class="ki-outline ki-black-left fs-2 me-3 text-white opacity-50"></i>Back to list</a>
 									end::Action-->
 									<span class="fs-2 fw-bolder text-white">
@@ -328,7 +336,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu content-->
 											<div class="menu-content">
 												<span class="menu-section fs-5 fw-bolder ps-1 py-1">
-													<a href="{{ route('home') }}">Home</a>	
+													<p">Manage</a>	
 												</span>
 											</div>
 											<!--end:Menu content-->
@@ -338,8 +346,10 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-item">
 											<!--begin:Menu link-->
 											<a style="text-decoration:none; text-underline:none" class="menu-link active" href="{{ route('product.index') }}">
-												<span class="menu-bullet">
-													<!--<span class="bullet bullet-dot"></span> -->
+												<span class="menu-icon me-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+													<path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+													</svg>
 												</span>
 												<span class="menu-title">My Products</span>
 											</a>
@@ -347,16 +357,74 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										{{--  <div class="menu-item">
+										<div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo29/dist/dashboards/ecommerce.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
+											<a class="menu-link" href="###">
+												<span class="menu-icon  me-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+													<path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+													<path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+													<path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+													<path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+													</svg>
 												</span>
 												<span class="menu-title">My Sales</span>
 											</a>
 											<!--end:Menu link-->
-										</div>  --}}
+										 </div>  
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" href="###">
+												<span class="menu-icon me-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+													<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+													</svg>
+												</span>
+												<span class="menu-title">My Orders</span>
+											</a>
+											<!--end:Menu link-->
+										 </div>  
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" href="###">
+												<span class="menu-icon me-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+													<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+													</svg>
+												</span>
+												<span class="menu-title">My Deliveries</span>
+											</a>
+											<!--end:Menu link-->
+										 </div>  
+										 <div class="menu-item">
+											<!--begin:Menu content-->
+											<div class="menu-content">
+												<span class="menu-section fs-5 fw-bolder ps-1 py-1">
+													<p>Customer Management</p>	
+												</span>
+											</div>
+											<!--end:Menu content-->
+										</div>
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" href="###">
+												<span class="menu-icon me-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+													<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+													</svg>
+												</span>
+												<span class="menu-title">Customer Orders</span>
+											</a>
+											<a class="menu-link" href="###">
+												<span class="menu-icon me-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+													<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+													</svg>
+												</span>
+												<span class="menu-title">Customer Deliveries</span>
+											</a>
+											<!--end:Menu link-->
+										 </div> 
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
 										{{--  <div class="menu-item">
@@ -4532,6 +4600,9 @@ License: For each use you must have a valid license purchased only from above li
 
 		<script src="{{ asset('public/dash/js/custom/apps/ecommerce/catalog/save-product.js')}}"></script>
 		<script src="{{ asset('public/dash/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
+
+
+
 	</body>
 	<!--end::Body-->
 </html>

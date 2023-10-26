@@ -39,14 +39,23 @@ class Product extends Model
         "length",
         "meta_title",
         "meta_keywords",
+        "is_approved"
     ];
+
+    
+    public function variants(){
+        return $this->hasMany(ProductVariation::class);
+    }
+    
+    public function photos(){
+        return $this->hasMany(ProductImage::class);
+    }
+    public function categories(){
+        return $this->hasMany(ProductCategory::class);
+    }
+    public function tags(){
+        return $this->hasMany(ProductTag::class);
+    }
 }
 
-// Product Variation
-// "kt_ecommerce_add_product_options" => array:2 [▼
-// 0 => array:2 [▼
-//   "product_option" => "color"
-//   "product_option_value" => "white"
-// ]
-// 1 => array:2 [▶]
-// ]
+

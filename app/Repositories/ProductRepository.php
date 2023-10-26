@@ -2,6 +2,8 @@
 namespace App\Repositories;
 
 use App\Models\Product;
+use App\Models\ProductImage;
+use App\Models\ProductVariation;
 
 class ProductRepository
 {
@@ -10,6 +12,9 @@ class ProductRepository
     }
     public function all(){
         return Product::orderBy('created_at', 'desc')->get();
+    }
+    public function mine(){
+        return Product::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
     }
     public function search($data){
         return Product::orWhere('name', 'LIKE', '%'.$data['s'].'%')
@@ -21,12 +26,13 @@ class ProductRepository
         return Product::find($id);
     }
     public function create($request){
-        dd($request);
+        // dd($request);
         // Validate the form data
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
-            // 'status' => 'required|string|in:published,draft,scheduled,inactive',
+            'status' => 'nullable',
+            'user_id' => 'nullable',
             'tags' => 'nullable|string',
             'disc_type' => 'nullable|string',
             'fixed_price' => 'nullable|numeric',
@@ -36,8 +42,8 @@ class ProductRepository
             'barcode' => 'nullable|string',
             'shelf_qty' => 'nullable|integer',
             'warehouse_qty' => 'nullable|integer',
-            // 'allow_backorder' => 'boolean',
-            // 'weight' => 'nullable|numeric',
+            'allow_backorder' => 'nullable',
+            'weight' => 'nullable',
             'width' => 'nullable|numeric',
             'height' => 'nullable|numeric',
             'length' => 'nullable|numeric',
@@ -45,22 +51,77 @@ class ProductRepository
             'meta_keywords' => 'nullable|string',
             'avatar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Adjust the file validation rules as needed
         ]);
-    
-        // Handle file upload (if an avatar is provided)
-        
-        if ($request->hasFile('avatar')) {
-            // Store the uploaded file and get its path
-            $avatarPath = $request->file('avatar')->store('products/avatars', 'public');
-            // dd($avatarPath);
-            // Add the avatar path to the validated data
-            $validatedData['image'] = $avatarPath;
-        }
-    
+
+
         // Create the product with the validated data
         $product = Product::create($validatedData);
+
+        // Store variations
+        foreach ($request->input('kt_ecommerce_add_product_options') as $option) {
+            ProductVariation::created([
+                "option" => $option['product_option'],
+                "value" => $option['product_option_value'],
+                "product_id" => $product->id
+            ]);
+        }
+    
+        // Handle file upload (if an avatar is provided)
+        if ($request->hasFile('avatar')) {
+            $avatarPath = $request->file('avatar')->store('products/avatars', 'public');
+            $validatedData['image'] = $avatarPath;
+        }
+        // Handle exhibit file upload (if an avatar is provided)
+        if ($request->hasFile('pic1')) {
+            // Store the uploaded file and get its path
+            $pic1 = $request->file('pic1')->store('products/extras', 'public');
+            ProductImage::created([ 
+                'path'=> $pic1,
+                'status'=> 1,
+                'product_id'=> $product->id
+            ]);
+        }
+        // Handle exhibit file upload (if an avatar is provided)
+        if ($request->hasFile('pic2')) {
+            $pic2 = $request->file('pic2')->store('products/extras', 'public');
+            ProductImage::created([ 
+                'path'=> $pic2,
+                'status'=> 1,
+                'product_id'=> $product->id
+            ]);
+        }
+        // Handle exhibit file upload (if an avatar is provided)
+        if ($request->hasFile('pic3')) {
+            $pic3 = $request->file('pic3')->store('products/extras', 'public');
+            ProductImage::created([ 
+                'path'=> $pic3,
+                'status'=> 1,
+                'product_id'=> $product->id
+            ]);
+        }
+        // Handle exhibit file upload (if an avatar is provided)
+        if ($request->hasFile('pic4')) {
+            $pic4 = $request->file('pic4')->store('products/extras', 'public');
+            ProductImage::created([ 
+                'path'=> $pic4,
+                'status'=> 1,
+                'product_id'=> $product->id
+            ]);
+        }
+        // Handle exhibit file upload (if an avatar is provided)
+        if ($request->hasFile('pic5')) {
+            $pic5 = $request->file('pic5')->store('products/extras', 'public');
+            ProductImage::created([ 
+                'path'=> $pic5,
+                'status'=> 1,
+                'product_id'=> $product->id
+            ]);
+        }
+    
         // Redirect back with a success message or perform any other actions as needed
         
     }
+
+    public function createVariant($product){}
 
     public function destroy($product){
         // Implement any logic to check if the user is authorized to delete the product.
