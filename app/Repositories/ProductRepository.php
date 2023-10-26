@@ -21,6 +21,7 @@ class ProductRepository
         return Product::find($id);
     }
     public function create($request){
+        dd($request);
         // Validate the form data
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',

@@ -117,7 +117,10 @@
                     <!--begin::Select2-->
                     <select class="form-select mb-2" data-control="select2" data-placeholder="Select an option" data-allow-clear="true" multiple="multiple">
                         <option></option>
-                        <option value="seed">Seeds</option>
+                        @foreach($categories as $cat)
+                        <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                        @endforeach
+                        {{-- <option value="seed">Seeds</option>
                         <option value="feed">Animal Feed</option>
                         <option value="machinery">Machinery</option>
                         <option value="Clothing">Clothing</option>
@@ -126,7 +129,7 @@
                         <option value="Tools">tools</option>
                         <option value="Pesticides">Pesticides</option>
                         <option value="food">Food</option>
-                        <option value="Other">Others</option>
+                        <option value="Other">Others</option> --}}
                     </select>
                     <!--end::Select2-->
                     <!--begin::Description-->
@@ -134,10 +137,11 @@
                     <!--end::Description-->
                     <!--end::Input group-->
                     <!--begin::Button-->
-                    <a href="{{ route('product.create') }}" class="btn btn-light-primary btn-sm mb-10">
-                    <i class="ki-outline ki-plus fs-2"></i>Create new category</a>
+                    {{-- <a href="{{ route('product.create') }}" class="btn btn-light-primary btn-sm mb-10">
+                    <i class="ki-outline ki-plus fs-2"></i>Create new category</a> --}}
                     <!--end::Button-->
                     <!--begin::Input group-->
+                    
                     <!--begin::Label-->
                     <label class="form-label d-block">Tags</label>
                     <!--end::Label-->

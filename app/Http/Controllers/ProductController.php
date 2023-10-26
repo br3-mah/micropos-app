@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Repositories\ProductRepository;
+use App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    private $productRepository;
+    private $productRepository, $categoryRepository;
 
-    public function __construct(ProductRepository $productRepository)
+    public function __construct(ProductRepository $productRepository, CategoryRepository $categoryRepository)
     {
         $this->productRepository = $productRepository;
     }
@@ -46,8 +48,11 @@ class ProductController extends Controller
         //     return response()->json(['message' => 'Product not found'], 404);
         // }
         // return response()->json($product);
-    
-        return view('pages.products.create');
+        // $categories = $this->categoryRepository->all();
+        $categories = Category::get();
+        return view('pages.products.create',[
+            'categories'=> $categories
+        ]);
     }
 
     public function store(Request $request){
