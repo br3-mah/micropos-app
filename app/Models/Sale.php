@@ -28,23 +28,31 @@ class Sale extends Model
 
 
     public static function avgSale(){
-        $orders = Order::with(['order_items.products.user' => function ($query) {
-            $query->where('id', auth()->user()->id);
-        }])->get();
-        
-        $totalPrice = $orders->sum(function ($order) {
-            return $order->order_items->sum('price');
-        });
-        
-        return $totalPrice;
+        try {
+            $orders = Order::with(['order_items.products.user' => function ($query) {
+                $query->where('id', auth()->user()->id);
+            }])->get();
+            
+            $totalPrice = $orders->sum(function ($order) {
+                return $order->order_items->sum('price');
+            });
+            
+            return $totalPrice;
+        } catch (\Throwable $th) {
+            return 0;
+        }
     }
     public static function spentTotal(){
-        $orders = Order::with('order_items')->where('user_id', auth()->user()->id)->get();
+        try {
+            $orders = Order::with('order_items')->where('user_id', auth()->user()->id)->get();
         
-        $totalPrice = $orders->sum(function ($order) {
-            return $order->order_items->sum('price');
-        });
-        
-        return $totalPrice;
+            $totalPrice = $orders->sum(function ($order) {
+                return $order->order_items->sum('price');
+            });
+            
+            return $totalPrice;
+        } catch (\Throwable $th) {
+            return 0;
+        }
     }
 }
