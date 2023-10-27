@@ -32,11 +32,12 @@ class Order extends Model
         "order_uuid",
         "order_referer",
         "order_status",
-        "total_paid"
+        "total_paid",
+        "user_id"
     ];
 
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,"user_id");
     }
     public function order_items(){
         return $this->hasMany(OrderItem::class, 'order_id');

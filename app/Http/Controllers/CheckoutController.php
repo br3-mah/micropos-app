@@ -39,7 +39,12 @@ class CheckoutController extends Controller
                     // Save it to a orders
                     $this->orderRepository->createItems($item, $order->id);
                 }
-                Mail::to($request->input('billing_email'))->send(new OrderConfirmation($order->toArray(), $cartData ));
+                if(auth()->check()){
+                    Mail::to(auth()->user()->email)->send(new OrderConfirmation($order->toArray(), $cartData ));
+                }else{
+                    Mail::to($request->input('billing_email'))->send(new OrderConfirmation($order->toArray(), $cartData ));
+                }
+        
                 Mail::to(['nyeleti.bremah@gmail.com','georgemunganga@gmail.com'])->send(new OrderReport($order->toArray(), $cartData ));
                 return response()->json(['data' => $order], 200);
             } else {

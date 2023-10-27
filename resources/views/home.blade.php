@@ -56,7 +56,7 @@
                                 <!--begin::Info-->
                                 <div class="d-flex align-items-center mb-2">
                                     <!--begin::Value-->
-                                    <span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">0</span>
+                                    <span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">{{ App\Models\Sale::avgSale() }}</span>
                                     <!--end::Value-->
                                     <!--begin::Label-->
                                     <span class="d-flex align-items-end text-gray-400 fs-6 fw-semibold">ZMK</span>

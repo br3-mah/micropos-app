@@ -28,6 +28,9 @@
 </div>
 <form id="checkout-form" action="{{ route('checkout.store') }}" name="checkout" method="post" class="checkout woocommerce-checkout" enctype="multipart/form-data" novalidate="novalidate" data-inited-validation="1">
     @csrf
+    @auth
+    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+    @endauth
     <div id="customer_details" style="width: 100%; padding-bottom: 3%; padding-left:8%; padding-right:8%;">
         <div class="col-1">
             <div class="woocommerce-billing-fields">

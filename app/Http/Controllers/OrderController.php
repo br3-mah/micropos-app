@@ -21,8 +21,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::get();
-        // return response()->json($products);    
+        $orders = $this->orderRepository->mine();
         return view('pages.orders.index', [
             'orders' => $orders
         ]);   
@@ -92,8 +91,14 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Order $order)
     {
-        //
+        try {
+            $this->orderRepository->destroy( $order );
+            session()->flash('success', 'Order has been deleted successfully.');
+            return redirect()->route('orders.index');
+        } catch (\Throwable $th) {
+            session()->flash('error', $th->getMessage());
+        }
     }
 }

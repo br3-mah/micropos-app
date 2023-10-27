@@ -85,7 +85,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex align-items-center d-lg-none ms-2 me-n3" title="Show sidebar menu">
 							<div class="btn btn-icon btn-color-white bg-white bg-opacity-0 bg-hover-opacity-10 w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
 								<i class="ki-outline ki-abstract-14 fs-1"></i>
-							</div>
+							</div> 
 						</div>
 						<!--end::Header mobile toggle-->
 					</div>
@@ -101,7 +101,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Logo-->
 							<div class="app-sidebar-logo d-none d-md-flex flex-center pt-10 mb-5 mb-lg-17" id="kt_app_sidebar_logo">
 								<!--begin::Logo image-->
-								<a href="https://website.greenwebbtech.com">
+								<a href="https://market.greenwebbtech.com">
 									<img alt="Logo" src="{{ asset('public/img/logo.png')}}" class="h-25px" />
 								</a>
 								<!--end::Logo image-->
@@ -317,10 +317,16 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="d-flex flex-column">
 								<!--begin::Sidebar secondary wrapper-->
 								<div class="d-flex flex-column pt-10 ps-11" id="kt_app_sidebar_secondary_header">
-									<!--begin::Action
-									 <a href="#" class="d-flex align-items-center custom-link fs-6 fw-semibold mb-5">
-									<i class="ki-outline ki-black-left fs-2 me-3 text-white opacity-50"></i>Back to list</a>
-									end::Action-->
+									
+									 <a href="{{ route('home') }}" class="d-flex  align-items-center custom-link fs-6 fw-semibold mb-5">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
+										<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"/>
+										</svg>
+										&nbsp;&nbsp;
+										Dashboard
+										
+									</a>
+									
 									<span class="fs-2 fw-bolder text-white">
 										@auth
 											{{auth()->user()->name}}
@@ -508,7 +514,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
 												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">K0</span>
+												<span class="text-gray-900 fw-bold fs-6 mb-1">K{{ App\Models\Sale::avgSale() }}</span>
 												<!--end::Number-->
 												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">Avg. Sales</div>
@@ -518,7 +524,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
 												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">K0</span>
+												<span class="text-gray-900 fw-bold fs-6 mb-1">K{{ App\Models\Sale::spentTotal() }}</span>
 												<!--end::Number-->
 												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">Today Spending</div>

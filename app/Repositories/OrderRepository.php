@@ -11,13 +11,12 @@ class OrderRepository
     {
         return Order::get();
     }
-    public function mine($data)
-    {
-        return Order::query()->where('id', auth()->user()->id);
+    public function mine(){
+        return Order::query()->where('id', auth()->user()->id)->with('order_items.products')->get();
     }
 
     public function customers(){
-        return Order::with(['order_items.user' => function ($query) {
+        return Order::with(['order_items.products.user' => function ($query) {
             $query->where('id', auth()->user()->id);
         }])->get();
         
@@ -42,5 +41,10 @@ class OrderRepository
     public function find($id)
     {
         return Order::find($id);
+    }    
+    
+    public function destroy($order){
+        $order->delete();
+        return true;
     }
 }
