@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\Repositories\OrderRepository;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
-{
+{    
+    
+    private $orderRepository;
+
+    public function __construct(OrderRepository $orderRepository)
+    {
+        $this->orderRepository = $orderRepository;
+    }
     /**
      * Display a listing of the resource.
      */
@@ -36,7 +44,7 @@ class OrderController extends Controller
 
     public function customers(){  
         
-        $orders = Order::get();
+        $orders = $this->orderRepository->customers();
         return view('pages.orders.customers', [
             'orders' => $orders
         ]);

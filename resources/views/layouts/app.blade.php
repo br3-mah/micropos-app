@@ -101,7 +101,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Logo-->
 							<div class="app-sidebar-logo d-none d-md-flex flex-center pt-10 mb-5 mb-lg-17" id="kt_app_sidebar_logo">
 								<!--begin::Logo image-->
-								<a href="{{ route('welcome')}}">
+								<a href="https://website.greenwebbtech.com">
 									<img alt="Logo" src="{{ asset('public/img/logo.png')}}" class="h-25px" />
 								</a>
 								<!--end::Logo image-->

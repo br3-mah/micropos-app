@@ -15,6 +15,14 @@ class OrderRepository
     {
         return Order::query()->where('id', auth()->user()->id);
     }
+
+    public function customers(){
+        return Order::with(['order_items.user' => function ($query) {
+            $query->where('id', auth()->user()->id);
+        }])->get();
+        
+    }
+
     public function create(array $data)
     {
         return Order::create($data);
