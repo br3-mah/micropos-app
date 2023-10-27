@@ -12,8 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sales', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('customer_id');
+            $table->string('str_amount')->nullable();
+            $table->decimal('amount', 10, 2)->nullable();
+            $table->integer('quantity')->nullable();
+            $table->text('notes')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
+            
         });
     }
 

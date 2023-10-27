@@ -12,8 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('deliveries', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->unsignedBigInteger('order_id')->nullable();
+            $table->unsignedBigInteger('driver_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->dateTime('delivery_date')->nullable();
+            $table->dateTime('delivery_type')->nullable();
+            $table->string('tracking_number')->nullable();
+            $table->text('notes')->nullable();
             $table->timestamps();
+
+        
+
         });
     }
 
