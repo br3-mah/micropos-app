@@ -110,11 +110,13 @@
                                                             <div class="sc_socials sc_socials_default sc_align_none">
                                                                 <div class="socials_wrap sc_item_content"><a
                                                                         target="_blank"
-                                                                        href="https://www.facebook.com/#"
+                                                                        href="https://web.facebook.com/profile.php?id=100092167823596"
                                                                         class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
                                                                             class="social_icon social_icon_facebook-1"
                                                                             style=""><span
-                                                                                class="icon-facebook-1"></span></span></a><a
+                                                                                class="icon-facebook-1"></span></span></a>
+                                                                                
+                                                                                {{-- <a
                                                                         target="_blank"
                                                                         href="https://twitter.com/#"
                                                                         class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
@@ -132,7 +134,7 @@
                                                                         class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
                                                                             class="social_icon social_icon_instagram"
                                                                             style=""><span
-                                                                                class="icon-instagram"></span></span></a>
+                                                                                class="icon-instagram"></span></span></a> --}}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -268,23 +270,23 @@
                                                                     <li id="menu-item-19462"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-19462">
                                                                         <a
-                                                                            href="index.php"><span>Home</span></a>
+                                                                            href="https://website.greenwebbtech.com"><span>Home</span></a>
                                                                     </li>
                                                                     <li id="menu-item-19465"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19465">
                                                                         <a
-                                                                            href="our-services.html"><span>Services</span></a>
+                                                                            href="https://website.greenwebbtech.com/services.php"><span>Services</span></a>
                                                                     </li>
                                                                     <li id="menu-item-19463"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19463">
-                                                                        <a href="about.html"><span>About</span></a></li>
+                                                                        <a href="https://website.greenwebbtech.com/about.php"><span>About</span></a></li>
                                                                     <li id="menu-item-19466"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19466">
-                                                                        <a href="marketplace.php"><span>Marketplace</span></a></li>
+                                                                        <a href="https://market.greenwebbtech.com"><span>Marketplace</span></a></li>
                                                                     <li id="menu-item-19464"
                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19464">
                                                                         <a
-                                                                            href="contact.php"><span>Contact</span></a>
+                                                                            href="https://website.greenwebbtech.com/contact.php"><span>Contact</span></a>
                                                                     </li>
                                                                 </ul>
                                                             </nav>
@@ -302,7 +304,7 @@
                                                         data-widget_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <a href="#"
+                                                                <a href="https://website.greenwebbtech.com"
                                                                     target="_blank" rel="noopener">EcoAgro</a>
                                                                 &copy; 2023. All Rights Reserved.
                                                             </div>
