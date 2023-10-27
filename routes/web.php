@@ -18,18 +18,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::middleware(['web'])->group(function () {
-    Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('detail/{id}', [ProductDetailController::class, 'index'])->name('detail.index');
+Route::get('shop-products', [ShopProductController::class, 'index'])->name('shop.index');
+Route::get('product-results', [ShopProductController::class, 'search'])->name('product.search');
+
+
+Route::resource('checkout', CheckoutController::class);
+Route::middleware(['web', 'auth'])->group(function () {
+
     Route::resource('product', ProductController::class);
-    Route::resource('checkout', CheckoutController::class);
     Route::get('order/{id}', [OrderController::class, 'summary'])->name('order.summary');
-    Route::get('detail/{id}', [ProductDetailController::class, 'index'])->name('detail.index');
-    Route::get('shop-products', [ShopProductController::class, 'index'])->name('shop.index');
-    Route::get('product-results', [ShopProductController::class, 'search'])->name('product.search');
-    
-    Auth::routes(['register' => true]);
-    Auth::routes(['login' => false]);
-    
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
-
+Auth::routes(['register' => true]);
+Auth::routes(['login' => false]);
