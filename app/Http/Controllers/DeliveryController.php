@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Delivery;
 use Illuminate\Http\Request;
 
 class DeliveryController extends Controller
@@ -12,6 +13,14 @@ class DeliveryController extends Controller
     public function index()
     {
         //
+    }
+
+    public function customerDeliveries(){
+
+        $deliveries = Delivery::get();
+        return view('pages.orders.customers', [
+            'orders' => $deliveries
+        ]);
     }
 
     /**

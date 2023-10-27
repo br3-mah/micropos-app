@@ -38,11 +38,13 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     // My Orders
     Route::get('order/{id}', [OrderController::class, 'summary'])->name('order.summary');
+    Route::get('customer-orders', [OrderController::class, 'customers'])->name('orders.customer.index');
 
     // My Deliveries
-    Route::resource('deliveries', SalesController::class);
-    Route::get('customer-deliveries', [OrderController::class, 'customerDeliveries'])->name('order.summary');
-
+    Route::resource('deliveries', DeliveryController::class);
+    Route::get('customer-deliveries', [DeliveryController::class, 'customerDeliveries'])->name('deliveries.customer.index');
+    
+    
 });
 
 

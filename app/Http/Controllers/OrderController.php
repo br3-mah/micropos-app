@@ -30,6 +30,13 @@ class OrderController extends Controller
         ]);
     }
 
+    public function customers(){  
+        
+        $orders = Order::get();
+        return view('pages.orders.customers', [
+            'orders' => $orders
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      */
