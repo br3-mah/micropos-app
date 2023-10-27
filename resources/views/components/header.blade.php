@@ -18,7 +18,7 @@
                                                 <nav class="sc_layouts_menu sc_layouts_menu_default sc_layouts_menu_dir_horizontal menu_hover_zoom_line" data-animation-in="fadeInUpSmall" data-animation-out="fadeOutDownSmall">
                                                     <ul id="menu_main" class="sc_layouts_menu_nav menu_main_nav">
                                                         <li id="menu-item-17651" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17651">
-                                                            <a href="services.php"><span>Services</span></a>
+                                                            <a href="https://website.greenwebbtech.com/services.php"><span>Services</span></a>
                                                             <ul class="sub-menu">
                                                                 <li id="menu-item-18280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18280">
                                                                     <a href="https://callcenter.greenwebbtech.com"><span>Call Center</span></a>
@@ -44,7 +44,7 @@
 
                                                         </li>
                                                         <li id="menu-item-17194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17194">
-                                                            <a href="contact.php"><span>Contact</span></a>
+                                                            <a href="https://website.greenwebbtech.com/contact.php"><span>Contact</span></a>
                                                         </li>
                                                         
                                                         <li id="menu-item-17194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17194">
@@ -302,8 +302,8 @@
                 <div class="sc_layouts_item elementor-element elementor-element-d662b41 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="d662b41" data-element_type="widget" data-widget_type="trx_sc_button.default">
                     <div class="elementor-widget-container">
                         <div class="sc_item_button sc_button_wrap"><a style="
-    background: #770614;
-" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2"><span class="sc_button_text"><span class="sc_button_title">Get
+                                            background: #770614;
+                                        " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2"><span class="sc_button_text"><span class="sc_button_title">Get
                                         Started</span></span></a></div>
                     </div>
                 </div>
