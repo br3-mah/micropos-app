@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sale;
 use Illuminate\Http\Request;
 
 class SalesController extends Controller
@@ -11,7 +12,11 @@ class SalesController extends Controller
      */
     public function index()
     {
-        //
+        $sales = Sale::get();
+        // return response()->json($products);    
+        return view('pages.sales.index', [
+            'sales' => $sales
+        ]);       
     }
 
     /**

@@ -12,13 +12,16 @@ class DeliveryController extends Controller
      */
     public function index()
     {
-        //
+        $deliveries = Delivery::get();
+        return view('pages.deliveries.customers', [
+            'orders' => $deliveries
+        ]);
     }
 
     public function customerDeliveries(){
 
         $deliveries = Delivery::get();
-        return view('pages.orders.customers', [
+        return view('pages.deliveries.customers', [
             'orders' => $deliveries
         ]);
     }

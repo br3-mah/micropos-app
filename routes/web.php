@@ -37,6 +37,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('sales', SalesController::class);
 
     // My Orders
+    Route::resource('orders', OrderController::class);
     Route::get('order/{id}', [OrderController::class, 'summary'])->name('order.summary');
     Route::get('customer-orders', [OrderController::class, 'customers'])->name('orders.customer.index');
 

@@ -13,7 +13,11 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::get();
+        // return response()->json($products);    
+        return view('pages.orders.index', [
+            'orders' => $orders
+        ]);   
     }
     public function summary($id)
     {

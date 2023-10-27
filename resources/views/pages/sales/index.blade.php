@@ -11,7 +11,7 @@
                 <!--begin::Search-->
                 <div class="d-flex align-items-center position-relative my-1">
                     <i class="ki-outline ki-magnifier fs-3 position-absolute ms-4"></i>
-                    <input type="text" data-kt-ecommerce-product-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Product" />
+                    <input type="text" data-kt-ecommerce-product-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Sale" />
                 </div>
                 <!--end::Search-->
             </div>
@@ -29,9 +29,9 @@
                     </select>
                     <!--end::Select2-->
                 </div>
-                <!--begin::Add product-->
-                <a href="{{ route('product.create') }}" class="btn btn-primary">Add Product</a>
-                <!--end::Add product-->
+                <!--begin::Add Sale-->
+                <a href="#" class="btn btn-primary">Create Sale</a>
+                <!--end::Add Sale-->
             </div>
             <!--end::Card toolbar-->
         </div>
@@ -47,7 +47,7 @@
                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_ecommerce_products_table .form-check-input" value="1" />
                             </div>
                         </th>
-                        <th class="min-w-200px">Product</th>
+                        <th class="min-w-200px">Sale</th>
                         <th class="text-end min-w-100px">SKU</th>
                         <th class="text-end min-w-70px">Qty</th>
                         <th class="text-end min-w-100px">Price</th>
@@ -57,7 +57,7 @@
                     </tr>
                 </thead>
                 <tbody class="fw-semibold text-gray-600">
-                    @foreach($products as $product)
+                    @foreach($sales as $sale)
                     <tr>
                         <td>
                             <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -68,23 +68,23 @@
                             <div class="d-flex align-items-center">
                                 <!--begin::Thumbnail-->
                                 <a href="#" class="symbol symbol-50px">
-                                    <span class="symbol-label" style="background-image:url('{{asset("public/storage/" . $product->image)}}');"></span>
+                                    <span class="symbol-label" style="background-image:url('{{asset("public/storage/" . $sale->image)}}');"></span>
                                 </a>
                                 <!--end::Thumbnail-->
                                 <div class="ms-5">
                                     <!--begin::Title-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $product->name }}</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $sale->name }}</a>
                                     <!--end::Title-->
                                 </div>
                             </div>
                         </td>
                         <td class="text-end pe-0">
-                            <span class="fw-bold">{{ $product->sku }}</span>
+                            <span class="fw-bold">{{ $sale->sku }}</span>
                         </td>
                         <td class="text-end pe-0" data-order="39">
-                            <span class="fw-bold ms-3">{{ $product->shelf_qty ?? 0 }}</span>
+                            <span class="fw-bold ms-3">{{ $sale->shelf_qty ?? 0 }}</span>
                         </td>
-                        <td class="text-end pe-0">K {{ $product->price }}</td>
+                        <td class="text-end pe-0">K {{ $sale->price }}</td>
                         <td class="text-end pe-0" data-order="rating-4">
                             <div class="rating justify-content-end">
 
@@ -109,7 +109,7 @@
                         <td class="text-end pe-0" data-order="Inactive">
                             <!--begin::Badges-->
                             
-                            @switch($product->status)
+                            @switch($sale->status)
                                 @case(1)
                                     <div class="badge badge-light-success text-primary">Published</div>
                                     @break
@@ -136,13 +136,13 @@
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3">Edit</a>
-                                    {{-- <a href="{{ route('product.edit', $product->id) }}" class="menu-link px-3">Edit</a> --}}
+                                    {{-- <a href="{{ route('Sale.edit', $sale->id) }}" class="menu-link px-3">Edit</a> --}}
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
-                                    <a href="#" class="menu-link px-3" onclick="event.preventDefault(); document.getElementById('delete-product-form-{{ $product->id }}').submit();">Delete</a>
-                                    <form id="delete-product-form-{{ $product->id }}" action="{{ route('product.destroy', $product->id) }}" method="POST" style="display: none;">
+                                    <a href="#" class="menu-link px-3" onclick="event.preventDefault(); document.getElementById('delete-product-form-{{ $sale->id }}').submit();">Delete</a>
+                                    <form id="delete-product-form-{{ $sale->id }}" action="{{ route('product.destroy', $sale->id) }}" method="POST" style="display: none;">
                                         @csrf
                                         @method('DELETE')
                                     </form>
