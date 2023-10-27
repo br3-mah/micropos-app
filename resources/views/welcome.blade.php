@@ -2877,7 +2877,39 @@ li {
                                                     <hr style="margin: 1.7857em 0 !important;">
                                                 </div>
                                             </section>
-
+                                            <div>
+                                                <div class="elementor-container elementor-column-gap-extended">
+                                                    <div style="background-color: #000">
+                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner">
+                                                                                    <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <div class="sc_item_button sc_button_wrap sc_align_center">
+                                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                    <span class="sc_button_text">
+                                                                                                        <span class="sc_button_title">
+                                                                                                            Go To The Shop
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-b904057 scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="b904057" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
