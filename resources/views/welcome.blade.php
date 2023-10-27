@@ -159,6 +159,15 @@ Cultivating Agriculture that Works for the Future
             padding: 0 !important;
         }
     </style>
+    
+<link property="stylesheet" rel="stylesheet" href="{{ asset('public/theme/css/prod.css')}}" type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="trx_demo_icons_animation-css" href="{{ asset('public/theme/css/css-animation.css')}}"type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="agricola-font-halyard-display-css"href="https://use.typekit.net/xog3vbp.css" type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="agricola-font-google_fonts-css"href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;subset=latin,latin-ext&amp;display=swap"type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="sbi_styles-css" href="{{ asset('public/theme/css/css-sbi-styles.min.css')}}" type="text/css"media="all">
+<link property="stylesheet" rel="stylesheet" id="wc-blocks-vendors-style-css"href="{{ asset('public/theme/css/build-wc-blocks-vendors-style.css')}}" type="text/css" media="all">
+
+
     <link property="stylesheet" rel='stylesheet' id='trx_addons-icons-css' href='{{ asset("public/theme/css/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css")}}' type='text/css' media='all' />
     <link property="stylesheet" rel='stylesheet' id='trx_demo_icons-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css")}}' type='text/css' media='all' />
     <link property="stylesheet" rel='stylesheet' id='trx_demo_icons_animation-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/font-icons/css/animation.css")}}' type='text/css' media='all' />
@@ -2115,6 +2124,75 @@ li {
 @media screen and (max-width: 600px) {
     .bg-slideshow li div h3 { font-size: 80px }
 }
+
+
+
+
+/* body {
+  align-items: center;
+  background: #e3e3e3;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+} */
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: pr;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 15s linear infinite;
+  animation: scroll 15s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  width: 100%;
+}
+
     </style>
 </head>
 
@@ -2127,7 +2205,7 @@ li {
                 footer</a>
             
             @include('components.header')
-
+        
             
             <div class="page_content_wrap">
                 <div class="content_wrap_fullscreen">
@@ -2547,6 +2625,259 @@ li {
                                                 </div>
                                             </section>
 
+
+                                            <section  style="padding-top:2%" class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="slider">
+                                                    <div class="slide-track">
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Wheat:</span> 
+                                                            2189 No. 1  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 2500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 2075 </span>
+                                                            </span>
+                                                        </div>
+                                                        {{-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" /> --}}
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
+                                                            50 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Rice:</span> 
+                                                            50 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>  
+                                                    </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Soya Beans:</span> 
+                                                            50 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>                                                     
+                                                      </div>
+                                                      <div class="slide">
+                                                        
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Tomatoes:</span> 
+                                                            2189 No. 1  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 250</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 75 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Onion:</span> 
+                                                            50 Kg 
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 430</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 195 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Feed:</span> 
+                                                            90 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 800</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 375 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
+                                                            50 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
+                                                            50 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Fertilizer:</span> 
+                                                            50 Kg. 
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Pesticides:</span> 
+                                                            2393.21 
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 420</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 195 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Bananas:</span> 
+                                                            100 Kg. 
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 3500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 1175 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
+                                                            50 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                      <div class="slide">
+                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
+                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
+                                                            100 Kg. 23  
+                                                            <br>
+                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
+                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 2990</span>
+                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 1175 </span>
+                                                            </span>
+                                                        </div>  
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                            </section>
+                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-13d55f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
+                                                data-id="13d55f9" data-element_type="section">
+
+                                            </section>
+                                            <section>
+                                                <div class="uk-section uk-section-default uk-padding-remove-vertical in-wave-5 in-offset-bottom-30">
+
+                                                    <div class="uk-section uk-section-default uk-padding-remove-vertical in-wave-5 in-offset-bottom-30">
+                                                        <div class="uk-container">
+                                                            <div class="uk-grid">
+
+                                                                <div class="uk-width-1-1 in-price-list">
+                                                                    <div data-uk-slider="autoplay: true; autoplay-interval: 2700"
+                                                                        class="uk-slider uk-slider-container">
+                                                                        <ul class="uk-slider-items text-white uk-child-width-1-3@s uk-child-width-1-5@m uk-text-small uk-text-center uk-grid"
+                                                                            data-uk-grid=""
+                                                                            style="transform: translate3d(-226px, 0px, 0px);">
+                                                                            <li tabindex="-1" class="uk-active"
+                                                                                style="order: 1;">
+                                                                                <span>Maize</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-up"></i>
+                                                                                    1478.81 &nbsp;(+0.28%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class="uk-active"
+                                                                                style="order: 1;">
+                                                                                <span>Tomatoes</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-danger uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-down"></i>
+                                                                                    1.3191 &nbsp;(-1.07%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class=""
+                                                                                style="order: 1;">
+                                                                                <span>Wheat</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-danger uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-down"></i>
+                                                                                    1.1159 &nbsp;(-0.11%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class=""
+                                                                                style="order: 1;">
+                                                                                <span>Sunflower</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-up"></i>
+                                                                                    109.59 &nbsp;(+0.05%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class="uk-first-column"
+                                                                                style="">
+                                                                                <span>Rice</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-up"></i>
+                                                                                    1.3172 &nbsp;(+0.18%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class="uk-active"
+                                                                                style="">
+                                                                                <span>Steak Meats</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-up"></i>
+                                                                                    0.9776 &nbsp;(+0.06%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class="uk-active"
+                                                                                style="">
+                                                                                <span>Oil</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-danger uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-down"></i>
+                                                                                    0.67064 &nbsp;(-0.08%)</span>
+                                                                            </li>
+                                                                            <li tabindex="-1" class="uk-active">
+                                                                                <span>Fertilizers</span>
+                                                                                <span
+                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
+                                                                                        class="fas fa-caret-up"></i>
+                                                                                    141.91 &nbsp;(+0.12%)</span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr style="margin: 1.7857em 0 !important;">
+                                                </div>
+                                            </section>
+
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-b904057 scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="b904057" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
@@ -2609,6 +2940,11 @@ li {
             document.body.className = c;
         })();
     </script>
+ <script type="text/javascript" defer src="{{ asset('public/theme/js/js-index.js')}}" id="contact-form-7-js"></script>
+ <script type="text/javascript" defer src="{{ asset('public/theme/js/js-jquery.powertip.min.js')}}" id="powertip-js"></script>
+ <script type="text/javascript" defer src="{{ asset('public/theme/js/js-maps_points.js')}}" id="maps-points-js"></script>
+
+
     <script>
         if (typeof revslider_showDoubleJqueryError === "undefined") {
             function revslider_showDoubleJqueryError(sliderID) {
@@ -2907,7 +3243,11 @@ li {
     <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.js")}}' id='trx_addons-mouse-helper-js'></script>
     <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js")}}' id='superfish-js'></script>
     <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/js/swiper/swiper.min.js")}}' id='swiper-js'>
-    </script>
+    </script><script type="text/javascript" defer src="{{ asset('public/theme/js/js-__scripts.js')}}" id="trx_addons-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/skills-chart-legacy.min.js')}}" id="chart-legacy-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/skills-skills.js')}}" id="trx_addons-sc_skills-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/menu-superfish.min.js')}}" id="superfish-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/swiper-swiper.min.js')}}" id="swiper-js"></script>
     <script type='text/javascript' src='{{ asset("public/theme/css/plugins/trx_addons/js/tweenmax/tweenmax.min.js")}}' id='tweenmax-js'></script>
     <script type='text/javascript' id='wpgdprc-front-js-js-extra'>
         /* <![CDATA[ */
@@ -3271,6 +3611,16 @@ li {
             window.RS_MODULES.checkMinimal();
         };
     </script>
+    
+    <script src="{{ asset('public/theme/js/jquery-3.4.1.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/popper.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/jquery.steps.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/bd-wizard.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/js/uikit.min.js"></script>
+    <script type="text/javascript" src="{{ asset('public/theme/js/js-frontend.min.js')}}" id="elementor-frontend-js"></script>
+    <script type="text/javascript" src="{{ asset('public/theme/js/js-preloaded-modules.min.js')}}" id="preloaded-modules-js"></script>
+    <script>
     <!-- Add this script tag to your HTML file to include jQuery from Google CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
