@@ -168,21 +168,11 @@
                     <label class="form-label">Categories</label>
                     <!--end::Label-->
                     <!--begin::Select2-->
-                    <select class="form-select mb-2" data-control="select2" data-placeholder="Select an option" data-allow-clear="true" multiple="multiple">
+                    <select class="form-select mb-2" name="categories[]" data-control="select2" data-placeholder="Select an option" data-allow-clear="true" multiple="multiple">
                         <option></option>
                         @foreach($categories as $cat)
                         <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                         @endforeach
-                        {{-- <option value="seed">Seeds</option>
-                        <option value="feed">Animal Feed</option>
-                        <option value="machinery">Machinery</option>
-                        <option value="Clothing">Clothing</option>
-                        <option value="Chemical">Chemical</option>
-                        <option value="Maize">maize</option>
-                        <option value="Tools">tools</option>
-                        <option value="Pesticides">Pesticides</option>
-                        <option value="food">Food</option>
-                        <option value="Other">Others</option> --}}
                     </select>
                     <!--end::Select2-->
                     <!--begin::Description-->
@@ -199,7 +189,12 @@
                     <label class="form-label d-block">Tags</label>
                     <!--end::Label-->
                     <!--begin::Input-->
-                    <input id="kt_ecommerce_add_product_tags" name="tags" class="form-control mb-2" value="" />
+                    <select class="form-select mb-2" name="tags[]" data-control="select2" data-placeholder="Select an option" data-allow-clear="true" multiple="multiple">
+                        <option></option>
+                        @foreach($tags as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                        @endforeach
+                    </select>
                     <!--end::Input-->
                     <!--begin::Description-->
                     <div class="text-muted fs-7">Add tags to a product.</div>

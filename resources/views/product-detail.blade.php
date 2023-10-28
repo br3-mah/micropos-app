@@ -2071,7 +2071,9 @@ Cultivating Agriculture that Works for the Future
                                                     data-large_image_width="1200" data-large_image_height="1320"
                                                     loading="lazy"
                                                     srcset="{{asset("public/storage/" . $product->image)}} 1200w"
-                                                    sizes="(max-width: 600px) 100vw, 600px"></a></div>
+                                                    sizes="(max-width: 600px) 100vw, 600px"></a>
+                                        </div>
+
                                         <div data-thumb="{{asset("public/storage/" . $product->image)}}"
                                             data-thumb-alt="" class="woocommerce-product-gallery__image"><a
                                                 href="{{asset("public/storage/" . $product->image)}}"><img
@@ -2085,7 +2087,8 @@ Cultivating Agriculture that Works for the Future
                                                     data-large_image_width="1200" data-large_image_height="1320"
                                                     loading="lazy"
                                                     srcset="{{asset("public/storage/" . $product->image)}} 1200w"
-                                                    sizes="(max-width: 600px) 100vw, 600px"></a></div>
+                                                    sizes="(max-width: 600px) 100vw, 600px"></a>
+                                        </div>
                                     </figure>
                                 </div>
 
@@ -2138,9 +2141,9 @@ Cultivating Agriculture that Works for the Future
                                         <span class="sku_wrapper">SKU: <span class="sku">{{ $product->sku }}</span></span>
 
 
-                                        <span class="posted_in">Category: <a href="#"
-                                                rel="tag">Marketplace</a></span>
-                                        <span class="tagged_as">Tags: <a href="#" rel="tag">crop</a>, <a
+                                        <span class="posted_in">Category: 
+                                            <a href="#" rel="tag">Marketplace</a></span>
+                                            <span class="tagged_as">Tags: <a href="#" rel="tag">crop</a>, <a
                                                 href="farm.html" rel="tag">farm</a>, <a href="#"
                                                 rel="tag">food</a>, <a href="#" rel="tag">farming</a></span>
                                         <span class="product_id">Product ID: <span>{{ $product->id }}</span></span>

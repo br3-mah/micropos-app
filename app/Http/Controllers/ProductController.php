@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Tags;
 use App\Repositories\ProductRepository;
 use App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
@@ -29,36 +30,32 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = $this->productRepository->find($id);
-        // dd($product);
-        // if (!$product) {
-        //     return response()->json(['message' => 'Product not found'], 404);
-        // }
-        // return response()->json($product);
+        $categories = Category::get();
+        $tags = Tags::get();
     
         return view('product-detail', [
-            'product' => $product
+            'product' => $product,
+            'categories'=> $categories,
+            'tags'=> $tags
         ]);
     }
 
     public function create()
     {
-        // $product = $this->productRepository->find($id);
-        // dd($product);
-        // if (!$product) {
-        //     return response()->json(['message' => 'Product not found'], 404);
-        // }
-        // return response()->json($product);
-        // $categories = $this->categoryRepository->all();
+        
         $categories = Category::get();
+        $tags = Tags::get();
         return view('pages.products.create',[
-            'categories'=> $categories
+            'categories'=> $categories,
+            'tags'=> $tags
         ]);
     }
 
     public function store(Request $request){
         try {
-            $product = $this->productRepository->create($request);
-            return redirect()->route('product.index')->with('success', 'Product created successfully.');
+            $this->productRepository->create($request);
+            session()->flash('successMessage', 'Uploaded successfully.');
+            return redirect()->route('product.index');
         } catch (\Throwable $th) {
             session()->flash('errorMessage', 'Error: ' . $th->getMessage());
             return redirect()->back();

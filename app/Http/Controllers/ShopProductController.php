@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Tags;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
@@ -18,8 +20,13 @@ class ShopProductController extends Controller
     public function index()
     {
         $products = $this->productRepository->all();
+        $categories = Category::get();
+        $tags = Tags::get();
+    
         return view('shop', [
-            'products'=>$products
+            'products' => $products,
+            'categories'=> $categories,
+            'tags'=> $tags
         ]);
     }
     /**

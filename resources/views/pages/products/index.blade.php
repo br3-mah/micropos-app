@@ -61,7 +61,7 @@
                         <th class="text-end min-w-100px">SKU</th>
                         <th class="text-end min-w-70px">Qty</th>
                         <th class="text-end min-w-100px">Price</th>
-                        <th class="text-end min-w-100px">Rating</th>
+                        {{-- <th class="text-end min-w-100px">Rating</th> --}}
                         <th class="text-end min-w-100px">Status</th>
                         <th class="text-end min-w-70px">Actions</th>
                     </tr>
@@ -95,7 +95,7 @@
                             <span class="fw-bold ms-3">{{ $product->shelf_qty ?? 0 }}</span>
                         </td>
                         <td class="text-end pe-0">K {{ $product->price }}</td>
-                        <td class="text-end pe-0" data-order="rating-4">
+                        {{-- <td class="text-end pe-0" data-order="rating-4">
                             <div class="rating justify-content-end">
 
                                
@@ -115,7 +115,7 @@
                                     <i class="ki-outline ki-star fs-6"></i>
                                 </div>
                             </div>
-                        </td>
+                        </td> --}}
                         <td class="text-end pe-0" data-order="Inactive">
                             <!--begin::Badges-->
                             

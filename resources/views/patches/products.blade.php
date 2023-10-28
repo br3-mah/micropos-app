@@ -116,17 +116,9 @@
                                                                             <aside class="widget woocommerce widget_product_categories">
                                                                                 <h5 class="widget_title">Categories</h5>
                                                                                 <ul class="product-categories">
-                                                                                    <li class="cat-item cat-item-185"><a href="#">Seeds</a></li>
-                                                                                    <li class="cat-item cat-item-197"><a href="#">Crops</a></li>
-                                                                                    <li class="cat-item cat-item-203"><a href="#">Fertilizers</a></li>
-                                                                                    {{-- <li class="cat-item cat-item-198"><a href="harvesting.html">Harvesting</a></li>
-                                                                                    <li class="cat-item cat-item-202"><a href="organic.html">Marketplace</a></li>
-                                                                                    <li class="cat-item cat-item-201"><a href="parts.html">Parts</a></li>
-                                                                                    <li class="cat-item cat-item-200"><a href="row-crops.html">Row Crops</a></li>
-                                                                                    <li class="cat-item cat-item-184"><a href="salad.html">Salad</a></li>
-                                                                                    <li class="cat-item cat-item-199"><a href="tractors.html">Tractors</a></li>
-                                                                                    <li class="cat-item cat-item-72"><a href="uncategorized.html">Uncategorized</a></li>
-                                                                                    <li class="cat-item cat-item-183"><a href="vegetables.html">Vegetables</a></li> --}}
+                                                                                    @foreach($categories as $cat)
+                                                                                    <li class="cat-item cat-item-185"><a href="{{ $cat->id }}">{{ $cat->name }}</a></li>
+                                                                                    @endforeach
                                                                                 </ul>
                                                                             </aside>
                                                                             <aside class="widget woocommerce widget_price_filter">
@@ -154,22 +146,10 @@
                                                                             </aside>
                                                                             <aside class="widget woocommerce widget_product_tag_cloud">
                                                                                 <h5 class="widget_title">Tags</h5>
-                                                                                <div class="tagcloud"><a href="crop.html"
-                                                                                        class="tag-cloud-link tag-link-192 tag-link-position-1" style="font-size: 22pt;"
-                                                                                        aria-label="crop (28 products)">crop</a>
-                                                                                    <a href="#" class="tag-cloud-link tag-link-189 tag-link-position-2"
-                                                                                        style="font-size: 18.315789473684pt;" aria-label="farm (22 products)">farm</a>
-                                                                                    <a href="#" class="tag-cloud-link tag-link-187 tag-link-position-3"
-                                                                                        style="font-size: 18.315789473684pt;" aria-label="food (22 products)">food</a>
-                                                                                    {{-- <a href="healthy.html" class="tag-cloud-link tag-link-188 tag-link-position-4"
-                                                                                        style="font-size: 18.315789473684pt;"
-                                                                                        aria-label="healthy (22 products)">healthy</a>
-                                                                                    <a href="organic.html" class="tag-cloud-link tag-link-186 tag-link-position-5"
-                                                                                        style="font-size: 8pt;" aria-label="organic (11 products)">Marketplace</a>
-                                                                                    <a href="season.html" class="tag-cloud-link tag-link-190 tag-link-position-6"
-                                                                                        style="font-size: 8pt;" aria-label="season (11 products)">season</a>
-                                                                                    <a href="summer.html" class="tag-cloud-link tag-link-191 tag-link-position-7"
-                                                                                        style="font-size: 8pt;" aria-label="summer (11 products)">summer</a> --}}
+                                                                                <div class="tagcloud">
+                                                                                    @foreach($tags as $tag)
+                                                                                    <a href="{{ $tag->id }}" class="tag-cloud-link tag-link-192 tag-link-position-1" style="font-size: 22pt;" aria-label="crop (28 products)">{{ $tag->name }}</a>
+                                                                                    @endforeach
                                                                                 </div>
                                                                             </aside>
                                                                         </div>
