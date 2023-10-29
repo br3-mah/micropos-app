@@ -62,6 +62,30 @@ class ProductController extends Controller
             return redirect()->back();
         }
     }
+
+    public function edit($id)
+    {
+        
+        $selectedCategoryIds = [];
+        $selectedTagIds = [];
+        $product = $this->productRepository->find($id);
+        $categories = Category::get();
+        $tags = Tags::get();
+        if($product->categories !== null){
+            $selectedCategoryIds = $product->categories->pluck('category_id')->toArray();
+        }
+        if($product->tags !== null){
+            $selectedTagIds = $product->tags->pluck('tag_id')->toArray();
+        }
+        // dd($selectedCategoryIds);
+        return view('pages.products.edit',[
+            'categories'=> $categories,
+            'product'=> $product,
+            'tags'=> $tags,
+            'selectedCategoryIds'=> $selectedCategoryIds,
+            'selectedTagIds'=> $selectedTagIds
+        ]);
+    }
     
     public function destroy(Product $product)
     {
