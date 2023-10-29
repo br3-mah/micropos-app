@@ -60,7 +60,7 @@
         @csrf
         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         <!--begin::Aside column-->
-        <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+        <div class="d-flex flex-column gap-7 gap-lg-10 w-40 w-lg-300px mb-7 me-lg-10">
             <!--begin::Thumbnail settings-->
             <div class="card card-flush py-4">
                 <!--begin::Card header-->
@@ -257,7 +257,7 @@
         </div>
         <!--end::Aside column-->
         <!--begin::Main column-->
-        <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+        <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10 w-60 w-lg-600px">
             <!--begin:::Tabs-->
             <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-n2">
                 <!--begin:::Tab item-->
@@ -398,7 +398,7 @@
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
                                                 <span class="ms-5">
-                                                    <span class="fs-4 fw-bold text-gray-800 d-block">No Discount</span>
+                                                    <span class="fs-6 fw-bold text-gray-800 d-block">No Discount</span>
                                                 </span>
                                                 <!--end::Info-->
                                             </label>
@@ -416,7 +416,7 @@
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
                                                 <span class="ms-5">
-                                                    <span class="fs-4 fw-bold text-gray-800 d-block">Percentage %</span>
+                                                    <span class="fs-6 fw-bold text-gray-800 d-block">Percentage %</span>
                                                 </span>
                                                 <!--end::Info-->
                                             </label>
@@ -434,7 +434,7 @@
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
                                                 <span class="ms-5">
-                                                    <span class="fs-4 fw-bold text-gray-800 d-block">Fixed Price</span>
+                                                    <span class="fs-6 fw-bold text-gray-800 d-block">Fixed Price</span>
                                                 </span>
                                                 <!--end::Info-->
                                             </label>
@@ -834,5 +834,41 @@ $("body").on("change",".imagepicker-add input",function() {
     )
   });
 });
+
+
+
+// Get all radio buttons with name 'disc_type'
+const radioButtons = document.querySelectorAll('input[name="disc_type"]');
+
+// Function to handle radio button click event
+function handleRadioButtonClick() {
+    const discountPercentageSection = document.getElementById('kt_ecommerce_add_product_discount_percentage');
+    const discountFixedSection = document.getElementById('kt_ecommerce_add_product_discount_fixed');
+
+    // Check the value of the selected radio button
+    radioButtons.forEach(radio => {
+        if (radio.checked) {
+            const value = radio.value;
+
+            // Toggle visibility based on the selected value
+            if (value === 'rate') {
+                discountPercentageSection.classList.remove('d-none');
+                discountFixedSection.classList.add('d-none');
+            } else if (value === 'fixed') {
+                discountPercentageSection.classList.add('d-none');
+                discountFixedSection.classList.remove('d-none');
+            } else {
+                discountPercentageSection.classList.add('d-none');
+                discountFixedSection.classList.add('d-none');
+            }
+        }
+    });
+}
+
+// Add click event listener to each radio button
+radioButtons.forEach(radio => {
+    radio.addEventListener('click', handleRadioButtonClick);
+});
+
 </script>
 @endsection
