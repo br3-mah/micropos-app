@@ -40,12 +40,12 @@
         <div class="card-body pt-0">
             @if(session('success'))
                 <div class="alert alert-success">
-                    {{ session('successMessage') }}
+                    {{ session('success') }}
                 </div>
             @endif
             @if(session('error'))
                 <div class="alert alert-danger">
-                    {{ session('errorMessage') }}
+                    {{ session('error') }}
                 </div>
             @endif
             <!--begin::Table-->

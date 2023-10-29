@@ -54,10 +54,11 @@ class ProductController extends Controller
     public function store(Request $request){
         try {
             $this->productRepository->create($request);
-            session()->flash('successMessage', 'Uploaded successfully.');
+            session()->flash('success', 'Uploaded successfully.');
             return redirect()->route('product.index');
         } catch (\Throwable $th) {
-            session()->flash('errorMessage', 'Error: ' . $th->getMessage());
+            // dd($th);
+            session()->flash('error', 'Oops, Failed: ' . $th->getMessage());
             return redirect()->back();
         }
     }
@@ -66,9 +67,13 @@ class ProductController extends Controller
     {
         try {
             $product = $this->productRepository->destroy($product);
-            return redirect()->route('product.index')->with('success', 'Product deleted successfully');
+            
+            session()->flash('success', 'Product deleted successfully.');
+            return redirect()->back();
         } catch (\Throwable $th) {
-            dd($th);
+            // dd($th);
+            session()->flash('error', 'Oops, Failed: ' . $th->getMessage());
+            return redirect()->back();
         }
     }
     

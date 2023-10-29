@@ -56,31 +56,38 @@ class ProductRepository
 
         /// >>> Create the product with the validated data
         $product = Product::create($validatedData);
-        // dd($product);
+        
         /// >>> Store Variations
         foreach ($request->input('kt_ecommerce_add_product_options') as $option) {
-            ProductVariation::created([
-                "option" => $option['product_option'],
-                "value" => $option['product_option_value'],
-                "product_id" => $product->id
-            ]);
+            if (is_array($option)) {
+                ProductVariation::create([
+                    "option" => $option['product_option'],
+                    "value" => $option['product_option_value'],
+                    "product_id" => $product->id
+                ]);
+            }
         }
 
+        // dd($request->input('categories') );
         /// >>> Store Categories
-        // foreach ($request->input('categories') as $key => $option) {
-        //     ProductCategory::created([
-        //         'category_id' => $option[$key],
-        //         "product_id" => $product->id
-        //     ]);
-        // }
+        foreach ($request->input('categories') as $option) {
+            // if (is_array($option)) {
+                ProductCategory::create([
+                    'category_id' => $option,
+                    "product_id" => $product->id
+                ]);
+            // }
+        }
 
-        // /// >>> Store Tags
-        // foreach ($request->input('tags') as $option) {
-        //     ProductTag::created([
-        //         'tag_id' => $option[$key],
-        //         "product_id" => $product->id
-        //     ]);
-        // }
+        /// >>> Store Tags
+        foreach ($request->input('tags') as $option) {
+            // if (is_array($option)) {
+                ProductTag::create([
+                    'tag_id' => $option,
+                    "product_id" => $product->id
+                ]);
+            // }
+        }
     
         /// >>> Handle file upload (if an avatar is provided)
         if ($request->hasFile('avatar')) {
@@ -89,7 +96,7 @@ class ProductRepository
         }
         if ($request->hasFile('pic1')) {
             $pic1 = $request->file('pic1')->store('products/extras', 'public');
-            ProductImage::created([ 
+            ProductImage::create([ 
                 'path'=> $pic1,
                 'status'=> 1,
                 'product_id'=> $product->id
@@ -97,7 +104,7 @@ class ProductRepository
         }
         if ($request->hasFile('pic2')) {
             $pic2 = $request->file('pic2')->store('products/extras', 'public');
-            ProductImage::created([ 
+            ProductImage::create([ 
                 'path'=> $pic2,
                 'status'=> 1,
                 'product_id'=> $product->id
@@ -105,7 +112,7 @@ class ProductRepository
         }
         if ($request->hasFile('pic3')) {
             $pic3 = $request->file('pic3')->store('products/extras', 'public');
-            ProductImage::created([ 
+            ProductImage::create([ 
                 'path'=> $pic3,
                 'status'=> 1,
                 'product_id'=> $product->id
@@ -113,7 +120,7 @@ class ProductRepository
         }
         if ($request->hasFile('pic4')) {
             $pic4 = $request->file('pic4')->store('products/extras', 'public');
-            ProductImage::created([ 
+            ProductImage::create([ 
                 'path'=> $pic4,
                 'status'=> 1,
                 'product_id'=> $product->id
@@ -121,7 +128,7 @@ class ProductRepository
         }
         if ($request->hasFile('pic5')) {
             $pic5 = $request->file('pic5')->store('products/extras', 'public');
-            ProductImage::created([ 
+            ProductImage::create([ 
                 'path'=> $pic5,
                 'status'=> 1,
                 'product_id'=> $product->id
@@ -134,15 +141,23 @@ class ProductRepository
 
     public function createVariant($product){}
 
-    public function destroy($product){
-        // Implement any logic to check if the user is authorized to delete the product.
-        
-        // Delete the product
+    public function destroy(Product $product){
+        if ($product->variants) {
+            $product->variants->each->delete();
+        }
+        if ($product->categories) {
+            $product->categories->each->delete();
+        }
+        if ($product->tags) {
+            $product->tags->each->delete();
+        }
+        if ($product->photos) {
+            $product->photos->each->delete();
+        }
         $product->delete();
-
-        // Redirect to the product list page or any other appropriate page.
         return true;
     }
+    
 
     
 }
