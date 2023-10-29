@@ -307,7 +307,7 @@
                                     <label class="form-label">Description</label>
                                     <!--end::Label-->
                                     <!--begin::Editor-->
-                                    <div id="kt_ecommerce_add_product_description" name="description" class="min-h-200px mb-2"></div>
+                                    <textarea id="kt_ecommerce_add_product_description" name="description" class="min-h-200px mb-2" cols="65" rows="5"></textarea>
                                     <!--end::Editor-->
                                     <!--begin::Description-->
                                     <div class="text-muted fs-7">Set a description to the product for better visibility.</div>

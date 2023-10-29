@@ -25,7 +25,7 @@ class ProductRepository
     }
 
     public function find($id){
-        return Product::find($id);
+        return Product::with(['variants','photos','categories','tags'])->find($id);
     }
     public function create($request){
         // dd($request);
@@ -53,7 +53,11 @@ class ProductRepository
             'avatar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Adjust the file validation rules as needed
         ]);
 
-
+        /// >>> Upload main image upload
+        if ($request->hasFile('avatar')) {
+            $avatarPath = $request->file('avatar')->store('products/avatars', 'public');
+            $validatedData['image'] = $avatarPath;
+        }
         /// >>> Create the product with the validated data
         $product = Product::create($validatedData);
         
@@ -67,8 +71,7 @@ class ProductRepository
                 ]);
             }
         }
-
-        // dd($request->input('categories') );
+        
         /// >>> Store Categories
         foreach ($request->input('categories') as $option) {
             // if (is_array($option)) {
@@ -89,11 +92,7 @@ class ProductRepository
             // }
         }
     
-        /// >>> Handle file upload (if an avatar is provided)
-        if ($request->hasFile('avatar')) {
-            $avatarPath = $request->file('avatar')->store('products/avatars', 'public');
-            $validatedData['image'] = $avatarPath;
-        }
+        /// >>> Upload other product photos
         if ($request->hasFile('pic1')) {
             $pic1 = $request->file('pic1')->store('products/extras', 'public');
             ProductImage::create([ 

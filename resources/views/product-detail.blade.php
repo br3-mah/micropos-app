@@ -2040,11 +2040,11 @@ Cultivating Agriculture that Works for the Future
                             <div class="woocommerce-notices-wrapper"></div>
                             <div id="product-18187"
                                 class="product type-product post-18187 status-publish first instock product_cat-organic product_tag-crop product_tag-farm product_tag-food product_tag-healthy has-post-thumbnail shipping-taxable purchasable product-type-simple">
-
+                                
                                 <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images woocommerce-product-gallery--with-thumbs"
                                     data-columns="4" style="transition: opacity .25s ease-in-out;">
                                     <figure class="woocommerce-product-gallery__wrapper">
-                                        <div data-thumb="{{asset("public/storage/" . $product->image)}}"
+                                         <div data-thumb="{{asset("public/storage/" . $product->image)}}"
                                             data-thumb-alt="" class="woocommerce-product-gallery__image"><a
                                                 href="{{asset("public/storage/" . $product->image)}}"><img
                                                     width="600" height="660"
@@ -2058,22 +2058,24 @@ Cultivating Agriculture that Works for the Future
                                                     srcset="{{asset("public/storage/" . $product->image)}} 1200w"
                                                     sizes="(max-width: 600px) 100vw, 600px"></a>
                                         </div>
-                                        
-                                        <div data-thumb="{{asset("public/storage/" . $product->image)}}"
-                                            data-thumb-alt="" class="woocommerce-product-gallery__image"><a
-                                                href="{{asset("public/storage/" . $product->image)}}"><img
-                                                    width="600" height="660"
-                                                    src="{{asset("public/storage/" . $product->image)}}" class=""
-                                                    alt="" decoding="async" title="{{$product->name}}"
-                                                    data-caption=""
-                                                    data-src="{{asset("public/storage/" . $product->image)}}"
-                                                    data-large_image="{{asset("public/storage/" . $product->image)}}"
-                                                    data-large_image_width="1200" data-large_image_height="1320"
-                                                    loading="lazy"
-                                                    srcset="{{asset("public/storage/" . $product->image)}} 1200w"
-                                                    sizes="(max-width: 600px) 100vw, 600px"></a>
-                                        </div>
-
+                                        @forelse($product->photos as $photo)
+                                            <div data-thumb="{{asset("public/storage/" . $photo->path)}}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                                                <a href="{{asset("public/storage/" . $photo->path)}}">
+                                                    <img width="600" height="660"
+                                                        src="{{asset("public/storage/" . $photo->path)}}" class=""
+                                                        alt="" decoding="async" title="{{$photo->created_at->toFormattedDateString()}}"
+                                                        data-caption=""
+                                                        data-src="{{asset("public/storage/" . $photo->path)}}"
+                                                        data-large_image="{{asset("public/storage/" . $photo->path)}}"
+                                                        data-large_image_width="1200" data-large_image_height="1320"
+                                                        loading="lazy"
+                                                        srcset="{{asset("public/storage/" . $photo->path)}} 1200w"
+                                                        sizes="(max-width: 600px) 100vw, 600px">
+                                                </a>
+                                            </div>
+                                        @empty
+                                        @endforelse
+                                        {{--
                                         <div data-thumb="{{asset("public/storage/" . $product->image)}}"
                                             data-thumb-alt="" class="woocommerce-product-gallery__image"><a
                                                 href="{{asset("public/storage/" . $product->image)}}"><img
@@ -2088,7 +2090,7 @@ Cultivating Agriculture that Works for the Future
                                                     loading="lazy"
                                                     srcset="{{asset("public/storage/" . $product->image)}} 1200w"
                                                     sizes="(max-width: 600px) 100vw, 600px"></a>
-                                        </div>
+                                        </div> --}}
                                     </figure>
                                 </div>
 
@@ -2103,16 +2105,15 @@ Cultivating Agriculture that Works for the Future
                                         </p>
                                     </div>
 
-
+                                    @if(($product->shelf_qty + $product->warehouse_qty) > 0)
                                     <form class="cart" action="#"
                                         method="post" enctype="multipart/form-data">
 
                                         <div class="quantity">
-                                            <label class="screen-reader-text" for="quantity_64faab22c360b">{{ $product->name }}
-                                                quantity</label>
+                                            <label class="screen-reader-text" for="quantity_64faab22c360b">{{ $product->name }} quantity</label>
                                             <input type="number" id="quantity_64faab22c360b" class="input-text qty text"
-                                                step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4"
-                                                placeholder="" inputmode="numeric" autocomplete="off">
+                                                step="1" min="1" max="15" name="quantity" value="1" title="Qty" size="4"
+                                                placeholder="1" inputmode="numeric" autocomplete="off">
                                         </div>
 
                                         <button type="submit" name="add-to-cart" value="18187"
@@ -2132,20 +2133,43 @@ Cultivating Agriculture that Works for the Future
                                             <div class="tinvwl-tooltip">Add to Wishlist</div>
                                         </div> --}}
                                     </form>
-
+                                    @else
+                                    <p class="price">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                <span class="woocommerce-Price-currencySymbol">Product is</span>
+                                                Out of Stock
+                                            </bdi>
+                                        </span>
+                                    </p>
+                                    @endif
 
                                     <div class="product_meta">
 
 
 
+                                        <span class="sku_wrapper">Remaining: <span class="sku">{{ $product->shelf_qty + $product->warehouse_qty  }}</span></span>
                                         <span class="sku_wrapper">SKU: <span class="sku">{{ $product->sku }}</span></span>
 
 
-                                        <span class="posted_in">Category: 
-                                            <a href="#" rel="tag">Marketplace</a></span>
-                                            <span class="tagged_as">Tags: <a href="#" rel="tag">crop</a>, <a
-                                                href="farm.html" rel="tag">farm</a>, <a href="#"
-                                                rel="tag">food</a>, <a href="#" rel="tag">farming</a></span>
+                                        <span class="posted_in">
+                                            @if ($product->categories !== null)
+                                            Category: 
+                                                @forelse($product->categories as $cat)
+                                                <a href="#" rel="tag">{{$cat->name}}</a>
+                                                @empty
+                                                @endforelse
+                                            @endif
+                                        </span>
+                                        <span class="tagged_as">
+                                            @if ($product->tags !== null)
+                                            Tags: 
+                                                @forelse($product->tags as $tag)
+                                                <a href="#" rel="tag">{{$tag->name}}</a>
+                                                @empty
+                                                @endforelse
+                                            @endif
+                                        </span>
                                         <span class="product_id">Product ID: <span>{{ $product->id }}</span></span>
                                     </div>
                                 </div>
@@ -2478,6 +2502,8 @@ Cultivating Agriculture that Works for the Future
 
 
 
+    {{-- Only for this page --}}
+    
     <script data-cfasync="false" src="js/cloudflare-static-email-decode.min.js"></script>
     <script>
     window.RS_MODULES = window.RS_MODULES || {};
@@ -3323,6 +3349,7 @@ Cultivating Agriculture that Works for the Future
     <script src="{{ asset('public/scripts/checkout.js') }}"></script>
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
     <script src="{{ asset('public/scripts/main.js') }}"></script>
+
 </body>
 
 </html>
