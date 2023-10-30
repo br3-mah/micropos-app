@@ -2209,13 +2209,16 @@ li {
             
             <div class="page_content_wrap">
                 <div class="content_wrap_fullscreen">
+                    
                     <div class="content">
+                        
                         <a id="content_skip_link_anchor" class="agricola_skip_link_anchor" href="#"></a>
                         <article id="post-18091" class="post_item_single post_type_page post-18091 page type-page status-publish hentry">
                             <div class="post_content entry-content">
                                 <div data-elementor-type="wp-page" data-elementor-id="18091" class="elementor elementor-18091">
                                     <div class="elementor-inner">
                                         <div class="elementor-section-wrap">
+                                            
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-771869f elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="771869f" data-element_type="section">
                                                 <ul class="bg-slideshow">
                                                     <li>
