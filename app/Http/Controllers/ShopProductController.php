@@ -35,8 +35,12 @@ class ShopProductController extends Controller
     public function search(Request $request)
     {
         $products = $this->productRepository->search($request->toArray());
+        $categories = Category::get();
+        $tags = Tags::get();
         return view('shop-result', [
-            'products'=>$products
+            'products'=>$products,
+            'categories'=> $categories,
+            'tags'=> $tags
         ]);
     }
 
