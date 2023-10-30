@@ -2419,6 +2419,8 @@ li {
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
+                                                                                            
+                                                                                            @if (!auth()->check())
                                                                                             <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-text-editor elementor-clearfix">
@@ -2426,6 +2428,7 @@ li {
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
+                                                                                            @endif
                                                                                             <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-spacer">
@@ -2435,6 +2438,18 @@ li {
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div style="display: flex; gap:4px">
+                                                                                                @if (auth()->check())
+                                                                                                
+                                                                                                <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                                    <div class="elementor-widget-container">
+                                                                                                        <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="{{ route('shop.index') }}" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                                                Continue to Shop
+                                                                                                                </span></span></a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                @else
                                                                                                 <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                                                     <div class="elementor-widget-container">
                                                                                                         <div class="sc_item_button sc_button_wrap">
@@ -2453,6 +2468,7 @@ li {
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
+                                                                                                @endif
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>

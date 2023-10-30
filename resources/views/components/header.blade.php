@@ -1,3 +1,21 @@
+<style>
+    /* Style for the dropdown content */
+    #dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Style when the dropdown is open */
+    #dropdown-content.show {
+        display: block;
+        padding: 3%;
+    }
+
+</style>
 <header class="top_panel top_panel_custom top_panel_custom_18654 top_panel_custom_header-modern				 without_bg_image">
     <div data-elementor-type="cpt_layouts" data-elementor-id="18654" class="elementor elementor-18654">
         <div class="elementor-inner">
@@ -129,13 +147,34 @@
                                             <div class="elementor-widget-container">
                                                 
                                                 @if (!auth()->check())
-                                                <a  href="https://auth.greenwebbtech.com/register?source=website&destination=marketplace"  class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                                <a id="register_now"   class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
                                                     <span class="sc_button_text">
                                                         <span class="sc_button_title">
                                                             Register
                                                         </span>
                                                     </span>
                                                 </a>
+                                                <div id="dropdown-content" style="display: none; text-align:left; padding:3%; border-top:1px solid #2B6A3B">
+                                                    
+                                                    <p > <!-- Centering the content within the paragraph -->
+                                                        <a href="https://auth.greenwebbtech.com/register?source=marketplace&destination=marketplace&type=farmer">
+                                                            <span style="display: flex; justify-content: start; align-items: center;">
+                                                                <img width="20" src="public/images/site/farmer.png" style="margin-right: 4px;">
+                                                                <span style="margin-top: 0;">Farmer</span>
+                                                            </span>
+                                                        </a>
+                                                    </p>
+                                                    <p > <!-- Centering the content within the paragraph -->
+                                                        <a href="https://auth.greenwebbtech.com/register?source=marketplace&destination=marketplace&type=agronomist">
+                                                            <span style="display: flex; justify-content: start; align-items: center;">
+                                                                <img width="20" src="public/images/site/agronomist.png" style="margin-right: 4px;">
+                                                                <span style="margin-top: 0;">Agronomist</span>
+                                                            </span>
+                                                        </a>
+                                                    </p>
+                                                    
+                                                    <br>
+                                                </div>
                                                 @endif
                                                 <div class="sc_item_button sc_button_wrap">
                                                     {{-- @auth --}}
@@ -350,3 +389,17 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const registerButton = document.getElementById("register_now");
+        const dropdownContent = document.getElementById("dropdown-content");
+
+        // Toggle the dropdown when the "Create an Account" button is clicked
+        registerButton.addEventListener("click", function () {
+            dropdownContent.classList.toggle("show");
+        });
+    });
+
+</script>
