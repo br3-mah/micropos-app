@@ -116,10 +116,13 @@
                                 </div>
                             </div>
                         </td> --}}
-                        <td class="text-end pe-0" data-order="Inactive">
+                        <td class="text-end pe-0"  data-order="Inactive">
                             <!--begin::Badges-->
                             
                             @switch($product->status)
+                                @case(0)
+                                <div class="badge badge-light-danger text-primary">Inactive</div>
+                                @break
                                 @case(1)
                                     @if ($product->is_approved == 1)
                                     <div class="badge badge-light-success text-primary">Published</div>
@@ -391,5 +394,5 @@
     </div>
     <!--end::Products-->
 </div>
-
+@include('pages.___parts.products.update-status')
 @endsection

@@ -1155,8 +1155,7 @@
               </div>
             </div>
 
-
-
+            
             @forelse($order_items as $item)
             <div style="background-color: transparent">
               <div

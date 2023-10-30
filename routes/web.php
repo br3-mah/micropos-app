@@ -25,6 +25,8 @@ Route::get('detail/{id}', [ProductDetailController::class, 'index'])->name('deta
 Route::get('shop-products', [ShopProductController::class, 'index'])->name('shop.index');
 Route::get('product-results', [ShopProductController::class, 'search'])->name('product.search');
 Route::resource('checkout', CheckoutController::class);
+Route::post('single-purchase', [CheckoutController::class, 'singlePurchase'])->name('store.buy');
+
 
 Route::middleware(['web', 'auth'])->group(function () {
     // My Dashboard

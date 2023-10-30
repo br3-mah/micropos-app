@@ -56,4 +56,9 @@ class CheckoutController extends Controller
             dd($th);
         }
     }
+
+    public function singlePurchase(Request $request){
+       return redirect()->route('checkout.index');
+    }
+
 }

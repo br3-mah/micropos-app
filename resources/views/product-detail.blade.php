@@ -2106,18 +2106,18 @@ Cultivating Agriculture that Works for the Future
                                     </div>
 
                                     @if(($product->shelf_qty + $product->warehouse_qty) > 0)
-                                    <form class="cart" action="#"
-                                        method="post" enctype="multipart/form-data">
-
+                                    <form class="cart" action="{{ route('store.buy') }}" method="post" enctype="multipart/form-data">
+                                        @csrf
                                         <div class="quantity">
                                             <label class="screen-reader-text" for="quantity_64faab22c360b">{{ $product->name }} quantity</label>
+                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
                                             <input type="number" id="quantity_64faab22c360b" class="input-text qty text"
-                                                step="1" min="1" max="15" name="quantity" value="1" title="Qty" size="4"
+                                                step="1" min="1" max="15" name="qty" value="1" title="Qty" size="4"
                                                 placeholder="1" inputmode="numeric" autocomplete="off">
                                         </div>
 
-                                        <button type="submit" name="add-to-cart" value="18187"
-                                            class="single_add_to_cart_button button alt">Buy now</button>
+                                        <button type="submit" value="18187" data-quantity="1" data-product-name="{{ $product->name }}" data-product-price="{{$product->price}}" data-product_id="{{ $product->id }}" data-product_sku="{{ $product->sku }}"
+                                            class="add_to_cart_button button alt">Buy now</button>
 
                                         {{-- <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart"
                                             data-tinvwl_product_id="18187">
