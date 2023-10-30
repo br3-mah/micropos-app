@@ -100,7 +100,15 @@
                                 </span>  
                             </span>
                         </td>
-                        <td class="text-end pe-0">K {{ $order->order_items->sum('price') * $order->order_items[$key]->qty }}</td>
+                        <td class="text-end pe-0">K 
+                            @php
+                                $total = 0;
+                                foreach ($order->order_items as $key => $item) {
+                                    $total += ($item->price * $item->qty);
+                                } 
+                                echo $total;
+                            @endphp
+                        </td>
                       
                         <td class="text-end pe-0" data-order="Inactive">
                             <!--begin::Badges-->
