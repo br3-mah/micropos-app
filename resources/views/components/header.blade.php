@@ -124,6 +124,15 @@
                                         <div class="sc_layouts_item elementor-element elementor-element-d662b41 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="d662b41" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                             <div class="elementor-widget-container">
                                                 
+                                                @if (!auth()->check())
+                                                <a  href="https://auth.greenwebbtech.com/register?source=website&destination=marketplace"  class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                                    <span class="sc_button_text">
+                                                        <span class="sc_button_title">
+                                                            Register
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                                @endif
                                                 <div class="sc_item_button sc_button_wrap">
                                                     {{-- @auth --}}
                                                     <a href="{{ route('home') }}" id="isUser" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
@@ -141,6 +150,7 @@
                                                             </span>
                                                         </span>
                                                     </a>
+
                                                     {{-- @endauth --}}
                                                 </div>
                                             </div>
