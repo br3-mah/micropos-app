@@ -53,8 +53,9 @@
                                                             <div class="sc_title sc_title_default">
                                                                 <h2
                                                                     class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                    <span class="sc_item_title_text">We Help You Choose the Best for Solution
-                                                                        Your Agro Needs !</span></h2>
+                                                                    <span class="sc_item_title_text">
+                                                                        
+                                                                    We Help You Choose the Best Solution for Your Agro Needs !</span></h2>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -90,7 +91,7 @@
                                                         data-widget_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <p>Zambia &mdash;<br>10445p Great East Road Munali, Lusaka</p>
+                                                                <p>Zambia &mdash;<br>10445P Great East Road, Chainama, Lusaka</p>
                                                             </div>
                                                         </div>
                                                     </div>
