@@ -45,7 +45,7 @@ class CheckoutController extends Controller
                     Mail::to($request->input('billing_email'))->send(new OrderConfirmation($order->toArray(), $cartData ));
                 }
         
-                Mail::to(['nyeleti.bremah@gmail.com','georgemunganga@gmail.com'])->send(new OrderReport($order->toArray(), $cartData ));
+                Mail::to(['nyeleti.bremah@gmail.com','georgemunganga@gmail.com','guntila@ecoagrozambia.com'])->send(new OrderReport($order->toArray(), $cartData ));
                 return response()->json(['data' => $order], 200);
             } else {
                 // Handle JSON decoding error
