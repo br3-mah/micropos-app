@@ -35,7 +35,7 @@
                                                                 <div style="display: flex" class="sc_extended_products_content sc_item_content">
                                                                     <div style="width: 80%" class="woocommerce columns-3">
                                                                         <ul class="products products_style_info_2 columns-3">
-                                                                            @foreach ($products as $product)
+                                                                            @forelse ($products as $product)
                                                                             <li class="product type-product post-{{ $product->id }} status-publish first instock product_cat-berries product_cat-fruits product_cat-organic product_tag-crop product_tag-organic product_tag-season product_tag-summer has-post-thumbnail shipping-taxable purchasable product-type-simple product_style_info_2">
                                                                                 <div class="post_item post_layout_thumbs">
                                                                                     <div class="post_featured hover_shop">
@@ -91,7 +91,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </li>
-                                                                            @endforeach
+                                                                            @empty
+                                                                            <h4>No Results Found.</h4>
+                                                                            @endforelse
 
 
                                                                         </ul>
@@ -117,7 +119,7 @@
                                                                                 <h5 class="widget_title">Categories</h5>
                                                                                 <ul class="product-categories">
                                                                                     @foreach($categories as $cat)
-                                                                                    <li class="cat-item cat-item-185"><a href="{{ $cat->id }}">{{ $cat->name }}</a></li>
+                                                                                    <li class="cat-item cat-item-185"><a href="#">{{ $cat->name }}</a></li>
                                                                                     @endforeach
                                                                                 </ul>
                                                                             </aside>
@@ -148,7 +150,7 @@
                                                                                 <h5 class="widget_title">Tags</h5>
                                                                                 <div class="tagcloud">
                                                                                     @foreach($tags as $tag)
-                                                                                    <a href="{{ $tag->id }}" class="tag-cloud-link tag-link-192 tag-link-position-1" style="font-size: 22pt;" aria-label="crop (28 products)">{{ $tag->name }}</a>
+                                                                                    <a href="#" class="tag-cloud-link tag-link-192 tag-link-position-1" style="font-size: 22pt;" aria-label="crop (28 products)">{{ $tag->name }}</a>
                                                                                     @endforeach
                                                                                 </div>
                                                                             </aside>
