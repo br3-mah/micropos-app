@@ -2,6 +2,26 @@
 @section('content')
 
 <div id="kt_app_content_container" class="app-container container-xxl">
+    <div class="page-title d-flex flex-column me-5 py-2">
+        <!--begin::Title-->
+        <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">My Products</h1>
+        <!--end::Title-->
+        <!--begin::Breadcrumb-->
+        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
+            <li class="breadcrumb-item text-muted">
+                <a href="{{ route('home') }}" class="text-muted text-hover-primary">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <span class="bullet bg-gray-200 w-5px h-2px"></span>
+            </li>
+            <li class="breadcrumb-item text-muted">My Product</li>
+            <li class="breadcrumb-item">
+                <span class="bullet bg-gray-200 w-5px h-2px"></span>
+            </li>
+            <li class="breadcrumb-item text-dark">Product Listing</li>
+        </ul>
+        <!--end::Breadcrumb-->
+    </div>
     <!--begin::Products-->
     <div class="card card-flush">
         <!--begin::Card header-->

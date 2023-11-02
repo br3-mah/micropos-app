@@ -4,7 +4,7 @@
 <div id="kt_app_content_container" class="app-container container-xxl">
     <div class="page-title d-flex flex-column me-5 py-2">
         <!--begin::Title-->
-        <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Customer Deliveries</h1>
+        <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Purchases History</h1>
         <!--end::Title-->
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
@@ -14,11 +14,11 @@
             <li class="breadcrumb-item">
                 <span class="bullet bg-gray-200 w-5px h-2px"></span>
             </li>
-            <li class="breadcrumb-item text-muted">Customer Deliveries</li>
+            <li class="breadcrumb-item text-muted">My Purchases</li>
             <li class="breadcrumb-item">
                 <span class="bullet bg-gray-200 w-5px h-2px"></span>
             </li>
-            <li class="breadcrumb-item text-dark">Customers Delivery History</li>
+            <li class="breadcrumb-item text-dark">Purchase History</li>
         </ul>
         <!--end::Breadcrumb-->
     </div>
@@ -31,7 +31,7 @@
                 <!--begin::Search-->
                 <div class="d-flex align-items-center position-relative my-1">
                     <i class="ki-outline ki-magnifier fs-3 position-absolute ms-4"></i>
-                    <input type="text" data-kt-ecommerce-product-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Delivery" />
+                    <input type="text" data-kt-ecommerce-product-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Purchase" />
                 </div>
                 <!--end::Search-->
             </div>
@@ -67,15 +67,15 @@
                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_ecommerce_products_table .form-check-input" value="1" />
                             </div>
                         </th>
-                        <th class="min-w-200px">Deliveries</th>
-                        <th class="text-end min-w-70px">Delivered Date</th>
-                        <th class="text-end min-w-100px">Customer</th>
-                        <th class="text-end min-w-100px">Rating</th>
+                        <th class="min-w-200px">Purchase</th>
+                        <th class="text-end min-w-70px">Qty</th>
+                        <th class="text-end min-w-100px">Price</th>
+                        <th class="text-end min-w-100px">Date Purchased</th>
                         <th class="text-end min-w-70px">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="fw-semibold text-gray-600">
-                    @foreach($deliveries as $delivery)
+                    @foreach($sales as $sale)
                     <tr>
                         <td>
                             <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -86,42 +86,25 @@
                             <div class="d-flex align-items-center">
                                 <!--begin::Thumbnail-->
                                 <a href="#" class="symbol symbol-50px">
-                                    <span class="symbol-label" style="background-image:url('{{asset("public/storage/" . $delivery->image)}}');"></span>
+                                    <span class="symbol-label" style="background-image:url('{{asset("public/storage/" . $sale->image)}}');"></span>
                                 </a>
                                 <!--end::Thumbnail-->
                                 <div class="ms-5">
                                     <!--begin::Title-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $delivery->name }}</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $sale->name }}</a>
                                     <!--end::Title-->
                                 </div>
                             </div>
                         </td>
-                        <td class="text-end pe-0">K {{ $delivery->price }}</td>
-                        <td class="text-end pe-0" data-order="rating-4">
-                            <div class="rating justify-content-end">
-
-                               
-                                <div class="rating-label checked">
-                                    <i class="ki-outline ki-star fs-6"></i>
-                                </div>
-                                <div class="rating-label checked">
-                                    <i class="ki-outline ki-star fs-6"></i>
-                                </div>
-                                <div class="rating-label checked">
-                                    <i class="ki-outline ki-star fs-6"></i>
-                                </div>
-                                <div class="rating-label checked">
-                                    <i class="ki-outline ki-star fs-6"></i>
-                                </div>
-                                <div class="rating-label">
-                                    <i class="ki-outline ki-star fs-6"></i>
-                                </div>
-                            </div>
+                        <td class="text-end pe-0" data-order="39">
+                            <span class="fw-bold ms-3">{{ $sale->shelf_qty ?? 0 }}</span>
                         </td>
+                        <td class="text-end pe-0">K {{ $sale->price }}</td>
+                    
                         <td class="text-end pe-0" data-order="Inactive">
                             <!--begin::Badges-->
                             
-                            @switch($delivery->status)
+                            @switch($sale->status)
                                 @case(1)
                                     <div class="badge badge-light-success text-primary">Published</div>
                                     @break
@@ -148,13 +131,13 @@
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3">Edit</a>
-                                    {{-- <a href="{{ route('Sale.edit', $delivery->id) }}" class="menu-link px-3">Edit</a> --}}
+                                    {{-- <a href="{{ route('Sale.edit', $sale->id) }}" class="menu-link px-3">Edit</a> --}}
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
-                                    <a href="#" class="menu-link px-3" onclick="event.preventDefault(); document.getElementById('delete-product-form-{{ $delivery->id }}').submit();">Delete</a>
-                                    <form id="delete-product-form-{{ $delivery->id }}" action="{{ route('product.destroy', $delivery->id) }}" method="POST" style="display: none;">
+                                    <a href="#" class="menu-link px-3" onclick="event.preventDefault(); document.getElementById('delete-product-form-{{ $sale->id }}').submit();">Delete</a>
+                                    <form id="delete-product-form-{{ $sale->id }}" action="{{ route('product.destroy', $sale->id) }}" method="POST" style="display: none;">
                                         @csrf
                                         @method('DELETE')
                                     </form>

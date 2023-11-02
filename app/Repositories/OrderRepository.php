@@ -43,8 +43,8 @@ class OrderRepository
         return Order::find($id);
     }    
     
-    public function destroy($order){
-        $order->delete();
+    public function destroy($id){
+        Order::where('id', $id)->delete();
         return true;
     }
 }

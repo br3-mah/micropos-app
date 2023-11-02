@@ -109,8 +109,7 @@
                                                         data-widget_type="trx_sc_socials.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="sc_socials sc_socials_default sc_align_none">
-                                                                <div class="socials_wrap sc_item_content"><a
-                                                                        target="_blank"
+                                                                <div class="socials_wrap sc_item_content"><a target="_blank"
                                                                         href="https://web.facebook.com/profile.php?id=100092167823596"
                                                                         class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span
                                                                             class="social_icon social_icon_facebook-1"

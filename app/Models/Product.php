@@ -59,6 +59,37 @@ class Product extends Model
     public function tags(){
         return $this->hasMany(ProductTag::class);
     }
+
+
+
+
+    
+    public static function mytotActiveProducts(){
+        try {
+            $total1 = Product::where('user_id', auth()->user()->id)->sum('shelf_qty');
+            $total2 = Product::where('user_id', auth()->user()->id)->sum('warehouse_qty');
+            return $total1 + $total2;
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
+
+    
+    public static function totSold(){
+        try {
+            $orders = Order::with(['order_items.products.user' => function ($query) {
+                $query->where('id', auth()->user()->id);
+            }])->get();
+            
+            $totalPrice = $orders->sum(function ($order) {
+                return $order->order_items->sum('qty');
+            });
+            
+            return $totalPrice;
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
 }
 
 

@@ -2,28 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Delivery;
+use App\Models\Sale;
 use Illuminate\Http\Request;
 
-class DeliveryController extends Controller
+class PurchaseController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $deliveries = Delivery::get();
-        return view('pages.deliveries.index', [
-            'deliveries' => $deliveries
-        ]);
-    }
-
-    public function customerDeliveries(){
-
-        $deliveries = Delivery::get();
-        return view('pages.deliveries.customers', [
-            'deliveries' => $deliveries
-        ]);
+        $sales = Sale::get();
+        // return response()->json($products);    
+        return view('pages.purchases.index', [
+            'sales' => $sales
+        ]); 
     }
 
     /**

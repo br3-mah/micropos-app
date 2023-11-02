@@ -13,7 +13,7 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html  lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 	<!--begin::Head-->
-	<head><base href=""/>
+	<head><base href="##"/>
 		<title>Marketplace | ecoAgro</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -24,7 +24,7 @@ License: For each use you must have a valid license purchased only from above li
 		<meta property="og:title" content="Metronic - Bootstrap Admin Template, HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template" />
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+		<link rel="canonical" href="##https://preview.keenthemes.com/metronic8" />
 		<link rel="shortcut icon" href="{{ asset('public/images/logo.png') }}" />
 		<!--begin::Fonts(mandatory for all pages)-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -353,7 +353,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin:Menu item-->
 										<div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link" href="{{ route('sales.index') }}">
+											<a class="menu-link" href="{{ route('purchases.index') }}">
 												<span class="menu-icon  me-3">
 													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
 													<path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
@@ -389,8 +389,13 @@ License: For each use you must have a valid license purchased only from above li
 												<span class="menu-title">My Deliveries</span>
 											</a>
 											<!--end:Menu link-->
-										 </div>  
-										 <div class="menu-item">
+										</div>  
+										
+										
+										
+										@auth
+										@if ((auth()->user()->is_approved == 1) && (auth()->user()->is_type == 'seller')) 
+										<div class="menu-item">
 											<!--begin:Menu content-->
 											<div class="menu-content">
 												<span class="menu-section fs-5 fw-bolder ps-1 py-1">
@@ -431,12 +436,14 @@ License: For each use you must have a valid license purchased only from above li
 												<span class="menu-title">Customer Deliveries</span>
 											</a>
 											<!--end:Menu link-->
-										 </div> 
+										</div> 
+										@endif
+										@endauth
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
 										{{--  <div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo29/dist/dashboards/projects.html">
+											<a class="menu-link" href="../../demo29/dist/dashboards/projects##">
 												<span class="menu-bullet">
 													<span class="bullet bullet-	dot"></span>
 												</span>
@@ -448,7 +455,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin:Menu item-->
 										{{--  <div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo29/dist/dashboards/online-courses.html">
+											<a class="menu-link" href="../../demo29/dist/dashboards/online-courses##">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -460,7 +467,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin:Menu item-->
 										{{--  <div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo29/dist/dashboards/marketing.html">
+											<a class="menu-link" href="../../demo29/dist/dashboards/marketing##">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -500,8 +507,14 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="page-title py-2 py-sm-0 d-flex flex-column justify-content-center me-3">
 											<!--begin::Title-->
 											<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Marketplace - Manager
-											<!--begin::Description-->
-											<span class="page-desc text-muted fs-7 fw-semibold pt-2">Seller</span>
+											<!--begin::Description-->										
+											@auth
+												@if ((auth()->user()->is_approved == 1) && (auth()->user()->is_type == 'seller')) 
+													<span class="page-desc text-muted fs-7 fw-semibold pt-2">Seller</span>
+												@else
+													<span class="page-desc text-muted fs-7 fw-semibold pt-2">Buyer</span>
+												@endif
+											@endauth
 											<!--end::Description--></h1>
 											<!--end::Title-->
 										</div>
@@ -513,14 +526,18 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Items-->
 										<div class="d-flex align-items-center gap-4 gap-lg-8">
 											<!--begin::Item-->
-											<div class="d-flex flex-column">
-												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">K{{ App\Models\Sale::avgSale() }}</span>
-												<!--end::Number-->
-												<!--begin::Section-->
-												<div class="text-gray-500 fw-semibold fs-7">Avg. Sales</div>
-												<!--end::Section-->
-											</div>
+											@auth
+												@if ((auth()->user()->is_approved == 1) && (auth()->user()->is_type == 'buyer')) 
+													<div class="d-flex flex-column">
+														<!--begin::Number-->
+														<span class="text-gray-900 fw-bold fs-6 mb-1">K{{ App\Models\Sale::avgSale() }}</span>
+														<!--end::Number-->
+														<!--begin::Section-->
+														<div class="text-gray-500 fw-semibold fs-7">Avg. Sales</div>
+														<!--end::Section-->
+													</div>
+												@endif
+											@endauth
 											<!--end::Item-->
 											<!--begin::Item-->
 											<div class="d-flex flex-column">
@@ -532,25 +549,20 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Section-->
 											</div>
 											<!--end::Item-->
-											<!--begin::Item-->
+											<!--begin::Item
 											<div class="d-flex flex-column">
-												<!--begin::Number-->
 												<span class="text-gray-900 fw-bold fs-6 mb-1">0%</span>
-												<!--end::Number-->
-												<!--begin::Section-->
 												<div class="text-gray-500 fw-semibold fs-7">Overall Share</div>
-												<!--end::Section-->
 											</div>
-											<!--end::Item-->
-											<!--begin::Item-->
-											<div class="d-flex flex-column">
-												<!--begin::Number-->
-												<span class="text-gray-900 fw-bold fs-6 mb-1">0%</span>
-												<!--end::Number-->
-												<!--begin::Section-->
-												<div class="text-gray-500 fw-semibold fs-7">7 Days</div>
-												<!--end::Section-->
-											</div>
+											end::Item-->
+											<!--begin::Item-->	
+											@auth
+												@if (auth()->user()->is_type == 'buyer') 
+												<div class="d-flex flex-column">
+													<a onclick="activateSeller()" class="btn btn-sm btn-primary me-2 seller_activation_txt">Request Seller Activation</a>
+												</div>
+												@endif
+											@endauth
 											<!--end::Item-->
 										</div>
 										<!--end::Items-->
@@ -668,20 +680,18 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Copyright-->
 								<div class="text-dark order-2 order-md-1">
 									<span class="text-muted fw-semibold me-1">2023&copy;</span>
-									<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Ecoagro</a>
+									<a href="https://website.greenwebbtech.com" target="_blank" class="text-gray-800 text-hover-primary">Ecoagro</a>
 								</div>
 								<!--end::Copyright-->
 								<!--begin::Menu-
 								<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
 									<li class="menu-item">
-										<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+										<a href="https://website.greenwebbtech.com/about.php" target="_blank" class="menu-link px-2">About</a>
 									</li>
 									<li class="menu-item">
-										<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
+										<a href="https://website.greenwebbtech.com/contact.php" target="_blank" class="menu-link px-2">Support</a>
 									</li>
-									<li class="menu-item">
-										<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
-									</li>
+									
 								</ul>
 								-end::Menu-->
 							</div>
@@ -754,7 +764,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Record-->
 										<div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-5">
 											<!--begin::Title-->
-											<a href="../../demo29/dist/apps/projects/project.html" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Meeting with customer</a>
+											<a href="####../../demo29/dist/apps/projects/project##" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Meeting with customer</a>
 											<!--end::Title-->
 											<!--begin::Label-->
 											<div class="min-w-175px pe-2">
@@ -786,14 +796,14 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 											<!--end::Progress-->
 											<!--begin::Action-->
-											<a href="../../demo29/dist/apps/projects/project.html" class="btn btn-sm btn-light btn-active-light-primary">View</a>
+											<a href="##../../demo29/dist/apps/projects/project##" class="btn btn-sm btn-light btn-active-light-primary">View</a>
 											<!--end::Action-->
 										</div>
 										<!--end::Record-->
 										<!--begin::Record-->
 										<div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-0">
 											<!--begin::Title-->
-											<a href="../../demo29/dist/apps/projects/project.html" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Project Delivery Preparation</a>
+											<a href="##../../demo29/dist/apps/projects/project##" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Project Delivery Preparation</a>
 											<!--end::Title-->
 											<!--begin::Label-->
 											<div class="min-w-175px">
@@ -820,7 +830,7 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 											<!--end::Progress-->
 											<!--begin::Action-->
-											<a href="../../demo29/dist/apps/projects/project.html" class="btn btn-sm btn-light btn-active-light-primary">View</a>
+											<a href="##../../demo29/dist/apps/projects/project##" class="btn btn-sm btn-light btn-active-light-primary">View</a>
 											<!--end::Action-->
 										</div>
 										<!--end::Record-->
@@ -884,7 +894,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Timeline heading-->
 									<div class="mb-5 pe-3">
 										<!--begin::Title-->
-										<a href="#" class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2">3 New Incoming Project Files:</a>
+										<a href="###" class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2">3 New Incoming Project Files:</a>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="d-flex align-items-center mt-1 fs-6">
@@ -911,7 +921,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
 													<!--begin::Desc-->
-													<a href="../../demo29/dist/apps/projects/project.html" class="fs-6 text-hover-primary fw-bold">Finance KPI App Guidelines</a>
+													<a href="##../../demo29/dist/apps/projects/project##" class="fs-6 text-hover-primary fw-bold">Finance KPI App Guidelines</a>
 													<!--end::Desc-->
 													<!--begin::Number-->
 													<div class="text-gray-400">1.9mb</div>
@@ -923,12 +933,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center pe-10 pe-lg-20">
 												<!--begin::Icon-->
-												<img alt="../../demo29/dist/apps/projects/project.html" class="w-30px me-3" src="assets/media/svg/files/doc.svg" />
+												<img alt="../../demo29/dist/apps/projects/project##" class="w-30px me-3" src="assets/media/svg/files/doc.svg" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
 													<!--begin::Desc-->
-													<a href="#" class="fs-6 text-hover-primary fw-bold">Client UAT Testing Results</a>
+													<a href="###" class="fs-6 text-hover-primary fw-bold">Client UAT Testing Results</a>
 													<!--end::Desc-->
 													<!--begin::Number-->
 													<div class="text-gray-400">18kb</div>
@@ -940,12 +950,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center">
 												<!--begin::Icon-->
-												<img alt="../../demo29/dist/apps/projects/project.html" class="w-30px me-3" src="assets/media/svg/files/css.svg" />
+												<img alt="../../demo29/dist/apps/projects/project##" class="w-30px me-3" src="assets/media/svg/files/css.svg" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
 													<!--begin::Desc-->
-													<a href="#" class="fs-6 text-hover-primary fw-bold">Finance Reports</a>
+													<a href="###" class="fs-6 text-hover-primary fw-bold">Finance Reports</a>
 													<!--end::Desc-->
 													<!--begin::Number-->
 													<div class="text-gray-400">20mb</div>
@@ -979,8 +989,8 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="pe-3 mb-5">
 										<!--begin::Title-->
 										<div class="fs-5 fw-semibold mb-2">Task
-										<a href="#" class="text-primary fw-bold me-1">#45890</a>merged with
-										<a href="#" class="text-primary fw-bold me-1">#45890</a>in “Ads Pro Admin Dashboard project:</div>
+										<a href="###" class="text-primary fw-bold me-1">#45890</a>merged with
+										<a href="###" class="text-primary fw-bold me-1">#45890</a>in “Ads Pro Admin Dashboard project:</div>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="d-flex align-items-center mt-1 fs-6">
@@ -1045,7 +1055,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Image-->
 												<!--begin::Link-->
 												<div class="overlay-layer bg-dark bg-opacity-10 rounded">
-													<a href="#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
+													<a href="###" class="btn btn-sm btn-primary btn-shadow">Explore</a>
 												</div>
 												<!--end::Link-->
 											</div>
@@ -1059,7 +1069,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Image-->
 												<!--begin::Link-->
 												<div class="overlay-layer bg-dark bg-opacity-10 rounded">
-													<a href="#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
+													<a href="###" class="btn btn-sm btn-primary btn-shadow">Explore</a>
 												</div>
 												<!--end::Link-->
 											</div>
@@ -1073,7 +1083,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Image-->
 												<!--begin::Link-->
 												<div class="overlay-layer bg-dark bg-opacity-10 rounded">
-													<a href="#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
+													<a href="###" class="btn btn-sm btn-primary btn-shadow">Explore</a>
 												</div>
 												<!--end::Link-->
 											</div>
@@ -1103,7 +1113,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="pe-3 mb-5">
 										<!--begin::Title-->
 										<div class="fs-5 fw-semibold mb-2">New case
-										<a href="#" class="text-primary fw-bold me-1">#67890</a>is assigned to you in Multi-platform Database Design project</div>
+										<a href="###" class="text-primary fw-bold me-1">#67890</a>is assigned to you in Multi-platform Database Design project</div>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="overflow-auto pb-5">
@@ -1113,7 +1123,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="text-muted me-2 fs-7">Added at 4:23 PM by</div>
 												<!--end::Info-->
 												<!--begin::User-->
-												<a href="#" class="text-primary fw-bold me-1">Alice Tan</a>
+												<a href="###" class="text-primary fw-bold me-1">Alice Tan</a>
 												<!--end::User-->
 											</div>
 											<!--end::Wrapper-->
@@ -1174,7 +1184,7 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 												<!--end::Content-->
 												<!--begin::Action-->
-												<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap">Proceed</a>
+												<a href="###" class="btn btn-primary px-6 align-self-center text-nowrap">Proceed</a>
 												<!--end::Action-->
 											</div>
 											<!--end::Wrapper-->
@@ -1204,7 +1214,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="pe-3 mb-5">
 										<!--begin::Title-->
 										<div class="fs-5 fw-semibold mb-2">New order
-										<a href="#" class="text-primary fw-bold me-1">#67890</a>is placed for Workshow Planning & Budget Estimation</div>
+										<a href="###" class="text-primary fw-bold me-1">#67890</a>is placed for Workshow Planning & Budget Estimation</div>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="d-flex align-items-center mt-1 fs-6">
@@ -1212,7 +1222,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="text-muted me-2 fs-7">Placed at 4:23 PM by</div>
 											<!--end::Info-->
 											<!--begin::User-->
-											<a href="#" class="text-primary fw-bold me-1">Jimmy Bold</a>
+											<a href="###" class="text-primary fw-bold me-1">Jimmy Bold</a>
 											<!--end::User-->
 										</div>
 										<!--end::Description-->
@@ -1230,7 +1240,7 @@ License: For each use you must have a valid license purchased only from above li
 				<!--end::Body-->
 				<!--begin::Footer-->
 				<div class="card-footer py-5 text-center" id="kt_activities_footer">
-					<a href="../../demo29/dist/pages/user-profile/activity.html" class="btn btn-bg-body text-primary">View All Activities
+					<a href="##../../demo29/dist/pages/user-profile/activity##" class="btn btn-bg-body text-primary">View All Activities
 					<i class="ki-outline ki-arrow-right fs-3 text-primary"></i></a>
 				</div>
 				<!--end::Footer-->
@@ -1247,7 +1257,7 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="card-title">
 						<!--begin::User-->
 						<div class="d-flex justify-content-center flex-column me-3">
-							<a href="#" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 mb-2 lh-1">Brian Cox</a>
+							<a href="###" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 mb-2 lh-1">Brian Cox</a>
 							<!--begin::Info-->
 							<div class="mb-0 lh-1">
 								<span class="badge badge-success badge-circle w-10px h-10px me-1"></span>
@@ -1274,12 +1284,12 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Heading-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3">
-									<a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
+									<a href="###" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
 								</div>
 								<!--end::Menu item-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3">
-									<a href="#" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">Invite Contacts
+									<a href="###" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">Invite Contacts
 									<span class="ms-2" data-bs-toggle="tooltip" title="Specify a contact email to send an invitation">
 										<i class="ki-outline ki-information fs-7"></i>
 									</span></a>
@@ -1287,7 +1297,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Menu item-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-									<a href="#" class="menu-link px-3">
+									<a href="###" class="menu-link px-3">
 										<span class="menu-title">Groups</span>
 										<span class="menu-arrow"></span>
 									</a>
@@ -1295,17 +1305,17 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-sub menu-sub-dropdown w-175px py-4">
 										<!--begin::Menu item-->
 										<div class="menu-item px-3">
-											<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create Group</a>
+											<a href="###" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create Group</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-3">
-											<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite Members</a>
+											<a href="###" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite Members</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-3">
-											<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
+											<a href="###" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
 										</div>
 										<!--end::Menu item-->
 									</div>
@@ -1314,7 +1324,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Menu item-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3 my-1">
-									<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
+									<a href="###" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
 								</div>
 								<!--end::Menu item-->
 							</div>
@@ -1347,7 +1357,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">2 mins</span>
 									</div>
 									<!--end::Details-->
@@ -1369,7 +1379,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">5 mins</span>
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1399,7 +1409,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">1 Hour</span>
 									</div>
 									<!--end::Details-->
@@ -1421,7 +1431,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">2 Hours</span>
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1451,7 +1461,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">3 Hours</span>
 									</div>
 									<!--end::Details-->
@@ -1459,8 +1469,8 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::User-->
 								<!--begin::Text-->
 								<div class="p-5 rounded bg-light-info text-dark fw-semibold mw-lg-400px text-start" data-kt-element="message-text">You can unwatch this repository immediately by clicking here:
-								<a href="https://keenthemes.com">Keenthemes.com</a></div>
-								<!--end::Text-->
+
+									<!--end::Text-->
 							</div>
 							<!--end::Wrapper-->
 						</div>
@@ -1474,7 +1484,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">4 Hours</span>
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1504,7 +1514,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">5 Hours</span>
 									</div>
 									<!--end::Details-->
@@ -1526,7 +1536,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">Just now</span>
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1556,7 +1566,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">Just now</span>
 									</div>
 									<!--end::Details-->
@@ -1629,7 +1639,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">Iblender</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">Iblender</a>
 								<span class="text-gray-400 fw-semibold d-block">The best kitchen gadget in 2022</span>
 							</div>
 							<!--end::Section-->
@@ -1638,10 +1648,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 350</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">5</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1664,7 +1674,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">SmartCleaner</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">SmartCleaner</a>
 								<span class="text-gray-400 fw-semibold d-block">Smart tool for cooking</span>
 							</div>
 							<!--end::Section-->
@@ -1673,10 +1683,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 650</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">4</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1699,7 +1709,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">CameraMaxr</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">CameraMaxr</a>
 								<span class="text-gray-400 fw-semibold d-block">Professional camera for edge</span>
 							</div>
 							<!--end::Section-->
@@ -1708,10 +1718,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 150</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">3</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1734,7 +1744,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">KD Printer</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">KD Printer</a>
 								<span class="text-gray-400 fw-semibold d-block">Manfactoring unique objekts</span>
 							</div>
 							<!--end::Section-->
@@ -1743,10 +1753,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 1450</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">7</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1769,7 +1779,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">MotionWire</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">MotionWire</a>
 								<span class="text-gray-400 fw-semibold d-block">Perfect animation tool</span>
 							</div>
 							<!--end::Section-->
@@ -1778,10 +1788,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 650</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">7</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1804,7 +1814,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">Samsung</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">Samsung</a>
 								<span class="text-gray-400 fw-semibold d-block">Profile info,Timeline etc</span>
 							</div>
 							<!--end::Section-->
@@ -1813,10 +1823,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 720</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">6</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1839,7 +1849,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo29/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">KD Printer</a>
+								<a href="##../../demo29/dist/apps/ecommerce/sales/details##" class="text-gray-800 text-hover-primary fs-4 fw-bold">KD Printer</a>
 								<span class="text-gray-400 fw-semibold d-block">Manfactoring unique objekts</span>
 							</div>
 							<!--end::Section-->
@@ -1848,10 +1858,10 @@ License: For each use you must have a valid license purchased only from above li
 								<span class="fw-bold text-gray-800 fs-5">K 430</span>
 								<span class="text-muted mx-2">for</span>
 								<span class="fw-bold text-gray-800 fs-5 me-3">8</span>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon-success btn-icon w-25px h-25px me-2">
 									<i class="ki-outline ki-minus fs-4"></i>
 								</a>
-								<a href="#" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
+								<a href="###" class="btn btn-sm btn-light-success btn-icon w-25px h-25px">
 									<i class="ki-outline ki-plus fs-4"></i>
 								</a>
 							</div>
@@ -1883,7 +1893,7 @@ License: For each use you must have a valid license purchased only from above li
 					<!--end::Item-->
 					<!--end::Action-->
 					<div class="d-flex justify-content-end mt-9">
-						<a href="#" class="btn btn-primary d-flex justify-content-end">Pleace Order</a>
+						<a href="###" class="btn btn-primary d-flex justify-content-end">Pleace Order</a>
 					</div>
 					<!--end::Action-->
 				</div>
@@ -1966,7 +1976,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Title-->
 											<!--begin::Notice-->
 											<div class="text-muted fw-semibold fs-6">If you need more info, please check out
-											<a href="#" class="link-primary fw-bold">Help Page</a>.</div>
+											<a href="###" class="link-primary fw-bold">Help Page</a>.</div>
 											<!--end::Notice-->
 										</div>
 										<!--end::Heading-->
@@ -2137,7 +2147,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Title-->
 											<!--begin::Description-->
 											<div class="text-muted fw-semibold fs-4">If you need more info, please check
-											<a href="#" class="link-primary">Campaign Guidelines</a></div>
+											<a href="###" class="link-primary">Campaign Guidelines</a></div>
 											<!--end::Description-->
 										</div>
 										<!--end::Heading-->
@@ -2178,7 +2188,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Avatar-->
 														<!--begin::Details-->
 														<div class="ms-6">
-															<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Product Specifications</a>
+															<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Product Specifications</a>
 															<div class="fw-semibold text-muted">230kb</div>
 														</div>
 														<!--end::Details-->
@@ -2205,7 +2215,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Avatar-->
 														<!--begin::Details-->
 														<div class="ms-6">
-															<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Creative Poster</a>
+															<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Creative Poster</a>
 															<div class="fw-semibold text-muted">2.4mb</div>
 														</div>
 														<!--end::Details-->
@@ -2232,7 +2242,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Avatar-->
 														<!--begin::Details-->
 														<div class="ms-6">
-															<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Landing Page Source</a>
+															<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Landing Page Source</a>
 															<div class="fw-semibold text-muted">1.12mb</div>
 														</div>
 														<!--end::Details-->
@@ -2259,7 +2269,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Avatar-->
 														<!--begin::Details-->
 														<div class="ms-6">
-															<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Landing Page Styling</a>
+															<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Landing Page Styling</a>
 															<div class="fw-semibold text-muted">85kb</div>
 														</div>
 														<!--end::Details-->
@@ -2286,7 +2296,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Avatar-->
 														<!--begin::Details-->
 														<div class="ms-6">
-															<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Design Source Files</a>
+															<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Design Source Files</a>
 															<div class="fw-semibold text-muted">48mb</div>
 														</div>
 														<!--end::Details-->
@@ -2313,7 +2323,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Avatar-->
 														<!--begin::Details-->
 														<div class="ms-6">
-															<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Plan Document</a>
+															<a href="###" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Plan Document</a>
 															<div class="fw-semibold text-muted">27kb</div>
 														</div>
 														<!--end::Details-->
@@ -2349,7 +2359,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Title-->
 											<!--begin::Description-->
 											<div class="text-muted fw-semibold fs-4">If you need more info, please check
-											<a href="#" class="link-primary">Campaign Guidelines</a></div>
+											<a href="###" class="link-primary">Campaign Guidelines</a></div>
 											<!--end::Description-->
 										</div>
 										<!--end::Heading-->
@@ -2466,7 +2476,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Title-->
 											<!--begin::Description-->
 											<div class="text-muted fw-semibold fs-4">If you need more info, please check
-											<a href="#" class="link-primary">Campaign Guidelines</a></div>
+											<a href="###" class="link-primary">Campaign Guidelines</a></div>
 											<!--end::Description-->
 										</div>
 										<!--end::Heading-->
@@ -2538,7 +2548,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Actions-->
 										<div class="d-flex flex-center pb-20">
 											<button id="kt_modal_create_campaign_create_new" type="button" class="btn btn-lg btn-light me-3" data-kt-element="complete-start">Create New Campaign</button>
-											<a href="" class="btn btn-lg btn-primary" data-bs-toggle="tooltip" title="Coming Soon">View Campaign</a>
+											<a href="##" class="btn btn-lg btn-primary" data-bs-toggle="tooltip" title="Coming Soon">View Campaign</a>
 										</div>
 										<!--end::Actions-->
 										<!--begin::Illustration-->
@@ -2607,7 +2617,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Title-->
 								<!--begin::Description-->
 								<div class="text-muted fw-semibold fs-5">If you need more info, please check
-								<a href="#" class="fw-bold link-primary">Bidding Guidelines</a>.</div>
+								<a href="###" class="fw-bold link-primary">Bidding Guidelines</a>.</div>
 								<!--end::Description-->
 							</div>
 							<!--end::Heading-->
@@ -2707,7 +2717,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="fw-semibold">
 										<h4 class="text-gray-900 fw-bold">Top up funds</h4>
 										<div class="fs-6 text-gray-700">Not enough funds in your wallet?
-										<a href="../../demo29/dist/utilities/modals/wizards/top-up-wallet.html" class="text-bolder">Top up wallet</a>.</div>
+										<a href="##../../demo29/dist/utilities/modals/wizards/top-up-wallet##" class="text-bolder">Top up wallet</a>.</div>
 									</div>
 									<!--end::Content-->
 								</div>
@@ -2759,7 +2769,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Title-->
 							<!--begin::Description-->
 							<div class="text-muted fw-semibold fs-5">If you need more info, please check out our
-							<a href="#" class="link-primary fw-bold">Users Directory</a>.</div>
+							<a href="#####" class="link-primary fw-bold">Users Directory</a>.</div>
 							<!--end::Description-->
 						</div>
 						<!--end::Heading-->
@@ -2779,7 +2789,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Smith
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Art Director</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -2813,7 +2823,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Melody Macy
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Melody Macy
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Marketing Analytic</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -2847,7 +2857,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Max Smith
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Max Smith
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Software Enginer</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -2881,7 +2891,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Sean Bean
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Sean Bean
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Web Developer</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -2915,7 +2925,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Brian Cox
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Brian Cox
 											<span class="badge badge-light fs-8 fw-semibold ms-2">UI/UX Designer</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -2949,7 +2959,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Mikaela Collins
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Mikaela Collins
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Head Of Marketing</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -2983,7 +2993,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Francis Mitcham
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Francis Mitcham
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Software Arcitect</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3017,7 +3027,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Olivia Wild
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Olivia Wild
 											<span class="badge badge-light fs-8 fw-semibold ms-2">System Admin</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3051,7 +3061,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Neil Owen
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Neil Owen
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Account Manager</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3085,7 +3095,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Dan Wilson
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Dan Wilson
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Web Desinger</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3119,7 +3129,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Bold
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Emma Bold
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Corporate Finance</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3153,7 +3163,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Ana Crown
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Ana Crown
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Customer Relationship</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3187,7 +3197,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Details-->
 										<div class="ms-6">
 											<!--begin::Name-->
-											<a href="#" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Robert Doe
+											<a href="#####" class="d-flex align-items-center fs-5 fw-bold text-dark text-hover-primary">Robert Doe
 											<span class="badge badge-light fs-8 fw-semibold ms-2">Marketing Executive</span></a>
 											<!--end::Name-->
 											<!--begin::Email-->
@@ -3295,7 +3305,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Users-->
 									<div class="mh-375px scroll-y me-n7 pe-7">
 										<!--begin::User-->
-										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+										<a href="#####" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
 												<img alt="Pic" src="assets/media/avatars/300-6.jpg" />
@@ -3310,7 +3320,7 @@ License: For each use you must have a valid license purchased only from above li
 										</a>
 										<!--end::User-->
 										<!--begin::User-->
-										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+										<a href="#####" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
 												<span class="symbol-label bg-light-danger text-danger fw-semibold">M</span>
@@ -3325,7 +3335,7 @@ License: For each use you must have a valid license purchased only from above li
 										</a>
 										<!--end::User-->
 										<!--begin::User-->
-										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+										<a href="#####" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
 												<img alt="Pic" src="assets/media/avatars/300-1.jpg" />
@@ -3340,7 +3350,7 @@ License: For each use you must have a valid license purchased only from above li
 										</a>
 										<!--end::User-->
 										<!--begin::User-->
-										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+										<a href="#####" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
 												<img alt="Pic" src="assets/media/avatars/300-5.jpg" />
@@ -3355,7 +3365,7 @@ License: For each use you must have a valid license purchased only from above li
 										</a>
 										<!--end::User-->
 										<!--begin::User-->
-										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+										<a href="#####" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
 												<img alt="Pic" src="assets/media/avatars/300-25.jpg" />
@@ -3393,7 +3403,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
 													<div class="fw-semibold text-muted">smith@kpmg.com</div>
 												</div>
 												<!--end::Details-->
@@ -3429,7 +3439,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
 													<div class="fw-semibold text-muted">melody@altbox.com</div>
 												</div>
 												<!--end::Details-->
@@ -3465,7 +3475,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max Smith</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max Smith</a>
 													<div class="fw-semibold text-muted">max@kt.com</div>
 												</div>
 												<!--end::Details-->
@@ -3501,7 +3511,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean Bean</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean Bean</a>
 													<div class="fw-semibold text-muted">sean@dellito.com</div>
 												</div>
 												<!--end::Details-->
@@ -3537,7 +3547,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
 													<div class="fw-semibold text-muted">brian@exchange.com</div>
 												</div>
 												<!--end::Details-->
@@ -3573,7 +3583,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
 													<div class="fw-semibold text-muted">mik@pex.com</div>
 												</div>
 												<!--end::Details-->
@@ -3609,7 +3619,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
 													<div class="fw-semibold text-muted">f.mit@kpmg.com</div>
 												</div>
 												<!--end::Details-->
@@ -3645,7 +3655,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
 													<div class="fw-semibold text-muted">olivia@corpmail.com</div>
 												</div>
 												<!--end::Details-->
@@ -3681,7 +3691,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil Owen</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil Owen</a>
 													<div class="fw-semibold text-muted">owen.neil@gmail.com</div>
 												</div>
 												<!--end::Details-->
@@ -3717,7 +3727,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
 													<div class="fw-semibold text-muted">dam@consilting.com</div>
 												</div>
 												<!--end::Details-->
@@ -3753,7 +3763,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Bold</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Bold</a>
 													<div class="fw-semibold text-muted">emma@intenso.com</div>
 												</div>
 												<!--end::Details-->
@@ -3789,7 +3799,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
 													<div class="fw-semibold text-muted">ana.cf@limtel.com</div>
 												</div>
 												<!--end::Details-->
@@ -3825,7 +3835,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
 													<div class="fw-semibold text-muted">robert@benko.com</div>
 												</div>
 												<!--end::Details-->
@@ -3861,7 +3871,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
 													<div class="fw-semibold text-muted">miller@mapple.com</div>
 												</div>
 												<!--end::Details-->
@@ -3897,7 +3907,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
 													<div class="fw-semibold text-muted">lucy.m@fentech.com</div>
 												</div>
 												<!--end::Details-->
@@ -3933,7 +3943,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
 													<div class="fw-semibold text-muted">ethan@loop.com.au</div>
 												</div>
 												<!--end::Details-->
@@ -3969,7 +3979,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
+													<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
 													<div class="fw-semibold text-muted">miller@mapple.com</div>
 												</div>
 												<!--end::Details-->
@@ -4047,7 +4057,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Title-->
 							<!--begin::Description-->
 							<div class="text-muted fw-semibold fs-5">If you need more info, please check out
-							<a href="#" class="link-primary fw-bold">FAQ Page</a>.</div>
+							<a href="#####" class="link-primary fw-bold">FAQ Page</a>.</div>
 							<!--end::Description-->
 						</div>
 						<!--end::Heading-->
@@ -4081,7 +4091,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
 											<div class="fw-semibold text-muted">smith@kpmg.com</div>
 										</div>
 										<!--end::Details-->
@@ -4109,7 +4119,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
 											<div class="fw-semibold text-muted">melody@altbox.com</div>
 										</div>
 										<!--end::Details-->
@@ -4137,7 +4147,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max Smith</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max Smith</a>
 											<div class="fw-semibold text-muted">max@kt.com</div>
 										</div>
 										<!--end::Details-->
@@ -4165,7 +4175,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean Bean</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean Bean</a>
 											<div class="fw-semibold text-muted">sean@dellito.com</div>
 										</div>
 										<!--end::Details-->
@@ -4193,7 +4203,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
 											<div class="fw-semibold text-muted">brian@exchange.com</div>
 										</div>
 										<!--end::Details-->
@@ -4221,7 +4231,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
 											<div class="fw-semibold text-muted">mik@pex.com</div>
 										</div>
 										<!--end::Details-->
@@ -4249,7 +4259,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
 											<div class="fw-semibold text-muted">f.mit@kpmg.com</div>
 										</div>
 										<!--end::Details-->
@@ -4277,7 +4287,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
 											<div class="fw-semibold text-muted">olivia@corpmail.com</div>
 										</div>
 										<!--end::Details-->
@@ -4305,7 +4315,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil Owen</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil Owen</a>
 											<div class="fw-semibold text-muted">owen.neil@gmail.com</div>
 										</div>
 										<!--end::Details-->
@@ -4333,7 +4343,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
 											<div class="fw-semibold text-muted">dam@consilting.com</div>
 										</div>
 										<!--end::Details-->
@@ -4361,7 +4371,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Bold</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Bold</a>
 											<div class="fw-semibold text-muted">emma@intenso.com</div>
 										</div>
 										<!--end::Details-->
@@ -4389,7 +4399,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
 											<div class="fw-semibold text-muted">ana.cf@limtel.com</div>
 										</div>
 										<!--end::Details-->
@@ -4417,7 +4427,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
 											<div class="fw-semibold text-muted">robert@benko.com</div>
 										</div>
 										<!--end::Details-->
@@ -4445,7 +4455,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
 											<div class="fw-semibold text-muted">miller@mapple.com</div>
 										</div>
 										<!--end::Details-->
@@ -4473,7 +4483,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
 											<div class="fw-semibold text-muted">lucy.m@fentech.com</div>
 										</div>
 										<!--end::Details-->
@@ -4501,7 +4511,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
 											<div class="fw-semibold text-muted">ethan@loop.com.au</div>
 										</div>
 										<!--end::Details-->
@@ -4529,7 +4539,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
+											<a href="#####" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
 											<div class="fw-semibold text-muted">brian@exchange.com</div>
 										</div>
 										<!--end::Details-->
@@ -4609,7 +4619,22 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="{{ asset('public/dash/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
 
 
-
+		<script>
+		 function activateSeller(){
+			
+			// Make an AJAX POST request to the Laravel controller
+			$.ajax({
+				type: 'POST',
+				url: '{{ route("activate-seller") }}', 
+				success: function (response) {
+					console.log('Your seller account activation is under review');
+				},
+				error: function (error) {
+					console.error('Unable to activate account');
+				}
+			});
+		 }	
+		</script>
 	</body>
 	<!--end::Body-->
 </html>

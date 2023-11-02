@@ -44,5 +44,16 @@ class Order extends Model
     }
 
 
+
+
+    public static function mytotOrders(){
+        try {
+            $total = Order::where('user_id', auth()->user()->id)->count();
+            return $total;
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
+
     
 }

@@ -2,28 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Delivery;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class DeliveryController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $deliveries = Delivery::get();
-        return view('pages.deliveries.index', [
-            'deliveries' => $deliveries
-        ]);
-    }
-
-    public function customerDeliveries(){
-
-        $deliveries = Delivery::get();
-        return view('pages.deliveries.customers', [
-            'deliveries' => $deliveries
-        ]);
+        //
     }
 
     /**
@@ -64,6 +53,17 @@ class DeliveryController extends Controller
     public function update(Request $request, string $id)
     {
         //
+    }
+    public function activateSeller()
+    {
+        try {
+            $user = User::where('id', auth()->user()->id)->first();
+            $user->activateSeller = 'seller';
+            $user->save();
+            return response()->json(['status'=> 'success']);
+        } catch (\Throwable $th) {
+            return response()->json(['status'=> 'error']);
+        }
     }
 
     /**

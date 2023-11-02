@@ -91,10 +91,10 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Order $order)
+    public function destroy(Request $request, $id)
     {
         try {
-            $this->orderRepository->destroy( $order );
+            $this->orderRepository->destroy( $id );
             session()->flash('success', 'Order has been deleted successfully.');
             return redirect()->route('orders.index');
         } catch (\Throwable $th) {

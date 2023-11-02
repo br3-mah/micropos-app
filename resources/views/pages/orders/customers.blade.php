@@ -2,6 +2,26 @@
 @section('content')
 
 <div id="kt_app_content_container" class="app-container container-xxl">
+    <div class="page-title d-flex flex-column me-5 py-2">
+        <!--begin::Title-->
+        <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Customer Orders</h1>
+        <!--end::Title-->
+        <!--begin::Breadcrumb-->
+        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
+            <li class="breadcrumb-item text-muted">
+                <a href="{{ route('home') }}" class="text-muted text-hover-primary">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <span class="bullet bg-gray-200 w-5px h-2px"></span>
+            </li>
+            <li class="breadcrumb-item text-muted">Customer Orders</li>
+            <li class="breadcrumb-item">
+                <span class="bullet bg-gray-200 w-5px h-2px"></span>
+            </li>
+            <li class="breadcrumb-item text-dark">Customer Order Listing</li>
+        </ul>
+        <!--end::Breadcrumb-->
+    </div>
     <!--begin::Products-->
     <div class="card card-flush">
         <!--begin::Card header-->
@@ -49,6 +69,7 @@
                 </div>
             @endif
             <!--begin::Table-->
+           
             <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_products_table">
                 <thead>
                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
@@ -80,10 +101,18 @@
                                     <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">
                                         @forelse($order->order_items as $item)
                                         <span class="badge badge-light-warning text-primary">
+                                            @if($item->products !== null)
                                             {{ $item->products->name }} x{{ $item->qty }}
+                                            @else
+                                            Product is Missing 
+                                            @endif
                                         </span>
                                             
                                         @empty
+                                        
+                                        <span class="badge badge-light-danger text-primary">
+                                            Products not found 
+                                        </span>
                                         @endforelse
                                         
                                     </a>

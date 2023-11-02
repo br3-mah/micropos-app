@@ -29,4 +29,15 @@ class Delivery extends Model
     public function order(){
         return $this->belongsTo(Order::class);
     }
+
+
+
+    public static function mytotDeliveries(){
+        try {
+            $total = Delivery::where('user_id', auth()->user()->id)->count();
+            return $total;
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
 }
