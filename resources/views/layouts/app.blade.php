@@ -101,7 +101,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Logo-->
 							<div class="app-sidebar-logo d-none d-md-flex flex-center pt-10 mb-5 mb-lg-17" id="kt_app_sidebar_logo">
 								<!--begin::Logo image-->
-								<a href="https://market.greenwebbtech.com">
+								<a href="https://market.ecoagrozm.com">
 									<img alt="Logo" src="{{ asset('public/img/logo.png')}}" class="h-25px" />
 								</a>
 								<!--end::Logo image-->
@@ -680,16 +680,16 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Copyright-->
 								<div class="text-dark order-2 order-md-1">
 									<span class="text-muted fw-semibold me-1">2023&copy;</span>
-									<a href="https://website.greenwebbtech.com" target="_blank" class="text-gray-800 text-hover-primary">Ecoagro</a>
+									<a href="https://ecoagrozm.com" target="_blank" class="text-gray-800 text-hover-primary">Ecoagro</a>
 								</div>
 								<!--end::Copyright-->
 								<!--begin::Menu-
 								<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
 									<li class="menu-item">
-										<a href="https://website.greenwebbtech.com/about.php" target="_blank" class="menu-link px-2">About</a>
+										<a href="https://ecoagrozm.com/about.php" target="_blank" class="menu-link px-2">About</a>
 									</li>
 									<li class="menu-item">
-										<a href="https://website.greenwebbtech.com/contact.php" target="_blank" class="menu-link px-2">Support</a>
+										<a href="https://ecoagrozm.com/contact.php" target="_blank" class="menu-link px-2">Support</a>
 									</li>
 									
 								</ul>

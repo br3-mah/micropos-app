@@ -372,7 +372,7 @@
                             alt="Ecoagro"
                             border="0"
                             class="center fixedwidth"
-                            src="https://market.greenwebbtech.com/public/img/logo2.png"
+                            src="https://market.ecoagrozm.com/public/img/logo2.png"
                             style="
                               text-decoration: none;
                               -ms-interpolation-mode: bicubic;
@@ -2554,7 +2554,7 @@
                                 margin: 0;
                               "
                             >
-                              You can find more amazing products on our website.
+                              You can find more amazing products on our 
                             </p>
                           </div>
                         </div>
@@ -2570,7 +2570,7 @@
                           "
                         >
                          <a
-                            href="https://market.greenwebbtech.com"
+                            href="https://market.ecoagrozm.com"
                             style="
                               -webkit-text-size-adjust: none;
                               text-decoration: none;
