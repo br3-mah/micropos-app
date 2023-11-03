@@ -9,6 +9,7 @@
     <title>Organic Farm - Ecogro</title>
     <link rel="canonical" href="https://agricola.axiomthemes.com" />
     <meta name='robots' content='max-image-preview:large' />
+    <link rel="shortcut icon" href="fav.png" />
     <link rel='dns-prefetch' href='//use.typekit.net' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
