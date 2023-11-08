@@ -5,7 +5,7 @@ try {
     $user = json_decode(urldecode($userData), true);
     $u = App\Models\User::where('email', $user['email'])->first();
 } catch (\Throwable $th) {
-    $externalSiteLink = 'https://auth.greenwebbtech.com/login?source=website&destination=marketplace';
+    $externalSiteLink = 'https://auth.ecoagrozm.com/login?source=website&destination=marketplace';
     header('Location: ' . $externalSiteLink);
     exit;
 }
@@ -142,7 +142,7 @@ try {
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                {{-- <a class="btn btn-link" href="https://auth.greenwebbtech.com/login">
+                                {{-- <a class="btn btn-link" href="https://auth.ecoagrozm.com/login">
                                     {{ __('Forgot Your Password?') }}
                                 </a> --}}
                                 {{-- <a class="btn btn-link" href="{{ route('password.request') }}">

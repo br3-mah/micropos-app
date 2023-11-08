@@ -348,7 +348,7 @@
                         <img style="display: none" id="order_processing" src="{{asset('/public/img/loader.gif')}}"> Buy Now
                     </button> 
                 {{-- <button  style="color:#fff" type="button" class="text-white" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
-                    <a style="color:white" href="https://auth.greenwebbtech.com/login?source=website&destination=marketplace" >Place order</a>
+                    <a style="color:white" href="https://auth.ecoagrozm.com/login?source=website&destination=marketplace" >Place order</a>
                 </button> --}}
                 @endauth
                 <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="d162cd3d41"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">

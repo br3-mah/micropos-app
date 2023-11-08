@@ -372,7 +372,7 @@
                             alt="Ecoagro"
                             border="0"
                             class="center fixedwidth"
-                            src="https://market.greenwebbtech.com/public/img/logo.png"
+                            src="https://market.ecoagrozm.com/public/img/logo.png"
                             style="
                               text-decoration: none;
                               -ms-interpolation-mode: bicubic;
@@ -2568,7 +2568,7 @@
                           "
                         >
                          <a
-                            href="https://market.greenwebbtech.com"
+                            href="https://market.ecoagrozm.com"
                             style="
                               -webkit-text-size-adjust: none;
                               text-decoration: none;

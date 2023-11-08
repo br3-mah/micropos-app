@@ -2018,7 +2018,7 @@ li {
 }
 .red {
       color: #F16B6F;
-    }
+}
 .logo {
   position: fixed;
   background-color: #333;
@@ -2042,7 +2042,6 @@ li {
 .bg-slideshow:after {
     content: '';
     background: transparent url('http://watchmaker.haz.wiki/_media/tips:stripes.png') repeat top left;
-    /*background: transparent url('http://erinsowards.com/articles/2012/07/graphics/bkg_patterns_08.gif') repeat top left;*/
 }
 .bg-slideshow li .image {
     width: 100%;
