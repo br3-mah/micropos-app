@@ -70,9 +70,9 @@
                                                             <a href="https://ecoagrozm.com/contact.php"><span>Contact</span></a>
                                                         </li>
                                                         
-                                                        <li id="menu-item-17194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17194">
+                                                        {{-- <li id="menu-item-17194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17194">
                                                             <a href="tel:+260773505560" style="color: #2B6A3B; font-weight:bold;"><span>+260 773 505 560</span></a>
-                                                        </li>
+                                                        </li> --}}
                                                     </ul>
                                                 </nav>
                                             </div>
