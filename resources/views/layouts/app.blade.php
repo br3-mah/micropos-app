@@ -511,6 +511,8 @@ License: For each use you must have a valid license purchased only from above li
 											@auth
 												@if ((auth()->user()->is_approved == 1) && (auth()->user()->is_type == 'seller')) 
 													<span class="page-desc text-muted fs-7 fw-semibold pt-2">Seller</span>
+												@elseif ((auth()->user()->is_approved == 0) && (auth()->user()->is_type == 'seller'))
+													<span class="page-desc text-muted fs-7 fw-semibold pt-2">Seller Account Pending</span>
 												@else
 													<span class="page-desc text-muted fs-7 fw-semibold pt-2">Buyer</span>
 												@endif
@@ -4628,6 +4630,7 @@ License: For each use you must have a valid license purchased only from above li
 				url: '{{ route("activate-seller") }}', 
 				success: function (response) {
 					console.log('Your seller account activation is under review');
+					location.reload();
 				},
 				error: function (error) {
 					console.error('Unable to activate account');

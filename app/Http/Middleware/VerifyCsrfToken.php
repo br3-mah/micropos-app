@@ -13,6 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'http://localhost:9000',
-        'login'
+        'login',
+        '/activate-seller'
     ];
 }

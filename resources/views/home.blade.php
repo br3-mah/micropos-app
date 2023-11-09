@@ -27,14 +27,14 @@
                     <!--end::Heading-->
                     <!--begin::Links-->
                     <div class="text-center mb-1">
-                        @auth
+                        {{-- @auth
                         @if ((auth()->user()->is_approved == 1) && (auth()->user()->is_type == 'seller')) 
                         <!--begin::Link-->
                         <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_bidding" data-bs-toggle="modal">Start Now</a>
                         @else
                         <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_bidding" data-bs-toggle="modal">Request Seller Account Activation</a>
                         @endif
-                        @endauth
+                        @endauth --}}
                         
                         
                         <!--end::Link-->

@@ -58,11 +58,11 @@ class UserController extends Controller
     {
         try {
             $user = User::where('id', auth()->user()->id)->first();
-            $user->activateSeller = 'seller';
+            $user->is_type = 'seller';
             $user->save();
             return response()->json(['status'=> 'success']);
         } catch (\Throwable $th) {
-            return response()->json(['status'=> 'error']);
+            return response()->json(['status'=> $th->getMessage()]);
         }
     }
 
