@@ -373,7 +373,6 @@
                                                             </div>
                                                         </div>
                                                     </form>
-                    
                                                 </aside> --}}
                                                 <aside id="hideTags" class="widget woocommerce widget_product_tag_cloud">
                                                     <h5 class="widget_title">Tags</h5>
