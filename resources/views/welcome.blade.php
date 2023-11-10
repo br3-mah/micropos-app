@@ -2175,6 +2175,9 @@ li {
         .mobile-view {
             display: none; /* Show the element by default */
         }
+        .desk-view {
+            display: block; /* Show the element by default */
+        }
 
             /* Media query for screens with a maximum width of 767px (typical for mobile devices) */
         @media screen and (max-width: 767px) {
@@ -2185,7 +2188,6 @@ li {
             }
             .desk-view {
                 display: none; /* Hide the element on mobile screens */
-                padding:2%;
             }
         }
     </style>
@@ -3489,107 +3491,119 @@ li {
     <script src="{{ asset('public/scripts/main.js') }}"></script>
 
 
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider");
-    const slideTrack = document.querySelector(".slide-track");
-    const slides = document.querySelectorAll(".slide");
-
-    let currentIndex = 0;
-    const totalSlides = slides.length;
-    const slideWidth = slides[0].clientWidth;
-    let startX;
-    let isDragging = false;
-
-    // Duplicate the first and last slides for looping
-    slideTrack.innerHTML = slideTrack.innerHTML + slideTrack.innerHTML;
-
-    // Set the initial position of the slide track
-    slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-
-    // Auto slide every 3 seconds
-    setInterval(() => {
-      if (!isDragging) {
-        currentIndex++;
-        updateSlide();
-      }
-    }, 3000);
-
-    // Handle touch and click events for navigation
-    // slider.addEventListener("touchstart", handleTouchStart);
-    // slider.addEventListener("touchmove", handleTouchMove);
-    // slider.addEventListener("touchend", handleTouchEnd);
-    // slider.addEventListener("mousedown", handleMouseDown);
-    // slider.addEventListener("mousemove", handleMouseMove);
-    // slider.addEventListener("mouseup", handleMouseUp);
-    // slider.addEventListener("mouseleave", handleMouseLeave);
-
-    function handleTouchStart(e) {
-      startX = e.touches[0].clientX;
-      isDragging = true;
-    }
-
-    function handleTouchMove(e) {
-      if (isDragging) {
-        const currentX = e.touches[0].clientX;
-        const deltaX = currentX - startX;
-
-        currentIndex -= deltaX / slideWidth;
-        updateSlide();
-        startX = currentX;
-      }
-    }
-
-    function handleTouchEnd() {
-      isDragging = false;
-    }
-
-    function handleMouseDown(e) {
-      startX = e.clientX;
-      isDragging = true;
-    }
-
-    function handleMouseMove(e) {
-      if (isDragging) {
-        const currentX = e.clientX;
-        const deltaX = currentX - startX;
-
-        currentIndex -= deltaX / slideWidth;
-        updateSlide();
-        startX = currentX;
-      }
-    }
-
-    function handleMouseUp() {
-      isDragging = false;
-      updateSlide();
-    }
-
-    function handleMouseLeave() {
-      if (isDragging) {
-        isDragging = false;
-        updateSlide();
-      }
-    }
-
-    function updateSlide() {
-      const newPosition = -currentIndex * slideWidth;
-      slideTrack.style.transition = "transform 0.5s ease-in-out";
-
-      // Check for the last duplicate slide to reset to the first slide
-      if (currentIndex >= totalSlides * 2) {
-        currentIndex = 0;
-        slideTrack.style.transition = "none"; // Disable transition for instant jump
-        newPosition = 0;
-      } else if (currentIndex < 0) {
-        currentIndex = totalSlides;
-        slideTrack.style.transition = "none"; // Disable transition for instant jump
-        newPosition = -currentIndex * slideWidth;
-      }
-
-      slideTrack.style.transform = `translateX(${newPosition}px)`;
-    }
-  });
-</script>
+    
 </body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const slideTrack = document.querySelector(".slide-track");
+            const slides = document.querySelectorAll(".slide");
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].clientWidth;
+            let startX;
+            let isDragging = false;
+
+            // Duplicate the first and last slides for looping
+            slideTrack.innerHTML = slideTrack.innerHTML + slideTrack.innerHTML;
+
+            // Set the initial position of the slide track
+            slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+            // Auto slide every 3 seconds
+            setInterval(() => {
+                if (!isDragging) {
+                currentIndex++;
+                updateSlide();
+                }
+            }, 3000);
+
+            // Handle touch and click events for navigation
+            slider.addEventListener("touchstart", handleTouchStart);
+            slider.addEventListener("touchmove", handleTouchMove);
+            slider.addEventListener("touchend", handleTouchEnd);
+            slider.addEventListener("mousedown", handleMouseDown);
+            slider.addEventListener("mousemove", handleMouseMove);
+            slider.addEventListener("mouseup", handleMouseUp);
+            slider.addEventListener("mouseleave", handleMouseLeave);
+
+            function handleTouchStart(e) {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }
+
+            function handleTouchMove(e) {
+                if (isDragging) {
+                const currentX = e.touches[0].clientX;
+                const deltaX = currentX - startX;
+
+                currentIndex -= deltaX / slideWidth;
+                updateSlide();
+                startX = currentX;
+                }
+            }
+
+            function handleTouchEnd() {
+                isDragging = false;
+            }
+
+            function handleMouseDown(e) {
+                startX = e.clientX;
+                isDragging = true;
+            }
+
+            function handleMouseMove(e) {
+                if (isDragging) {
+                const currentX = e.clientX;
+                const deltaX = currentX - startX;
+
+                currentIndex -= deltaX / slideWidth;
+                updateSlide();
+                startX = currentX;
+                }
+            }
+
+            function handleMouseUp() {
+                isDragging = false;
+                updateSlide();
+            }
+
+            function handleMouseLeave() {
+                if (isDragging) {
+                isDragging = false;
+                updateSlide();
+                }
+            }
+
+            function updateSlide() {
+                const newPosition = -currentIndex * slideWidth;
+                slideTrack.style.transition = "transform 0.5s ease-in-out";
+
+                // Check if currentIndex exceeds the total number of slides
+                if (currentIndex >= totalSlides * 2) {
+                currentIndex = 0;
+                slideTrack.style.transition = "none"; // Disable transition for instant jump
+                slideTrack.style.transform = `translateX(${newPosition}px)`;
+                setTimeout(() => {
+                    currentIndex = 1;
+                    slideTrack.style.transition = "transform 0.5s ease-in-out";
+                    slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+                }, 0);
+                } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+                slideTrack.style.transition = "none"; // Disable transition for instant jump
+                slideTrack.style.transform = `translateX(${newPosition}px)`;
+                setTimeout(() => {
+                    currentIndex = totalSlides;
+                    slideTrack.style.transition = "transform 0.5s ease-in-out";
+                    slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+                }, 0);
+                } else {
+                slideTrack.style.transform = `translateX(${newPosition}px)`;
+                }
+            }
+            });
+    </script>
 </html> 

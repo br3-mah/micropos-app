@@ -3370,10 +3370,8 @@ Cultivating Agriculture that Works for the Future
             var loginRoute = "{{ route('login') }}"; // Define the login route URL using double quotes    
         @endverbatim
         </script>
-    {{-- @include('components.auth.auto-auth') --}}
     <script src="{{ asset('public/scripts/authenticate.js') }}"></script>
     <script src="{{ asset('public/scripts/routes.js') }}"></script>
-    {{-- <script src="{{ asset('public/scripts/checkout.js') }}"></script> --}}
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
     <script src="{{ asset('public/scripts/main.js') }}"></script>
 </body>
