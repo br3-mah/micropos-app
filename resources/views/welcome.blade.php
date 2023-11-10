@@ -748,9 +748,11 @@ Cultivating Agriculture that Works for the Future
         .elementor-18091 .elementor-element.elementor-element-35fdf84f {
             margin-top: -8%;
             transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-            padding: 2% 5% 12% 5%;
+            padding: 3% 5% 6% 5%;
             line-height: 0px;
             font-size: 12px;
+            background: transparent;
+            opacity: 0.8;
         }
 
         .elementor-18091 .elementor-element.elementor-element-35fdf84f>.elementor-background-overlay {
@@ -2044,7 +2046,9 @@ li {
 }
 .bg-slideshow:after {
     content: '';
-    background: transparent url('http://watchmaker.haz.wiki/_media/tips:stripes.png') repeat top left;
+    background-color: rgba(0, 0, 0, 0.3); /*Adjust the alpha value (0.5) for the level of transparency*/
+
+    /* background: transparent url('http://watchmaker.haz.wiki/_media/tips:stripes.png') repeat top left; */
 }
 .bg-slideshow li .image {
     width: 100%;
@@ -2128,73 +2132,44 @@ li {
 }
 
 
-
-
-/* body {
-  align-items: center;
-  background: #e3e3e3;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-} */
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-    transform: translateX(calc(-250px * 7));
-  }
-}
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-    transform: translateX(calc(-250px * 7));
-  }
-}
-.slider {
-  background: pr;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.slider::before,
-.slider::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  -webkit-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-}
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider .slide-track {
-  -webkit-animation: scroll 15s linear infinite;
-  animation: scroll 15s linear infinite;
-  display: flex;
-  width: calc(250px * 14);
-}
-.slider .slide {
-  width: 100%;
-}
-
+        .slider {
+            
+            background: #fff;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+            height: 100px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .slider::before,
+        .slider::after {
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+        .slider::after {
+            right: 0;
+            top: 0;
+            -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+        }
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+        .slider .slide-track {
+            -webkit-animation: scroll 15s linear infinite;
+            animation: scroll 15s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+        .slider .slide {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -2296,39 +2271,41 @@ li {
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-721499a0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="721499a0" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-1afa4bb6 sc_fly_static elementor-widget elementor-widget-trx_sc_title" data-id="1afa4bb6" data-element_type="widget" data-widget_type="trx_sc_title.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="sc_title sc_title_default">
-                                                                                <h3 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                                    <span class="sc_item_title_text">Join
-                                                                                        the Marketplace!</span>
-                                                                                </h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-a0e0342 sc_fly_static elementor-widget elementor-widget-spacer" data-id="a0e0342" data-element_type="widget" data-widget_type="spacer.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-spacer">
-                                                                                <div class="elementor-spacer-inner">
+                                                                <div class="elementor-widget-wrap" style="display: flex; gap:8px">
+                                                                    <div>
+                                                                        <div class="elementor-element elementor-element-1afa4bb6 sc_fly_static elementor-widget elementor-widget-trx_sc_title" data-id="1afa4bb6" data-element_type="widget" data-widget_type="trx_sc_title.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_title sc_title_default">
+                                                                                    <h3 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
+                                                                                        <span class="sc_item_title_text">Join
+                                                                                            the Marketplace!</span>
+                                                                                    </h3>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    
-                                                                    @if (!auth()->check())
-                                                                    <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-text-editor elementor-clearfix">
-                                                                                Sign up today
+                                                                        <div class="elementor-element elementor-element-a0e0342 sc_fly_static elementor-widget elementor-widget-spacer" data-id="a0e0342" data-element_type="widget" data-widget_type="spacer.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-spacer">
+                                                                                    <div class="elementor-spacer-inner">
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    @endif
-                                                                    <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-spacer">
-                                                                                <div class="elementor-spacer-inner">
+                                                                        
+                                                                        @if (!auth()->check())
+                                                                        <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                    Sign up today
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        @endif
+                                                                        <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-spacer">
+                                                                                    <div class="elementor-spacer-inner">
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2381,9 +2358,10 @@ li {
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section style="margin-top:5%" class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-no">
+                                            <section style="" class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
+                                                <div style="margin:2%;margin-top: 5%;">
                                                     <div class="elementor-row">
+                                                        @include('components.stock-rates')
                                                         {{-- <div class="elementor-col-50 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
@@ -2496,7 +2474,7 @@ li {
                                             </section> 
 
                                             
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
+                                            {{-- <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
@@ -2528,7 +2506,7 @@ li {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </section>
+                                            </section> --}}
 
                                              <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
@@ -2667,258 +2645,9 @@ li {
                                             </section>
 
 
-                                            <section  style="padding-top:2%" class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="slider">
-                                                    <div class="slide-track">
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Wheat:</span> 
-                                                            2189 No. 1  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 2500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 2075 </span>
-                                                            </span>
-                                                        </div>
-                                                        {{-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" /> --}}
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
-                                                            50 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Rice:</span> 
-                                                            50 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>  
-                                                    </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Soya Beans:</span> 
-                                                            50 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>                                                     
-                                                      </div>
-                                                      <div class="slide">
-                                                        
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Tomatoes:</span> 
-                                                            2189 No. 1  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 250</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 75 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Onion:</span> 
-                                                            50 Kg 
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 430</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 195 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Feed:</span> 
-                                                            90 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 800</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 375 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
-                                                            50 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
-                                                            50 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Fertilizer:</span> 
-                                                            50 Kg. 
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Pesticides:</span> 
-                                                            2393.21 
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 420</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 195 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Bananas:</span> 
-                                                            100 Kg. 
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 3500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 1175 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
-                                                            50 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 1500</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 875 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                      <div class="slide">
-                                                        <div style="padding:2%;padding-bottom:2%; font-size:16px">
-                                                            <span style="padding-left:2%; font-weight: bold;">Maize:</span> 
-                                                            100 Kg. 23  
-                                                            <br>
-                                                            <span style="padding:2%; background-color:#fff;border-radius:12px; border:1px solid #c7ced1">
-                                                                <span style="color:#1a5741; font-size:12px;font-weight:bold">Max Price: 2990</span>
-                                                                <span style="color:#d04c00; font-size:12px;font-weight:bold">Min Price: 1175 </span>
-                                                            </span>
-                                                        </div>  
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                            </section>
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-13d55f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-                                                data-id="13d55f9" data-element_type="section">
-
-                                            </section>
-                                            <section>
-                                                <div class="uk-section uk-section-default uk-padding-remove-vertical in-wave-5 in-offset-bottom-30">
-
-                                                    <div class="uk-section uk-section-default uk-padding-remove-vertical in-wave-5 in-offset-bottom-30">
-                                                        <div class="uk-container">
-                                                            <div class="uk-grid">
-
-                                                                <div class="uk-width-1-1 in-price-list">
-                                                                    <div data-uk-slider="autoplay: true; autoplay-interval: 2700"
-                                                                        class="uk-slider uk-slider-container">
-                                                                        <ul class="uk-slider-items text-white uk-child-width-1-3@s uk-child-width-1-5@m uk-text-small uk-text-center uk-grid"
-                                                                            data-uk-grid=""
-                                                                            style="transform: translate3d(-226px, 0px, 0px);">
-                                                                            <li tabindex="-1" class="uk-active"
-                                                                                style="order: 1;">
-                                                                                <span>Maize</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-up"></i>
-                                                                                    1478.81 &nbsp;(+0.28%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class="uk-active"
-                                                                                style="order: 1;">
-                                                                                <span>Tomatoes</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-danger uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-down"></i>
-                                                                                    1.3191 &nbsp;(-1.07%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class=""
-                                                                                style="order: 1;">
-                                                                                <span>Wheat</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-danger uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-down"></i>
-                                                                                    1.1159 &nbsp;(-0.11%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class=""
-                                                                                style="order: 1;">
-                                                                                <span>Sunflower</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-up"></i>
-                                                                                    109.59 &nbsp;(+0.05%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class="uk-first-column"
-                                                                                style="">
-                                                                                <span>Rice</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-up"></i>
-                                                                                    1.3172 &nbsp;(+0.18%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class="uk-active"
-                                                                                style="">
-                                                                                <span>Steak Meats</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-up"></i>
-                                                                                    0.9776 &nbsp;(+0.06%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class="uk-active"
-                                                                                style="">
-                                                                                <span>Oil</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-danger uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-down"></i>
-                                                                                    0.67064 &nbsp;(-0.08%)</span>
-                                                                            </li>
-                                                                            <li tabindex="-1" class="uk-active">
-                                                                                <span>Fertilizers</span>
-                                                                                <span
-                                                                                    class="uk-label uk-label-success uk-border-pill uk-margin-small-left"><i
-                                                                                        class="fas fa-caret-up"></i>
-                                                                                    141.91 &nbsp;(+0.12%)</span>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr style="margin: 1.7857em 0 !important;">
-                                                </div>
-                                            </section>
-                                            <div>
+                                            
+                                            
+                                            {{-- <section>
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div style="background-color: #000">
                                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
@@ -2950,7 +2679,7 @@ li {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </section> --}}
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-b904057 scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="b904057" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
@@ -2961,6 +2690,34 @@ li {
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner">
+                                                                                    <br>
+                                                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
+                                                                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                                                                        <div class="elementor-widget-wrap">
+                                                                                                            <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
+                                                                                                                <div class="elementor-widget-container">
+                                                                                                                    <div class="elementor-spacer">
+                                                                                                                        <div class="elementor-spacer-inner">
+                                                                                                                            <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                    <div class="sc_item_button sc_button_wrap sc_align_center">
+                                                                                                                                        <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                                                            <span class="sc_button_text">
+                                                                                                                                                <span class="sc_button_title">
+                                                                                                                                                    Go To The Shop
+                                                                                                                                                </span>
+                                                                                                                                            </span>
+                                                                                                                                        </a>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -3712,5 +3469,109 @@ li {
     
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
     <script src="{{ asset('public/scripts/main.js') }}"></script>
+
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    const slideTrack = document.querySelector(".slide-track");
+    const slides = document.querySelectorAll(".slide");
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    const slideWidth = slides[0].clientWidth;
+    let startX;
+    let isDragging = false;
+
+    // Duplicate the first and last slides for looping
+    slideTrack.innerHTML = slideTrack.innerHTML + slideTrack.innerHTML;
+
+    // Set the initial position of the slide track
+    slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+    // Auto slide every 3 seconds
+    setInterval(() => {
+      if (!isDragging) {
+        currentIndex++;
+        updateSlide();
+      }
+    }, 3000);
+
+    // Handle touch and click events for navigation
+    // slider.addEventListener("touchstart", handleTouchStart);
+    // slider.addEventListener("touchmove", handleTouchMove);
+    // slider.addEventListener("touchend", handleTouchEnd);
+    // slider.addEventListener("mousedown", handleMouseDown);
+    // slider.addEventListener("mousemove", handleMouseMove);
+    // slider.addEventListener("mouseup", handleMouseUp);
+    // slider.addEventListener("mouseleave", handleMouseLeave);
+
+    function handleTouchStart(e) {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }
+
+    function handleTouchMove(e) {
+      if (isDragging) {
+        const currentX = e.touches[0].clientX;
+        const deltaX = currentX - startX;
+
+        currentIndex -= deltaX / slideWidth;
+        updateSlide();
+        startX = currentX;
+      }
+    }
+
+    function handleTouchEnd() {
+      isDragging = false;
+    }
+
+    function handleMouseDown(e) {
+      startX = e.clientX;
+      isDragging = true;
+    }
+
+    function handleMouseMove(e) {
+      if (isDragging) {
+        const currentX = e.clientX;
+        const deltaX = currentX - startX;
+
+        currentIndex -= deltaX / slideWidth;
+        updateSlide();
+        startX = currentX;
+      }
+    }
+
+    function handleMouseUp() {
+      isDragging = false;
+      updateSlide();
+    }
+
+    function handleMouseLeave() {
+      if (isDragging) {
+        isDragging = false;
+        updateSlide();
+      }
+    }
+
+    function updateSlide() {
+      const newPosition = -currentIndex * slideWidth;
+      slideTrack.style.transition = "transform 0.5s ease-in-out";
+
+      // Check for the last duplicate slide to reset to the first slide
+      if (currentIndex >= totalSlides * 2) {
+        currentIndex = 0;
+        slideTrack.style.transition = "none"; // Disable transition for instant jump
+        newPosition = 0;
+      } else if (currentIndex < 0) {
+        currentIndex = totalSlides;
+        slideTrack.style.transition = "none"; // Disable transition for instant jump
+        newPosition = -currentIndex * slideWidth;
+      }
+
+      slideTrack.style.transform = `translateX(${newPosition}px)`;
+    }
+  });
+</script>
 </body>
 </html> 
