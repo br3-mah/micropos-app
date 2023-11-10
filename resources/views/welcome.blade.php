@@ -746,8 +746,11 @@ Cultivating Agriculture that Works for the Future
         }
 
         .elementor-18091 .elementor-element.elementor-element-35fdf84f {
+            margin-top: -8%;
             transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-            padding: 23% 14% 23% 14%;
+            padding: 2% 5% 12% 5%;
+            line-height: 0px;
+            font-size: 12px;
         }
 
         .elementor-18091 .elementor-element.elementor-element-35fdf84f>.elementor-background-overlay {
@@ -2204,9 +2207,10 @@ li {
                 footer</a>
             
             @include('components.header')
-        
+            
             
             <div class="page_content_wrap">
+                
                 <div class="content_wrap_fullscreen">
                     
                     <div class="content">
@@ -2287,11 +2291,100 @@ li {
                                                     </div>
                                                 </div>
                                             </section>
-
+                                            <section style="height: 10px" data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark  elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
+                                                <div class="elementor-container elementor-column-gap-no">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-721499a0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="721499a0" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-1afa4bb6 sc_fly_static elementor-widget elementor-widget-trx_sc_title" data-id="1afa4bb6" data-element_type="widget" data-widget_type="trx_sc_title.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="sc_title sc_title_default">
+                                                                                <h3 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
+                                                                                    <span class="sc_item_title_text">Join
+                                                                                        the Marketplace!</span>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-a0e0342 sc_fly_static elementor-widget elementor-widget-spacer" data-id="a0e0342" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    @if (!auth()->check())
+                                                                    <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                Sign up today
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    @endif
+                                                                    <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="display: flex; gap:4px">
+                                                                        @if (auth()->check())
+                                                                        
+                                                                        <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Continue to Shop
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        @else
+                                                                        <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                    <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Buyer account
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                    <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Become a Seller
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        {{-- <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                    <a href="https://auth.ecoagrozm.com/login?source=marketplace&destination=marketplace" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Login
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> --}}
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
                                             <section style="margin-top:5%" class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-no">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
+                                                        {{-- <div class="elementor-col-50 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <section class="elementor-section elementor-inner-section elementor-element elementor-element-6589da6c scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static">
@@ -2321,10 +2414,7 @@ li {
                                                                                             <div class="elementor-element elementor-element-6038bae1 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="6038bae1" data-element_type="widget" data-widget_type="text-editor.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-text-editor elementor-clearfix">
-                                                                                                        {{-- Adipiscing elit,
-                                                                                                        sed do eiusmod
-                                                                                                        tempor
-                                                                                                        incididunt ut. --}}
+                                                                                                        
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -2361,8 +2451,8 @@ li {
                                                                     </section>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e95e5f sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e95e5f" data-element_type="column">
+                                                        </div> --}}
+                                                        {{-- <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e95e5f sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e95e5f" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <div class="elementor-element elementor-element-12ccc613 no-title sc_fly_static elementor-widget elementor-widget-image" data-id="12ccc613" data-element_type="widget" data-widget_type="image.default">
@@ -2382,8 +2472,8 @@ li {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5d65ae0d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5d65ae0d" data-element_type="column">
+                                                        </div> --}}
+                                                        {{-- <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5d65ae0d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5d65ae0d" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <div class="elementor-element elementor-element-7444ef4e sc_height_small sc_fly_static elementor-widget elementor-widget-spacer" data-id="7444ef4e" data-element_type="widget" data-widget_type="spacer.default">
@@ -2394,91 +2484,13 @@ li {
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <section data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark  elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
-                                                                        <div class="elementor-container elementor-column-gap-no">
-                                                                            <div class="elementor-row">
-                                                                                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-721499a0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="721499a0" data-element_type="column">
-                                                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                                                        <div class="elementor-widget-wrap">
-                                                                                            <div class="elementor-element elementor-element-1afa4bb6 sc_fly_static elementor-widget elementor-widget-trx_sc_title" data-id="1afa4bb6" data-element_type="widget" data-widget_type="trx_sc_title.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="sc_title sc_title_default">
-                                                                                                        <h3 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                                                            <span class="sc_item_title_text">Join
-                                                                                                                the Marketplace!</span>
-                                                                                                        </h3>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="elementor-element elementor-element-a0e0342 sc_fly_static elementor-widget elementor-widget-spacer" data-id="a0e0342" data-element_type="widget" data-widget_type="spacer.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="elementor-spacer">
-                                                                                                        <div class="elementor-spacer-inner">
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            
-                                                                                            @if (!auth()->check())
-                                                                                            <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="elementor-text-editor elementor-clearfix">
-                                                                                                        Sign up today
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            @endif
-                                                                                            <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="elementor-spacer">
-                                                                                                        <div class="elementor-spacer-inner">
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div style="display: flex; gap:4px">
-                                                                                                @if (auth()->check())
-                                                                                                
-                                                                                                <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
-                                                                                                    <div class="elementor-widget-container">
-                                                                                                        <div class="sc_item_button sc_button_wrap">
-                                                                                                        <a href="{{ route('shop.index') }}" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
-                                                                                                                Continue to Shop
-                                                                                                                </span></span></a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                @else
-                                                                                                <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
-                                                                                                    <div class="elementor-widget-container">
-                                                                                                        <div class="sc_item_button sc_button_wrap">
-                                                                                                            <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
-                                                                                                                Register
-                                                                                                                </span></span></a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
-                                                                                                    <div class="elementor-widget-container">
-                                                                                                        <div class="sc_item_button sc_button_wrap">
-                                                                                                            <a href="https://auth.ecoagrozm.com/login?source=marketplace&destination=marketplace" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
-                                                                                                                Login
-                                                                                                                </span></span></a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                @endif
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </section>
+                                                                    
+
+                                                                    Remove Yellow Card Here
                                                                 </div>
 
                                                             </div>
-                                                        </div>
+                                                        </div> --}}
                                                     </div>
                                                 </div>
                                             </section> 
