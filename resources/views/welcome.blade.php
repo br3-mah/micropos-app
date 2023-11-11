@@ -2332,7 +2332,6 @@ li {
                                                                     </div>
                                                                     <div style="display: flex; gap:4px">
                                                                         @if (auth()->check())
-                                                                        
                                                                         <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                             <div class="elementor-widget-container">
                                                                                 <div class="sc_item_button sc_button_wrap">

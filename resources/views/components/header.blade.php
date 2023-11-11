@@ -1,3 +1,5 @@
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style>
     /* Style for the dropdown content */
     #dropdown-content {
@@ -16,7 +18,41 @@
         padding: 2%;
     }
 
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.947);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+
+    #overlay img {
+        /* Add custom styles for your loader image */
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 </style>
+<div id="overlay">
+    <!-- You can add a loading spinner or an image here -->
+    <img src="fav.png" alt="Loading...">
+</div>
 <header class="top_panel top_panel_custom top_panel_custom_18654 top_panel_custom_header-modern				 without_bg_image">
     <div data-elementor-type="cpt_layouts" data-elementor-id="18654" class="elementor elementor-18654">
         <div class="elementor-inner">
@@ -148,13 +184,13 @@
                                             <div class="elementor-widget-container">
                                                 
                                                 @if (!auth()->check())
-                                                <a id="register_now"   class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                                {{-- <a id="register_now"   class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
                                                     <span class="sc_button_text">
                                                         <span class="sc_button_title">
                                                             Register
                                                         </span>
                                                     </span>
-                                                </a>
+                                                </a> --}}
                                                 <div id="dropdown-content" style="display: none; text-align:left; padding:3%; border-top:1px solid #2B6A3B">
                                                     
                                                     <p > <!-- Centering the content within the paragraph -->

@@ -324,3 +324,9 @@
             
  @include('components.modal') 
  @include('components.side-cart-bar') 
+ <script>
+    $(window).on('load', function () {
+        // Hide the overlay when the page has loaded
+        $('#overlay').fadeOut(500);
+    });
+</script>
