@@ -460,26 +460,28 @@
                                                     <article class="card-wrapper">
                                                         <div class="image-holder">
                                                             <a href="#" data-quantity="1" data-product-name="{{ $product->name }}" data-product-price="{{$product->price}}" data-product_id="{{ $product->id }}" data-product_sku="{{ $product->sku }}" class="image-holder__link add_to_cart_button"></a>
-                                                            <div class="image-liquid image-holder--original" style="background-image: url('{{asset("public/storage/" . $product->image)}}')">
+                                                                <div class="image-liquid image-holder--original" style="background-image: url('{{asset("public/storage/" . $product->image)}}')">
                                                             </div>
                                                         </div>
 
-                                                        <div class="product-description">
-                                                            <!-- title -->
-                                                            <h1 class="product-description__title">
-                                                                <a href="#">						
-                                                                    {{ $product->name }}
-                                                                </a>
-                                                            </h1>
-                                                            <div class="">
-                                                                <div class="col-xs-12 col-sm-8 product-description__category secondary-text">
-                                                                    {{-- Men's running shirt --}}
-                                                                </div>
-                                                                <div class="col-xs-12 col-sm-4 product-description__price">
-                                                                    K {{ $product->price }}
+                                                        <a href="{{ route('detail.index', $product->id) }}">	
+                                                            <div class="product-description">
+                                                                <!-- title -->
+                                                                <h1 class="product-description__title">
+                                                                    <a href="{{ route('detail.index', $product->id) }}">						
+                                                                        {{ $product->name }}
+                                                                    </a>
+                                                                </h1>
+                                                                <div class="">
+                                                                    <div class="col-xs-12 col-sm-8 product-description__category secondary-text">
+                                                                        {{-- Men's running shirt --}}
+                                                                    </div>
+                                                                    <div class="col-xs-12 col-sm-4 product-description__price">
+                                                                        K {{ $product->price }}
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </a>
 
                                                     </article>
                                                 </div>
