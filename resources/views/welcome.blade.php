@@ -2613,7 +2613,7 @@ li {
                                                                     <div class="elementor-element elementor-element-28413095 no-title sc_fly_static elementor-widget elementor-widget-image" data-id="28413095" data-element_type="widget" data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img decoding="async" loading="lazy" width="945" height="945" src="{{ asset('public/theme/images/custom-img-26-copyright.jpg') }}" class="attachment-full size-full" alt="" sizes="(max-width: 945px) 100vw, 945px" />
+                                                                                <img decoding="async" loading="lazy" width="945" height="945" src="{{ asset('public/img/7.jpg') }}" class="attachment-full size-full" alt="" sizes="(max-width: 945px) 100vw, 945px" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
