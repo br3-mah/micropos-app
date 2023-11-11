@@ -2220,19 +2220,19 @@ li {
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-771869f elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="771869f" data-element_type="section">
                                                 <ul class="bg-slideshow">
                                                     <li>
-                                                        {{-- <span class="image">Image 01</span> --}}
+                                                        <span class="image">Image 01</span>
                                                         <div>
                                                             {{-- <h3><span class="red">re</span>·lax</h3> --}}
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        {{-- <span class="image">Image 02</span> --}}
+                                                        <span class="image">Image 02</span>
                                                         <div>
                                                             {{-- <h3>and <span class="red">go</span>..</h3> --}}
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        {{-- <span class="image">Image 03</span> --}}
+                                                        <span class="image">Image 03</span>
                                                         <div>
                                                             {{-- <h3>Get <span class="red">you</span>rself</h3> --}}
                                                         </div>
@@ -2286,8 +2286,6 @@ li {
                                                     </div>
                                                 </div>
                                             </section>
-
-                                            
                                             <section  style="height: 10px" data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark  elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
                                                 <div class="elementor-container elementor-column-gap-no">
                                                     <div class="elementor-row">
@@ -2349,16 +2347,15 @@ li {
                                                                             <div class="elementor-widget-container">
                                                                                 <div class="sc_item_button sc_button_wrap">
                                                                                     <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
-                                                                                        Buyer Account
-                                                                                        </span></span>
-                                                                                    </a>
+                                                                                        Buyer account
+                                                                                        </span></span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                             <div class="elementor-widget-container">
                                                                                 <div class="sc_item_button sc_button_wrap">
-                                                                                    <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=seller" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                    <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
                                                                                         Become a Seller
                                                                                         </span></span></a>
                                                                                 </div>
