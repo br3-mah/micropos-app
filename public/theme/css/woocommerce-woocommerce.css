@@ -739,7 +739,7 @@ body.woocommerce {
 .woocommerce-page .related.products ul.products li.product.column-1_3,
 .woocommerce-page .upcells.products ul.products.columns-3 li.product,
 .woocommerce-page .upcells.products ul.products li.product.column-1_3 {
-  width: 33.3333333333%;
+  width: 22.3333333333%;
 }
 
 .woocommerce.columns-4 ul.products li.product,
