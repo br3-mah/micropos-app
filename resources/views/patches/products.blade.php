@@ -448,14 +448,81 @@
                                                                         <h2 class="woocommerce-loop-product__title">
                                                                             <a href="#">{{ $product->name }}</a>
                                                                         </h2>
-                                                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                                                                            <span style="width:100%">Rated
-                                                                                <strong class="rating">5.00</strong>
-                                                                                out of 5
+                                                                        <div>
+                                                                            <span style="width:100%">
+                                                                                {{ $product->seller_name ?? $product->user != null ? $product->user->name : 'Seller' }}
                                                                             </span>
                                                                         </div>
+                                                                        @if ($product->disc_type != 'none')
+                                                                        <div>
+                                                                            <small style="width:100%">
+                                                                                @if($product->disc_type != 'fixed')
+                                                                                    %
+                                                                                @endif
+
+                                                                                @if($product->disc_type != 'rate')
+                                                                                    {{$product->disc_value}}
+                                                                                @else
+                                                                                    {{$product->fixed_price}}
+                                                                                @endif
+                                                                                
+                                                                                @if($product->disc_type != 'rate')
+                                                                                    %
+                                                                                @endif
+                                                                                OFF
+                                                                            </small>
+                                                                        </div>
+                                                                        @endif
+                                                                        {{-- <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                                                            <span style="width:100%">
+                                                                                Rated
+                                                                                <strong class="rating">3.00</strong>
+                                                                                out of 5
+                                                                            </span>
+                                                                        </div> --}}
                                                                     </div>
-                                                                    <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">{{ $product->currency_symbol }}</span>{{ $product->price }}</bdi></span></span>
+                                                                    <span class="price">
+                                                                        @if ($product->disc_type != 'none')
+                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                <bdi style="text-decoration: line-through; ">
+                                                                                    <span class="woocommerce-Price-currencySymbol">
+                                                                                        K
+                                                                                    </span>
+                                                                                    {{ $product->price }}
+                                                                                </bdi>
+                                                                            </span>
+                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                <bdi style="color: #4caf50">
+                                                                                    <span class="woocommerce-Price-currencySymbol">
+                                                                                        K
+                                                                                    </span>
+                                                                                    @if($product->disc_type != 'rate')
+                                                                                        {{-- Assume 20% discount --}}
+                                                                                        <span class="original-price">{{ $product->price }}</span>
+                                                                                        <span class="discounted-price">
+                                                                                            {{ number_format($product->price * ($product->disc_value/100), 2) }} 
+                                                                                        </span>
+                                                                                    @else
+                                                                                        <span class="original-price">{{ $product->price }}</span>
+                                                                                        <span class="discounted-price">
+                                                                                            {{ number_format((float)$product->price - (float)$product->fixed_price, 2) }}
+                                                                                        </span>
+                                                                                    @endif
+                                                                                </bdi>
+                                                                            </span>
+                                                                        @else
+                                                                            <span style="color: #4caf50" class="woocommerce-Price-amount amount">
+                                                                                <bdi>
+                                                                                    <b>
+                                                                                        <span class="woocommerce-Price-currencySymbol">
+                                                                                            K
+                                                                                        </span>
+                                                                                        {{ $product->price }}
+                                                                                    </b>
+                                                                                </bdi>
+                                                                            </span>
+                                                                        @endif
+                                                                    </span>
                                                                     <a href="?add-to-cart=18184" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="18184" data-product_sku="285" aria-label="Add &ldquo;Strawberry&rdquo; to your cart" rel="nofollow">
                                                                         Buy now
                                                                     </a>
@@ -515,14 +582,81 @@
                                                                         <h2 class="woocommerce-loop-product__title">
                                                                             <a href="#">{{ $product->name }}</a>
                                                                         </h2>
-                                                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                                                                            <span style="width:100%">Rated
-                                                                                <strong class="rating">5.00</strong>
-                                                                                out of 5
+                                                                        <div>
+                                                                            <span style="width:100%">
+                                                                                {{ $product->seller_name ?? $product->user != null ? $product->user->name : 'Seller' }}
                                                                             </span>
                                                                         </div>
+                                                                        @if ($product->disc_type != 'none')
+                                                                        <div>
+                                                                            <small style="width:100%">
+                                                                                @if($product->disc_type != 'fixed')
+                                                                                    %
+                                                                                @endif
+
+                                                                                @if($product->disc_type != 'rate')
+                                                                                    {{$product->disc_value}}
+                                                                                @else
+                                                                                    {{$product->fixed_price}}
+                                                                                @endif
+                                                                                
+                                                                                @if($product->disc_type != 'rate')
+                                                                                    %
+                                                                                @endif
+                                                                                OFF
+                                                                            </small>
+                                                                        </div>
+                                                                        @endif
+                                                                        {{-- <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                                                            <span style="width:100%">
+                                                                                Rated
+                                                                                <strong class="rating">3.00</strong>
+                                                                                out of 5
+                                                                            </span>
+                                                                        </div> --}}
                                                                     </div>
-                                                                    <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">{{ $product->currency_symbol }}</span>{{ $product->price }}</bdi></span></span>
+                                                                    <span class="price">
+                                                                        @if ($product->disc_type != 'none')
+                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                <bdi style="text-decoration: line-through; ">
+                                                                                    <span class="woocommerce-Price-currencySymbol">
+                                                                                        K
+                                                                                    </span>
+                                                                                    {{ $product->price }}
+                                                                                </bdi>
+                                                                            </span>
+                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                <bdi style="color: #4caf50">
+                                                                                    <span class="woocommerce-Price-currencySymbol">
+                                                                                        K
+                                                                                    </span>
+                                                                                    @if($product->disc_type != 'rate')
+                                                                                        {{-- Assume 20% discount --}}
+                                                                                        <span class="original-price">{{ $product->price }}</span>
+                                                                                        <span class="discounted-price">
+                                                                                            {{ number_format($product->price * ($product->disc_value/100), 2) }} 
+                                                                                        </span>
+                                                                                    @else
+                                                                                        <span class="original-price">{{ $product->price }}</span>
+                                                                                        <span class="discounted-price">
+                                                                                            {{ number_format((float)$product->price - (float)$product->fixed_price, 2) }}
+                                                                                        </span>
+                                                                                    @endif
+                                                                                </bdi>
+                                                                            </span>
+                                                                        @else
+                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                <bdi style="color: #4caf50">
+                                                                                    <b>
+                                                                                        <span class="woocommerce-Price-currencySymbol">
+                                                                                            K
+                                                                                        </span>
+                                                                                        {{ $product->price }}
+                                                                                    </b>
+                                                                                </bdi>
+                                                                            </span>
+                                                                        @endif
+                                                                    </span>
                                                                     <a href="?add-to-cart=18184" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="18184" data-product_sku="285" aria-label="Add &ldquo;Strawberry&rdquo; to your cart" rel="nofollow">
                                                                         Buy now
                                                                     </a>
@@ -542,6 +676,7 @@
                                             <div class="row">
 
                                                 @forelse ($products as $product)
+                                                
                                                 <div class="col-6">
                                                     <article class="card-wrapper">
                                                         <div class="image-holder">
@@ -560,7 +695,7 @@
                                                                 </h1>
                                                                 <div class="">
                                                                     <div class="col-xs-12 col-sm-8 product-description__category secondary-text">
-                                                                        {{-- Men's running shirt --}}
+                                                                        {{ $product->seller_name ?? $product->user != null ? $product->user->name : 'Seller' }}
                                                                     </div>
                                                                     <div class="col-xs-12 col-sm-4 product-description__price">
                                                                         K {{ $product->price }}

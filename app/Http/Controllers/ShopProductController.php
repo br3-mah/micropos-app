@@ -22,7 +22,7 @@ class ShopProductController extends Controller
         $products = $this->productRepository->all();
         $categories = Category::get();
         $tags = Tags::get();
-    
+        
         return view('shop', [
             'products' => $products,
             'categories'=> $categories,

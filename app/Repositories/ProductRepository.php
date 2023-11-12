@@ -10,22 +10,22 @@ use App\Models\ProductVariation;
 class ProductRepository
 {
     public function four(){
-        return Product::orderBy('created_at', 'desc')->limit(4)->get();
+        return Product::with(['user','variants','categories','tags'])->orderBy('created_at', 'desc')->limit(4)->get();
     }
     public function all(){
-        return Product::orderBy('created_at', 'desc')->get();
+        return Product::with(['user','variants','categories','tags'])->orderBy('created_at', 'desc')->get();
     }
     public function mine(){
         return Product::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
     }
     public function search($data){
-        return Product::orWhere('name', 'LIKE', '%'.$data['s'].'%')
+        return Product::with(['user','variants','categories','tags'])->orWhere('name', 'LIKE', '%'.$data['s'].'%')
                 ->orWhere('description', 'LIKE', '%'.$data['s'])
                 ->orderBy('created_at', 'desc')->get();
     }
 
     public function find($id){
-        return Product::with(['variants','photos','categories','tags'])->find($id);
+        return Product::with(['variants','photos','categories','tags', 'user'])->find($id);
     }
     public function create($request){
         // dd($request);
