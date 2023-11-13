@@ -53,7 +53,7 @@
     <!-- You can add a loading spinner or an image here -->
     <img src="fav.png" alt="Loading...">
 </div>
-<header class="top_panel top_panel_custom top_panel_custom_18654 top_panel_custom_header-modern				 without_bg_image">
+<header class="top_panel top_panel_custom top_panel_custom_18654 top_panel_custom_header-modern without_bg_image">
     <div data-elementor-type="cpt_layouts" data-elementor-id="18654" class="elementor elementor-18654">
         <div class="elementor-inner">
             <div class="elementor-section-wrap">
@@ -65,7 +65,7 @@
                                     <div class="elementor-widget-wrap">
                                         <div class="sc_layouts_item elementor-element elementor-element-f112344 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="f112344" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                                             <div class="elementor-widget-container">
-                                                <a href="https://ecoagrozm.com" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1675068927"><img style="width: 150px; height: 160px" class="logo_image" src="{{ asset('public/img/logo2.png')}}" alt="Ecoagro" width="173" height="53"></a>
+                                                <a href="https://ecoagrozm.com" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1675068927"><img style="width: 150px; height: 160px" class="logo_image" src="{{ asset('public/img/logo-inverse.png')}}" alt="Ecoagro" width="173" height="53"></a>
                                             </div>
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-29ff9f0 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="29ff9f0" data-element_type="widget" data-widget_type="trx_sc_layouts_menu.default">
