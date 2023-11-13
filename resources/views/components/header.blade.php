@@ -65,7 +65,7 @@
                                     <div class="elementor-widget-wrap">
                                         <div class="sc_layouts_item elementor-element elementor-element-f112344 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="f112344" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                                             <div class="elementor-widget-container">
-                                                <a href="https://ecoagrozm.com" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1675068927"><img style="width: 150px; height: 160px" class="logo_image" src="{{ asset('public/img/logo-inverse.png')}}" alt="Ecoagro" width="173" height="53"></a>
+                                                <a href="https://ecoagrozm.com" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1675068927"><img style="width: 150px; height: 160px" class="logo_image" src="{{ asset('public/images/logo.png')}}" alt="Ecoagro" width="173" height="53"></a>
                                             </div>
                                         </div>
                                         <div class="sc_layouts_item elementor-element elementor-element-29ff9f0 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="29ff9f0" data-element_type="widget" data-widget_type="trx_sc_layouts_menu.default">
@@ -359,7 +359,7 @@
     <div class="menu_mobile_inner with_widgets">
         <div class="menu_mobile_header_wrap">
             <a class="sc_layouts_logo" href="https://ecoagrozm.com">
-                <img src="{{ asset('public/img/logo2.png') }}" srcset="{{ asset('public/img/logo2.png') }} 2x" alt="Ecoagro" width="173" height="53"> 
+                <img src="{{ asset('public/img/logo.png') }}" srcset="{{ asset('public/img/logo.png') }} 2x" alt="Ecoagro" width="173" height="53"> 
             </a>
 
             <a class="menu_mobile_close menu_button_close" tabindex="0" href="agro-services.html"><span class="menu_button_close_text">Close</span><span class="menu_button_close_icon"></span></a>
