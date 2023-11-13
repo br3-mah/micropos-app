@@ -408,8 +408,21 @@
                     <div class="elementor-widget-container">
                         <div class="sc_item_button sc_button_wrap"><a style="
                                             background: #770614;
-                                        " href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2"><span class="sc_button_text"><span class="sc_button_title">Get
-                                        Started</span></span></a></div>
+                                        " href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                        <span class="sc_button_text">
+                                            <span class="sc_button_title">Open Buyer Account
+                                        </span></span></a></div>
+                    </div>
+                </div>
+                <br>
+                <div class="sc_layouts_item elementor-element elementor-element-d662b41 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="d662b41" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                    <div class="elementor-widget-container">
+                        <div class="sc_item_button sc_button_wrap"><a style="
+                                            background: #770614;
+                                        " href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=seller" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sc_button sc_button_default sc_button_size_small sc_button_icon_left color_style_link2">
+                                        <span class="sc_button_text">
+                                            <span class="sc_button_title">Become
+                                        a Seller</span></span></a></div>
                     </div>
                 </div>
                 <div class="socials_mobile"><a target="_blank" href="https://www.facebook.com/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook-1" style=""><span class="icon-facebook-1"></span></span></a><a target="_blank" href="https://twitter.com/ThemesAxiom" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter-new" style=""><span class="icon-twitter-new"></span></span></a><a target="_blank" href="https://dribbble.com/AxiomThemes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_dribble-new" style=""><span class="icon-dribble-new"></span></span></a><a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagram" style=""><span class="icon-instagram"></span></span></a></div>

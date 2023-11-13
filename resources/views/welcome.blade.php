@@ -2191,6 +2191,11 @@ li {
             }
         }
 
+        
+        #mbl_btn{
+            margin-left: 45%; 
+        }
+
         /* style="margin-top:28%" */
         /* Hide the element with ID "hideCategory" in mobile view */
         @media only screen and (max-width: 767px) {
@@ -2199,6 +2204,9 @@ li {
             }      
             #yellowBannerJoin {
                 padding-bottom:16%; 
+            }
+            #mbl_btn{
+                padding-top:3%; 
             }
         }
     </style>
@@ -2325,13 +2333,13 @@ li {
                                                                         </div>
                                                                         
                                                                         @if (!auth()->check())
-                                                                        <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        {{-- <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
                                                                             <div class="elementor-widget-container">
                                                                                 <div class="elementor-text-editor elementor-clearfix">
                                                                                     Sign up today
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div> --}}
                                                                         @endif
                                                                         <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
                                                                             <div class="elementor-widget-container">
@@ -2342,7 +2350,7 @@ li {
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div style="display: flex; gap:4px">
+                                                                    <div id="mbl_btn" style="display: flex; gap:4px">
                                                                         @if (auth()->check())
                                                                         <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
                                                                             <div class="elementor-widget-container">
