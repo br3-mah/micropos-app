@@ -51,6 +51,8 @@
                 </div>
                 <!--begin::Add product-->
                 <a href="{{ route('product.create') }}" class="btn btn-primary">Add Product</a>
+                <button type="button" class="btn btn-primary" id="bulkEditButton">Bulk Edit</button>
+
                 <!--end::Add product-->
             </div>
             <!--end::Card toolbar-->
@@ -415,4 +417,82 @@
     <!--end::Products-->
 </div>
 @include('pages.___parts.products.update-status')
+
+<div class="modal fade" id="bulkEditModal" tabindex="-1" role="dialog" aria-labelledby="bulkEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Add your modal content here -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="bulkEditModalLabel">Bulk Edit Products</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add your form elements for bulk editing -->
+                <form id="bulkEditForm">
+                    <!-- Your form elements go here -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="applyBulkEdit">Apply Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Global Variables
+    $('#bulkEditButton').hide();
+    var selectedProducts = [];
+
+    // Display the modal when the bulk edit button is clicked
+    $('#bulkEditButton').on('click', function() {
+        $('#bulkEditModal').modal('show');
+    });
+
+    // Handle the event when a checkbox is checked or unchecked
+    $('#kt_ecommerce_products_table tbody').on('change', 'input[type="checkbox"]', function() {
+        var isChecked = $(this).prop('checked');
+        var productId = $(this).val();
+
+        // TODO: Add your logic based on whether the checkbox is checked or unchecked
+        if (isChecked) {
+            console.log('Product with ID ' + productId + ' is checked.');
+            
+            // Add logic for when the checkbox is checked
+            selectedProducts.push(productId);
+        } else {
+            console.log('Product with ID ' + productId + ' is unchecked.');
+            
+            // Add logic for when the checkbox is unchecked
+            var index = selectedProducts.indexOf(productId);
+            if (index !== -1) {
+                selectedProducts.splice(index, 1);
+            }
+        }
+
+        // Update the "Bulk Edit" button visibility based on the number of selected products
+        if (selectedProducts.length > 0) {
+            $('#bulkEditButton').show();
+        } else {
+            $('#bulkEditButton').hide();
+        }
+    });
+
+    // Handle the bulk edit logic when the apply changes button is clicked
+    $('#applyBulkEdit').on('click', function() {
+        // Get the selected products
+        console.log('Selected Products:', selectedProducts);
+
+        // TODO: Post selectedProducts to Laravel Controller
+
+        // Close the modal
+        $('#bulkEditModal').modal('hide');
+    });
+});
+
+</script>
 @endsection
