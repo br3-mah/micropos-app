@@ -254,12 +254,10 @@
                                     <!--begin::Value-->
                                     <span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">{{ App\Models\Product::mytotActiveProducts() }}</span>
                                     <!--end::Value-->
-                                    <!--begin::Label-->
-                                    <!--end::Label-->
                                 </div>
                                 <!--end::Statistics-->
                                 <!--begin::Description-->
-                                <span class="fs-6 fw-semibold text-gray-400">Active Products</span>
+                                <span class="fs-6 fw-semibold text-gray-400">Active Product Stock Quantity</span>
                                 <!--end::Description-->
                             </div>
                             <!--end::Statistics-->
