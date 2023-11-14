@@ -691,7 +691,7 @@ $(document).ready(function() {
         // var serializedProducts = selectedProducts.map(product => ({ name: 'products[]', value: product }));
 
         // Assign the array to the products[] input field
-        $('#setbidproducts').val($.param(serializedProducts));
+        $('#setbidproducts').val(selectedProducts);
 
         // Update the "Bulk Edit" button visibility based on the number of selected products
         if (selectedProducts.length > 0) {
