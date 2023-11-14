@@ -2132,6 +2132,53 @@ li {
 }
 
 
+/* Price stock table */
+
+ .container {
+	 padding: 30px 0;
+}
+ .table {
+	 margin: 20px auto;
+	 width: 957px;
+}
+ .table:nth-child(4) {
+	 width: 240px;
+}
+ .table thead tr th {
+	 font-size: 0.9rem;
+	 line-height: 1.2;
+}
+ .table thead tr th.sector {
+	 width: 70px !important;
+	 white-space: nowrap;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+ .table thead tr th.ploss {
+	 min-width: 80px;
+}
+ .table tbody tr.active td {
+	 font-weight: 700;
+}
+ .table tbody tr td {
+	 vertical-align: middle !important;
+	 line-height: 1.2;
+	 font-weight: 300;
+}
+ .table tbody tr td:nth-first-child {
+	 width: 249px;
+	 white-space: nowrap;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+ .table tbody tr td:nth-last-child(1) {
+	 width: 140px;
+}
+ 
+
+/* End Pricing table */
+
+
         .slider {
             
             background: #fff;
@@ -2570,8 +2617,327 @@ li {
                                             </section>
 
 
+                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">  
+                                                  <table class="table table-hover">
+                                                    <thead>
+                                                      <tr>
+                                                        <th></th>
+                                                        <th class="sector">Sector </th>
+                                                        <th class="text-right">Quantity</th>
+                                                        <th class="text-right">Last price K</th>
+                                                        <th class="text-right">Profit Loss %</th>
+                                                        <th class="text-right">Yield %</th>
+                                                        <th class="text-right">Market value K</th>
+                                                        <th class="text-right">Portfolio %</th>
+                                                        <th class="text-right"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <td><strong>Maize</strong> • 50 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">2,075</td>
+                                                        <td class="text-right">27.81</td>
+                                                        <td class="text-right">6.23 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">1.50</td>
+                                                        <td class="text-right">57,726.12</td>
+                                                        <td class="text-right">23.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                <svg style="color:#23A455" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                                  </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Fertilizer</strong> • Urea</td>
+                                                        <td>Fertilizers</td>
+                                                        <td class="text-right">1,164</td>
+                                                        <td class="text-right">15.10</td>
+                                                        <td class="text-right text-danger"><strong>-42.24</strong> <i class="fa fa-angle-down text-danger"></i></td>
+                                                        <td class="text-right text-danger"><strong>-5.50</strong></td>
+                                                        <td class="text-right">17,568.82</td>
+                                                        <td class="text-right">7.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                <svg style="color: #cf2e2e" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                                </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Soya Beans</strong> • 50 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">5,340</td>
+                                                        <td class="text-right">5.64</td>
+                                                        <td class="text-right">2.13 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">0.89</td>
+                                                        <td class="text-right">30,117.98</td>
+                                                        <td class="text-right">12.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                <svg style="color: #cf2e2e" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                                </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Wheat</strong> • 70 kg</td>
+                                                        <td>Financials</td>
+                                                        <td class="text-right">1,328</td>
+                                                        <td class="text-right">24.57</td>
+                                                        <td class="text-right">9.87 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.21</td>
+                                                        <td class="text-right">32.627.31</td>
+                                                        <td class="text-right">13.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                
+                                                                <svg style="color:#23A455" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                                  </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong> Sweat Potatoes </strong> • 90 Kg</td>
+                                                        <td>Food</td>
+                                                        <td class="text-right">870</td>
+                                                        <td class="text-right">42.87</td>
+                                                        <td class="text-right">11.20 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">5.52</td>
+                                                        <td class="text-right">37,321.53</td>
+                                                        <td class="text-right">14.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            {{-- <button class="btn btn-default btn-sm">Buy</button> --}}
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Tomatoes</strong> • 90 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">622</td>
+                                                        <td class="text-right">78.26</td>
+                                                        <td class="text-right">22.13 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">14.12</td>
+                                                        <td class="text-right">48,654.53</td>
+                                                        <td class="text-right">19.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                
+                                                                <svg style="color:#23A455" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                                  </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Mealie Meal</strong> • #1</td>
+                                                        <td>Food</td>
+                                                        <td class="text-right">532</td>
+                                                        <td class="text-right">24.42</td>
+                                                        <td class="text-right">11.14 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">4.52</td>
+                                                        <td class="text-right">12,899.53</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            {{-- <button class="btn btn-default btn-sm">Buy</button> --}}
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Sunflower</strong> • 90 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">493</td>
+                                                        <td class="text-right">42.80</td>
+                                                        <td class="text-right">8.24 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">2.51</td>
+                                                        <td class="text-right">21,124.53</td>
+                                                        <td class="text-right">7.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            {{-- <button class="btn btn-default btn-sm">Buy</button> --}}
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  
+                                                  <table class="table table-hover table-striped hide">
+                                                    <thead>
+                                                      <tr>
+                                                        <th class="text-right">#</th>
+                                                        <th>Sector</th>
+                                                        <th class="text-center">ASX</th>
+                                                        <th class="text-right"># Shares</th>
+                                                        <th class="text-right">Share price</th>
+                                                        <th class="text-right">Market value</th>
+                                                        <th class="text-right">% P&L</th>
+                                                        <th class="text-right">% Yield</th>
+                                                        <th class="text-right">% Portfolio</th>
+                                                        <th width="70"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td class="text-right">1</td>
+                                                        <td>Mining</td>
+                                                        <td class="text-center">RIO</td>
+                                                        <td class="text-right">2,100</td>
+                                                        <td class="text-right">2.45</td>
+                                                        <td class="text-right">42,134.31</td>
+                                                        <td class="text-right">123.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.21</td>
+                                                        <td class="text-right"> 25.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-success btn-block">Buy</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">2</td>
+                                                        <td>Mining</td>
+                                                        <td class="text-center">BHP</td>
+                                                        <td class="text-right">250</td>
+                                                        <td class="text-right">33.14</td>
+                                                        <td class="text-right">4,654.53</td>
+                                                        <td class="text-right">12.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">2.50</td>
+                                                        <td class="text-right">10.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-success btn-block">Buy</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">3</td>
+                                                        <td>Telco</td>
+                                                        <td class="text-center">TLS</td>
+                                                        <td class="text-right">500</td>
+                                                        <td class="text-right">452.45</td>
+                                                        <td class="text-right">84,872.94</td>
+                                                        <td class="text-right">6.11 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">8.75</td>
+                                                        <td class="text-right">15.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-success btn-block">Buy</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">4</td>
+                                                        <td>Telco</td>
+                                                        <td class="text-center">OPT</td>
+                                                        <td class="text-right">345</td>
+                                                        <td class="text-right">11.22</td>
+                                                        <td class="text-right">12,872.94</td>
+                                                        <td class="text-right">5.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.25</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-disabled btn-block">Hold</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">5</td>
+                                                        <td>Banking</td>
+                                                        <td class="text-center">CBA</td>
+                                                        <td class="text-right">25</td>
+                                                        <td class="text-right">555.22</td>
+                                                        <td class="text-right">72,872.94</td>
+                                                        <td class="text-right">3.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.25</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-disabled btn-block">Hold</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">6</td>
+                                                        <td>Energy</td>
+                                                        <td class="text-center">ORG</td>
+                                                        <td class="text-right">100</td>
+                                                        <td class="text-right">0.29</td>
+                                                        <td class="text-right">1,824.14</td>
+                                                        <td class="text-right">1.23 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">7.1</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-disabled btn-block">Hold</button></td>
+                                                      </tr>
+                                                      <tr class="danger">
+                                                        <td class="text-right">7</td>
+                                                        <td>Banking</td>
+                                                        <td class="text-center">SCG</td>
+                                                        <td class="text-right">125</td>
+                                                        <td class="text-right">11.45</td>
+                                                        <td class="text-right">1,235.35</td>
+                                                        <td class="text-right">-1.10 <i class="fa fa-angle-down text-danger"></i></td>
+                                                        <td class="text-right">1.10</td>
+                                                        <td class="text-right">35.00</td>
+                                                        <td><button class="btn btn-danger btn-xs btn-block">Sell</button></td>
+                                                      </tr>
+                                                      <tr class="active">
+                                                        <td colspan="2"><button class="btn btn-default btn-sm">Cash <i class="fa fa-plus fa-sm"></i></button></td>
+                                                        <td></td>
+                                                        <td class="text-right">4,122</td>
+                                                        <td class="text-right">4,122</td>
+                                                        <td class="text-right">4,122</td>
+                                                        <td class="text-right">3.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">5.20</td>
+                                                        <td class="text-right">100</td>
+                                                        <td></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  
+                                                  <table class="table table-condensed table-hover table-striped hide">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Code</th>
+                                                        <th class="hide">Company</th>
+                                                        <th>Date</th>
+                                                        <th class="text-right">$ Amount</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>CBA</td>
+                                                        <td class="hide">Commonwealth Bank</td>
+                                                        <td>20.01.2016</td>
+                                                        <td class="text-right">77.37</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>WOW</td>
+                                                        <td class="hide">Woolworths</td>
+                                                        <td>20.01.2016</td>
+                                                        <td class="text-right">24.23</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>TLS</td>
+                                                        <td class="hide">Telstra</td>
+                                                        <td>20.01.2016</td>
+                                                        <td class="text-right">5.62</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                            </section>
                                             <section style="padding-top:2%" class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended">
+
+
+
+
+
+                                                    
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c5518a3 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="c5518a3" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
