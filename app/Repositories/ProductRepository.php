@@ -162,7 +162,6 @@ class ProductRepository
 
     // Featured products
     public function storeFeature(array $data){
-        dd($data);
         foreach ($data['products'] as $key => $prod_id) {
             FeatureProduct::create([
                 'product_id'=> $prod_id,
