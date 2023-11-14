@@ -75,9 +75,9 @@
                 <thead>
                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                         <th class="w-10px pe-2">
-                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                            {{-- <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_ecommerce_products_table .form-check-input" value="1" />
-                            </div>
+                            </div> --}}
                         </th>
                         <th class="min-w-200px">Product</th>
                         <th class="text-end min-w-100px">SKU</th>
@@ -93,7 +93,7 @@
                     <tr>
                         <td>
                             <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                <input class="form-check-input" type="checkbox" value="1" />
+                                <input class="form-check-input" type="checkbox" value="{{ $product->id }}" />
                             </div>
                         </td>
                         <td>
@@ -147,9 +147,9 @@
                                 @break
                                 @case(1)
                                     @if ($product->is_approved == 1)
-                                    <div class="badge badge-light-success text-primary">Published</div>
+                                    <div class="badge badge-success text-primary">Published</div>
                                     @else
-                                    <div class="badge badge-light-success text-primary">Pending Approval</div>
+                                    <div class="badge badge-light text-warning">Pending approval</div>
                                     @endif
                                     @break
                                 @case(2)
@@ -165,6 +165,11 @@
                                     <div class="badge badge-light-danger text-primary">Inactive</div>
                             @endswitch
                             <!--end::Badges-->
+                            {{-- 
+                            @if ($product->featured)
+                            <div class="badge badge-light-warning text-warning">Pending bid approval</div> 
+                            @endif 
+                            --}}
                         </td>
                         <td class="text-end">
                             <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -428,14 +433,210 @@
             </div>
             <div class="modal-body">
                 <!-- Add your form elements for bulk editing -->
-                <form id="bulkEditForm">
-                    <!-- Your form elements go here -->
-                </form>
+                <div id="bulkEditForm">
+                    <div class="d-flex flex-column">
+                        <!--begin::Nav group-->
+                        <div class="nav-group nav-group-outline mx-auto" data-kt-buttons="true">
+                            <a id="firstTab" class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3 me-2 active" data-kt-plan="stock">Stock Update</a>
+                            <a id="secondTab" class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3" data-kt-plan="bidding">Featured Products</a>
+                            {{-- <a class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3" data-kt-plan="annual">Annual</a> --}}
+                        </div>
+                        <!--end::Nav group-->
+                        <!--begin::Row-->
+                        <div class="row mt-10">
+                            <!--begin::Col-->
+                              
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-12">
+                                <!--begin::Tab content-->
+                                <div class="tab-content rounded h-100 bg-light p-10">
+                                    <!--begin::Tab Pane-->
+                                    <div class="tab-pane fade show active" id="kt_upgrade_plan_stock">
+                                        <!--begin::Body-->
+                                        <div class="pt-1">
+                                            <!--begin::Item-->
+                                            <div class="mb-10 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="required form-label">Quantity</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <div class="d-flex gap-3">
+                                                    <input type="number" name="shelf_qty" class="form-control mb-2" placeholder="On shelf" value="" />
+                                                    <input type="number" name="warehouse_qty" class="form-control mb-2" placeholder="In warehouse" />
+                                                </div>
+                                                <!--end::Input-->
+                                                <!--begin::Description-->
+                                                <div class="text-muted fs-7">Enter the product quantity.</div>
+                                                <!--end::Description-->
+                                            </div>
+                                            <!--end::Item-->
+                                        </div>
+                                        <!--end::Body-->
+                                    </div>
+                                    <!--end::Tab Pane-->
+
+                                    <div class="tab-pane fade show" id="kt_upgrade_plan_bidding">
+                                        <!--begin::Body-->
+                                        <div class="pt-1">
+                                            <!--begin::Item-->
+                                            <form id="kt_modal_bidding_form" class="form" method="POST" action="{{ route('store.feature') }}">
+                                                @csrf
+                                                <!--begin::Heading-->
+                                                {{-- <div class="mb-13 text-center">
+                                                    <!--begin::Title-->
+                                                    <h1 class="mb-3">Place your bids</h1>
+                                                    <!--end::Title-->
+                                                    <!--begin::Description-->
+                                                    <div class="text-muted fw-semibold fs-5">If you need more info, please check
+                                                    <a href="#" class="fw-bold link-primary">Bidding Guidelines</a>.</div>
+                                                    <!--end::Description-->
+                                                </div> --}}
+                                                <!--end::Heading-->
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-8 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                                        <span class="required">Available Plans</span>
+                                                        <span class="ms-1" data-bs-toggle="tooltip" title="Specify the bid amount to place in.">
+                                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+                                                                <span class="path1"></span>
+                                                                <span class="path2"></span>
+                                                                <span class="path3"></span>
+                                                            </i>
+                                                        </span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Bid options-->
+                                                    <div class="d-flex flex-stack gap-5 mb-3">
+                                                        <button onclick="setBidValue(100)" type="button" class="btn btn-light-primary w-100" data-kt-modal-bidding="option">100</button>
+                                                        <button onclick="setBidValue(500)" type="button" class="btn btn-light-primary w-100" data-kt-modal-bidding="option">500</button>
+                                                        <button onclick="setBidValue(900)" type="button" class="btn btn-light-primary w-100" data-kt-modal-bidding="option">900</button>
+                                                    </div>
+                                                    <!--begin::Bid options-->
+                                                    <input id="bid_amount" type="hidden" class="form-control" placeholder="Enter Bid Amount" name="bid_amount" />
+                                                    <input id="bid_days" type="hidden" class="form-control" placeholder="Days" name="days" />
+                                                    <input id="setbidproducts" type="hidden" class="form-control" name="products[]" />
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                {{-- <div class="fv-row mb-8">
+                                                    <!--begin::Label-->
+                                                    <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                                        <span class="required">Currency Type</span>
+                                                        <span class="ms-1" data-bs-toggle="tooltip" title="Select the currency type.">
+                                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+                                                                <span class="path1"></span>
+                                                                <span class="path2"></span>
+                                                                <span class="path3"></span>
+                                                            </i>
+                                                        </span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Select2-->
+                                                    <select class="form-select" data-control="select2" data-hide-search="true" data-placeholder="Select a Currency Type" name="currency_type">
+                                                        <option value=""></option>
+                                                        <option value="dollar" selected="selected">Dollar</option>
+                                                        <option value="crypto">Crypto</option>
+                                                    </select>
+                                                    <!--end::Select2-->
+                                                </div> --}}
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                {{-- <div class="fv-row mb-8">
+                                                    <!--begin::Label-->
+                                                    <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                                        <span>Currency</span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Dollar type-->
+                                                    <div class="" data-kt-modal-bidding-type="dollar">
+                                                        <!--begin::Select2-->
+                                                        <select name="currency_dollar" aria-label="Select a Currency" data-placeholder="Select a currency.." class="form-select form-select-solid form-select-lg">
+                                                            <option data-kt-bidding-modal-option-icon="flags/united-states.svg" value="USD" selected="selected">
+                                                            <b>USD</b>&nbsp;-&nbsp;USA dollar</option>
+                                                            <option data-kt-bidding-modal-option-icon="flags/united-kingdom.svg" value="GBP">
+                                                            <b>GBP</b>&nbsp;-&nbsp;British pound</option>
+                                                            <option data-kt-bidding-modal-option-icon="flags/australia.svg" value="AUD">
+                                                            <b>AUD</b>&nbsp;-&nbsp;Australian dollar</option>
+                                                            <option data-kt-bidding-modal-option-icon="flags/japan.svg" value="JPY">
+                                                            <b>JPY</b>&nbsp;-&nbsp;Japanese yen</option>
+                                                            <option data-kt-bidding-modal-option-icon="flags/sweden.svg" value="SEK">
+                                                            <b>SEK</b>&nbsp;-&nbsp;Swedish krona</option>
+                                                            <option data-kt-bidding-modal-option-icon="flags/canada.svg" value="CAD">
+                                                            <b>CAD</b>&nbsp;-&nbsp;Canadian dollar</option>
+                                                            <option data-kt-bidding-modal-option-icon="flags/switzerland.svg" value="CHF">
+                                                            <b>CHF</b>&nbsp;-&nbsp;Swiss franc</option>
+                                                        </select>
+                                                        <!--end::Select2-->
+                                                    </div>
+                                                    <!--end::Dollar type-->
+                                                    <!--begin::Crypto type-->
+                                                    <div class="d-none" data-kt-modal-bidding-type="crypto">
+                                                        <!--begin::Select2-->
+                                                        <select name="currency_crypto" aria-label="Select a Coin" data-placeholder="Select a currency.." class="form-select form-select-solid form-select-lg">
+                                                            <option data-kt-bidding-modal-option-icon="svg/coins/bitcoin.svg" value="1" selected="selected">Bitcoin</option>
+                                                            <option data-kt-bidding-modal-option-icon="svg/coins/binance.svg" value="2">Binance</option>
+                                                            <option data-kt-bidding-modal-option-icon="svg/coins/chainlink.svg" value="3">Chainlink</option>
+                                                            <option data-kt-bidding-modal-option-icon="svg/coins/coin.svg" value="4">Coin</option>
+                                                            <option data-kt-bidding-modal-option-icon="svg/coins/ethereum.svg" value="5">Ethereum</option>
+                                                            <option data-kt-bidding-modal-option-icon="svg/coins/filecoin.svg" value="6">Filecoin</option>
+                                                        </select>
+                                                        <!--end::Select2-->
+                                                    </div>
+                                                    <!--end::Crypto type-->
+                                                </div> --}}
+                                                <!--end::Input group-->
+                                                <!--begin::Notice-->
+                                                <!--begin::Notice-->
+                                                <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+                                                    <!--begin::Icon-->
+                                                    <i class="ki-duotone ki-wallet fs-2tx text-primary me-4">
+                                                        <span class="path1"></span>
+                                                        <span class="path2"></span>
+                                                        <span class="path3"></span>
+                                                        <span class="path4"></span>
+                                                    </i>
+                                                    <!--end::Icon-->
+                                                    <!--begin::Wrapper-->
+                                                    <div class="d-flex flex-stack flex-grow-1">
+                                                        <!--begin::Content-->
+                                                        <div class="fw-semibold">
+                                                            <h4 class="text-gray-900 fw-bold">K <span id="bid_price_text"></span> Plan</h4>
+                                                            <div class="fs-6 text-gray-700">Display your product on top featured products for <span id="bid_days_text"></span> days
+                                                            {{-- <a href="../../demo10/dist/utilities/modals/wizards/top-up-wallet.html" class="text-bolder">Top up wallet</a>.</div> --}}
+                                                        </div>
+                                                        <!--end::Content-->
+                                                    </div>
+                                                    <!--end::Wrapper-->
+                                                </div>
+                                                <!--end::Notice-->
+                                                <!--end::Notice-->
+                                                <!--begin::Actions-->
+                                                <div class="text-center w-full">
+                                                    {{-- <button type="reset" class="btn btn-light me-3" data-kt-modal-action-type="cancel">Cancel</button> --}}
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <span class="indicator-label">Continue</span>
+                                                        <span class="indicator-progress">Please wait...
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </form>
+                                            <!--end::Item-->
+                                        </div>
+                                        <!--end::Body-->
+                                    </div>
+                                </div>
+                                <!--end::Tab content-->
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="applyBulkEdit">Apply Changes</button>
-            </div>
+          
         </div>
     </div>
 </div>
@@ -451,6 +652,18 @@ $(document).ready(function() {
     // Display the modal when the bulk edit button is clicked
     $('#bulkEditButton').on('click', function() {
         $('#bulkEditModal').modal('show');
+    });
+
+    
+    // Tab buttons
+    $('#firstTab').on('click', function() {
+        $('#kt_upgrade_plan_stock').addClass('show active');
+        $('#kt_upgrade_plan_bidding').removeClass('show active');
+    });
+
+    $('#secondTab').on('click', function() {
+        $('#kt_upgrade_plan_bidding').addClass('show active');
+        $('#kt_upgrade_plan_stock').removeClass('show active');
     });
 
     // Handle the event when a checkbox is checked or unchecked
@@ -474,6 +687,12 @@ $(document).ready(function() {
             }
         }
 
+        // Map selectedProducts to an array of objects with the key "products[]"
+        // var serializedProducts = selectedProducts.map(product => ({ name: 'products[]', value: product }));
+
+        // Assign the array to the products[] input field
+        $('#setbidproducts').val($.param(serializedProducts));
+
         // Update the "Bulk Edit" button visibility based on the number of selected products
         if (selectedProducts.length > 0) {
             $('#bulkEditButton').show();
@@ -483,16 +702,45 @@ $(document).ready(function() {
     });
 
     // Handle the bulk edit logic when the apply changes button is clicked
-    $('#applyBulkEdit').on('click', function() {
-        // Get the selected products
-        console.log('Selected Products:', selectedProducts);
+    // $('#applyBulkEdit').on('click', function() {
+    //     // Get the selected products
+    //     console.log('Selected Products:', selectedProducts);
 
-        // TODO: Post selectedProducts to Laravel Controller
+    //     // Assign selectedProducts to the products[] input field
+    //     $('#setbidproducts').val(selectedProducts);
 
-        // Close the modal
-        $('#bulkEditModal').modal('hide');
-    });
+    //     // Close the modal
+    //     $('#bulkEditModal').modal('hide');
+    // });
 });
 
+
+// JavaScript
+function setBidValue(val){
+    $('#bid_amount').val(val);
+    switch (val) {
+        case 100:
+            $('#bid_days').val(7);
+            $('#bid_price_text').text('100');
+            $('#bid_days_text').text('7');
+            break;
+        case 500:
+            $('#bid_days').val(30);
+            $('#bid_price_text').text('500');
+            $('#bid_days_text').text('30');
+            break;
+        case 900:
+            $('#bid_days').val(60);
+            $('#bid_price_text').text('900');
+            $('#bid_days_text').text('60');
+            break;
+    
+        default:
+            $('#bid_days').val(7);
+            $('#bid_price_text').text('100');
+            $('#bid_days_text').text('7');
+            break;
+    }
+}
 </script>
 @endsection

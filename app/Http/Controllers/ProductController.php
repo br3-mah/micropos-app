@@ -21,6 +21,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->productRepository->mine();
+        // dd($products);
         // return response()->json($products);    
         return view('pages.products.index', [
             'products' => $products
@@ -58,6 +59,18 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         } catch (\Throwable $th) {
             // dd($th);
+            session()->flash('error', 'Oops, Failed: ' . $th->getMessage());
+            return redirect()->back();
+        }
+    }
+
+    public function storeFeature(Request $request){
+        try {
+            // store to top selling featured products
+            $this->productRepository->storeFeature($request->toArray());
+            session()->flash('success', 'A request to place the products on top selling has been submitted.');
+            return redirect()->route('product.index');
+        } catch (\Throwable $th) {
             session()->flash('error', 'Oops, Failed: ' . $th->getMessage());
             return redirect()->back();
         }

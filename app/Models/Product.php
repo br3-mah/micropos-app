@@ -59,10 +59,9 @@ class Product extends Model
     public function tags(){
         return $this->hasMany(ProductTag::class);
     }
-
-
-
-
+    public function featured(){
+        return $this->hasMany(FeatureProduct::class);
+    }
     
     public static function mytotActiveProducts(){
         try {

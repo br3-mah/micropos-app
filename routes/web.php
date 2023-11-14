@@ -37,6 +37,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     
     // My Products
     Route::resource('product', ProductController::class);
+    Route::post('store-feature-product', [ProductController::class, 'storeFeature'])->name('store.feature');
 
     // My Sales
     Route::resource('sales', SalesController::class);
@@ -58,3 +59,5 @@ Route::middleware(['web', 'auth'])->group(function () {
 // Authentication
 Auth::routes(['register' => true]);
 Auth::routes(['login' => false]);
+
+

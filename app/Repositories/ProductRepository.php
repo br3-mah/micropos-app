@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 
+use App\Models\FeatureProduct;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductImage;
@@ -13,10 +14,10 @@ class ProductRepository
         return Product::with(['user','variants','categories','tags'])->orderBy('created_at', 'desc')->limit(4)->get();
     }
     public function all(){
-        return Product::with(['user','variants','categories','tags'])->orderBy('created_at', 'desc')->get();
+        return Product::with(['user','variants','categories','tags','featured'])->orderBy('created_at', 'desc')->get();
     }
     public function mine(){
-        return Product::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
+        return Product::with(['user','variants','categories','tags','featured'])->where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
     }
     public function search($data){
         return Product::with(['user','variants','categories','tags'])->orWhere('name', 'LIKE', '%'.$data['s'].'%')
@@ -154,6 +155,21 @@ class ProductRepository
             $product->photos->each->delete();
         }
         $product->delete();
+        return true;
+    }
+
+
+
+    // Featured products
+    public function storeFeature(array $data){
+        dd($data);
+        foreach ($data['products'] as $key => $prod_id) {
+            FeatureProduct::create([
+                'product_id'=> $prod_id,
+                'price'=> (float)$data['bid_amount'],
+                'days'=> (int)$data['days'],
+            ]);
+        }
         return true;
     }
     
