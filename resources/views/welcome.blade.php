@@ -751,10 +751,9 @@ Cultivating Agriculture that Works for the Future
             padding: 3% 5% 6% 5%;
             line-height: 0px;
             font-size: 12px;
-            background: transparent;
-            opacity: 0.8;
+            background: #f2c20000; /* Transparent black, adjust the alpha (last) parameter as needed */
+            opacity:0.9;
         }
-
         .elementor-18091 .elementor-element.elementor-element-35fdf84f>.elementor-background-overlay {
             transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
         }
@@ -2617,7 +2616,7 @@ li {
                                             </section>
 
 
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">  
+                                            <section style="padding-top: 2%;padding-bottom: 2%" class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">  
                                                   <table class="table table-hover">
                                                     <thead>
                                                       <tr>

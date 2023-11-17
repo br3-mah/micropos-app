@@ -70,6 +70,15 @@
                     {{ session('error') }}
                 </div>
             @endif
+
+            
+            
+            <div id="indicator-success" class="alert alert-success">
+                A request to place the products on top selling has been submitted.
+            </div>
+            <div id="indicator-error" class="alert alert-danger">
+                Unable to request for featured listsing.
+            </div>
             <!--begin::Table-->
             <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_products_table">
                 <thead>
@@ -99,13 +108,13 @@
                         <td>
                             <div class="d-flex align-items-center">
                                 <!--begin::Thumbnail-->
-                                <a href="#" class="symbol symbol-50px">
+                                <a target="_blank" href="{{ route('product.edit', $product->id) }}" class="symbol symbol-50px">
                                     <span class="symbol-label" style="background-image:url('{{asset("public/storage/" . $product->image)}}');"></span>
                                 </a>
                                 <!--end::Thumbnail-->
                                 <div class="ms-5">
                                     <!--begin::Title-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $product->name }}</a>
+                                    <a target="_blank" href="{{ route('product.edit', $product->id) }}" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $product->name }}</a>
                                     <!--end::Title-->
                                 </div>
                             </div>
@@ -165,11 +174,15 @@
                                     <div class="badge badge-light-danger text-primary">Inactive</div>
                             @endswitch
                             <!--end::Badges-->
-                            {{-- 
-                            @if ($product->featured)
-                            <div class="badge badge-light-warning text-warning">Pending bid approval</div> 
+                            
+                            @if ($product->featured !== null)
+                                @if ($product->featured[0]->status == 0)
+                                    <div class="badge badge-light-warning text-warning">Pending bid approval</div>
+                                @else
+                                    <div class="badge badge-light-success text-success">Feature Item</div>
+                                @endif 
                             @endif 
-                            --}}
+                           
                         </td>
                         <td class="text-end">
                             <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -516,7 +529,7 @@
                                                     <!--begin::Bid options-->
                                                     <input id="bid_amount" type="hidden" class="form-control" placeholder="Enter Bid Amount" name="bid_amount" />
                                                     <input id="bid_days" type="hidden" class="form-control" placeholder="Days" name="days" />
-                                                    <input id="setbidproducts" type="hidden" class="form-control" name="products[]" />
+                                                    {{-- <input id="setbidproducts" type="hidden" class="form-control" name="products[]" /> --}}
                                                 </div>
                                                 <!--end::Input group-->
                                                 <!--begin::Input group-->
@@ -615,10 +628,12 @@
                                                 <!--begin::Actions-->
                                                 <div class="text-center w-full">
                                                     {{-- <button type="reset" class="btn btn-light me-3" data-kt-modal-action-type="cancel">Cancel</button> --}}
-                                                    <button type="submit" class="btn btn-primary">
+                                                    <button id="applyBulkEdit" type="button" class="btn btn-primary">
                                                         <span class="indicator-label">Continue</span>
-                                                        <span class="indicator-progress">Please wait...
-                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                        <span class="indicator-progress">
+                                                            Please wait...
+                                                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                                        </span>
                                                     </button>
                                                 </div>
                                                 <!--end::Actions-->
@@ -646,6 +661,8 @@
 <script>
 $(document).ready(function() {
     // Global Variables
+    $('#indicator-success').hide();
+    $('#indicator-error').hide();
     $('#bulkEditButton').hide();
     var selectedProducts = [];
 
@@ -691,7 +708,7 @@ $(document).ready(function() {
         // var serializedProducts = selectedProducts.map(product => ({ name: 'products[]', value: product }));
 
         // Assign the array to the products[] input field
-        $('#setbidproducts').val(selectedProducts);
+        // $('#setbidproducts').val(selectedProducts);
 
         // Update the "Bulk Edit" button visibility based on the number of selected products
         if (selectedProducts.length > 0) {
@@ -702,16 +719,44 @@ $(document).ready(function() {
     });
 
     // Handle the bulk edit logic when the apply changes button is clicked
-    // $('#applyBulkEdit').on('click', function() {
-    //     // Get the selected products
-    //     console.log('Selected Products:', selectedProducts);
+    $('#applyBulkEdit').on('click', function() {
+        $('.indicator-label').hide();
+        $('.indicator-progress').show();
 
-    //     // Assign selectedProducts to the products[] input field
-    //     $('#setbidproducts').val(selectedProducts);
+        var bid_amount = $('#bid_amount').val();
+        var bid_days = $('#bid_days').val();
+        // Get the selected products
+        console.log('Selected Products:', selectedProducts);
+        const postData = {
+            bid_amount: bid_amount,
+            bid_days: bid_days,
+            products: selectedProducts,
+        };
 
-    //     // Close the modal
-    //     $('#bulkEditModal').modal('hide');
-    // });
+        // console.log(postData);
+        // Make an AJAX POST request to the Laravel controller
+        $.ajax({
+            type: 'POST',
+            url: 'store-feature-product', // Replace with the actual URL of your Laravel controller
+            data: postData,
+            success: function (response) {
+                if(response.data === 'true'){
+                    $('.indicator-label').show();
+                    $('.indicator-progress').hide();
+                    $('#indicator-success').show();
+                }else{
+                    $('.indicator-label').show();
+                    $('.indicator-progress').hide();
+                    $('#indicator-error').show();
+                }
+            },
+            error: function (error) {
+                console.error('Could not auto register:', error);
+            }
+        });
+        // Close the modal
+        $('#bulkEditModal').modal('hide');
+    });
 });
 
 

@@ -69,10 +69,10 @@ class ProductController extends Controller
             // store to top selling featured products
             $this->productRepository->storeFeature($request->toArray());
             session()->flash('success', 'A request to place the products on top selling has been submitted.');
-            return redirect()->route('product.index');
+            return response()->json(['data' => 'true'], 200);
         } catch (\Throwable $th) {
             session()->flash('error', 'Oops, Failed: ' . $th->getMessage());
-            return redirect()->back();
+            return response()->json(['data' => 'false'], 500);
         }
     }
 

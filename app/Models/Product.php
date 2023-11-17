@@ -73,6 +73,15 @@ class Product extends Model
         }
     }
 
+    public static function mytotInactiveProducts(){}
+
+    public static function myTotalProducts(){
+        try {
+            return Product::where('user_id', auth()->user()->id)->count();
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
     
     public static function totSold(){
         try {

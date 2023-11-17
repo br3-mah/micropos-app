@@ -166,12 +166,10 @@ class ProductRepository
             FeatureProduct::create([
                 'product_id'=> $prod_id,
                 'price'=> (float)$data['bid_amount'],
-                'days'=> (int)$data['days'],
+                'days'=> (int)$data['bid_days'],
             ]);
         }
         return true;
     }
-    
-
     
 }

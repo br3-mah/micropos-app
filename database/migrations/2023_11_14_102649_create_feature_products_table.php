@@ -23,8 +23,9 @@ return new class extends Migration
             $table->text('comments')->nullable();         
             
             $table->timestamps();
-        });// Set the default value using a custom expression
-        DB::statement('ALTER TABLE feature_products MODIFY bid_key INTEGER UNSIGNED NOT NULL DEFAULT FLOOR(1000 + RAND() * 9000)');
+        });
+        // Set the default value using a custom expression
+        DB::statement('ALTER TABLE feature_products MODIFY bid_key INTEGER UNSIGNED NOT NULL DEFAULT FLOOR(1000 + RAND() * 9000)');           
     }
 
     /**

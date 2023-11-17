@@ -14,6 +14,7 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         'http://localhost:9000',
         'login',
-        '/activate-seller'
+        '/activate-seller',
+        'store-feature-product'
     ];
 }

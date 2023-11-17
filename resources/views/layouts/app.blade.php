@@ -150,13 +150,17 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-content d-flex align-items-center px-3">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-50px me-5">
-												<img alt="Logo" src="{{ asset('public/img/logo.png')}}" />
+												<img alt="Logo" src="{{ asset('public/img/1.jpg')}}" />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Username-->
 											@auth
 											<div class="d-flex flex-column">
 												<div class="fw-bold d-flex align-items-center fs-5">{{ auth()->user()->name }}</div>
+												
+												@if(auth()->user()->is_type == 'seller' && auth()->user()->is_approved == 1)
+												<div class="fw-bold d-flex align-items-center fs-6">{{ auth()->user()->seller_name }}</div>
+												@endif
 												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{ auth()->user()->email }}</a>
 											</div>
 											@endauth
@@ -174,20 +178,20 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="#" class="menu-link px-5">
+										<a href="{{ route('product.index') }}" class="menu-link px-5">
 											<span class="menu-text">My Products</span>
-											<!--<span class="menu-badge">
-												<span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-											</span>-->
+											<span class="menu-badge">
+												<span class="badge badge-light-danger badge-circle fw-bold fs-7">{{ App\Models\Product::myTotalProducts()}}</span>
+											</span>
 										</a>
 									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-end" data-kt-menu-offset="-15px, 0">
-										<a href="#" class="menu-link px-5">
+										<!--<a href="#" class="menu-link px-5">
 											<span class="menu-title">My Subscription</span>
 											<span class="menu-arrow"></span>
-										</a>
+										</a>-->
 										<!--begin::Menu sub-->
 										<div class="menu-sub menu-sub-dropdown w-175px py-4">
 											<!--begin::Menu item-->
@@ -205,14 +209,14 @@ License: For each use you must have a valid license purchased only from above li
 												<a href="##" class="menu-link px-5">Payments</a>
 											</div>
 											<!--end::Menu item-->
-											<!--begin::Menu item-->
+											<!--begin::Menu item
 											<div class="menu-item px-3">
 												<a href="##" class="menu-link d-flex flex-stack px-5">Statements
 												<span class="ms-2 lh-0" data-bs-toggle="tooltip" title="View your statements">
 													<i class="ki-outline ki-information-5 fs-5"></i>
 												</span></a>
 											</div>
-											<!--end::Menu item-->
+											end::Menu item-->
 											<!--begin::Menu separator-->
 											<div class="separator my-2"></div>
 											<!--end::Menu separator-->
