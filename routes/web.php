@@ -5,6 +5,7 @@ use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductDetailController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\ShopProductController;
@@ -33,6 +34,7 @@ Route::post('single-purchase', [CheckoutController::class, 'singlePurchase'])->n
 Route::middleware(['web', 'auth'])->group(function () {
     // My Dashboard
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/activate-seller', [UserController::class, 'activateSeller'])->name('activate-seller');
     
     // My Products

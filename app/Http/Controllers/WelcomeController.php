@@ -17,10 +17,11 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+        
         $products = $this->productRepository->four();
         return view('welcome', [
             'products' => $products
-        ]);
+        ])->layout('layouts.app');
     }
 
     /**

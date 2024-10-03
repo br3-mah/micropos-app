@@ -7,11 +7,11 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Marketplace | Ecogro</title>
+    <title>Marketplace | EcoAgro</title>
     <link rel="canonical" href="https://agricola.axiomthemes.com" />
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//use.typekit.net' />
-	<link rel="shortcut icon" href="{{ asset('public/img/logo.png') }}" />
+    <link rel="shortcut icon" href="fav.png" />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -159,6 +159,15 @@ Cultivating Agriculture that Works for the Future
             padding: 0 !important;
         }
     </style>
+    
+<link property="stylesheet" rel="stylesheet" href="{{ asset('public/theme/css/prod.css')}}" type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="trx_demo_icons_animation-css" href="{{ asset('public/theme/css/css-animation.css')}}"type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="agricola-font-halyard-display-css"href="https://use.typekit.net/xog3vbp.css" type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="agricola-font-google_fonts-css"href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;subset=latin,latin-ext&amp;display=swap"type="text/css" media="all">
+<link property="stylesheet" rel="stylesheet" id="sbi_styles-css" href="{{ asset('public/theme/css/css-sbi-styles.min.css')}}" type="text/css"media="all">
+<link property="stylesheet" rel="stylesheet" id="wc-blocks-vendors-style-css"href="{{ asset('public/theme/css/build-wc-blocks-vendors-style.css')}}" type="text/css" media="all">
+
+
     <link property="stylesheet" rel='stylesheet' id='trx_addons-icons-css' href='{{ asset("public/theme/css/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css")}}' type='text/css' media='all' />
     <link property="stylesheet" rel='stylesheet' id='trx_demo_icons-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css")}}' type='text/css' media='all' />
     <link property="stylesheet" rel='stylesheet' id='trx_demo_icons_animation-css' href='{{ asset("public/theme/css/plugins/trx_demo/css/font-icons/css/animation.css")}}' type='text/css' media='all' />
@@ -737,10 +746,14 @@ Cultivating Agriculture that Works for the Future
         }
 
         .elementor-18091 .elementor-element.elementor-element-35fdf84f {
+            margin-top: -8%;
             transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-            padding: 23% 14% 23% 14%;
+            padding: 3% 5% 6% 5%;
+            line-height: 0px;
+            font-size: 12px;
+            background: #f2c20000; /* Transparent black, adjust the alpha (last) parameter as needed */
+            opacity:0.9;
         }
-
         .elementor-18091 .elementor-element.elementor-element-35fdf84f>.elementor-background-overlay {
             transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
         }
@@ -2003,6 +2016,247 @@ Cultivating Agriculture that Works for the Future
             max-height: 53px;
         }
     </style>
+    <style>
+li {
+  list-style: none;
+}
+.red {
+      color: #F16B6F;
+}
+.logo {
+  position: fixed;
+  background-color: #333;
+  color: #eee;
+  left: 0;
+  top: 0;
+  z-index: 1200;
+  padding: 10px;
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bg-slideshow,
+.bg-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.bg-slideshow:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3); /*Adjust the alpha value (0.5) for the level of transparency*/
+
+    /* background: transparent url('http://watchmaker.haz.wiki/_media/tips:stripes.png') repeat top left; */
+}
+.bg-slideshow li .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 18s linear infinite 0s;
+}
+.bg-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 18s linear infinite 0s;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.bg-slideshow li div h3 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 240px;
+    padding: 0;
+    line-height: 200px;
+}
+.bg-slideshow li:nth-child(1) .image {
+    background-image: url('{{ asset("public/img/3.jpg") }}')
+}
+.bg-slideshow li:nth-child(2) .image {
+    background-image: url('{{ asset("public/img/4.jpg") }}');
+    animation-delay: 6s;
+}
+.bg-slideshow li:nth-child(3) .image {
+    background-image: url('{{ asset("public/img/5.jpg") }}');
+    animation-delay: 12s;
+}
+.bg-slideshow li:nth-child(2) div {
+    animation-delay: 6s;
+}
+.bg-slideshow li:nth-child(3) div {
+    animation-delay: 12s;
+}
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    27% { opacity: 1 }
+    45% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  27% { opacity: 1 }
+  45% { opacity: 0 }
+  100% { opacity: 0 }
+}
+.no-cssanimations .cb-slideshow li .image{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) {
+    .bg-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) {
+    .bg-slideshow li div h3 { font-size: 80px }
+}
+
+
+/* Price stock table */
+
+ .container {
+	 padding: 30px 0;
+}
+ .table {
+	 margin: 20px auto;
+	 width: 957px;
+}
+ .table:nth-child(4) {
+	 width: 240px;
+}
+ .table thead tr th {
+	 font-size: 0.9rem;
+	 line-height: 1.2;
+}
+ .table thead tr th.sector {
+	 width: 70px !important;
+	 white-space: nowrap;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+ .table thead tr th.ploss {
+	 min-width: 80px;
+}
+ .table tbody tr.active td {
+	 font-weight: 700;
+}
+ .table tbody tr td {
+	 vertical-align: middle !important;
+	 line-height: 1.2;
+	 font-weight: 300;
+}
+ .table tbody tr td:nth-first-child {
+	 width: 249px;
+	 white-space: nowrap;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+ .table tbody tr td:nth-last-child(1) {
+	 width: 140px;
+}
+ 
+
+/* End Pricing table */
+
+
+        .slider {
+            
+            background: #fff;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+            height: 100px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .slider::before,
+        .slider::after {
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+        .slider::after {
+            right: 0;
+            top: 0;
+            -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+        }
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+        .slider .slide-track {
+            -webkit-animation: scroll 15s linear infinite;
+            animation: scroll 15s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+        .slider .slide {
+            width: 100%;
+        }
+
+                /* Styles for larger screens (not mobile) */
+        .mobile-view {
+            display: none; /* Show the element by default */
+        }
+        .desk-view {
+            display: block; /* Show the element by default */
+        }
+
+            /* Media query for screens with a maximum width of 767px (typical for mobile devices) */
+        @media screen and (max-width: 767px) {
+            /* Styles for mobile screens */
+            .mobile-view {
+                display: block; /* Hide the element on mobile screens */
+                padding:2%;
+            }
+            .desk-view {
+                display: none; /* Hide the element on mobile screens */
+            }
+        }
+
+        
+        #mbl_btn{
+            margin-left: 45%; 
+        }
+
+        /* style="margin-top:28%" */
+        /* Hide the element with ID "hideCategory" in mobile view */
+        @media only screen and (max-width: 767px) {
+            #gotoShopBtn{
+                margin-top: 28%;
+            }      
+            #yellowBannerJoin {
+                padding-bottom:16%; 
+            }
+            #mbl_btn{
+                padding-top:3%; 
+                margin-left: 0%; 
+            }
+        }
+    </style>
 </head>
 
 <body class="page-template-default page page-id-18091 wp-custom-logo theme-agricola woocommerce-no-js tinvwl-theme-style skin_default scheme_light blog_mode_page body_style_fullscreen is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-18667 header_position_over menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-18091">
@@ -2014,239 +2268,42 @@ Cultivating Agriculture that Works for the Future
                 footer</a>
             
             @include('components.header')
-
+            
             
             <div class="page_content_wrap">
+                
                 <div class="content_wrap_fullscreen">
+                    
                     <div class="content">
+                        
                         <a id="content_skip_link_anchor" class="agricola_skip_link_anchor" href="#"></a>
                         <article id="post-18091" class="post_item_single post_type_page post-18091 page type-page status-publish hentry">
                             <div class="post_content entry-content">
                                 <div data-elementor-type="wp-page" data-elementor-id="18091" class="elementor elementor-18091">
                                     <div class="elementor-inner">
                                         <div class="elementor-section-wrap">
+                                            
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-771869f elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="771869f" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-extended">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d91685a sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="d91685a" data-element_type="column">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-0015647 sc_fly_static elementor-widget elementor-widget-trx_widget_slider" data-id="0015647" data-element_type="widget" data-widget_type="trx_widget_slider.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="widget_area sc_widget_slider">
-                                                                                <aside class="widget widget_slider">
-                                                                                    <div class="slider_wrap slider_engine_revo slider_alias_organic-farm">
-                                                                                        <div class="wp-block-themepunch-revslider 0">
-                                                                                            <!-- START Organic Farm REVOLUTION SLIDER 6.5.31 -->
-                                                                                            <p class="rs-p-wp-fix"></p>
-                                                                                            <rs-module-wrap id="rev_slider_4_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
-                                                                                                <rs-module id="rev_slider_4_1" style="" data-version="6.5.31">
-                                                                                                    <rs-slides>
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-6" data-title="Slide" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="" title="slider-4-slide-1-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/3.jpg')}}" data-parallax="on" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--
-							                                        -->
-                                                                                                            <rs-layer id="slider-4-slide-6-layer-3" data-type="image" data-rsp_ch="on" data-xy="x:c;y:m;" data-text="w:normal;s:20,15,8,4;l:0,18,9,6;" data-dim="w:838px,628px,339px,209px;h:647px,485px,262px,161px;" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:520;sp:1000;sR:520;" data-frame_999="o:0;st:w;sR:7480;" style="z-index:16;">
-                                                                                                                <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Marketpalce Farm" class="tp-rs-img rs-lazyload" width="838" height="647" data-lazyload="{{ asset('public/images/organic-farm.jpg')}}" data-no-retina>
-                                                                                                            </rs-layer>
-                                                                                                            <!--
-                                                                                    -->
-                                                                                                        </rs-slide>
-                                                                                                        
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-7" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-2-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Slider Slide" title="slider-4-slide-2-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/4.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--						-->
-                                                                                                            <rs-zone id="rrzm_7" class="rev_row_zone_middle" style="z-index: 14;">
-                                                                                                                <!--
-								                                -->
-                                                                                                                <rs-row id="slider-4-slide-7-layer-13" data-type="row" data-xy="xo:50px;yo:50px;" data-cbreak="nobreak" data-basealign="slide" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:1;">
-                                                                                                                    <!--
-									                                                            -->
-                                                                                                                    <rs-column id="slider-4-slide-7-layer-14" data-type="column" data-xy="xo:50px;yo:50px;" data-text="l:26,24,24,24;a:center;" data-rsp_bd="off" data-column="w:100%;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:2;width:100%;">
-                                                                                                                        <!--
-										                        -->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-1" data-type="text" data-text="w:normal;s:19,17,16,16;l:28,26,24,24;a:center;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-frame_0="x:30px;" data-frame_1="st:1770;sp:1000;" data-frame_999="o:0;st:w;sR:6230;" style="z-index:3;font-family:'DM Sans';display:inline-block;">
-                                                                                                                            Cultivating
-                                                                                                                            Agriculture
-                                                                                                                            that
-                                                                                                                            Works
-                                                                                                                            for
-                                                                                                                            the
-                                                                                                                            Future
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-0" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:22px,16px,12px,0px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:4;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-24" class="sldr-title" data-type="text" data-xy="xo:0,35px,35px,35px;yo:0,281px,281px,281px;" data-text="w:normal;s:78,58,40,28;l:72,58,42,34;fw:500;a:center;" data-rsp_o="off" data-disp="inline-block" data-frame_0="x:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index:5;font-family:'halyard-display';display:inline-block;">
-                                                                                                                            We’re
-                                                                                                                            a
-                                                                                                                            Unique
-                                                                                                                            and
-                                                                                                                            Traditional<br />
-                                                                                                                            Organic
-                                                                                                                            Farm
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-7-layer-19" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:50px,36px,32px,20px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:6;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-                                                                                                                            --><a id="slider-4-slide-7-layer-21" class="rs-layer rev-btn" href="marketplace.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Go
-                                                                                                                            to
-                                                                                                                            the
-                                                                                                                            Shop
-                                                                                                                        </a>
-                                                                                                                        <!--
-									-->
-                                                                                                                    </rs-column>
-                                                                                                                    <!--
-								    -->
-                                                                                                                </rs-row>
-                                                                                                                <!--
-							        -->
-                                                                                                            </rs-zone>
-                                                                                                            <!--
-                                                                    -->
-                                                                                                        </rs-slide>
-                                                                                                        <rs-slide style="position: absolute;" data-key="rs-8" data-title="Slide" data-thumb="//agricola.axiomthemes.com/wp-content/uploads/2022/08/slider-4-slide-3-copyright-146x102.jpg" data-anim="adpr:false;ms:1000ms;" data-in="o:0;" data-out="a:false;">
-                                                                                                            <img decoding="async" src="{{ asset('public/css/plugins/revslider/public/assets/assets/dummy.png')}}" alt="Slider Slide" title="slider-4-slide-3-copyright" width="1920" height="980" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ asset('public/img/5.jpg')}}" data-parallax="off" data-panzoom="d:10000;ss:100;se:110%;" data-no-retina>
-                                                                                                            <!--						-->
-                                                                                                            <rs-zone id="rrzm_8" class="rev_row_zone_middle" style="z-index: 14;">
-                                                                                                                <!--
-								    -->
-                                                                                                                <rs-row id="slider-4-slide-8-layer-13" data-type="row" data-xy="xo:50px;yo:50px;" data-cbreak="nobreak" data-basealign="slide" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:1;">
-                                                                                                                    <!--
-									-->
-                                                                                                                    <rs-column id="slider-4-slide-8-layer-14" data-type="column" data-xy="xo:50px;yo:50px;" data-text="l:26,24,24,24;a:center;" data-rsp_bd="off" data-column="w:100%;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:2;width:100%;">
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-1" data-type="text" data-text="w:normal;s:19,17,16,16;l:28,26,24,24;a:center;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-frame_0="x:30px;" data-frame_1="st:1770;sp:1000;sR:1770;" data-frame_999="o:0;st:w;sR:6230;" style="z-index:3;font-family:'DM Sans';display:inline-block;">
-                                                                                                                            Cultivating
-                                                                                                                            Agriculture
-                                                                                                                            that
-                                                                                                                            Works
-                                                                                                                            for
-                                                                                                                            the
-                                                                                                                            Future
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-0" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:22px,16px,8px,0px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:4;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-24" class="sldr-title" data-type="text" data-xy="xo:0,35px,35px,35px;yo:0,281px,281px,281px;" data-text="w:normal;s:92,72,54,38;l:92,76,64,46;fw:500;a:center;" data-rsp_o="off" data-disp="inline-block" data-frame_0="x:50;" data-frame_1="st:740;sp:1000;sR:740;" data-frame_999="o:0;st:w;sR:7260;" style="z-index:5;font-family:'halyard-display';display:inline-block;">
-                                                                                                                            Get
-                                                                                                                            the
-                                                                                                                            Fresh
-                                                                                                                            Product
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										-->
-                                                                                                                        <rs-layer id="slider-4-slide-8-layer-19" data-type="shape" data-rsp_ch="on" data-xy="xo:50px,37px,19px,11px;yo:160px,120px,64px,39px;" data-text="w:normal;s:20,15,8,4;c:both;l:0,18,9,6;" data-flcr="c:both;" data-dim="w:100%;h:44px,30px,26px,20px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:6;">
-                                                                                                                        </rs-layer>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-8-layer-21" class="rs-layer rev-btn" href="#" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:54,52,50,50;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-margin="r:10,8,6,6;" data-padding="r:40,32,28,28;l:40,32,28,28;" data-frame_0="x:30px;" data-frame_1="st:1250;sp:1000;sR:1250;" data-frame_999="o:0;st:w;sR:6750;" data-frame_hover="rX:0deg;rY:0deg;bgc:#dcb000;boc:#1f242e;bor:0px,0px,0px,0px;bos:solid;bow:0px,0px,0px,0px;e:power1.inOut;" style="z-index:7;background-color:#f2c200;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Go
-                                                                                                                            to
-                                                                                                                            the
-                                                                                                                            Shop
-                                                                                                                        </a>
-                                                                                                                        <!--
-										--><a id="slider-4-slide-8-layer-2" class="rs-layer rev-btn" href="ecoagrozm.com/contacts.php" target="_self" data-type="button" data-text="w:normal;s:14,14,14,13;l:50,48,46,46;ls:1.5px;fw:500;a:center;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-disp="inline-block" data-padding="r:38,30,26,26;l:38,30,26,26;" data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;" data-frame_0="x:30px;" data-frame_1="st:1350;sp:1000;sR:1350;" data-frame_999="o:0;st:w;sR:6650;" data-frame_hover="rX:0deg;rY:0deg;bgc:#92bb53;boc:#92bb53;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;e:power1.inOut;" style="z-index:8;font-family:'halyard-display';text-transform:uppercase;display:inline-block;will-change:transform;">Contact
-                                                                                                                            Info
-                                                                                                                        </a>
-                                                                                                                        <!--
-									-->
-                                                                                                                    </rs-column>
-                                                                                                                    <!--
-								-->
-                                                                                                                </rs-row>
-                                                                                                                <!--
-							-->
-                                                                                                            </rs-zone>
-                                                                                                            <!--
--->
-                                                                                                        </rs-slide>
-                                                                                                    </rs-slides>
-                                                                                                    <rs-static-layers>
-                                                                                                        <!--
-					-->
-                                                                                                    </rs-static-layers>
-                                                                                                </rs-module>
-                                                                                                <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-                                                                                                </script>
-                                                                                                <script>
-                                                                                                    setREVStartSize({
-                                                                                                        c: 'rev_slider_4_1',
-                                                                                                        rl: [1240,
-                                                                                                            1460,
-                                                                                                            785,
-                                                                                                            500
-                                                                                                        ],
-                                                                                                        el: [980,
-                                                                                                            700,
-                                                                                                            480,
-                                                                                                            480
-                                                                                                        ],
-                                                                                                        gw: [1920,
-                                                                                                            1440,
-                                                                                                            778,
-                                                                                                            480
-                                                                                                        ],
-                                                                                                        gh: [980,
-                                                                                                            700,
-                                                                                                            480,
-                                                                                                            480
-                                                                                                        ],
-                                                                                                        type: 'standard',
-                                                                                                        justify: '',
-                                                                                                        layout: 'fullscreen',
-                                                                                                        offsetContainer: '',
-                                                                                                        offset: '',
-                                                                                                        mh: "0"
-                                                                                                    });
-                                                                                                    if (window
-                                                                                                        .RS_MODULES !==
-                                                                                                        undefined && window
-                                                                                                        .RS_MODULES
-                                                                                                        .modules !==
-                                                                                                        undefined && window
-                                                                                                        .RS_MODULES.modules[
-                                                                                                            "revslider41"
-                                                                                                        ] !== undefined
-                                                                                                    ) {
-                                                                                                        window.RS_MODULES
-                                                                                                            .modules[
-                                                                                                                "revslider41"
-                                                                                                            ].once =
-                                                                                                            false;
-                                                                                                        window.revapi4 =
-                                                                                                            undefined;
-                                                                                                        if (window
-                                                                                                            .RS_MODULES
-                                                                                                            .checkMinimal !==
-                                                                                                            undefined)
-                                                                                                            window
-                                                                                                            .RS_MODULES
-                                                                                                            .checkMinimal()
-                                                                                                    }
-                                                                                                </script>
-                                                                                            </rs-module-wrap>
-                                                                                            <!-- END REVOLUTION SLIDER -->
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </aside>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                <ul class="bg-slideshow">
+                                                    <li>
+                                                        <span class="image">Image 01</span>
+                                                        <div>
+                                                            {{-- <h3><span class="red">re</span>·lax</h3> --}}
                                                         </div>
-                                                    </div>
-                                                </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="image">Image 02</span>
+                                                        <div>
+                                                            {{-- <h3>and <span class="red">go</span>..</h3> --}}
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="image">Image 03</span>
+                                                        <div>
+                                                            {{-- <h3>Get <span class="red">you</span>rself</h3> --}}
+                                                        </div>
+                                                    </li>
+                                               </ul>
                                             </section>
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
@@ -2271,39 +2328,10 @@ Cultivating Agriculture that Works for the Future
 
 
 
-                                            @include('patches.products');
+                                            {{-- @include('patches.products'); --}}
 
 
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-extended">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-spacer">
-                                                                                <div class="elementor-spacer-inner">
-                                                                                    <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
-                                                                                        <div class="elementor-widget-container">
-                                                                                            <div class="sc_item_button sc_button_wrap sc_align_center">
-                                                                                                <a href="marketplace.php" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span class="sc_button_text"><span class="sc_button_title">Go
-                                                                                                            To The
-                                                                                                            Shop</span></span></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-
+                                            
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
@@ -2324,10 +2352,103 @@ Cultivating Agriculture that Works for the Future
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
+                                            <section id="yellowBannerJoin" style="height: 10px" data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark  elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
                                                 <div class="elementor-container elementor-column-gap-no">
                                                     <div class="elementor-row">
-                                                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-721499a0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="721499a0" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap" style="display: flex; gap:8px">
+                                                                    <div>
+                                                                        <div class="elementor-element elementor-element-1afa4bb6 sc_fly_static elementor-widget elementor-widget-trx_sc_title" data-id="1afa4bb6" data-element_type="widget" data-widget_type="trx_sc_title.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_title sc_title_default">
+                                                                                    <h3 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
+                                                                                        <span class="sc_item_title_text">
+                                                                                            Join the Marketplace!
+                                                                                        </span>
+                                                                                    </h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-element elementor-element-a0e0342 sc_fly_static elementor-widget elementor-widget-spacer" data-id="a0e0342" data-element_type="widget" data-widget_type="spacer.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-spacer">
+                                                                                    <div class="elementor-spacer-inner">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        @if (!auth()->check())
+                                                                        {{-- <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-text-editor elementor-clearfix">
+                                                                                    Sign up today
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> --}}
+                                                                        @endif
+                                                                        <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-spacer">
+                                                                                    <div class="elementor-spacer-inner">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="mbl_btn" style="display: flex; gap:4px">
+                                                                        @if (auth()->check())
+                                                                        <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Continue to Shop
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        @else
+                                                                        <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                    <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=farmer" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Buyer account
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                    <a href="https://auth.ecoagrozm.com/register?source=marketplace&destination=marketplace&type=seller" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Become a Seller
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        {{-- <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="sc_item_button sc_button_wrap">
+                                                                                    <a href="https://auth.ecoagrozm.com/login?source=marketplace&destination=marketplace" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">
+                                                                                        Login
+                                                                                        </span></span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> --}}
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section style="" class="elementor-section elementor-top-section elementor-element elementor-element-65bfb6f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="65bfb6f2" data-element_type="section">
+                                                <div style="margin:2%;margin-top: 5%;">
+                                                    <div class="elementor-row">
+                                                        {{-- @include('components.stock-rates') --}}
+                                                        {{-- <div class="elementor-col-50 elementor-top-column elementor-element elementor-element-1c27b8fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="1c27b8fa" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <section class="elementor-section elementor-inner-section elementor-element elementor-element-6589da6c scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static">
@@ -2357,10 +2478,7 @@ Cultivating Agriculture that Works for the Future
                                                                                             <div class="elementor-element elementor-element-6038bae1 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="6038bae1" data-element_type="widget" data-widget_type="text-editor.default">
                                                                                                 <div class="elementor-widget-container">
                                                                                                     <div class="elementor-text-editor elementor-clearfix">
-                                                                                                        {{-- Adipiscing elit,
-                                                                                                        sed do eiusmod
-                                                                                                        tempor
-                                                                                                        incididunt ut. --}}
+                                                                                                        
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -2397,8 +2515,8 @@ Cultivating Agriculture that Works for the Future
                                                                     </section>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e95e5f sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e95e5f" data-element_type="column">
+                                                        </div> --}}
+                                                        {{-- <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e95e5f sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5e95e5f" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <div class="elementor-element elementor-element-12ccc613 no-title sc_fly_static elementor-widget elementor-widget-image" data-id="12ccc613" data-element_type="widget" data-widget_type="image.default">
@@ -2418,8 +2536,8 @@ Cultivating Agriculture that Works for the Future
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5d65ae0d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5d65ae0d" data-element_type="column">
+                                                        </div> --}}
+                                                        {{-- <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5d65ae0d sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="5d65ae0d" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
                                                                     <div class="elementor-element elementor-element-7444ef4e sc_height_small sc_fly_static elementor-widget elementor-widget-spacer" data-id="7444ef4e" data-element_type="widget" data-widget_type="spacer.default">
@@ -2430,71 +2548,53 @@ Cultivating Agriculture that Works for the Future
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <section data-parallax-params="{&quot;parallax&quot;:1,&quot;flow&quot;:&quot;default&quot;,&quot;crop&quot;:&quot;none&quot;,&quot;range_start&quot;:0,&quot;range_end&quot;:40,&quot;sticky_offset&quot;:0,&quot;ease&quot;:&quot;power2&quot;,&quot;duration&quot;:1,&quot;delay&quot;:0,&quot;squeeze&quot;:1,&quot;lag&quot;:0,&quot;x_start&quot;:0,&quot;x_start_unit&quot;:&quot;px&quot;,&quot;x_end&quot;:0,&quot;x_end_unit&quot;:&quot;px&quot;,&quot;y_start&quot;:0,&quot;y_start_unit&quot;:&quot;px&quot;,&quot;y_end&quot;:30,&quot;y_end_unit&quot;:&quot;px&quot;,&quot;scale_start&quot;:100,&quot;scale_end&quot;:100,&quot;rotate_start&quot;:0,&quot;rotate_end&quot;:0,&quot;opacity_start&quot;:1,&quot;opacity_end&quot;:1,&quot;crop_start&quot;:0,&quot;crop_end&quot;:100,&quot;text&quot;:&quot;block&quot;,&quot;text_separate&quot;:0,&quot;text_wrap&quot;:0,&quot;mouse&quot;:0,&quot;mouse_type&quot;:&quot;transform3d&quot;,&quot;mouse_tilt_amount&quot;:70,&quot;mouse_speed&quot;:10,&quot;mouse_z&quot;:&quot;&quot;,&quot;mouse_handler&quot;:&quot;row&quot;}" class="elementor-section elementor-inner-section elementor-element elementor-element-35fdf84f scheme_dark  elementor-section-boxed elementor-section-height-default elementor-section-height-default animation_type_block sc_fly_static" data-id="35fdf84f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
-                                                                        <div class="elementor-container elementor-column-gap-no">
-                                                                            <div class="elementor-row">
-                                                                                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-721499a0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="721499a0" data-element_type="column">
-                                                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                                                        <div class="elementor-widget-wrap">
-                                                                                            <div class="elementor-element elementor-element-1afa4bb6 sc_fly_static elementor-widget elementor-widget-trx_sc_title" data-id="1afa4bb6" data-element_type="widget" data-widget_type="trx_sc_title.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="sc_title sc_title_default">
-                                                                                                        <h3 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                                                                                                            <span class="sc_item_title_text">Join
-                                                                                                                the Marketplace!</span>
-                                                                                                        </h3>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="elementor-element elementor-element-a0e0342 sc_fly_static elementor-widget elementor-widget-spacer" data-id="a0e0342" data-element_type="widget" data-widget_type="spacer.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="elementor-spacer">
-                                                                                                        <div class="elementor-spacer-inner">
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="elementor-element elementor-element-21ef2b84 sc_fly_static elementor-widget elementor-widget-text-editor" data-id="21ef2b84" data-element_type="widget" data-widget_type="text-editor.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="elementor-text-editor elementor-clearfix">
-                                                                                                        Adipiscing elit,
-                                                                                                        sed do eiusmod
-                                                                                                        tempor
-                                                                                                        incididunt ut.
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="elementor-element elementor-element-2e389742 sc_fly_static elementor-widget elementor-widget-spacer" data-id="2e389742" data-element_type="widget" data-widget_type="spacer.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="elementor-spacer">
-                                                                                                        <div class="elementor-spacer-inner">
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="elementor-element elementor-element-5a817888 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="5a817888" data-element_type="widget" data-widget_type="trx_sc_button.default">
-                                                                                                <div class="elementor-widget-container">
-                                                                                                    <div class="sc_item_button sc_button_wrap">
-                                                                                                        <a href="about.html" class="sc_button sc_button_bordered sc_button_size_small sc_button_icon_left color_style_dark"><span class="sc_button_text"><span class="sc_button_title">About
-                                                                                                                    Us</span></span></a>
-                                                                                                    </div>
-                                                                                                </div>
+                                                                    
+
+                                                                    Remove Yellow Card Here
+                                                                </div>
+
+                                                            </div>
+                                                        </div> --}}
+                                                    </div>
+                                                </div>
+                                            </section> 
+
+                                            
+                                            <section id="gotoShopBtn" class="elementor-section elementor-top-section elementor-element elementor-element-e5d2f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="e5d2f06" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-extended">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner">
+                                                                                    <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <div class="sc_item_button sc_button_wrap sc_align_center">
+                                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                    <span class="sc_button_text">
+                                                                                                        <span class="sc_button_title">
+                                                                                                            Go To The Shop
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </section>
+                                                                    </div>
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </section> 
+                                            </section>
 
-                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
+                                            <section class="elementor-section elementor-top-section elementor-element elementor-element-228aa24 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="228aa24" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6d2cc54 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="6d2cc54" data-element_type="column">
@@ -2516,8 +2616,327 @@ Cultivating Agriculture that Works for the Future
                                             </section>
 
 
+                                            <section style="padding-top: 2%;padding-bottom: 2%" class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">  
+                                                  <table class="table table-hover">
+                                                    <thead>
+                                                      <tr>
+                                                        <th></th>
+                                                        <th class="sector">Sector </th>
+                                                        <th class="text-right">Quantity</th>
+                                                        <th class="text-right">Last price K</th>
+                                                        <th class="text-right">Profit Loss %</th>
+                                                        <th class="text-right">Yield %</th>
+                                                        <th class="text-right">Market value K</th>
+                                                        <th class="text-right">Portfolio %</th>
+                                                        <th class="text-right"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <td><strong>Maize</strong> • 50 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">2,075</td>
+                                                        <td class="text-right">27.81</td>
+                                                        <td class="text-right">6.23 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">1.50</td>
+                                                        <td class="text-right">57,726.12</td>
+                                                        <td class="text-right">23.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                <svg style="color:#23A455" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                                  </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Fertilizer</strong> • Urea</td>
+                                                        <td>Fertilizers</td>
+                                                        <td class="text-right">1,164</td>
+                                                        <td class="text-right">15.10</td>
+                                                        <td class="text-right text-danger"><strong>-42.24</strong> <i class="fa fa-angle-down text-danger"></i></td>
+                                                        <td class="text-right text-danger"><strong>-5.50</strong></td>
+                                                        <td class="text-right">17,568.82</td>
+                                                        <td class="text-right">7.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                <svg style="color: #cf2e2e" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                                </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Soya Beans</strong> • 50 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">5,340</td>
+                                                        <td class="text-right">5.64</td>
+                                                        <td class="text-right">2.13 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">0.89</td>
+                                                        <td class="text-right">30,117.98</td>
+                                                        <td class="text-right">12.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                <svg style="color: #cf2e2e" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                                </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Wheat</strong> • 70 kg</td>
+                                                        <td>Financials</td>
+                                                        <td class="text-right">1,328</td>
+                                                        <td class="text-right">24.57</td>
+                                                        <td class="text-right">9.87 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.21</td>
+                                                        <td class="text-right">32.627.31</td>
+                                                        <td class="text-right">13.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                
+                                                                <svg style="color:#23A455" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                                  </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong> Sweat Potatoes </strong> • 90 Kg</td>
+                                                        <td>Food</td>
+                                                        <td class="text-right">870</td>
+                                                        <td class="text-right">42.87</td>
+                                                        <td class="text-right">11.20 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">5.52</td>
+                                                        <td class="text-right">37,321.53</td>
+                                                        <td class="text-right">14.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            {{-- <button class="btn btn-default btn-sm">Buy</button> --}}
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Tomatoes</strong> • 90 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">622</td>
+                                                        <td class="text-right">78.26</td>
+                                                        <td class="text-right">22.13 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">14.12</td>
+                                                        <td class="text-right">48,654.53</td>
+                                                        <td class="text-right">19.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            <button class="btn btn-default btn-sm">
+                                                                
+                                                                <svg style="color:#23A455" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                                  </svg>
+                                                            </button>
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Mealie Meal</strong> • #1</td>
+                                                        <td>Food</td>
+                                                        <td class="text-right">532</td>
+                                                        <td class="text-right">24.42</td>
+                                                        <td class="text-right">11.14 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">4.52</td>
+                                                        <td class="text-right">12,899.53</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            {{-- <button class="btn btn-default btn-sm">Buy</button> --}}
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><strong>Sunflower</strong> • 90 Kg</td>
+                                                        <td>Seeds</td>
+                                                        <td class="text-right">493</td>
+                                                        <td class="text-right">42.80</td>
+                                                        <td class="text-right">8.24 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">2.51</td>
+                                                        <td class="text-right">21,124.53</td>
+                                                        <td class="text-right">7.00</td>
+                                                        <td class="text-right">
+                                                          <div class="btn-group">
+                                                            {{-- <button class="btn btn-default btn-sm">Buy</button> --}}
+                                                            {{-- <button class="btn btn-default btn-sm">Sell</button> --}}
+                                                          </div>
+                                                          <button class="btn btn-default btn-sm"><i class="fa fa-caret-down"></i></button></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  
+                                                  <table class="table table-hover table-striped hide">
+                                                    <thead>
+                                                      <tr>
+                                                        <th class="text-right">#</th>
+                                                        <th>Sector</th>
+                                                        <th class="text-center">ASX</th>
+                                                        <th class="text-right"># Shares</th>
+                                                        <th class="text-right">Share price</th>
+                                                        <th class="text-right">Market value</th>
+                                                        <th class="text-right">% P&L</th>
+                                                        <th class="text-right">% Yield</th>
+                                                        <th class="text-right">% Portfolio</th>
+                                                        <th width="70"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td class="text-right">1</td>
+                                                        <td>Mining</td>
+                                                        <td class="text-center">RIO</td>
+                                                        <td class="text-right">2,100</td>
+                                                        <td class="text-right">2.45</td>
+                                                        <td class="text-right">42,134.31</td>
+                                                        <td class="text-right">123.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.21</td>
+                                                        <td class="text-right"> 25.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-success btn-block">Buy</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">2</td>
+                                                        <td>Mining</td>
+                                                        <td class="text-center">BHP</td>
+                                                        <td class="text-right">250</td>
+                                                        <td class="text-right">33.14</td>
+                                                        <td class="text-right">4,654.53</td>
+                                                        <td class="text-right">12.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">2.50</td>
+                                                        <td class="text-right">10.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-success btn-block">Buy</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">3</td>
+                                                        <td>Telco</td>
+                                                        <td class="text-center">TLS</td>
+                                                        <td class="text-right">500</td>
+                                                        <td class="text-right">452.45</td>
+                                                        <td class="text-right">84,872.94</td>
+                                                        <td class="text-right">6.11 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">8.75</td>
+                                                        <td class="text-right">15.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-success btn-block">Buy</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">4</td>
+                                                        <td>Telco</td>
+                                                        <td class="text-center">OPT</td>
+                                                        <td class="text-right">345</td>
+                                                        <td class="text-right">11.22</td>
+                                                        <td class="text-right">12,872.94</td>
+                                                        <td class="text-right">5.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.25</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-disabled btn-block">Hold</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">5</td>
+                                                        <td>Banking</td>
+                                                        <td class="text-center">CBA</td>
+                                                        <td class="text-right">25</td>
+                                                        <td class="text-right">555.22</td>
+                                                        <td class="text-right">72,872.94</td>
+                                                        <td class="text-right">3.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">6.25</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-disabled btn-block">Hold</button></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="text-right">6</td>
+                                                        <td>Energy</td>
+                                                        <td class="text-center">ORG</td>
+                                                        <td class="text-right">100</td>
+                                                        <td class="text-right">0.29</td>
+                                                        <td class="text-right">1,824.14</td>
+                                                        <td class="text-right">1.23 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">7.1</td>
+                                                        <td class="text-right">5.00</td>
+                                                        <td class="text-right"><button class="btn btn-xs btn-disabled btn-block">Hold</button></td>
+                                                      </tr>
+                                                      <tr class="danger">
+                                                        <td class="text-right">7</td>
+                                                        <td>Banking</td>
+                                                        <td class="text-center">SCG</td>
+                                                        <td class="text-right">125</td>
+                                                        <td class="text-right">11.45</td>
+                                                        <td class="text-right">1,235.35</td>
+                                                        <td class="text-right">-1.10 <i class="fa fa-angle-down text-danger"></i></td>
+                                                        <td class="text-right">1.10</td>
+                                                        <td class="text-right">35.00</td>
+                                                        <td><button class="btn btn-danger btn-xs btn-block">Sell</button></td>
+                                                      </tr>
+                                                      <tr class="active">
+                                                        <td colspan="2"><button class="btn btn-default btn-sm">Cash <i class="fa fa-plus fa-sm"></i></button></td>
+                                                        <td></td>
+                                                        <td class="text-right">4,122</td>
+                                                        <td class="text-right">4,122</td>
+                                                        <td class="text-right">4,122</td>
+                                                        <td class="text-right">3.00 <i class="fa fa-angle-up text-success"></i></td>
+                                                        <td class="text-right">5.20</td>
+                                                        <td class="text-right">100</td>
+                                                        <td></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  
+                                                  <table class="table table-condensed table-hover table-striped hide">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Code</th>
+                                                        <th class="hide">Company</th>
+                                                        <th>Date</th>
+                                                        <th class="text-right">$ Amount</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>CBA</td>
+                                                        <td class="hide">Commonwealth Bank</td>
+                                                        <td>20.01.2016</td>
+                                                        <td class="text-right">77.37</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>WOW</td>
+                                                        <td class="hide">Woolworths</td>
+                                                        <td>20.01.2016</td>
+                                                        <td class="text-right">24.23</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>TLS</td>
+                                                        <td class="hide">Telstra</td>
+                                                        <td>20.01.2016</td>
+                                                        <td class="text-right">5.62</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                            </section>
                                             <section style="padding-top:2%" class="elementor-section elementor-top-section elementor-element elementor-element-1e9fbafa scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="1e9fbafa" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended">
+
+
+
+
+
+                                                    
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c5518a3 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="c5518a3" data-element_type="column">
                                                             <div class="elementor-column-wrap elementor-element-populated">
@@ -2568,7 +2987,7 @@ Cultivating Agriculture that Works for the Future
                                                                     <div class="elementor-element elementor-element-28413095 no-title sc_fly_static elementor-widget elementor-widget-image" data-id="28413095" data-element_type="widget" data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-image">
-                                                                                <img decoding="async" loading="lazy" width="945" height="945" src="{{ asset('public/theme/images/custom-img-26-copyright.jpg') }}" class="attachment-full size-full" alt="" sizes="(max-width: 945px) 100vw, 945px" />
+                                                                                <img decoding="async" loading="lazy" width="945" height="945" src="{{ asset('public/img/7.jpg') }}" class="attachment-full size-full" alt="" sizes="(max-width: 945px) 100vw, 945px" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -2630,6 +3049,42 @@ Cultivating Agriculture that Works for the Future
                                                 </div>
                                             </section>
 
+
+                                            
+                                            
+                                            {{-- <section>
+                                                <div class="elementor-container elementor-column-gap-extended">
+                                                    <div style="background-color: #000">
+                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-spacer">
+                                                                                <div class="elementor-spacer-inner">
+                                                                                    <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <div class="sc_item_button sc_button_wrap sc_align_center">
+                                                                                                <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                    <span class="sc_button_text">
+                                                                                                        <span class="sc_button_title">
+                                                                                                            Go To The Shop
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section> --}}
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-b904057 scheme_default elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="b904057" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended">
                                                     <div class="elementor-row">
@@ -2640,6 +3095,34 @@ Cultivating Agriculture that Works for the Future
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-spacer">
                                                                                 <div class="elementor-spacer-inner">
+                                                                                    <br>
+                                                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-89b62a9 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-id="89b62a9" data-element_type="column">
+                                                                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                                                                        <div class="elementor-widget-wrap">
+                                                                                                            <div class="elementor-element elementor-element-6c798e9 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="6c798e9" data-element_type="widget" data-widget_type="spacer.default">
+                                                                                                                <div class="elementor-widget-container">
+                                                                                                                    <div class="elementor-spacer">
+                                                                                                                        <div class="elementor-spacer-inner">
+                                                                                                                            <div class="elementor-element elementor-element-981741c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="981741c" data-element_type="widget" data-widget_type="trx_sc_button.default">
+                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                    <div class="sc_item_button sc_button_wrap sc_align_center">
+                                                                                                                                        <a href="{{ route('shop.index') }}" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                                                            <span class="sc_button_text">
+                                                                                                                                                <span class="sc_button_title">
+                                                                                                                                                    Go To The Shop
+                                                                                                                                                </span>
+                                                                                                                                            </span>
+                                                                                                                                        </a>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2692,6 +3175,11 @@ Cultivating Agriculture that Works for the Future
             document.body.className = c;
         })();
     </script>
+ <script type="text/javascript" defer src="{{ asset('public/theme/js/js-index.js')}}" id="contact-form-7-js"></script>
+ <script type="text/javascript" defer src="{{ asset('public/theme/js/js-jquery.powertip.min.js')}}" id="powertip-js"></script>
+ <script type="text/javascript" defer src="{{ asset('public/theme/js/js-maps_points.js')}}" id="maps-points-js"></script>
+
+
     <script>
         if (typeof revslider_showDoubleJqueryError === "undefined") {
             function revslider_showDoubleJqueryError(sliderID) {
@@ -2990,7 +3478,11 @@ Cultivating Agriculture that Works for the Future
     <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/addons/mouse-helper/mouse-helper.js")}}' id='trx_addons-mouse-helper-js'></script>
     <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js")}}' id='superfish-js'></script>
     <script type='text/javascript' defer="defer" src='{{ asset("public/theme/css/plugins/trx_addons/js/swiper/swiper.min.js")}}' id='swiper-js'>
-    </script>
+    </script><script type="text/javascript" defer src="{{ asset('public/theme/js/js-__scripts.js')}}" id="trx_addons-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/skills-chart-legacy.min.js')}}" id="chart-legacy-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/skills-skills.js')}}" id="trx_addons-sc_skills-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/menu-superfish.min.js')}}" id="superfish-js"></script>
+    <script type="text/javascript" defer src="{{ asset('public/theme/js/swiper-swiper.min.js')}}" id="swiper-js"></script>
     <script type='text/javascript' src='{{ asset("public/theme/css/plugins/trx_addons/js/tweenmax/tweenmax.min.js")}}' id='tweenmax-js'></script>
     <script type='text/javascript' id='wpgdprc-front-js-js-extra'>
         /* <![CDATA[ */
@@ -3354,6 +3846,16 @@ Cultivating Agriculture that Works for the Future
             window.RS_MODULES.checkMinimal();
         };
     </script>
+    
+    <script src="{{ asset('public/theme/js/jquery-3.4.1.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/popper.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/jquery.steps.min.js')}}"></script>
+        <script src="{{ asset('public/theme/js/bd-wizard.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/js/uikit.min.js"></script>
+    <script type="text/javascript" src="{{ asset('public/theme/js/js-frontend.min.js')}}" id="elementor-frontend-js"></script>
+    <script type="text/javascript" src="{{ asset('public/theme/js/js-preloaded-modules.min.js')}}" id="preloaded-modules-js"></script>
+    <script>
     <!-- Add this script tag to your HTML file to include jQuery from Google CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -3366,11 +3868,127 @@ Cultivating Agriculture that Works for the Future
             var loginRoute = "{{ route('login') }}"; // Define the login route URL using double quotes    
         @endverbatim
         </script>
-    @include('components.auth.auto-auth')
+        
     <script src="{{ asset('public/scripts/authenticate.js') }}"></script>
     <script src="{{ asset('public/scripts/routes.js') }}"></script>
-    {{-- <script src="{{ asset('public/scripts/checkout.js') }}"></script> --}}
+    
     <script src="{{ asset('public/scripts/realtime-cart.js') }}"></script>
     <script src="{{ asset('public/scripts/main.js') }}"></script>
+
+
+    
 </body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const slideTrack = document.querySelector(".slide-track");
+            const slides = document.querySelectorAll(".slide");
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].clientWidth;
+            let startX;
+            let isDragging = false;
+
+            // Duplicate the first and last slides for looping
+            slideTrack.innerHTML = slideTrack.innerHTML + slideTrack.innerHTML;
+
+            // Set the initial position of the slide track
+            slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+            // Auto slide every 3 seconds
+            setInterval(() => {
+                if (!isDragging) {
+                currentIndex++;
+                updateSlide();
+                }
+            }, 3000);
+
+            // Handle touch and click events for navigation
+            slider.addEventListener("touchstart", handleTouchStart);
+            slider.addEventListener("touchmove", handleTouchMove);
+            slider.addEventListener("touchend", handleTouchEnd);
+            slider.addEventListener("mousedown", handleMouseDown);
+            slider.addEventListener("mousemove", handleMouseMove);
+            slider.addEventListener("mouseup", handleMouseUp);
+            slider.addEventListener("mouseleave", handleMouseLeave);
+
+            function handleTouchStart(e) {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }
+
+            function handleTouchMove(e) {
+                if (isDragging) {
+                const currentX = e.touches[0].clientX;
+                const deltaX = currentX - startX;
+
+                currentIndex -= deltaX / slideWidth;
+                updateSlide();
+                startX = currentX;
+                }
+            }
+
+            function handleTouchEnd() {
+                isDragging = false;
+            }
+
+            function handleMouseDown(e) {
+                startX = e.clientX;
+                isDragging = true;
+            }
+
+            function handleMouseMove(e) {
+                if (isDragging) {
+                const currentX = e.clientX;
+                const deltaX = currentX - startX;
+
+                currentIndex -= deltaX / slideWidth;
+                updateSlide();
+                startX = currentX;
+                }
+            }
+
+            function handleMouseUp() {
+                isDragging = false;
+                updateSlide();
+            }
+
+            function handleMouseLeave() {
+                if (isDragging) {
+                isDragging = false;
+                updateSlide();
+                }
+            }
+
+            function updateSlide() {
+                const newPosition = -currentIndex * slideWidth;
+                slideTrack.style.transition = "transform 0.5s ease-in-out";
+
+                // Check if currentIndex exceeds the total number of slides
+                if (currentIndex >= totalSlides * 2) {
+                currentIndex = 0;
+                slideTrack.style.transition = "none"; // Disable transition for instant jump
+                slideTrack.style.transform = `translateX(${newPosition}px)`;
+                setTimeout(() => {
+                    currentIndex = 1;
+                    slideTrack.style.transition = "transform 0.5s ease-in-out";
+                    slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+                }, 0);
+                } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+                slideTrack.style.transition = "none"; // Disable transition for instant jump
+                slideTrack.style.transform = `translateX(${newPosition}px)`;
+                setTimeout(() => {
+                    currentIndex = totalSlides;
+                    slideTrack.style.transition = "transform 0.5s ease-in-out";
+                    slideTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+                }, 0);
+                } else {
+                slideTrack.style.transform = `translateX(${newPosition}px)`;
+                }
+            }
+            });
+    </script>
 </html> 
