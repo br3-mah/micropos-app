@@ -1536,8 +1536,121 @@
     <!-- end: container -->
    </main>
 <!-- Welcome Modal -->
-<!-- Welcome Modal -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        #welcomeModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 50;
+        }
 
+        .bg-white {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            max-width: 28rem;
+            width: 90%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            margin: 1rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        #getStarted {
+            width: 100%;
+            background-image: linear-gradient(to right, #3b82f6, #2563eb);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        #getStarted:hover {
+            background-image: linear-gradient(to right, #2563eb, #1d4ed8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .bg-white {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 1.875rem;
+            }
+        }
+    </style>
+    <div id="welcomeModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm" style="display: none;">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 shadow-xl flex flex-col items-center text-center">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-blue-600 mb-4">Welcome to Micropos Easy Tax Platform</h2>
+                <p class="mb-4">
+                    Congratulations! <b>{{ auth()->user()->fname.' '.auth()->user()->lname }}</b> 
+                    You've successfully onboarded to our platform.
+                </p>
+                <p>We're excited to help you manage your taxes with ease and efficiency.</p>
+            </div>
+            <span class="py-4 flex justify-center items-center">
+                <img width="200" src="{{ asset('public/assets/img/2.png') }}" alt="">
+            </span>
+            {{-- <button id="getStarted">Get Started</button> --}}
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('welcomeModal');
+            const getStartedBtn = document.getElementById('getStarted');
+        
+            // Function to show the modal
+            function showModal() {
+                modal.style.display = 'flex';
+            }
+        
+            // Show modal immediately upon page load
+            showModal();
+        
+            // Event listener for "Get Started" button
+            getStartedBtn.addEventListener('click', function() {
+                console.log('Get Started clicked');
+                // Add functionality for the next step here if required
+                // Modal does not close
+            });
+        });
+    </script>
+
+    
  
 
 @endsection
