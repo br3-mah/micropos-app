@@ -75,23 +75,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!isAuthenticated) {
         const authUrl = "{{ env('APP_AUTH_URL') }}";
-        // window.location.href = `${authUrl}/login?source=origin&destination=d`;
+        window.location.href = `${authUrl}/login?source=origin&destination=d`;
     }
 
     if (isAuthenticated) {
-        alert('Authenticated');
+        // alert('Authenticated');
         const dashUrl = "{{ env('APP_URL') }}";
-        // window.location.href = `${dashUrl}/home?source=origin&destination=d`;
+        window.location.href = `${dashUrl}/home?source=origin&destination=d`;
     } else {
         if (userSessionInfo && userSessionInfo.trim() == "") {
-            alert('No Authentication User Data');
+            // alert('No Authentication User Data');
         } else {
             if (userParams) {
-                alert('Authenticating');
+                // alert('Authenticating');
                 const usr = JSON.parse(decodeURIComponent(userParams));
                 auto_register(usr);
             } else {
-                alert('Failed Authenticating');
+                const authUrl = "{{ env('APP_AUTH_URL') }}";
+                window.location.href = `${authUrl}/login?source=origin&destination=d`;
             }
         }
     }
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             user: user
         };
 
-        alert('Posting Data');
+        // alert('Posting Data');
 
         $.ajax({
             type: 'POST',

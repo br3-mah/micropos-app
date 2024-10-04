@@ -87,14 +87,14 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
      <div class="scrollable-y-hover grow shrink-0 flex pl-2 lg:pl-5 pr-1 lg:pr-3" data-scrollable="true" data-scrollable-dependencies="#sidebar_header" data-scrollable-height="auto" data-scrollable-offset="0px" data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
       <div class="menu flex flex-col grow gap-0.5" data-menu="true" data-menu-accordion-expand-all="false" id="sidebar_menu">
        
-        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+        <div class="menu-item" data-menu-item-toggle="accordion">
             <div class="menu-link flex items-center grow cursor-pointer border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]" tabindex="0">
                 <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i class="ki-filled ki-element-11 text-lg"></i>
                 </span>
-                <span class="menu-title text-sm font-semibold text-gray-700 menu-item-active:text-primary menu-link-hover:!text-primary">
+                <a href="{{ route('home') }}" class="menu-title text-sm font-semibold text-gray-700 menu-item-active:text-primary menu-link-hover:!text-primary">
                     Dashboard
-                </span>
+                </a>
                 {{-- <span class="menu-arrow text-gray-400 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
                     <i class="ki-filled ki-plus text-2xs menu-item-show:hidden">
                     </i>
@@ -149,18 +149,18 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
         </div>
         <div class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
          <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
-          <div class="menu-link border border-transparent gap-[14px] pl-[10px] pr-[10px] py-[8px] grow cursor-pointer" tabindex="0">
+          <a href="{{ route('companies.index') }}" class="menu-link border border-transparent gap-[14px] pl-[10px] pr-[10px] py-[8px] grow cursor-pointer" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium mr-1 text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
             Add a Company
            </span>
-          </div>
+          </a>
          
          </div>
          
          <div class="menu-item">
-          <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/public-profile/works.html" tabindex="0">
+          <a href="{{ route('companies.index') }}"  class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/public-profile/works.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
@@ -202,7 +202,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
          
 
          <div class="menu-item">
-          <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
+          <a  href="{{ route('integrations.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
@@ -210,17 +210,9 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
            </span>
           </a>
          </div>
+         
          <div class="menu-item">
-          <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/notifications.html" tabindex="0">
-           <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
-           </span>
-           <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-            Notifications
-           </span>
-          </a>
-         </div>
-         <div class="menu-item">
-          <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/api-keys.html" tabindex="0">
+          <a href="{{ route('api-keys.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/api-keys.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
@@ -273,7 +265,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
          
 
          <div class="menu-item">
-          <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
+          <a href="{{ route('billing.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
@@ -282,7 +274,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
           </a>
          </div>
          <div class="menu-item">
-          <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/notifications.html" tabindex="0">
+          <a href="{{ route('billing.history') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/notifications.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
@@ -296,7 +288,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
        </div>
 
        <div class="menu-item">
-        <div class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
+        <a href="{{ route('users.index') }}" class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
          <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
           <i class="ki-filled ki-users text-lg">
           </i>
@@ -305,10 +297,10 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
           User Management
          </span>
         
-        </div>
+        </a>
        </div>
-       <div class="menu-item">
-        <div class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
+       {{-- <div class="menu-item">
+        <a href="{{ route('projects.index') }}" class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
          <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
           <i class="ki-filled ki-questionnaire-tablet text-lg">
           </i>
@@ -317,8 +309,8 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
           Projects
          </span>
 
-        </div>
-       </div>
+        </a>
+       </div> --}}
 
 {{--        
        <div class="menu-item pt-2.25 pb-px">
@@ -329,7 +321,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
 
 
        <div class="menu-item">
-        <div class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
+        <a href="{{ route('audit.index') }}" class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
          <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
           <i class="ki-filled ki-some-files text-lg">
           </i>
@@ -338,10 +330,10 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
             Audit Log
          </span>
          
-        </div>
+        </a>
        </div>
        <div class="menu-item">
-        <div class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
+        <a href="{{ route('support.index') }}" class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
          <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
           <i class="ki-filled ki-note-2 text-lg">
           </i>
@@ -350,7 +342,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
             Support 
          </span>
         
-        </div>
+        </a>
        </div>
       </div>
      </div>
@@ -1422,7 +1414,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
 
             <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[220px]">
              <div class="menu-item">
-              <a class="menu-link" href="#">
+              <a class="menu-link" href="{{ route('billing.index') }}">
                <span class="menu-icon">
                 <i class="ki-filled ki-icon">
                 </i>

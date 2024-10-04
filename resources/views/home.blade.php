@@ -1535,4 +1535,9 @@
     </div>
     <!-- end: container -->
    </main>
+<!-- Welcome Modal -->
+<!-- Welcome Modal -->
+
+ 
+
 @endsection

@@ -48,7 +48,7 @@
       <button class="btn btn-sm btn-primary">
        <i class="ki-filled ki-users">
        </i>
-       Connect
+       Edit My Profile
       </button>
       <button class="btn btn-sm btn-icon btn-light">
        <i class="ki-filled ki-messages">
@@ -71,7 +71,7 @@
           </span>
          </button>
         </div>
-        <div class="menu-item" data-dropdown-dismiss="true">
+        {{-- <div class="menu-item" data-dropdown-dismiss="true">
          <a class="menu-link" data-modal-toggle="#give_award_modal" href="#">
           <span class="menu-icon">
            <i class="ki-filled ki-award">
@@ -107,7 +107,7 @@
            Report User
           </span>
          </button>
-        </div>
+        </div> --}}
        </div>
       </div>
      </div>
@@ -209,15 +209,15 @@
              Age
             </td>
             <td class="text-sm font-medium text-gray-800 pb-3.5">
-             32
+             {{ auth()->user()->dob }}
             </td>
            </tr>
            <tr>
             <td class="text-sm font-medium text-gray-500 pb-3.5 pe-3">
-             City:
+             City
             </td>
             <td class="text-sm font-medium text-gray-800 pb-3.5">
-             Lusaka
+              {{ auth()->user()->city ?? 'Not Available' }}
             </td>
            </tr>
            <tr>
@@ -225,7 +225,7 @@
              State/Province:
             </td>
             <td class="text-sm font-medium text-gray-800 pb-3.5">
-             Lusaka
+              {{ auth()->user()->provnice ?? 'Not Available' }}
             </td>
            </tr>
            <tr>
@@ -233,7 +233,7 @@
              Country:
             </td>
             <td class="text-sm font-medium text-gray-800 pb-3.5">
-             Zambia
+              {{ auth()->user()->country ?? 'Not Available' }}
             </td>
            </tr>
            <tr>
@@ -249,7 +249,7 @@
              Phone:
             </td>
             <td class="text-sm font-medium text-gray-800 pb-3.5">
-             0772147755
+              {{ auth()->user()->phone ?? 'Not Available' }}
             </td>
            </tr>
            <tr>
@@ -266,7 +266,11 @@
          </table>
         </div>
        </div>
-       <div class="card">
+
+
+
+
+      {{-- <div class="card">
         <div class="card-header">
          <h3 class="card-title">
           Work Experience
@@ -326,8 +330,11 @@
           Open to Work
          </a>
         </div>
-       </div>
-       <div class="card">
+       </div> --}}
+
+
+
+       {{-- <div class="card">
         <div class="card-header">
          <h3 class="card-title">
           Skills
@@ -361,7 +368,11 @@
           </span>
          </div>
         </div>
-       </div>
+       </div> --}}
+
+
+
+
        <div class="card">
         <div class="card-header">
          <h3 class="card-title">
@@ -476,7 +487,7 @@
         </div>
         <div class="card-body">
          <div class="grid gap-2.5 lg:gap-5">
-          <div class="flex items-center gap-3">
+          {{-- <div class="flex items-center gap-3">
            <div class="flex items-center grow gap-2.5">
             <img src="assets/media/file-types/pdf.svg"/>
             <div class="flex flex-col">
@@ -531,185 +542,22 @@
              </div>
             </div>
            </div>
-          </div>
-          <div class="flex items-center gap-3">
-           <div class="flex items-center grow gap-2.5">
-            <img src="assets/media/file-types/doc.svg"/>
-            <div class="flex flex-col">
-             <span class="text-sm font-semibold text-gray-900 cursor-pointer hover:text-primary mb-px">
-              Report-v1.docx
-             </span>
-             <span class="text-xs font-normal text-gray-600">
-              2.3 MB 1 Oct 2024 12:00 PM
-             </span>
-            </div>
-           </div>
-           <div class="menu" data-menu="true">
-            <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
-             <button class="menu-toggle btn btn-sm btn-icon btn-light btn-clear">
-              <i class="ki-filled ki-dots-vertical">
-              </i>
-             </button>
-             <div class="menu-dropdown menu-default w-full max-w-[175px]" data-menu-dismiss="true">
-              <div class="menu-item">
-               <a class="menu-link" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-document">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Details
-                </span>
-               </a>
-              </div>
-              <div class="menu-item">
-               <a class="menu-link" data-modal-toggle="#share_profile_modal" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-share">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Share
-                </span>
-               </a>
-              </div>
-              <div class="menu-item">
-               <a class="menu-link" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-file-up">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Export
-                </span>
-               </a>
-              </div>
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="flex items-center gap-3">
-           <div class="flex items-center grow gap-2.5">
-            <img src="assets/media/file-types/ai.svg"/>
-            <div class="flex flex-col">
-             <span class="text-sm font-semibold text-gray-900 cursor-pointer hover:text-primary mb-px">
-              Framework-App.js
-             </span>
-             <span class="text-xs font-normal text-gray-600">
-              0.8 MB 17 Oct 2024 6:46 PM
-             </span>
-            </div>
-           </div>
-           <div class="menu" data-menu="true">
-            <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
-             <button class="menu-toggle btn btn-sm btn-icon btn-light btn-clear">
-              <i class="ki-filled ki-dots-vertical">
-              </i>
-             </button>
-             <div class="menu-dropdown menu-default w-full max-w-[175px]" data-menu-dismiss="true">
-              <div class="menu-item">
-               <a class="menu-link" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-document">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Details
-                </span>
-               </a>
-              </div>
-              <div class="menu-item">
-               <a class="menu-link" data-modal-toggle="#share_profile_modal" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-share">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Share
-                </span>
-               </a>
-              </div>
-              <div class="menu-item">
-               <a class="menu-link" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-file-up">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Export
-                </span>
-               </a>
-              </div>
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="flex items-center gap-3">
-           <div class="flex items-center grow gap-2.5">
-            <img src="assets/media/file-types/js.svg"/>
-            <div class="flex flex-col">
-             <span class="text-sm font-semibold text-gray-900 cursor-pointer hover:text-primary mb-px">
-              Mobile-logo.ai
-             </span>
-             <span class="text-xs font-normal text-gray-600">
-              0.2 MB 4 Nov 2024 11:30 AM
-             </span>
-            </div>
-           </div>
-           <div class="menu" data-menu="true">
-            <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
-             <button class="menu-toggle btn btn-sm btn-icon btn-light btn-clear">
-              <i class="ki-filled ki-dots-vertical">
-              </i>
-             </button>
-             <div class="menu-dropdown menu-default w-full max-w-[175px]" data-menu-dismiss="true">
-              <div class="menu-item">
-               <a class="menu-link" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-document">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Details
-                </span>
-               </a>
-              </div>
-              <div class="menu-item">
-               <a class="menu-link" data-modal-toggle="#share_profile_modal" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-share">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Share
-                </span>
-               </a>
-              </div>
-              <div class="menu-item">
-               <a class="menu-link" href="#">
-                <span class="menu-icon">
-                 <i class="ki-filled ki-file-up">
-                 </i>
-                </span>
-                <span class="menu-title">
-                 Export
-                </span>
-               </a>
-              </div>
-             </div>
-            </div>
-           </div>
-          </div>
+          </div> --}}
+          
+          
+          <p class="text-muted ">None</p>
          </div>
         </div>
-        <div class="card-footer justify-center">
+        {{-- <div class="card-footer justify-center">
          <a class="btn btn-link" href="html/demo1/account/integrations.html">
           All Files
          </a>
-        </div>
+        </div> --}}
        </div>
       </div>
      </div>
+
+
      <div class="col-span-2">
       <div class="flex flex-col gap-5 lg:gap-7.5">
        <div class="flex flex-col gap-5 lg:gap-7.5">
@@ -732,16 +580,16 @@
            <img alt="image" class="light:hidden max-h-[160px]" src="assets/media/illustrations/1-dark.svg"/>
           </div>
          </div>
-         <div class="card-footer justify-center">
+         {{-- <div class="card-footer justify-center">
           <a class="btn btn-link" href="html/demo1/network/get-started.html">
            Get Started
           </a>
-         </div>
+         </div> --}}
         </div>
         <div class="card">
          <div class="card-header">
           <h3 class="card-title">
-           Media Uploads
+           Tax Compliance Trend
           </h3>
           <div class="menu" data-menu="true">
            <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
@@ -805,7 +653,8 @@
         </div>
        </div>
        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7.5">
-        <div class="card">
+        
+        {{-- <div class="card">
          <div class="card-header gap-2">
           <h3 class="card-title">
            Contributors
@@ -994,8 +843,10 @@
            All Contributors
           </a>
          </div>
-        </div>
-        <div class="card">
+        </div> --}}
+
+
+        {{-- <div class="card">
          <div class="card-header">
           <h3 class="card-title">
            Assistance
@@ -1059,9 +910,12 @@
           <div id="contributions_chart">
           </div>
          </div>
-        </div>
+        </div> --}}
        </div>
-       <div class="card">
+
+
+
+       {{-- <div class="card">
         <div class="card-header">
          <h3 class="card-title">
           Projects
@@ -1701,7 +1555,7 @@
           All Projects
          </a>
         </div>
-       </div>
+       </div> --}}
       </div>
      </div>
     </div>
