@@ -13,7 +13,7 @@
        </div>
       </div>
       <div class="flex items-center gap-2.5">
-       <a class="btn btn-sm btn-light" href="#">
+       <a href="{{ route('companies.create') }}" class="btn btn-sm btn-light" href="#">
         New Company
        </a>
       </div>
@@ -23,12 +23,8 @@
     <!-- begin: container -->
     <div class="container-fixed">
      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-7.5">
-     
       
-      
-      
-      
-      
+    @foreach ($companies as $comp)
       <div class="card flex flex-col gap-5 p-5 lg:p-7.5">
        <div class="flex items-center flex-wrap justify-between gap-1">
         <div class="flex items-center gap-2.5">
@@ -49,11 +45,11 @@
           </div>
          </div>
          <div class="flex flex-col">
-          <a class="text-md font-semibold text-gray-900 hover:text-primary-active mb-px" href="html/demo1/public-profile/profiles/feeds.html">
-           XYZ Investments
+          <a class="text-md font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+           {{ $comp->name }}
           </a>
           <span class="text-2sm font-medium text-gray-600">
-           Public Limited Company
+           {{ $comp->type }}
           </span>
          </div>
         </div>
@@ -108,15 +104,22 @@
         1 person
        </span>
       </div>
+            
+      @endforeach
+
+
+
+
+
       <style>
        .add-new-bg {
-       background-image: url('/static/metronic-tailwind-html/dist/assets/media/images/2600x1200/bg-4.png');
-   }
-   .dark .add-new-bg {
-       background-image: url('/static/metronic-tailwind-html/dist/assets/media/images/2600x1200/bg-4-dark.png');
-   }
+            background-image: url('/static/metronic-tailwind-html/dist/assets/media/images/2600x1200/bg-4.png');
+        }
+        .dark .add-new-bg {
+            background-image: url('/static/metronic-tailwind-html/dist/assets/media/images/2600x1200/bg-4-dark.png');
+        }
       </style>
-      <a class="card border-2 border-dashed border-brand-clarity bg-center bg-[length:600px] bg-no-repeat add-new-bg" href="html/demo1/public-profile/works.html">
+      <a class="card border-2 border-dashed border-brand-clarity bg-center bg-[length:600px] bg-no-repeat add-new-bg" href="{{ route('companies.create') }}">
        <div class="card-body grid items-center">
         <div class="flex flex-col gap-3">
          <div class="flex justify-center pt-5">
@@ -152,4 +155,30 @@
     </div>
     <!-- end: container -->
    </main>
+   <script>
+        $(document).ready(function() {
+            // Check if there are success messages
+            @if(session('success'))
+                toastr.success("{{ session('success') }}", 'Success', {
+                    closeButton: true,
+                    progressBar: true,
+                    positionClass: 'toast-top-right', // You can adjust the position
+                    timeOut: 5000 // Duration in milliseconds
+                });
+            @endif
+
+            // Check for error messages
+            @if(session('error'))
+                toastr.error("{{ session('error') }}", 'Error', {
+                    closeButton: true,
+                    progressBar: true,
+                    positionClass: 'toast-top-right',
+                    timeOut: 5000
+                });
+            @endif
+
+            // Add more message types as needed (info, warning)
+        });
+    </script>
+
 @endsection

@@ -40,6 +40,12 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
   <link href="{{ env('APP_URL') }}/public/assets/vendors/apexcharts/apexcharts.css" rel="stylesheet"/>
   <link href="{{ env('APP_URL') }}/public/assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
   <link href="{{ env('APP_URL') }}/public/assets/css/styles.css" rel="stylesheet"/>
+  <!-- Include Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <!-- Include Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
  </head>
  <body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#fefefe] dark:bg-coal-500">
   <!--begin::Theme mode setup on page load-->
@@ -149,7 +155,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
         </div>
         <div class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
          <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
-          <a href="{{ route('companies.index') }}" class="menu-link border border-transparent gap-[14px] pl-[10px] pr-[10px] py-[8px] grow cursor-pointer" tabindex="0">
+          <a href="{{ route('companies.create') }}" class="menu-link border border-transparent gap-[14px] pl-[10px] pr-[10px] py-[8px] grow cursor-pointer" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
            </span>
            <span class="menu-title text-2sm font-medium mr-1 text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">

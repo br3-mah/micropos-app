@@ -18,7 +18,6 @@ return new class extends Migration
             $table->dateTime('exp_date')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('plan_id')->nullable();
-            $table->timestamp('deleted_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

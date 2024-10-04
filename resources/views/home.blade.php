@@ -1536,7 +1536,7 @@
     <!-- end: container -->
    </main>
 <!-- Welcome Modal -->
-    <style>
+    {{-- <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         #welcomeModal {
             position: fixed;
@@ -1624,7 +1624,7 @@
             <span class="py-4 flex justify-center items-center">
                 <img width="200" src="{{ asset('public/assets/img/2.png') }}" alt="">
             </span>
-            {{-- <button id="getStarted">Get Started</button> --}}
+            <button id="getStarted">Get Started</button>
         </div>
     </div>
 
@@ -1648,7 +1648,7 @@
                 // Modal does not close
             });
         });
-    </script>
+    </script> --}}
 
     
  
