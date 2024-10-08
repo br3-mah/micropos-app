@@ -1,14 +1,8 @@
-<!--
-Product: Metronic is a toolkit of UI components built with Tailwind CSS for developing scalable web applications quickly and efficiently
-Version: v9.0.0
-Author: Keenthemes
-Contact: support@keenthemes.com
-Website: https://www.keenthemes.com
-Support: https://devs.keenthemes.com
-Follow: https://www.twitter.com/keenthemes
-License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
--->
 <!DOCTYPE html>
+@php
+    $thisComp = App\Models\Company::currentCompany();
+
+@endphp
 <html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
  <head><base href="../../">
   <title>
@@ -40,14 +34,95 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
   <link href="{{ env('APP_URL') }}/public/assets/vendors/apexcharts/apexcharts.css" rel="stylesheet"/>
   <link href="{{ env('APP_URL') }}/public/assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
   <link href="{{ env('APP_URL') }}/public/assets/css/styles.css" rel="stylesheet"/>
-  <!-- Include Toastr CSS -->
+    <!-- Include Toastr CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-    <!-- Include Toastr JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+    <style>
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .loading-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .loader {
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+        .circular {
+            animation: rotate 2s linear infinite;
+            height: 100%;
+            transform-origin: center center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+            stroke-linecap: round;
+        }
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -35px;
+            }
+            100% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124px;
+            }
+        }
+        @keyframes color {
+            100%, 0% {
+                stroke: #4285F4;
+            }
+            40% {
+                stroke: #DE3E35;
+            }
+            66% {
+                stroke: #F7C223;
+            }
+            80%, 90% {
+                stroke: #1B9A59;
+            }
+        }
+    </style>
  </head>
  <body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#fefefe] dark:bg-coal-500">
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+    </div>
   <!--begin::Theme mode setup on page load-->
   <script>
    const defaultThemeMode = 'light'; // light|dark|system
@@ -92,9 +167,17 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
     <div class="sidebar-content flex grow shrink-0 py-5 pr-2" id="sidebar_content">
      <div class="scrollable-y-hover grow shrink-0 flex pl-2 lg:pl-5 pr-1 lg:pr-3" data-scrollable="true" data-scrollable-dependencies="#sidebar_header" data-scrollable-height="auto" data-scrollable-offset="0px" data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
       <div class="menu flex flex-col grow gap-0.5" data-menu="true" data-menu-accordion-expand-all="false" id="sidebar_menu">
-       
+        @if ($thisComp)
+            <div class="px-4 py-6 text-lg font-weight-bold border rounded p-4">
+                {{ $thisComp->name ?? '' }}
+            </div>
+        @endif
+        <br>
         <div class="menu-item" data-menu-item-toggle="accordion">
+            
             <div class="menu-link flex items-center grow cursor-pointer border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]" tabindex="0">
+                
+                
                 <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i class="ki-filled ki-element-11 text-lg"></i>
                 </span>
@@ -1527,6 +1610,60 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
 
 
     @yield('content')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Toastr Flash Messages -->
+    <script>
+        $(document).ready(function () {
+            // Success Message
+            @if(session('success'))
+                toastr.success("{{ session('success') }}", "Success", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "timeOut": "4000",
+                    "extendedTimeOut": "1000"
+                });
+            @endif
+
+            // Error Message
+            @if(session('error'))
+                toastr.error("{{ session('error') }}", "Error", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-left",
+                    "timeOut": "6000",
+                    "extendedTimeOut": "2000"
+                });
+            @endif
+
+            // Info Message
+            @if(session('info'))
+                toastr.info("{{ session('info') }}", "Information", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-top-right",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000"
+                });
+            @endif
+
+            // Warning Message
+            @if(session('warning'))
+                toastr.warning("{{ session('warning') }}", "Warning", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-top-left",
+                    "timeOut": "7000",
+                    "extendedTimeOut": "1500"
+                });
+            @endif
+        });
+    </script>   
+
+
     <footer class="footer">
      <!-- begin: container -->
      <div class="container-fixed">
@@ -2879,8 +3016,7 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
     </div>
    </div>
   </div>
-  <!--end::Page layout-->
-  <!--begin::Page scripts-->
+  
   <script src="{{ env('APP_URL') }}/public/assets/js/core.bundle.js">
   </script>
   <script src="{{ env('APP_URL') }}/public/assets/vendors/apexcharts/apexcharts.min.js">
@@ -2889,6 +3025,9 @@ License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
   </script>
   <script src="{{ env('APP_URL') }}/public/assets/js/layouts/demo1.js">
   </script>
+
+
+
   <!--end::Page scripts-->
  </body>
 </html>

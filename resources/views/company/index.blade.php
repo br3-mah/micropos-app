@@ -45,7 +45,7 @@
           </div>
          </div>
          <div class="flex flex-col">
-          <a class="text-md font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+          <a class="text-md font-semibold text-gray-900 hover:text-primary-active mb-px" href="{{ route('current.index', ['compid'=>$comp->id]) }}">
            {{ $comp->name }}
           </a>
           <span class="text-2sm font-medium text-gray-600">
@@ -67,11 +67,11 @@
               </i>
              </span>
              <span class="menu-title">
-              Details
+              Add Branch
              </span>
             </a>
            </div>
-           <div class="menu-item">
+           {{-- <div class="menu-item">
             <a class="menu-link" data-modal-toggle="#share_profile_modal" href="#">
              <span class="menu-icon">
               <i class="ki-filled ki-share">
@@ -81,24 +81,28 @@
               Share
              </span>
             </a>
-           </div>
-           <div class="menu-item">
-            <a class="menu-link bg-danger" href="#">
-             <span class="menu-icon">
-              <i class="ki-filled ki-delete">
-              </i>
-             </span>
-             <span class="menu-title">
-              Delete
-             </span>
-            </a>
-           </div>
+           </div> --}}
+            <div class="menu-item">
+                <!-- Delete Button with onclick -->
+                <a class="menu-link bg-danger" href="javascript:void(0);" onclick="confirmDelete({{ $comp->id }})">
+                    <span class="menu-icon">
+                        <i class="ki-filled ki-delete"></i>
+                    </span>
+                    <span class="menu-title">Delete</span>
+                </a>
+
+                <!-- Hidden form for delete -->
+                <form id="delete-form-{{ $comp->id }}" action="{{ route('companies.destroy', $comp->id) }}" method="POST" style="display: none;">
+                    @csrf
+                    @method('DELETE')
+                </form>
+            </div>
           </div>
          </div>
         </div>
        </div>
        <p class="text-2sm text-gray-600 font-medium">
-        Manages human resources, recruitment, and employee relations.
+        {{ $comp->about }}
        </p>
        <span class="text-2sm text-gray-700 font-medium">
         1 person
@@ -155,30 +159,13 @@
     </div>
     <!-- end: container -->
    </main>
-   <script>
-        $(document).ready(function() {
-            // Check if there are success messages
-            @if(session('success'))
-                toastr.success("{{ session('success') }}", 'Success', {
-                    closeButton: true,
-                    progressBar: true,
-                    positionClass: 'toast-top-right', // You can adjust the position
-                    timeOut: 5000 // Duration in milliseconds
-                });
-            @endif
 
-            // Check for error messages
-            @if(session('error'))
-                toastr.error("{{ session('error') }}", 'Error', {
-                    closeButton: true,
-                    progressBar: true,
-                    positionClass: 'toast-top-right',
-                    timeOut: 5000
-                });
-            @endif
-
-            // Add more message types as needed (info, warning)
-        });
+    <script>
+        function confirmDelete(companyId) {
+            if (confirm('Are you sure you want to delete this company?')) {
+                document.getElementById('delete-form-' + companyId).submit();
+            }
+        }
     </script>
 
 @endsection

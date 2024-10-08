@@ -46,6 +46,7 @@ class Company extends Model
         'reg_no',
         'contact_person',
         'contact_person_phone',
+        'is_current',
     ];
 
     // Define the attributes that should be cast to native types
@@ -148,6 +149,10 @@ class Company extends Model
     
         // Create the company record with only the set fields
         return Company::create($companyData);
+    }
+
+    public static function currentCompany(){
+        return Company::where('user_id', auth()->user()->id)->where('is_current', true)->first();
     }
     
 

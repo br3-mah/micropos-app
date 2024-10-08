@@ -3,8 +3,10 @@
 use App\Http\Controllers\ApiKeyController;
 use App\Http\Controllers\AuditController;
 use App\Http\Controllers\BillingController;
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CurrentCompanyController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\IntegrationController;
 use App\Http\Controllers\OrderController;
@@ -72,6 +74,8 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     //Company
     Route::resource('companies', CompanyController::class);
+    Route::resource('current', CurrentCompanyController::class);
+    Route::resource('branch', BranchController::class);
 
     //Integration
     Route::resource('integrations', IntegrationController::class);
