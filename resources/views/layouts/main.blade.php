@@ -174,10 +174,10 @@
         @endif
         <br>
         <div class="menu-item" data-menu-item-toggle="accordion">
-            
+
             <div class="menu-link flex items-center grow cursor-pointer border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]" tabindex="0">
-                
-                
+
+
                 <span class="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i class="ki-filled ki-element-11 text-lg"></i>
                 </span>
@@ -191,7 +191,7 @@
                     </i>
                 </span> --}}
             </div>
-        
+
             {{-- <div class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
                 <div class="menu-item">
                     <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1.html" tabindex="0">
@@ -245,9 +245,9 @@
             Add a Company
            </span>
           </a>
-         
+
          </div>
-         
+
          <div class="menu-item">
           <a href="{{ route('companies.index') }}"  class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/public-profile/works.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
@@ -257,7 +257,7 @@
            </span>
           </a>
          </div>
-         
+
          {{-- <div class="menu-item">
           <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/public-profile/works.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
@@ -267,7 +267,7 @@
            </span>
           </a>
          </div> --}}
-         
+
         </div>
        </div>
 
@@ -278,7 +278,7 @@
           </i>
          </span>
          <span class="menu-title text-sm font-semibold text-gray-700 menu-item-active:text-primary menu-link-hover:!text-primary">
-          My ZRA Integration 
+          My ZRA Integration
          </span>
          <span class="menu-arrow text-gray-400 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
           <i class="ki-filled ki-plus text-2xs menu-item-show:hidden">
@@ -288,7 +288,7 @@
          </span>
         </div>
         <div class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
-         
+
 
          <div class="menu-item">
           <a  href="{{ route('integrations.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
@@ -299,7 +299,7 @@
            </span>
           </a>
          </div>
-         
+
          <div class="menu-item">
           <a href="{{ route('api-keys.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/api-keys.html" tabindex="0">
            <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
@@ -309,7 +309,7 @@
            </span>
           </a>
          </div>
-         
+
         </div>
        </div>
 
@@ -323,11 +323,11 @@
          <span class="menu-title text-sm font-semibold text-gray-700 menu-item-active:text-primary menu-link-hover:!text-primary">
             Notifications
          </span>
-        
+
         </div>
        </div> --}}
 
-       
+
        {{-- <div class="menu-item pt-2.25 pb-px">
         <span class="menu-heading uppercase pl-[10px] pr-[10px] text-2sm font-semibold text-gray-500">
          Tools
@@ -351,7 +351,7 @@
          </span>
         </div>
         <div class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
-         
+
 
          <div class="menu-item">
           <a href="{{ route('billing.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
@@ -371,8 +371,8 @@
            </span>
           </a>
          </div>
-         
-         
+
+
         </div>
        </div>
 
@@ -385,7 +385,7 @@
          <span class="menu-title text-sm font-semibold text-gray-700">
           User Management
          </span>
-        
+
         </a>
        </div>
        {{-- <div class="menu-item">
@@ -401,7 +401,7 @@
         </a>
        </div> --}}
 
-{{--        
+{{--
        <div class="menu-item pt-2.25 pb-px">
         <span class="menu-heading uppercase pl-[10px] pr-[10px] text-2sm font-semibold text-gray-500">
          General Settings
@@ -418,7 +418,7 @@
          <span class="menu-title text-sm font-semibold text-gray-700">
             Audit Log
          </span>
-         
+
         </a>
        </div>
        <div class="menu-item">
@@ -428,9 +428,9 @@
           </i>
          </span>
          <span class="menu-title text-sm font-semibold text-gray-700">
-            Support 
+            Support
          </span>
-        
+
         </a>
        </div>
       </div>
@@ -469,7 +469,7 @@
                 --switch-bg-color: #ffffff;
                 --text-color: #2c3e50;
                 --shadow-color: rgba(0, 0, 0, 0.1);
-                
+
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
                 display: inline-flex;
                 align-items: center;
@@ -479,20 +479,20 @@
                 box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
                 transition: all 0.3s ease;
             }
-        
+
             .toggle-switch {
                 position: relative;
                 width: 3.5rem;
                 height: 2rem;
                 margin-right: 0.5rem;
             }
-        
+
             .toggle-switch input {
                 opacity: 0;
                 width: 0;
                 height: 0;
             }
-        
+
             .slider {
                 position: absolute;
                 cursor: pointer;
@@ -505,7 +505,7 @@
                 border-radius: 1rem;
                 box-shadow: inset 0 0.125rem 0.25rem var(--shadow-color);
             }
-        
+
             .slider:before {
                 position: absolute;
                 content: "";
@@ -517,19 +517,19 @@
                 transition: 0.4s;
                 border-radius: 50%;
             }
-        
+
             input:checked + .slider:before {
                 transform: translateX(1.5rem);
                 background-color: var(--primary-color);
             }
-        
+
             .mode-display {
                 font-size: 0.875rem;
                 font-weight: 600;
                 color: var(--text-color);
                 transition: all 0.3s ease;
             }
-        
+
             .icon {
                 display: inline-block;
                 width: 1rem;
@@ -537,16 +537,16 @@
                 margin-right: 0.25rem;
                 vertical-align: middle;
             }
-        
+
             .icon-production {
                 background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e74c3c"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>') no-repeat center center / contain;
             }
-        
+
             .icon-sandbox {
                 background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233498db"><path d="M15 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zM3 12c0-2.61 1.67-4.83 4-5.65V4.26C3.55 5.15 1 8.27 1 12s2.55 6.85 6 7.74v-2.09c-2.33-.82-4-3.04-4-5.65z"/></svg>') no-repeat center center / contain;
             }
         </style>
-        
+
         <div class="toggle-container" role="region" aria-label="Environment Mode Selection">
             <label class="toggle-switch" for="modeToggle">
                 <input type="checkbox" id="modeToggle" role="switch" aria-checked="false" aria-label="Toggle between Production and Sandbox modes">
@@ -556,35 +556,35 @@
                 <i class="icon icon-production"></i>Production
             </div>
         </div>
-        
+
         <script>
             (function() {
                 const toggle = document.getElementById('modeToggle');
                 const modeDisplay = document.getElementById('modeDisplay');
                 const toggleContainer = document.querySelector('.toggle-container');
-        
+
                 function updateMode() {
                     const isProduction = !toggle.checked;
                     const mode = isProduction ? 'Production' : 'Sandbox';
                     const icon = isProduction ? 'icon-production' : 'icon-sandbox';
                     const color = isProduction ? 'var(--secondary-color)' : 'var(--primary-color)';
-                    
+
                     modeDisplay.innerHTML = `<i class="icon ${icon}"></i>${mode}`;
                     modeDisplay.style.color = color;
                     toggle.setAttribute('aria-checked', toggle.checked);
-                    
+
                     // Animate the container
                     toggleContainer.style.transform = 'scale(1.05)';
                     setTimeout(() => { toggleContainer.style.transform = 'scale(1)'; }, 200);
-        
+
                     // Custom event for external scripts
-                    toggleContainer.dispatchEvent(new CustomEvent('modeChange', { 
-                        detail: { mode: mode.toLowerCase() } 
+                    toggleContainer.dispatchEvent(new CustomEvent('modeChange', {
+                        detail: { mode: mode.toLowerCase() }
                     }));
                 }
-        
+
                 toggle.addEventListener('change', updateMode);
-        
+
                 // Keyboard accessibility
                 toggle.addEventListener('keydown', function(e) {
                     if (e.key === ' ' || e.key === 'Enter') {
@@ -593,7 +593,7 @@
                         updateMode();
                     }
                 });
-        
+
                 // Initialize
                 updateMode();
             })();
@@ -603,9 +603,9 @@
         <i class="ki-filled ki-magnifier">
         </i>
        </button>
-       
-    
-       
+
+
+
        <div class="dropdown" data-dropdown="true" data-dropdown-offset="70px, 10px" data-dropdown-placement="bottom-end" data-dropdown-trigger="click|lg:click">
         <button class="dropdown-toggle btn btn-icon btn-icon-lg relative cursor-pointer size-9 rounded-full hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary text-gray-500">
          <i class="ki-filled ki-notification-on">
@@ -613,7 +613,7 @@
          <span class="badge badge-dot badge-success size-[5px] absolute top-0.5 right-0.5 transform translate-y-1/2">
          </span>
         </button>
-        
+
         <div class="dropdown-content light:border-gray-300 w-full max-w-[460px]">
          <div class="flex items-center justify-between gap-2.5 text-sm text-gray-900 font-semibold px-5 py-2.5" id="notifications_header">
           Notifications
@@ -1611,57 +1611,71 @@
 
     @yield('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Toastr JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Toastr Flash Messages -->
+    <!-- SweetAlert2 Flash Messages -->
     <script>
         $(document).ready(function () {
             // Success Message
             @if(session('success'))
-                toastr.success("{{ session('success') }}", "Success", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "positionClass": "toast-bottom-right",
-                    "timeOut": "4000",
-                    "extendedTimeOut": "1000"
+                Swal.fire({
+                    title: "Success",
+                    text: "{{ session('success') }}",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                    timer: 4000,
+                    timerProgressBar: true,
+                    toast: true,
+                    position: 'bottom-left'
                 });
             @endif
 
             // Error Message
             @if(session('error'))
-                toastr.error("{{ session('error') }}", "Error", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "positionClass": "toast-bottom-left",
-                    "timeOut": "6000",
-                    "extendedTimeOut": "2000"
+                Swal.fire({
+                    title: "Error",
+                    text: "{{ session('error') }}",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                    timer: 6000,
+                    timerProgressBar: true,
+                    toast: true,
+                    position: 'bottom-left'
                 });
             @endif
 
             // Info Message
             @if(session('info'))
-                toastr.info("{{ session('info') }}", "Information", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "positionClass": "toast-top-right",
-                    "timeOut": "5000",
-                    "extendedTimeOut": "1000"
+                Swal.fire({
+                    title: "Information",
+                    text: "{{ session('info') }}",
+                    icon: "info",
+                    confirmButtonText: "OK",
+                    timer: 5000,
+                    timerProgressBar: true,
+                    toast: true,
+                    position: 'bottom-left'
                 });
             @endif
 
             // Warning Message
             @if(session('warning'))
-                toastr.warning("{{ session('warning') }}", "Warning", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "positionClass": "toast-top-left",
-                    "timeOut": "7000",
-                    "extendedTimeOut": "1500"
+                Swal.fire({
+                    title: "Warning",
+                    text: "{{ session('warning') }}",
+                    icon: "warning",
+                    confirmButtonText: "OK",
+                    timer: 7000,
+                    timerProgressBar: true,
+                    toast: true,
+                    position: 'bottom-left'
                 });
             @endif
         });
-    </script>   
+    </script>
+
 
 
     <footer class="footer">
@@ -3016,7 +3030,7 @@
     </div>
    </div>
   </div>
-  
+
   <script src="{{ env('APP_URL') }}/public/assets/js/core.bundle.js">
   </script>
   <script src="{{ env('APP_URL') }}/public/assets/vendors/apexcharts/apexcharts.min.js">

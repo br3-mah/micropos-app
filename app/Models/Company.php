@@ -47,6 +47,7 @@ class Company extends Model
         'contact_person',
         'contact_person_phone',
         'is_current',
+        'status', //1 / 0
     ];
 
     // Define the attributes that should be cast to native types

@@ -10,6 +10,7 @@ use App\Http\Controllers\CurrentCompanyController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\IntegrationController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentPortalController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\ProfileController;
@@ -49,7 +50,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/activate-seller', [UserController::class, 'activateSeller'])->name('activate-seller');
-    
+
     // My Products
     Route::resource('product', ProductController::class);
     Route::post('store-feature-product', [ProductController::class, 'storeFeature'])->name('store.feature');
@@ -66,12 +67,14 @@ Route::middleware(['web', 'auth'])->group(function () {
     // My Deliveries
     Route::resource('deliveries', DeliveryController::class);
     Route::get('customer-deliveries', [DeliveryController::class, 'customerDeliveries'])->name('deliveries.customer.index');
-    
+
     // Billing
     Route::resource('billing', BillingController::class);
     Route::get('billing-history', [BillingController::class, 'history'])->name('billing.history');
-
-
+    Route::get('plans', [BillingController::class, 'plans'])->name('billing.plans');
+    Route::get('continue-to-payments/{planId}/{isAnnual}', [BillingController::class, 'payments'])->name('subscription.payments');
+    Route::get('payment', [PaymentPortalController::class, 'index'])->name('subscription.pay');
+    Route::get('/subscription-payment-callback/{paymentMethod}/{subscription_id}', [BillingController::class, 'store'])->name('payment.callback');
     //Company
     Route::resource('companies', CompanyController::class);
     Route::resource('current', CurrentCompanyController::class);
@@ -79,7 +82,6 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     //Integration
     Route::resource('integrations', IntegrationController::class);
-
     //APIs
     Route::resource('api-keys', ApiKeyController::class);
     //APIs

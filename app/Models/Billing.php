@@ -18,6 +18,10 @@ class Billing extends Model
         'amount',
         'desc',
         'exp_date',
+        'next_billing_at',
+        'subscription_id',
+        'user_pay_account_id',
+        'status',
         'user_id',
         'plan_id',
     ];
@@ -41,9 +45,9 @@ class Billing extends Model
     /**
      * Get the plan associated with the billing.
      */
-    public function plan()
+    public function sub()
     {
-        // return $this->belongsTo(Plan::class, 'plan_id'); // Assuming you have a Plan model
+        return $this->belongsTo(Subscription::class, 'subscription_id'); // Assuming you have a Plan model
     }
 
     // You can add other relationships or methods as needed

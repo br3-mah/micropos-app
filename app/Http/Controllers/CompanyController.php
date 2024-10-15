@@ -33,12 +33,11 @@ class CompanyController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    
+
     public function store(StoreCompanyRequest $request)
     {
         // Start a database transaction
         DB::beginTransaction();
-        
         try {
             // Extract data from request
             $data = $request->only([
@@ -57,43 +56,50 @@ class CompanyController extends Controller
                 'city',
                 'report-option'
             ]);
-    
+
             // Add the user ID to the data
             $data['user_id'] = auth()->id();
-    
+
             // If avatar is present, handle avatar upload
             if ($request->hasFile('avatar')) {
                 $avatarPath = $request->file('avatar')->store('logos', 'public');
                 $data['logo'] = $avatarPath;
             }
-    
+
             // Create the new company
-            Company::create($data);
-    
+            $company = Company::create($data);
+
             // Commit the transaction
             DB::commit();
-    
+
             // Set success flash message
             Session::flash('success', 'Company created successfully!');
-    
+
             // Redirect to the appropriate page
-            return redirect()->route('companies.index');
-    
+            if(auth()->user()->isSubscribed == 0){
+                return redirect()->route('billing.plans')->with('error', 'You are not subscribed. Please subscribe to register a company for the integration.');
+            }else{
+                // update $company 
+                $company->is_current = true;
+                $company->save();
+                return redirect()->route('companies.index');
+            }
+
         } catch (\Exception $e) {
             // Rollback the transaction if an error occurs
             DB::rollBack();
-    
+
             // Log the error for further debugging
             Log::error('Error creating company: '.$e->getMessage());
-    
+
             // Set error flash message
             Session::flash('error', 'There was an error creating the company. Please try again later.');
-    
+
             // Redirect back with input so the user doesn't lose the filled-out form data
             return redirect()->back()->withInput();
         }
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -128,15 +134,15 @@ class CompanyController extends Controller
             // Attempt to find the company by its ID and delete it
             $company = Company::findOrFail($id);
             $company->delete();
-    
+
             // Redirect with success message
             return redirect()->route('companies.index')->with('success', 'Company deleted successfully.');
-        
+
         } catch (\Exception $e) {
             // Handle any errors and return a failure message
             return redirect()->route('companies.index')->with('error', 'There was an error deleting the company: ' . $e->getMessage());
         }
     }
-    
-    
+
+
 }

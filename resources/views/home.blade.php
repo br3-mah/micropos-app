@@ -16,7 +16,7 @@
         Dashboard
        </h1>
        <div class="flex items-center gap-2 text-sm font-medium text-gray-600">
-        Central Hub for Personal Customization
+        Central Hub for ZRA Smart Invoicing & Submission of Tax Returns
        </div>
       </div>
       <div class="flex items-center gap-2.5">
@@ -118,7 +118,7 @@
             </div> --}}
            </div>
            <h2 class="text-1.5xl font-semibold text-gray-900">
-            Connect to ZRA Today &amp; Pay  
+            Connect to ZRA Today &amp; Pay
             <br/>
             Taxes
             <a class="link" href="#">
@@ -126,9 +126,9 @@
             </a>
            </h2>
            <p class="text-sm font-medium text-gray-700 leading-5.5">
-            Simplify your tax payments by connecting to the ZRA online platform. 
+            Simplify your tax payments by connecting to the ZRA online platform.
             <br/>
-            Quickly and securely manage your taxes with ease from anywhere. Join the growing community of users who are taking advantage of seamless, 
+            Quickly and securely manage your taxes with ease from anywhere. Join the growing community of users who are taking advantage of seamless,
             <br/>
             hassle-free tax payment solutions.
             Start today and experience a convenient way to fulfill your tax obligations online!
@@ -1616,7 +1616,7 @@
             <div class="mb-6">
                 <h2 class="text-2xl font-bold text-blue-600 mb-4">Welcome to Micropos Easy Tax Platform</h2>
                 <p class="mb-4">
-                    Congratulations! <b>{{ auth()->user()->fname.' '.auth()->user()->lname }}</b> 
+                    Congratulations! <b>{{ auth()->user()->fname.' '.auth()->user()->lname }}</b>
                     You've successfully onboarded to our platform.
                 </p>
                 <p>We're excited to help you manage your taxes with ease and efficiency.</p>
@@ -1632,15 +1632,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('welcomeModal');
             const getStartedBtn = document.getElementById('getStarted');
-        
+
             // Function to show the modal
             function showModal() {
                 modal.style.display = 'flex';
             }
-        
+
             // Show modal immediately upon page load
             showModal();
-        
+
             // Event listener for "Get Started" button
             getStartedBtn.addEventListener('click', function() {
                 console.log('Get Started clicked');
@@ -1650,7 +1650,7 @@
         });
     </script> --}}
 
-    
- 
+
+
 
 @endsection

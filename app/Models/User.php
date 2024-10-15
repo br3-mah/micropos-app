@@ -22,6 +22,7 @@ class User extends Authenticatable
         'lname',
         'mname',
         'email',
+        'isSubscribed',
         'password',
         'global_id',
         'current_source',
