@@ -61,7 +61,7 @@ class Company extends Model
         $companyData = [
             'user_id' => auth()->user()->id, // Always present
         ];
-    
+
         // Only add fields to the array if they are set
         if (isset($data['name'])) {
             $companyData['name'] = $data['name'];
@@ -147,15 +147,17 @@ class Company extends Model
         if (isset($data['contact_person_phone'])) {
             $companyData['contact_person_phone'] = $data['contact_person_phone'];
         }
-    
         // Create the company record with only the set fields
         return Company::create($companyData);
     }
 
     public static function currentCompany(){
-        return Company::where('user_id', auth()->user()->id)->where('is_current', true)->first();
+        try {
+            return Company::where('user_id', auth()->user()->id)->where('is_current', 1)->first();
+        } catch (\Throwable $th) {
+            return Company::where('user_id', auth()->user()->id)->first();
+        }
     }
-    
 
     // Define any relationships here
 

@@ -20,8 +20,10 @@ use App\Http\Controllers\SalesController;
 use App\Http\Controllers\ShopProductController;
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\WelcomeController;
 use App\Models\Billing;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -79,6 +81,8 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::resource('companies', CompanyController::class);
     Route::resource('current', CurrentCompanyController::class);
     Route::resource('branch', BranchController::class);
+    Route::resource('roles', UserManagementController::class);
+    Route::get('clone/{id}', [UserManagementController::class, 'clone'])->name('roles.clone');
 
     //Integration
     Route::resource('integrations', IntegrationController::class);

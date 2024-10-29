@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('content')
 
-    @if (auth()->user()->isSubscribed == 0)
+
+    @if($sub == null)
         @include('billing.empty');
     @else
         @include('billing.current');

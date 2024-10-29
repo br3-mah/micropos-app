@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('companies', function (Blueprint $table) {
+        Schema::table('companies', function (Blueprint $table) {
             $table->integer('status')->default(0);
         });
     }

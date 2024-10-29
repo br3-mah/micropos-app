@@ -15,21 +15,21 @@ class CurrentCompanyController extends Controller
         // Set all other companies' is_current to false for the current user in a single query
         Company::where('user_id', auth()->user()->id)
                ->update(['is_current' => false]);
-    
+
         // Set this company is_current to true
         $compid = $request->query('compid');
-        $company = Company::find($compid);
-        
+        $company = Company::where('id',$compid)->first();
+
         if (!$company) {
             return redirect()->back()->with('error', 'Company not found.');
         }
-    
+
         $company->is_current = true;  // Set the current company to true
         $company->save();
-        
+
         return view('current_company.index', ['company' => $company]);
     }
-    
+
 
     /**
      * Show the form for creating a new resource.

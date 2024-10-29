@@ -10,8 +10,8 @@ class PlanFeature extends Model
     // Managed by admin
     use HasFactory;
     protected $fillable = [
-        'name',  
-        'plan_id',  
+        'name',
+        'plan_id',
         'description',
         'amount',
         'discount',

@@ -3,7 +3,7 @@
 
 <main class="grow content pt-5" id="content" role="content">
     <!-- begin: container -->
-    <form action="{{ route('companies.store') }}" method="POST" class=" w-full">
+    <form action="{{ route('companies.store') }}" method="POST" style="max-width: 100%" class="w-full">
      @csrf
      <div class="flex">
       <div class="w-full container-fixed px-2 overflow-hidden" id="modal_settings_content">
@@ -17,13 +17,13 @@
              Add a New Company
             </h1>
            </div>
-      
+
           </div>
          </div>
         </div>
        </div>
-       
-       
+
+
        <div class="modal-body scrollable-y py-0 mb-5 pl-6 pr-3 mr-3" id="modal_settings_body">
         <div class="flex grow gap-5 lg:gap-7.5">
          <div class="flex flex-col items-stretch grow gap-5 lg:gap-7.5">
@@ -90,7 +90,7 @@
              </label>
              <input class="input" type="text" name="tpin" value=""/>
             </div>
-       
+
             <div class="flex items-baseline flex-wrap lg:flex-nowrap gap-2.5">
              <label class="form-label max-w-56">
               Company Email
@@ -171,15 +171,15 @@
              </div>
              <div class="flex justify-between">
                 <button type="button"class="btn btn-secondary" id="prev-2">
-                 Previous 
+                 Previous
                 </button>
                 <button type="button"class="btn btn-primary" id="next-2">
-                 Next 
+                 Next
                 </button>
              </div>
             </div>
            </div>
-          
+
         {{-- Step 3 --}}
           <div class="card wizard-step" id="step-3" style="display: none;">
            <div class="card-header" id="auth_password">
@@ -209,7 +209,7 @@
             <div class="w-full">
              <div class="flex items-baseline flex-wrap lg:flex-nowrap gap-2.5">
               <label class="form-label max-w-56">
-                Contact Person Phone Number 
+                Contact Person Phone Number
               </label>
               <input class="input" name="contact_phone" placeholder="000 000 0000" type="text" value="">
               </input>
@@ -321,7 +321,7 @@
           <div class="card wizard-step" id="step-5" style="display: none;">
            <div class="card-header" id="external_services_integrations">
             <h3 class="card-title">
-             Integrations 
+             Integrations
             </h3>
            </div>
            <div class="card-body grid gap-5 lg:gap-7.5 lg:py-7.5 py-5">
@@ -332,7 +332,7 @@
                <div class="flex flex-col">
                 <div class="flex items-center gap-1.5">
                  <a class="text-sm font-semibold text-gray-900 hover:text-primary-active" href="#">
-                  Smart ZRA 
+                  Smart ZRA
                  </a>
                 </div>
                 <span class="text-2sm font-medium text-gray-600">
@@ -362,13 +362,14 @@
            </div>
           </div>
 
-        
+
          </div>
         </div>
        </div>
       </div>
      </div>
-    </div>
+    </form>
+
     <!-- end: container -->
    </main>
    <script>
@@ -377,48 +378,48 @@
     document.getElementById('next-1').addEventListener('click', function() {
       showStep(2);
     });
-    
+
     document.getElementById('next-2').addEventListener('click', function() {
       showStep(3);
     });
-    
+
     document.getElementById('next-3').addEventListener('click', function() {
       showStep(4);
     });
-    
+
     document.getElementById('next-4').addEventListener('click', function() {
       showStep(5);
     });
-    
+
     // Previous Links
     document.getElementById('prev-2').addEventListener('click', function() {
       showStep(1);
     });
-    
+
     document.getElementById('prev-3').addEventListener('click', function() {
       showStep(2);
     });
-    
+
     document.getElementById('prev-4').addEventListener('click', function() {
       showStep(3);
     });
-    
+
     document.getElementById('prev-5').addEventListener('click', function() {
       showStep(4);
     });
-    
+
     function showStep(step) {
       // Hide all steps
       document.querySelectorAll('.wizard-step').forEach(function(stepElement) {
         stepElement.style.display = 'none';
       });
-      
+
       // Show the current step
       document.getElementById('step-' + step).style.display = 'block';
     }
-    
+
     </script>
-    
+
     <style>
     /* Smooth transitions between steps */
     .wizard-step {

@@ -374,39 +374,56 @@
 
 
         </div>
-       </div>
-
-       <div class="menu-item">
-        <a href="{{ route('users.index') }}" class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
-         <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
-          <i class="ki-filled ki-users text-lg">
+       </div><div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+        <div class="menu-link flex items-center grow cursor-pointer border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]" tabindex="0">
+            <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
+                <i class="ki-filled ki-users text-lg">
+                </i>
+            </span>
+         <span class="menu-title text-sm font-semibold text-gray-700 menu-item-active:text-primary menu-link-hover:!text-primary">
+            User Management
+         </span>
+         <span class="menu-arrow text-gray-400 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+          <i class="ki-filled ki-plus text-2xs menu-item-show:hidden">
+          </i>
+          <i class="ki-filled ki-minus text-2xs hidden menu-item-show:inline-flex">
           </i>
          </span>
-         <span class="menu-title text-sm font-semibold text-gray-700">
-          User Management
-         </span>
+        </div>
+        <div class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
 
-        </a>
+
+         <div class="menu-item">
+          <a href="{{ route('users.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/integrations.html" tabindex="0">
+           <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+           </span>
+           <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+            Users
+           </span>
+          </a>
+         </div>
+         <div class="menu-item">
+          <a href="{{ route('roles.index') }}" class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg" href="html/demo1/account/notifications.html" tabindex="0">
+           <span class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+           </span>
+           <span class="menu-title text-2sm font-medium text-gray-700 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+            User roles
+           </span>
+          </a>
+         </div>
+
+
+        </div>
        </div>
-       {{-- <div class="menu-item">
-        <a href="{{ route('projects.index') }}" class="menu-label gap-[10px] pl-[10px] pr-[10px] py-[6px] border border-transparent" href="" tabindex="0">
-         <span class="menu-icon items-start w-[20px] text-gray-500 dark:text-gray-400">
-          <i class="ki-filled ki-questionnaire-tablet text-lg">
-          </i>
-         </span>
-         <span class="menu-title text-sm font-semibold text-gray-700">
-          Projects
-         </span>
 
-        </a>
-       </div> --}}
 
-{{--
+
+
        <div class="menu-item pt-2.25 pb-px">
         <span class="menu-heading uppercase pl-[10px] pr-[10px] text-2sm font-semibold text-gray-500">
          General Settings
         </span>
-       </div> --}}
+       </div>
 
 
        <div class="menu-item">

@@ -40,28 +40,32 @@ class BillingController extends Controller
     public function payments($planId, $isAnnual){
         // Create innactive subscription and make user subscribed then
         // activate subscription and change user isSuscribed to 1
-        if(auth()->user()->isSubscribed == 0){
-            // dd($planId, $isAnnual);
-            $plan = Plan::find($planId);
-            $subscription = Subscription::create([
-                'name' => $plan->name,
-                'company_id' => Company::currentCompany()->id,
-                'plan_id' => $plan->id,
-                'user_id' => auth()->user()->id,
-                'amount' => $plan->amount, //independent field
-                'is_promo' => 0,
-                'promo_name' => null,
-                'promo_duration' => null,
-                'promo_duration_value' => null,
-                'promo_code' => null,
-                'discount' => 0,
-                'status' => 'disabled', //'cancelled, active, disabled, expired' - auto setting
-                'cancellation_run_at' => null //date to change status to cancelled
-            ]);
+        try {
+            if(auth()->user()->isSubscribed == 0){
+                // dd($planId, $isAnnual);
+                $plan = Plan::find($planId);
+                $subscription = Subscription::create([
+                    'name' => $plan->name,
+                    'company_id' => Company::currentCompany()->id,
+                    'plan_id' => $plan->id,
+                    'user_id' => auth()->user()->id,
+                    'amount' => $plan->amount, //independent field
+                    'is_promo' => 0,
+                    'promo_name' => null,
+                    'promo_duration' => null,
+                    'promo_duration_value' => null,
+                    'promo_code' => null,
+                    'discount' => 0,
+                    'status' => 'disabled', //'cancelled, active, disabled, expired' - auto setting
+                    'cancellation_run_at' => null //date to change status to cancelled
+                ]);
 
-            // redirect to payments page with subscriiption id with a success message
-            return redirect()->route('subscription.pay', ['subscription_id' => $subscription->id])
-            ->with('success', 'Subscription created successfully. Please make payment to activate ZRA '.$plan->name.' subscription for '.Company::currentCompany()->name.'.');
+                // redirect to payments page with subscriiption id with a success message
+                return redirect()->route('subscription.pay', ['subscription_id' => $subscription->id])
+                ->with('success', 'Subscription created successfully. Please make payment to activate ZRA '.$plan->name.' subscription for '.Company::currentCompany()->name.'.');
+            }
+        } catch (\Throwable $th) {
+            //throw $th;
         }
     }
     /**
@@ -79,7 +83,7 @@ class BillingController extends Controller
     {
         //
     }
-    
+
     public function store($payment_method, $sub_id)
     {
         try {
@@ -88,15 +92,15 @@ class BillingController extends Controller
             if (!$sub) {
                 return redirect()->route('billing.index')->with('error', 'Subscription not found.');
             }
-        
+
             // Update the Subscription model status
             $sub->status = 'active';
             $sub->save();
-        
+
             // Calculate the billing dates
             $exp_date = Carbon::now()->addMonth(); // Expiration date: 1 month from now
             $next_billing_at = Carbon::now()->addMonth()->addDays(3); // Next billing: 1 month + 3 days from now
-        
+
             // Create a billing record
             Billing::create([
                 'exp_date' => $exp_date,
@@ -123,7 +127,7 @@ class BillingController extends Controller
             dd($th->getMessage());
         }
     }
-    
+
 
     /**
      * Display the specified resource.
